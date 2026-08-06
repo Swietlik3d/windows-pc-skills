@@ -15,4 +15,11 @@ Describe 'Install manifest lifecycle' {
   if(Test-Path -LiteralPath $installDest){throw 'Installer WhatIf created a destination'}
   if(Test-Path -LiteralPath $packageDest){throw 'Packager WhatIf created a destination'}
  }
+ It 'uses self-contained dist packages as the default install source' {
+  $dest=Join-Path $TestDrive 'packaged-skills'
+  $install=& (Join-Path $Repo 'scripts\repo\Install-WindowsMasterSkills.ps1') -Scope User -Destination $dest -Mode Copy
+  $shared=Join-Path $dest 'windows-master-router\references\_shared\schemas\playbook.schema.json'
+  if($install.Installed -ne 39 -or -not(Test-Path -LiteralPath $shared)){throw 'Default install was not self-contained'}
+  & (Join-Path $Repo 'scripts\repo\Uninstall-WindowsMasterSkills.ps1') -Scope User -Destination $dest -Confirm:$false|Out-Null
+ }
 }

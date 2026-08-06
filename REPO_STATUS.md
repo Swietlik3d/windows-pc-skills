@@ -24,8 +24,8 @@ celowo ignorowany przez Git).
 | Statyczny validator repo | PASS | 7/7 grup, 0 błędów, 0 ostrzeżeń |
 | Linki wewnętrzne | PASS | 703 odwołania |
 | Safety/schema/evals/coverage | PASS | 0 niedozwolonych binariów; 936 promptów; 60+15 spraw |
-| Pester, PowerShell 7.6.4 | PASS | 23/23, 0 skipped |
-| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 23/23, 0 skipped |
+| Pester, PowerShell 7.6.4 | PASS | 24/24, 0 skipped |
+| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 24/24, 0 skipped |
 | Parser AST PowerShell 5.1 | PASS | 38 plików, 0 błędów |
 | Python `compileall` | PASS | wszystkie skrypty Python, 0 błędów |
 | Build `dist/skills` | PASS | 39/39 poprawnych i samowystarczalnych paczek |

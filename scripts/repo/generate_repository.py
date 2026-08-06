@@ -1647,13 +1647,14 @@ Walidacja repo:
 & .\\scripts\\repo\\Test-WindowsMasterRepo.ps1 -Category All
 ```
 
-Instalacja repo-local (domyślne źródło `.agents/skills`, bez instalowania `_shared` jako skilla):
+W tym repo skille są już repo-local w oficjalnym katalogu `.agents/skills`; wystarczy otworzyć
+repo w Codex. Instalacja samowystarczalnych paczek do innego repo:
 
 ```powershell
-& .\\scripts\\repo\\Install-WindowsMasterSkills.ps1 -Scope Repo -Mode Copy
+& .\\scripts\\repo\\Install-WindowsMasterSkills.ps1 -Scope Repo -Destination '<TARGET_REPO>\\.agents\\skills' -Mode Copy
 ```
 
-Instalacja user-wide do `$HOME/.agents/skills`:
+Instalacja user-wide do `$HOME/.agents/skills` (domyślne źródło: `dist/skills`):
 
 ```powershell
 & .\\scripts\\repo\\Install-WindowsMasterSkills.ps1 -Scope User -Mode Copy
@@ -4408,8 +4409,14 @@ param(
 Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
 $repo=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 Import-Module (Join-Path $repo 'scripts\lib\WindowsMaster.Common.psm1') -Force
-if(-not $Source){$Source=Join-Path $repo '.agents\skills'}
-if(-not $Destination){$Destination=if($Scope -eq 'User'){Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}else{Join-Path $repo '.agents\skills-installed'}}
+if(-not $Source){
+ $packaged=Join-Path $repo 'dist\skills'
+ if(Test-Path -LiteralPath (Join-Path $packaged 'packages.json')){$Source=$packaged}else{$Source=Join-Path $repo '.agents\skills'}
+}
+if(-not $Destination){
+ if($Scope -eq 'User'){$Destination=Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}
+ else{throw "Repo scope requires -Destination '<TARGET_REPO>\.agents\skills'. This repository already exposes .agents\skills directly."}
+}
 $sourceRoot=(Resolve-Path -LiteralPath $Source).Path;$dest=[IO.Path]::GetFullPath($Destination)
 if([IO.Path]::GetFullPath($sourceRoot).TrimEnd('\') -eq $dest.TrimEnd('\')){throw 'Source and destination must differ.'}
 $skills=@(Get-ChildItem -LiteralPath $sourceRoot -Directory|Where-Object Name -ne '_shared'|Sort-Object Name)
@@ -4452,7 +4459,10 @@ $manifest|ConvertTo-Json -Depth 20|Set-Content -LiteralPath $manifestPath -Encod
 param([ValidateSet('Repo','User')][string]$Scope='User',[string]$Destination,[switch]$RestoreBackup)
 Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
 $repo=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-if(-not $Destination){$Destination=if($Scope -eq 'User'){Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}else{Join-Path $repo '.agents\skills-installed'}}
+if(-not $Destination){
+ if($Scope -eq 'User'){$Destination=Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}
+ else{throw "Repo scope requires the exact installed -Destination '<TARGET_REPO>\.agents\skills'."}
+}
 $dest=[IO.Path]::GetFullPath($Destination);$manifestPath=Join-Path $dest '.windows-master-installed.json'
 if(-not(Test-Path -LiteralPath $manifestPath)){throw "Install manifest not found: $manifestPath"}
 $manifest=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json
@@ -5016,6 +5026,13 @@ Describe 'Install manifest lifecycle' {
   if(Test-Path -LiteralPath $installDest){throw 'Installer WhatIf created a destination'}
   if(Test-Path -LiteralPath $packageDest){throw 'Packager WhatIf created a destination'}
  }
+ It 'uses self-contained dist packages as the default install source' {
+  $dest=Join-Path $TestDrive 'packaged-skills'
+  $install=& (Join-Path $Repo 'scripts\repo\Install-WindowsMasterSkills.ps1') -Scope User -Destination $dest -Mode Copy
+  $shared=Join-Path $dest 'windows-master-router\references\_shared\schemas\playbook.schema.json'
+  if($install.Installed -ne 39 -or -not(Test-Path -LiteralPath $shared)){throw 'Default install was not self-contained'}
+  & (Join-Path $Repo 'scripts\repo\Uninstall-WindowsMasterSkills.ps1') -Scope User -Destination $dest -Confirm:$false|Out-Null
+ }
 }
 '''
         ),
@@ -5270,8 +5287,8 @@ celowo ignorowany przez Git).
 | Statyczny validator repo | PASS | 7/7 grup, 0 błędów, 0 ostrzeżeń |
 | Linki wewnętrzne | PASS | 703 odwołania |
 | Safety/schema/evals/coverage | PASS | 0 niedozwolonych binariów; 936 promptów; 60+15 spraw |
-| Pester, PowerShell 7.6.4 | PASS | 23/23, 0 skipped |
-| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 23/23, 0 skipped |
+| Pester, PowerShell 7.6.4 | PASS | 24/24, 0 skipped |
+| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 24/24, 0 skipped |
 | Parser AST PowerShell 5.1 | PASS | 38 plików, 0 błędów |
 | Python `compileall` | PASS | wszystkie skrypty Python, 0 błędów |
 | Build `dist/skills` | PASS | 39/39 poprawnych i samowystarczalnych paczek |

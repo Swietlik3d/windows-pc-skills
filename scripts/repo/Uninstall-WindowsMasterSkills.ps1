@@ -6,7 +6,10 @@
 param([ValidateSet('Repo','User')][string]$Scope='User',[string]$Destination,[switch]$RestoreBackup)
 Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
 $repo=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
-if(-not $Destination){$Destination=if($Scope -eq 'User'){Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}else{Join-Path $repo '.agents\skills-installed'}}
+if(-not $Destination){
+ if($Scope -eq 'User'){$Destination=Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}
+ else{throw "Repo scope requires the exact installed -Destination '<TARGET_REPO>\.agents\skills'."}
+}
 $dest=[IO.Path]::GetFullPath($Destination);$manifestPath=Join-Path $dest '.windows-master-installed.json'
 if(-not(Test-Path -LiteralPath $manifestPath)){throw "Install manifest not found: $manifestPath"}
 $manifest=Get-Content -LiteralPath $manifestPath -Raw|ConvertFrom-Json

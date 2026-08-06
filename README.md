@@ -24,13 +24,14 @@ Walidacja repo:
 & .\scripts\repo\Test-WindowsMasterRepo.ps1 -Category All
 ```
 
-Instalacja repo-local (domyślne źródło `.agents/skills`, bez instalowania `_shared` jako skilla):
+W tym repo skille są już repo-local w oficjalnym katalogu `.agents/skills`; wystarczy otworzyć
+repo w Codex. Instalacja samowystarczalnych paczek do innego repo:
 
 ```powershell
-& .\scripts\repo\Install-WindowsMasterSkills.ps1 -Scope Repo -Mode Copy
+& .\scripts\repo\Install-WindowsMasterSkills.ps1 -Scope Repo -Destination '<TARGET_REPO>\.agents\skills' -Mode Copy
 ```
 
-Instalacja user-wide do `$HOME/.agents/skills`:
+Instalacja user-wide do `$HOME/.agents/skills` (domyślne źródło: `dist/skills`):
 
 ```powershell
 & .\scripts\repo\Install-WindowsMasterSkills.ps1 -Scope User -Mode Copy

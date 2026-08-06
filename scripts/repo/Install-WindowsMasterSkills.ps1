@@ -13,8 +13,14 @@ param(
 Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
 $repo=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 Import-Module (Join-Path $repo 'scripts\lib\WindowsMaster.Common.psm1') -Force
-if(-not $Source){$Source=Join-Path $repo '.agents\skills'}
-if(-not $Destination){$Destination=if($Scope -eq 'User'){Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}else{Join-Path $repo '.agents\skills-installed'}}
+if(-not $Source){
+ $packaged=Join-Path $repo 'dist\skills'
+ if(Test-Path -LiteralPath (Join-Path $packaged 'packages.json')){$Source=$packaged}else{$Source=Join-Path $repo '.agents\skills'}
+}
+if(-not $Destination){
+ if($Scope -eq 'User'){$Destination=Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}
+ else{throw "Repo scope requires -Destination '<TARGET_REPO>\.agents\skills'. This repository already exposes .agents\skills directly."}
+}
 $sourceRoot=(Resolve-Path -LiteralPath $Source).Path;$dest=[IO.Path]::GetFullPath($Destination)
 if([IO.Path]::GetFullPath($sourceRoot).TrimEnd('\') -eq $dest.TrimEnd('\')){throw 'Source and destination must differ.'}
 $skills=@(Get-ChildItem -LiteralPath $sourceRoot -Directory|Where-Object Name -ne '_shared'|Sort-Object Name)
