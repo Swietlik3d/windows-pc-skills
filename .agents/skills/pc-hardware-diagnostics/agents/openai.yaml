@@ -1,0 +1,6 @@
+interface:
+  display_name: "Diagnostyka sprzętu PC"
+  short_description: "Bezpiecznie: Diagnostyka sprzętu PC"
+  default_prompt: "Use $pc-hardware-diagnostics to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Procesy, usługi i autostart"
+  short_description: "Bezpiecznie: Procesy, usługi i autostart"
+  default_prompt: "Use $windows-process-service-startup to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

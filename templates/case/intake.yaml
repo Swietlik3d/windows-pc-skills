@@ -1,0 +1,13 @@
+{
+  "case_id": "<CASE_ID>",
+  "created_utc": "<ISO8601>",
+  "owner_alias": "<ALIAS>",
+  "authorization_level": "R0",
+  "data_value": "unknown",
+  "backup_status": "unknown",
+  "encryption_status": "unknown",
+  "managed_status": "unknown",
+  "symptom": "<SYMPTOM>",
+  "last_changes": [],
+  "accessories": []
+}

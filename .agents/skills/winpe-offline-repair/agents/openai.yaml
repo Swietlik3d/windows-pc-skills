@@ -1,0 +1,6 @@
+interface:
+  display_name: "WinRE, WinPE i naprawa offline"
+  short_description: "Bezpiecznie: WinRE, WinPE i naprawa offline"
+  default_prompt: "Use $winpe-offline-repair to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

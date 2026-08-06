@@ -1,0 +1,105 @@
+{
+  "case_id": "full-14",
+  "fictional": true,
+  "title": "Start/Search nie odpowiada",
+  "device": {
+    "alias": "lab-device-14",
+    "form_factor": "desktop",
+    "os": "Windows 10 22H2 x64",
+    "firmware": "BIOS/MBR"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "medium",
+    "backup": "present-unverified",
+    "encryption": "off",
+    "managed": "personal"
+  },
+  "symptom": "Kliknięcie bez reakcji.",
+  "expected_routing": {
+    "primary": "windows-shell-ui-repair",
+    "supporting": [
+      "windows-accounts-profiles",
+      "windows-apps-store-winget",
+      "windows-component-repair"
+    ]
+  },
+  "red_flags": [
+    "objaw tylko na jednym profilu z EFS/OneDrive",
+    "managed shell policy",
+    "crash po third-party extension",
+    "storage/component corruption"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Kliknięcie bez reakcji."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "scope user/system",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "Reliability/WER",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "shell extension list",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "AppX events",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "profile comparison",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "policy",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Search service/package/user state/policy.",
+      "confidence": "medium",
+      "test": "Events, process state i test nowego profilu."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Naprawić konkretny komponent; re-registration ograniczona.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Start, Search i Settings działają po dwóch logowaniach.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

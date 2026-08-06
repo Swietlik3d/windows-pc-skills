@@ -1,0 +1,106 @@
+{
+  "case_id": "full-12",
+  "fictional": true,
+  "title": "SMB działa lokalnie, nie z sieci",
+  "device": {
+    "alias": "lab-device-12",
+    "form_factor": "mini-PC",
+    "os": "Windows 11 25H2 ARM64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "critical",
+    "backup": "absent",
+    "encryption": "on-key-ready",
+    "managed": "entra-test-tenant"
+  },
+  "symptom": "NTFS lokalnie OK.",
+  "expected_routing": {
+    "primary": "windows-ntfs-permissions-shares",
+    "supporting": [
+      "windows-accounts-profiles",
+      "windows-network-repair",
+      "windows-bitlocker-tpm-security"
+    ]
+  },
+  "red_flags": [
+    "EFS encrypted files",
+    "organizacyjny share",
+    "nieznany właściciel danych",
+    "root system drive target",
+    "brak ACL backup"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "NTFS lokalnie OK."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "identity/SID",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "current ACL SDDL",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "inheritance",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "share permissions",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "effective access",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "EFS status",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Share ACL, SMB auth, firewall lub network profile.",
+      "confidence": "medium",
+      "test": "Sprawdzić Get-SmbShareAccess i test z autoryzowanego klienta."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Naprawić najwęższą warstwę, nie Everyone Full Control.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Dostęp działa tylko dla zaplanowanych principal.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

@@ -1,0 +1,106 @@
+{
+  "case_id": "full-15",
+  "fictional": true,
+  "title": "File History brak wersji",
+  "device": {
+    "alias": "lab-device-15",
+    "form_factor": "mini-PC",
+    "os": "Windows 11 25H2 ARM64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "critical",
+    "backup": "absent",
+    "encryption": "on-key-ready",
+    "managed": "entra-test-tenant"
+  },
+  "symptom": "Użytkownik nie widzi pliku.",
+  "expected_routing": {
+    "primary": "windows-backup-vss-restore",
+    "supporting": [
+      "storage-triage-cloning-recovery",
+      "windows-case-evidence",
+      "windows-post-repair-validation"
+    ]
+  },
+  "red_flags": [
+    "jedyna kopia danych",
+    "ransomware",
+    "storage risk source/destination",
+    "backup encryption key unavailable",
+    "managed retention"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Użytkownik nie widzi pliku."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "backup scope",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "last successful run",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "restore test",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "VSS writers/providers",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "target health/capacity",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "encryption/key custody",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Scope/exclusion/target disconnect/retention.",
+      "confidence": "medium",
+      "test": "Zebrać config i target health bez cleanup."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Naprawić target/schedule, dane odzyskać z innych kopii.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Nowy plik ma co najmniej dwie wersje i restore działa.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

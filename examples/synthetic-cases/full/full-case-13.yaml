@@ -1,0 +1,106 @@
+{
+  "case_id": "full-13",
+  "fictional": true,
+  "title": "PUP/browser hijack",
+  "device": {
+    "alias": "lab-device-13",
+    "form_factor": "laptop",
+    "os": "Windows 11 24H2 x64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "high",
+    "backup": "verified",
+    "encryption": "on-key-ready",
+    "managed": "personal"
+  },
+  "symptom": "Homepage/extensions wracają.",
+  "expected_routing": {
+    "primary": "windows-malware-remediation",
+    "supporting": [
+      "windows-process-service-startup",
+      "windows-case-evidence",
+      "windows-backup-vss-restore"
+    ]
+  },
+  "red_flags": [
+    "ransomware in progress",
+    "credential theft",
+    "business incident",
+    "evidence/legal hold",
+    "backup connected to infected host"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Homepage/extensions wracają."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "timeline",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "network isolation status",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "Defender state/detections",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "persistence exports",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "hashes/signatures",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "account exposure",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Extension, policy, scheduled task lub sync.",
+      "confidence": "medium",
+      "test": "Odłączyć sync, eksportować extensions/policies/tasks."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Usunąć potwierdzoną persistence i zresetować tylko dotknięte ustawienia.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Po reboot/sync brak powrotu, accounts reviewed.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

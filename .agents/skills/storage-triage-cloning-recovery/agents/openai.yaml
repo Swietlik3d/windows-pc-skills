@@ -1,0 +1,6 @@
+interface:
+  display_name: "Storage triage, klonowanie i odzysk"
+  short_description: "Bezpiecznie: Storage triage, klonowanie i odzysk"
+  default_prompt: "Use $storage-triage-cloning-recovery to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

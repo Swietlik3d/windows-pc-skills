@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "short-001",
+    "fictional": true,
+    "prompt": "Użytkownik mówi tylko „komputer nie działa”. komputer nie działa i nie wiem od czego zacząć.",
+    "expected_primary": "windows-master-router",
+    "supporting": [
+      "windows-service-intake",
+      "windows-case-evidence",
+      "windows-os-identification"
+    ],
+    "red_flags": [
+      "zagrożenie danych",
+      "zapach spalenizny lub spuchnięta bateria"
+    ],
+    "first_step": "R0: Zebrać pięć bramek bezpieczeństwa i sklasyfikować etap startu.",
+    "evidence": [
+      "stan uruchamiania",
+      "backup i wartość danych",
+      "szyfrowanie",
+      "zarządzanie organizacji"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Przekazać do jednego skilla o najwyższym dopasowaniu; nie wykonywać naprawy w routerze."
+    ],
+    "validation": "Router zwraca jednego primary, maksymalnie trzy supporting i poziom pewności."
+  },
+  {
+    "id": "short-002",
+    "fictional": true,
+    "prompt": "Brak backupu i niestabilny dysk. service intake.",
+    "expected_primary": "windows-service-intake",
+    "supporting": [
+      "windows-case-evidence",
+      "windows-master-router",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "brak upoważnienia",
+      "dane krytyczne bez kopii"
+    ],
+    "first_step": "R0: Zatrzymać testy zapisu i uzgodnić imaging/pro recovery.",
+    "evidence": [
+      "tożsamość urządzenia bez sekretów",
+      "zakres zgody R0–R4",
+      "wartość i lokalizacja danych",
+      "stan BitLocker"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nadać priorytet odzyskowi, nie naprawie Windows."
+    ],
+    "validation": "Zakres wyraźnie rozdziela odzysk danych od naprawy."
+  },
+  {
+    "id": "short-003",
+    "fictional": true,
+    "prompt": "Naprawa zakończona i wykonano testy. chain of custody.",
+    "expected_primary": "windows-case-evidence",
+    "supporting": [
+      "windows-service-intake",
+      "windows-post-repair-validation",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "podejrzenie przestępstwa",
+      "brak zgody na kopiowanie danych"
+    ],
+    "first_step": "R0: Złożyć actions, evidence i validation według statusu.",
+    "evidence": [
+      "czas UTC",
+      "operator",
+      "cel czynności",
+      "hash SHA-256"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wygenerować raport techniczny i krótkie owner summary."
+    ],
+    "validation": "Każde twierdzenie ma dowód lub jawne ograniczenie."
+  },
+  {
+    "id": "short-004",
+    "fictional": true,
+    "prompt": "Zero LED i wentylatorów. laptop nie ładuje.",
+    "expected_primary": "pc-hardware-diagnostics",
+    "supporting": [
+      "memory-cpu-gpu-thermal",
+      "bios-uefi-firmware",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "spuchnięta bateria",
+      "zapach spalenizny"
+    ],
+    "first_step": "R0: Odłączyć zasilanie, ocenić wizualnie, potem testować znanym dobrym zasilaczem o zgodnej specyfikacji.",
+    "evidence": [
+      "dokładny model",
+      "sekwencja LED/beep",
+      "napięcie znamionowe zasilacza",
+      "minimalna konfiguracja"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wymieniać jedną część naraz; żadnego otwierania PSU."
+    ],
+    "validation": "Urządzenie przechodzi powtarzalny power-on bez zapachu i nadmiernego poboru."
+  },
+  {
+    "id": "short-005",
+    "fictional": true,
+    "prompt": "OEM zaleca poprawkę stabilności. aktualizacja BIOS.",
+    "expected_primary": "bios-uefi-firmware",
+    "supporting": [
+      "windows-bitlocker-tpm-security",
+      "windows-bcd-partition-repair",
+      "pc-hardware-diagnostics"
+    ],
+    "red_flags": [
+      "niepewny model/rewizja",
+      "niestabilne zasilanie"
+    ],
+    "first_step": "R0: Zweryfikować Service Tag/model/board, release notes i podpis.",
+    "evidence": [
+      "manufacturer/model/board revision",
+      "wersja BIOS i EC",
+      "tryb UEFI/Legacy",
+      "Secure Boot/TPM"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Flash pozostawić ręcznej, jawnie potwierdzonej procedurze R4."
+    ],
+    "validation": "Po flashu sprawdzić wersję, ustawienia, TPM, boot i temperatury."
+  },
+  {
+    "id": "short-006",
+    "fictional": true,
+    "prompt": "Pliki skasowane, dysk stabilny. SSD znika.",
+    "expected_primary": "storage-triage-cloning-recovery",
+    "supporting": [
+      "windows-backup-vss-restore",
+      "windows-case-evidence",
+      "pc-hardware-diagnostics"
+    ],
+    "red_flags": [
+      "klikający lub znikający dysk",
+      "rosnące read errors"
+    ],
+    "first_step": "R0: Natychmiast zatrzymać zapisy i utworzyć obraz read-only.",
+    "evidence": [
+      "model/serial z redakcją",
+      "SMART/NVMe health",
+      "read error trend",
+      "wartość danych"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Analizować kopię TestDisk/PhotoRec/DMDE; wyniki zapisywać na trzeci nośnik."
+    ],
+    "validation": "Otworzyć reprezentatywną próbkę i zachować log narzędzia."
+  },
+  {
+    "id": "short-007",
+    "fictional": true,
+    "prompt": "PC resetuje się bez BSOD. GPU artifacts.",
+    "expected_primary": "memory-cpu-gpu-thermal",
+    "supporting": [
+      "pc-hardware-diagnostics",
+      "windows-bsod-debugging",
+      "windows-performance-hangs"
+    ],
+    "red_flags": [
+      "jakikolwiek błąd RAM",
+      "temperatura szybko rośnie do limitu"
+    ],
+    "first_step": "R0: Zebrać WHEA/Kernel-Power i temperatury, testować jeden podsystem.",
+    "evidence": [
+      "WHEA timeline",
+      "temperatury i clocks",
+      "ustawienia stock/XMP",
+      "moduły i sloty"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wrócić do stock; wymienić znaną dobrą część przed zmianami systemu."
+    ],
+    "validation": "Brak restartu w powtarzalnym obciążeniu i zimnym starcie."
+  },
+  {
+    "id": "short-008",
+    "fictional": true,
+    "prompt": "Litery dysków są inne. edition architecture boot mode.",
+    "expected_primary": "windows-os-identification",
+    "supporting": [
+      "windows-10-support",
+      "windows-11-support",
+      "windows-legacy-xp-vista-7-8"
+    ],
+    "red_flags": [
+      "wyniki z różnych instalacji/offline volume",
+      "WinRE z nieustaloną literą"
+    ],
+    "first_step": "R0: Przeszukać woluminy read-only po Windows/System32/config/SOFTWARE.",
+    "evidence": [
+      "ProductName/EditionID",
+      "CurrentBuild/UBR",
+      "architecture",
+      "locale"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Załadować hive pod unikalną nazwą tylko do odczytu i zawsze odmontować."
+    ],
+    "validation": "Wskazany OS_VOLUME ma zgodny BCD, Windows dir i build."
+  },
+  {
+    "id": "short-009",
+    "fictional": true,
+    "prompt": "Logo pojawia się, potem reset. Automatic Repair loop.",
+    "expected_primary": "windows-boot-recovery",
+    "supporting": [
+      "windows-bcd-partition-repair",
+      "winpe-offline-repair",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "storage risk",
+      "BitLocker bez key readiness"
+    ],
+    "first_step": "R0: Wyłączyć auto-restart wyłącznie w WinRE menu, zebrać bugcheck/dump.",
+    "evidence": [
+      "etap startu",
+      "firmware detection",
+      "boot layout",
+      "SrtTrail/boot log"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawiać potwierdzony komponent, nie maskować restartu."
+    ],
+    "validation": "Start stabilny, dump skonfigurowany, regresja sleep/restart."
+  },
+  {
+    "id": "short-010",
+    "fictional": true,
+    "prompt": "WinRE pokazuje wiele NTFS. WinPE repair.",
+    "expected_primary": "winpe-offline-repair",
+    "supporting": [
+      "windows-os-identification",
+      "windows-component-repair",
+      "windows-bcd-partition-repair"
+    ],
+    "red_flags": [
+      "nieustalone źródło/cel",
+      "BitLocker locked"
+    ],
+    "first_step": "R0: Listować woluminy i potwierdzić Windows dir, SOFTWARE hive i BCD.",
+    "evidence": [
+      "disk/volume unique IDs",
+      "OS directory",
+      "BCD device",
+      "BitLocker lock state"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zapisać mapę do sprawy; nie używać domyślnego C:."
+    ],
+    "validation": "Trzy niezależne sygnały wskazują ten sam OS volume."
+  },
+  {
+    "id": "short-011",
+    "fictional": true,
+    "prompt": "BIOS mówi no bootable device. Windows Boot Manager ontbreekt.",
+    "expected_primary": "windows-bcd-partition-repair",
+    "supporting": [
+      "windows-boot-recovery",
+      "winpe-offline-repair",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "nieustalony dysk/OS/ESP",
+      "BitLocker bez klucza"
+    ],
+    "first_step": "R0: Potwierdzić BIOS mode, MBR i aktywną system partition.",
+    "evidence": [
+      "firmware mode",
+      "disk IDs",
+      "GPT/MBR",
+      "ESP/active partition"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawiać pojedynczy element; nie konwertować do GPT w tym samym kroku."
+    ],
+    "validation": "Boot działa i layout pozostaje zgodny z backupem."
+  },
+  {
+    "id": "short-012",
+    "fictional": true,
+    "prompt": "System nie bootuje, CBS wskazuje servicing. bronbestanden niet gevonden.",
+    "expected_primary": "windows-component-repair",
+    "supporting": [
+      "windows-update-servicing",
+      "winpe-offline-repair",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "storage/RAM instability",
+      "source build/language/index mismatch"
+    ],
+    "first_step": "R0: Zebrać offline identity i logi przed zmianą.",
+    "evidence": [
+      "DISM health",
+      "CBS/DISM excerpts",
+      "build/edition/language",
+      "source metadata/index"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Repair wrapper z właściwym ImagePath i source; nie revert pending bez wyjątkowego gate."
+    ],
+    "validation": "Boot, DISM/SFC i update scan przechodzą."
+  },
+  {
+    "id": "short-013",
+    "fictional": true,
+    "prompt": "Ta sama KB wraca z błędem. Windows Update error.",
+    "expected_primary": "windows-update-servicing",
+    "supporting": [
+      "windows-component-repair",
+      "windows-setup-upgrade-rollback",
+      "windows-remote-managed-client"
+    ],
+    "red_flags": [
+      "storage/RAM issue",
+      "managed update policy"
+    ],
+    "first_step": "R0: Zebrać exact KB/code, eventy, CBS i release health.",
+    "evidence": [
+      "build/edition",
+      "update history",
+      "WindowsUpdateClient events",
+      "policy sources"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Najpierw retry po potwierdzonym preflight; reset components dopiero później."
+    ],
+    "validation": "KB zainstalowana, reboot completed i scan clean."
+  },
+  {
+    "id": "short-014",
+    "fictional": true,
+    "prompt": "System działa, component repair nie wystarcza. SetupDiag.",
+    "expected_primary": "windows-setup-upgrade-rollback",
+    "supporting": [
+      "windows-update-servicing",
+      "windows-component-repair",
+      "windows-drivers-devices"
+    ],
+    "red_flags": [
+      "brak backupu",
+      "storage/RAM instability"
+    ],
+    "first_step": "R0: Sprawdzić edition/language/build, backup i BitLocker.",
+    "evidence": [
+      "SetupDiag result",
+      "Panther/Rollback logs",
+      "compat scan",
+      "build/edition/language"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Uruchomienie pozostawić jawnej interakcji z Setup; nie automatyzować wyborów."
+    ],
+    "validation": "Build, activation, apps, profile i update działają."
+  },
+  {
+    "id": "short-015",
+    "fictional": true,
+    "prompt": "Laptop poza siecią nie aktywuje. edition mismatch.",
+    "expected_primary": "windows-activation-licensing",
+    "supporting": [
+      "windows-os-identification",
+      "windows-remote-managed-client",
+      "windows-setup-upgrade-rollback"
+    ],
+    "red_flags": [
+      "prośba o crack/KMS emulator",
+      "pełny product key w logu"
+    ],
+    "first_step": "R0: Zebrać channel i generic error; nie testować publicznych serwerów.",
+    "evidence": [
+      "edition/channel",
+      "partial product key only",
+      "activation status/error",
+      "OEM marker presence bez klucza"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Eskalować do administratora licencji."
+    ],
+    "validation": "Status licensed w autoryzowanej sieci."
+  },
+  {
+    "id": "short-016",
+    "fictional": true,
+    "prompt": "Ten sam bugcheck pod konkretną akcją. blauw scherm WinDbg.",
+    "expected_primary": "windows-bsod-debugging",
+    "supporting": [
+      "memory-cpu-gpu-thermal",
+      "windows-drivers-devices",
+      "windows-boot-recovery"
+    ],
+    "red_flags": [
+      "storage/RAM errors",
+      "brak wolnego miejsca/pagefile"
+    ],
+    "first_step": "R0: Analizować kilka dumpów z symbolami i korelować SetupAPI/driver changes.",
+    "evidence": [
+      "exact bugcheck parameters",
+      "dump type",
+      "stack/module timestamps",
+      "symbols"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Rollback/update tylko potwierdzonego drivera OEM."
+    ],
+    "validation": "Brak bugcheck w repro i brak nowych WHEA."
+  },
+  {
+    "id": "short-017",
+    "fictional": true,
+    "prompt": "Active time 100%, niski throughput. Windows wolno działa.",
+    "expected_primary": "windows-performance-hangs",
+    "supporting": [
+      "windows-process-service-startup",
+      "memory-cpu-gpu-thermal",
+      "windows-drivers-devices"
+    ],
+    "red_flags": [
+      "storage health issue",
+      "thermal throttling"
+    ],
+    "first_step": "R0: Najpierw SMART/latency, potem process I/O trace.",
+    "evidence": [
+      "repro timeline",
+      "resource counters",
+      "ETW profile",
+      "Reliability/WER"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawić przyczynę; nie wyłączać SysMain/Defender w ciemno."
+    ],
+    "validation": "Latency i queue spadają w tym samym workload."
+  },
+  {
+    "id": "short-018",
+    "fictional": true,
+    "prompt": "Losowy task uruchamia skrypt. service won't start.",
+    "expected_primary": "windows-process-service-startup",
+    "supporting": [
+      "windows-performance-hangs",
+      "windows-malware-remediation",
+      "windows-advanced-administration"
+    ],
+    "red_flags": [
+      "usługa bezpieczeństwa/backup/MDM",
+      "nieznany binary signature"
+    ],
+    "first_step": "R0: Wyeksportować XML, podpis/hash targetu i parent provenance.",
+    "evidence": [
+      "process path/signature",
+      "service config/dependencies",
+      "task XML",
+      "startup registry"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Przy malware przejść do incident playbook; nie kasować dowodu."
+    ],
+    "validation": "Task sklasyfikowany, dowody zachowane, brak nieautoryzowanego uruchomienia."
+  },
+  {
+    "id": "short-019",
+    "fictional": true,
+    "prompt": "Brak sterownika. driver problem.",
+    "expected_primary": "windows-drivers-devices",
+    "supporting": [
+      "windows-peripherals-repair",
+      "windows-bsod-debugging",
+      "windows-boot-recovery"
+    ],
+    "red_flags": [
+      "storage/network driver needed for recovery",
+      "managed OEM policy"
+    ],
+    "first_step": "R0: Zebrać IDs i dokładny model; szukać OEM/Windows Update Catalog.",
+    "evidence": [
+      "hardware IDs",
+      "problem code",
+      "driver provider/version/date",
+      "SetupAPI excerpt"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zainstalować podpisany driver właściwy dla arch/build."
+    ],
+    "validation": "Problem code 0 i funkcja urządzenia działa po reboot."
+  },
+  {
+    "id": "short-020",
+    "fictional": true,
+    "prompt": "IP działa, nazwy czasem nie. geen internet / VPN werkt niet.",
+    "expected_primary": "windows-network-repair",
+    "supporting": [
+      "windows-drivers-devices",
+      "windows-remote-managed-client",
+      "windows-malware-remediation"
+    ],
+    "red_flags": [
+      "managed VPN/firewall",
+      "incydent bezpieczeństwa"
+    ],
+    "first_step": "R0: Porównać Resolve-DnsName z serwerami i timeline.",
+    "evidence": [
+      "link/radio",
+      "IP/gateway/DHCP",
+      "DNS resolution",
+      "routes/proxy/VPN"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Korygować konfigurację tylko po identyfikacji właściciela DNS."
+    ],
+    "validation": "Wielokrotne rozwiązywanie obu stref działa bez leak."
+  },
+  {
+    "id": "short-021",
+    "fictional": true,
+    "prompt": "Urządzenie znika okresowo. drukarka nie drukuje.",
+    "expected_primary": "windows-peripherals-repair",
+    "supporting": [
+      "windows-drivers-devices",
+      "pc-hardware-diagnostics",
+      "windows-network-repair"
+    ],
+    "red_flags": [
+      "przegrzewający się port/kabel",
+      "uszkodzenie mechaniczne"
+    ],
+    "first_step": "R0: Korelować PnP events i topologię; test znanego kabla/portu.",
+    "evidence": [
+      "problem device IDs",
+      "port/cable/dock path",
+      "driver and firmware",
+      "service/event logs"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zmieniać jeden element; ustawienia zasilania jako R1 z rollback."
+    ],
+    "validation": "Brak disconnect w powtarzalnym teście oraz po resume."
+  },
+  {
+    "id": "short-022",
+    "fictional": true,
+    "prompt": "Windows loguje do profilu tymczasowego. nie mogę się zalogować.",
+    "expected_primary": "windows-accounts-profiles",
+    "supporting": [
+      "windows-ntfs-permissions-shares",
+      "windows-bitlocker-tpm-security",
+      "windows-office-cloud-repair"
+    ],
+    "red_flags": [
+      "brak autoryzacji właściciela",
+      "EFS"
+    ],
+    "first_step": "R0: Zebrać events i profile mapping, sprawdzić storage.",
+    "evidence": [
+      "account type/source",
+      "profile SID/path/state",
+      "User Profile Service events",
+      "EFS awareness"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Najpierw odwracalna korekta pojedynczego mappingu; migracja do nowego profilu jeśli hive uszkodzony."
+    ],
+    "validation": "Dwa logowania do właściwego profilu i aplikacje/dane dostępne."
+  },
+  {
+    "id": "short-023",
+    "fictional": true,
+    "prompt": "Foldery pokazują unknown account. SMB share permission.",
+    "expected_primary": "windows-ntfs-permissions-shares",
+    "supporting": [
+      "windows-accounts-profiles",
+      "windows-network-repair",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "EFS encrypted files",
+      "organizacyjny share"
+    ],
+    "first_step": "R0: Mapować stare/nowe konto i EFS przed zmianą.",
+    "evidence": [
+      "identity/SID",
+      "current ACL SDDL",
+      "inheritance",
+      "share permissions"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Dodać nowe ACE; nie usuwać starych do walidacji."
+    ],
+    "validation": "Pliki otwierają się i audit nie pokazuje broadened access."
+  },
+  {
+    "id": "short-024",
+    "fictional": true,
+    "prompt": "Urządzenie może mieć certyfikaty 2011. herstelcode BitLocker / Secure Boot.",
+    "expected_primary": "windows-bitlocker-tpm-security",
+    "supporting": [
+      "bios-uefi-firmware",
+      "windows-bcd-partition-repair",
+      "windows-remote-managed-client"
+    ],
+    "red_flags": [
+      "brak recovery key readiness",
+      "firmware/BCD/partition change"
+    ],
+    "first_step": "R0: Sprawdzić oficjalne signals/events i firmware compatibility.",
+    "evidence": [
+      "protection/lock status bez key",
+      "protector types bez IDs w raporcie publicznym",
+      "TPM readiness",
+      "Secure Boot cert state"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Pilotować oficjalny update, nie wgrywać losowych kluczy."
+    ],
+    "validation": "Status Updated, boot/BitLocker stabilne po kontrolowanych rebootach."
+  },
+  {
+    "id": "short-025",
+    "fictional": true,
+    "prompt": "Homepage/extensions wracają. podejrzewam wirusa.",
+    "expected_primary": "windows-malware-remediation",
+    "supporting": [
+      "windows-process-service-startup",
+      "windows-case-evidence",
+      "windows-backup-vss-restore"
+    ],
+    "red_flags": [
+      "ransomware in progress",
+      "credential theft"
+    ],
+    "first_step": "R0: Odłączyć sync, eksportować extensions/policies/tasks.",
+    "evidence": [
+      "timeline",
+      "network isolation status",
+      "Defender state/detections",
+      "persistence exports"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Usunąć potwierdzoną persistence i zresetować tylko dotknięte ustawienia."
+    ],
+    "validation": "Po reboot/sync brak powrotu, accounts reviewed."
+  },
+  {
+    "id": "short-026",
+    "fictional": true,
+    "prompt": "Installer kończy 1603. winget error.",
+    "expected_primary": "windows-apps-store-winget",
+    "supporting": [
+      "windows-shell-ui-repair",
+      "windows-office-cloud-repair",
+      "windows-update-servicing"
+    ],
+    "red_flags": [
+      "aplikacja przechowuje krytyczne dane",
+      "managed deployment"
+    ],
+    "first_step": "R0: Wygenerować verbose MSI log i znaleźć Return value 3 context.",
+    "evidence": [
+      "package identity/version",
+      "install technology",
+      "event/MSI log",
+      "dependencies"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawić konkretny prerequisite/ACL, nie czyścić rejestru."
+    ],
+    "validation": "MSI exit 0 i aplikacja startuje/odinstalowuje się."
+  },
+  {
+    "id": "short-027",
+    "fictional": true,
+    "prompt": "Pliki otwierają złą aplikację. taskbar frozen.",
+    "expected_primary": "windows-shell-ui-repair",
+    "supporting": [
+      "windows-accounts-profiles",
+      "windows-apps-store-winget",
+      "windows-component-repair"
+    ],
+    "red_flags": [
+      "objaw tylko na jednym profilu z EFS/OneDrive",
+      "managed shell policy"
+    ],
+    "first_step": "R0: Zebrać extension/progid i approved apps.",
+    "evidence": [
+      "scope user/system",
+      "Reliability/WER",
+      "shell extension list",
+      "AppX events"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Użyć UI Default Apps lub precyzyjnego, wspieranego association path."
+    ],
+    "validation": "Double-click i Open With działają dla próbki."
+  },
+  {
+    "id": "short-028",
+    "fictional": true,
+    "prompt": "Outlook nie otwiera profilu. Office activering / synchronisatie.",
+    "expected_primary": "windows-office-cloud-repair",
+    "supporting": [
+      "windows-accounts-profiles",
+      "windows-apps-store-winget",
+      "windows-network-repair"
+    ],
+    "red_flags": [
+      "lokalne-only PST",
+      "unsynced OneDrive files"
+    ],
+    "first_step": "R0: Safe mode, event/WER i lista add-ins; zabezpieczyć PST.",
+    "evidence": [
+      "account/tenant scope bez sekretów",
+      "Office channel/build",
+      "data file paths/sizes",
+      "sync state"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wyłączyć potwierdzony add-in lub utworzyć nowy profil bez kasowania starego."
+    ],
+    "validation": "Mail/calendar i send/receive działają, dane lokalne zachowane."
+  },
+  {
+    "id": "short-029",
+    "fictional": true,
+    "prompt": "Backup mówi successful. VSS error.",
+    "expected_primary": "windows-backup-vss-restore",
+    "supporting": [
+      "storage-triage-cloning-recovery",
+      "windows-case-evidence",
+      "windows-post-repair-validation"
+    ],
+    "red_flags": [
+      "jedyna kopia danych",
+      "ransomware"
+    ],
+    "first_step": "R0: Sprawdzić checksum/catalog i wykonać mount/test restore w izolacji.",
+    "evidence": [
+      "backup scope",
+      "last successful run",
+      "restore test",
+      "VSS writers/providers"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nie nadpisywać oryginału; testować na pustym celu/VM."
+    ],
+    "validation": "Losowa próbka i boot test VM, jeśli licencja pozwala."
+  },
+  {
+    "id": "short-030",
+    "fictional": true,
+    "prompt": "Device noncompliant. Entra joined.",
+    "expected_primary": "windows-remote-managed-client",
+    "supporting": [
+      "windows-network-repair",
+      "windows-bitlocker-tpm-security",
+      "windows-accounts-profiles"
+    ],
+    "red_flags": [
+      "brak świadomej zgody na sesję",
+      "Defender for Endpoint/LAPS/MDM"
+    ],
+    "first_step": "R0: dsregcmd/status i MDM diagnostics bez tokenów.",
+    "evidence": [
+      "join state",
+      "MDM enrollment",
+      "gpresult",
+      "cert store metadata bez private keys"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nie re-enroll/leave organization bez administratora."
+    ],
+    "validation": "Compliance naprawiona oficjalnym kanałem i access restored."
+  },
+  {
+    "id": "short-031",
+    "fictional": true,
+    "prompt": "Wiele błędów bez jasnej przyczyny. Hyper-V WSL issue.",
+    "expected_primary": "windows-advanced-administration",
+    "supporting": [
+      "windows-automation-powershell",
+      "windows-process-service-startup",
+      "windows-network-repair"
+    ],
+    "red_flags": [
+      "managed policy",
+      "registry root bulk edit"
+    ],
+    "first_step": "R0: Ustalić symptom timestamp i filtrować provider/event/window.",
+    "evidence": [
+      "scope and owner",
+      "before export",
+      "events/config",
+      "dependencies"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawiać tylko zdarzenie skorelowane z reprodukcją."
+    ],
+    "validation": "Po naprawie symptom znika i odpowiedni event nie wraca."
+  },
+  {
+    "id": "short-032",
+    "fictional": true,
+    "prompt": "Potrzebna kontrolowana zmiana. PowerShell automatisering.",
+    "expected_primary": "windows-automation-powershell",
+    "supporting": [
+      "windows-advanced-administration",
+      "windows-case-evidence",
+      "windows-post-repair-validation"
+    ],
+    "red_flags": [
+      "brak WhatIf/Apply gate",
+      "Invoke-Expression"
+    ],
+    "first_step": "R0: Preflight, snapshot, -Mode Scan default, -Apply i ShouldProcess.",
+    "evidence": [
+      "PowerShell version",
+      "OS/arch/elevation",
+      "target set",
+      "idempotency state"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Concrete cmdlets w switch, bez eval/string execution."
+    ],
+    "validation": "WhatIf wykonuje zero mutacji, apply test wyłącznie VM."
+  },
+  {
+    "id": "short-033",
+    "fictional": true,
+    "prompt": "WinPE/Windows nie widzi storage/network. capture WIM.",
+    "expected_primary": "windows-deployment-imaging",
+    "supporting": [
+      "windows-service-media",
+      "winpe-offline-repair",
+      "windows-bcd-partition-repair"
+    ],
+    "red_flags": [
+      "source/target ambiguity",
+      "BitLocker"
+    ],
+    "first_step": "R0: Rozpakowany signed OEM driver, arch/build i katalog backup.",
+    "evidence": [
+      "disk unique IDs",
+      "image metadata/index/hash",
+      "edition/language/arch",
+      "driver set"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Inject tylko wymagany INF; zachować DISM log."
+    ],
+    "validation": "Urządzenie widoczne i boot działa bez nowych problem devices."
+  },
+  {
+    "id": "short-034",
+    "fictional": true,
+    "prompt": "ADK i add-on mogą być zainstalowane. WinPE toolkit.",
+    "expected_primary": "windows-service-media",
+    "supporting": [
+      "windows-tool-research",
+      "windows-deployment-imaging",
+      "bios-uefi-firmware"
+    ],
+    "red_flags": [
+      "nieustalony target USB",
+      "brak backupu nośnika"
+    ],
+    "first_step": "R0: Wykryć lokalnie ADK bez instalacji/pobierania.",
+    "evidence": [
+      "target unique ID/capacity",
+      "media manifest",
+      "official URLs",
+      "license/redistribution"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wygenerować plan; build wykonać dopiero jawnie na lab host."
+    ],
+    "validation": "Plan wskazuje ADK version, patch, arch i brak third-party binaries."
+  },
+  {
+    "id": "short-035",
+    "fictional": true,
+    "prompt": "Startup Repair loop. NTLDR missing.",
+    "expected_primary": "windows-legacy-xp-vista-7-8",
+    "supporting": [
+      "storage-triage-cloning-recovery",
+      "windows-os-identification",
+      "windows-bcd-partition-repair"
+    ],
+    "red_flags": [
+      "Internet exposure",
+      "brak backupu na starym HDD"
+    ],
+    "first_step": "R0: Zebrać logs i health, uwzględnić stare WinRE.",
+    "evidence": [
+      "exact OS/SP/arch",
+      "BIOS/MBR layout",
+      "hardware age/health",
+      "offline malware risk"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Najmniej inwazyjny rollback; plan migracji jako wynik długoterminowy."
+    ],
+    "validation": "Dane skopiowane, system startuje offline lub urządzenie zastąpione."
+  },
+  {
+    "id": "short-036",
+    "fictional": true,
+    "prompt": "TPM/CPU blocker. Windows 10 ondersteuning.",
+    "expected_primary": "windows-10-support",
+    "supporting": [
+      "windows-os-identification",
+      "windows-11-support",
+      "windows-update-servicing"
+    ],
+    "red_flags": [
+      "brak ESU na Internet-connected device",
+      "unsupported app/security stack"
+    ],
+    "first_step": "R0: Sprawdzić oficjalne wymagania i firmware OEM.",
+    "evidence": [
+      "edition/channel/build",
+      "ESU enrollment/status",
+      "LTSC exact product",
+      "hardware eligibility"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Rozważyć wymianę, supported Windows 10 ESU lub alternatywny supported OS; bez bypass."
+    ],
+    "validation": "Wybrana opcja ma patching, backup i datę wyjścia."
+  },
+  {
+    "id": "short-037",
+    "fictional": true,
+    "prompt": "PC ma 24H2/25H2/26H1. Windows 11 24H2/25H2/26H1.",
+    "expected_primary": "windows-11-support",
+    "supporting": [
+      "windows-os-identification",
+      "windows-update-servicing",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "26H1 traktowane jako upgrade dla istniejącego PC",
+      "Secure Boot cert not updated"
+    ],
+    "first_step": "R0: Query dynamic matrix oraz model/OEM path.",
+    "evidence": [
+      "version/build/edition",
+      "hardware/arch",
+      "release health",
+      "Secure Boot/TPM/VBS"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nie wymuszać niewłaściwej branch; stosować oferowaną ścieżkę."
+    ],
+    "validation": "Build pozostaje wspierany i miesięczne updates działają."
+  },
+  {
+    "id": "short-038",
+    "fictional": true,
+    "prompt": "Wymieniono RAM/SSD/cooling. post repair validation.",
+    "expected_primary": "windows-post-repair-validation",
+    "supporting": [
+      "windows-case-evidence",
+      "windows-service-intake",
+      "pc-hardware-diagnostics"
+    ],
+    "red_flags": [
+      "niewyjaśnione storage/RAM errors",
+      "temperatury przy limicie"
+    ],
+    "first_step": "R0: Test właściwy komponentowi z limitami temperatur i stop conditions.",
+    "evidence": [
+      "baseline before",
+      "success criteria",
+      "cause reproduction",
+      "symptom test"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nie wykonywać stress przy danych bez backupu."
+    ],
+    "validation": "Zero error, stabilne temperatury i cold boot/sleep cycles."
+  },
+  {
+    "id": "short-039",
+    "fictional": true,
+    "prompt": "Użytkownik pyta o WinUtil/Tron. update tool catalog.",
+    "expected_primary": "windows-tool-research",
+    "supporting": [
+      "windows-service-media",
+      "windows-automation-powershell",
+      "windows-case-evidence"
+    ],
+    "red_flags": [
+      "download aggregator only",
+      "license unknown"
+    ],
+    "first_step": "R0: Rozłożyć konkretne actions, source, version i rollback.",
+    "evidence": [
+      "official home/repository",
+      "exact version/release date",
+      "license/commercial/redistribution",
+      "hash/signature method"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nigdy nie zalecać run-all; preferować natywne narzędzia."
+    ],
+    "validation": "Rekomendacja dotyczy jednej przejrzanej funkcji albo odradza."
+  },
+  {
+    "id": "short-040",
+    "fictional": true,
+    "prompt": "Użytkownik mówi tylko „komputer nie działa”. route this Windows issue.",
+    "expected_primary": "windows-master-router",
+    "supporting": [
+      "windows-service-intake",
+      "windows-case-evidence",
+      "windows-os-identification"
+    ],
+    "red_flags": [
+      "zagrożenie danych",
+      "zapach spalenizny lub spuchnięta bateria"
+    ],
+    "first_step": "R0: Zebrać pięć bramek bezpieczeństwa i sklasyfikować etap startu.",
+    "evidence": [
+      "stan uruchamiania",
+      "backup i wartość danych",
+      "szyfrowanie",
+      "zarządzanie organizacji"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Przekazać do jednego skilla o najwyższym dopasowaniu; nie wykonywać naprawy w routerze."
+    ],
+    "validation": "Router zwraca jednego primary, maksymalnie trzy supporting i poziom pewności."
+  },
+  {
+    "id": "short-041",
+    "fictional": true,
+    "prompt": "Brak backupu i niestabilny dysk. przyjęcie laptopa do serwisu.",
+    "expected_primary": "windows-service-intake",
+    "supporting": [
+      "windows-case-evidence",
+      "windows-master-router",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "brak upoważnienia",
+      "dane krytyczne bez kopii"
+    ],
+    "first_step": "R0: Zatrzymać testy zapisu i uzgodnić imaging/pro recovery.",
+    "evidence": [
+      "tożsamość urządzenia bez sekretów",
+      "zakres zgody R0–R4",
+      "wartość i lokalizacja danych",
+      "stan BitLocker"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Nadać priorytet odzyskowi, nie naprawie Windows."
+    ],
+    "validation": "Zakres wyraźnie rozdziela odzysk danych od naprawy."
+  },
+  {
+    "id": "short-042",
+    "fictional": true,
+    "prompt": "Naprawa zakończona i wykonano testy. case evidence.",
+    "expected_primary": "windows-case-evidence",
+    "supporting": [
+      "windows-service-intake",
+      "windows-post-repair-validation",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "podejrzenie przestępstwa",
+      "brak zgody na kopiowanie danych"
+    ],
+    "first_step": "R0: Złożyć actions, evidence i validation według statusu.",
+    "evidence": [
+      "czas UTC",
+      "operator",
+      "cel czynności",
+      "hash SHA-256"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wygenerować raport techniczny i krótkie owner summary."
+    ],
+    "validation": "Każde twierdzenie ma dowód lub jawne ograniczenie."
+  },
+  {
+    "id": "short-043",
+    "fictional": true,
+    "prompt": "Zero LED i wentylatorów. pieptoon moederbord.",
+    "expected_primary": "pc-hardware-diagnostics",
+    "supporting": [
+      "memory-cpu-gpu-thermal",
+      "bios-uefi-firmware",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "spuchnięta bateria",
+      "zapach spalenizny"
+    ],
+    "first_step": "R0: Odłączyć zasilanie, ocenić wizualnie, potem testować znanym dobrym zasilaczem o zgodnej specyfikacji.",
+    "evidence": [
+      "dokładny model",
+      "sekwencja LED/beep",
+      "napięcie znamionowe zasilacza",
+      "minimalna konfiguracja"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wymieniać jedną część naraz; żadnego otwierania PSU."
+    ],
+    "validation": "Urządzenie przechodzi powtarzalny power-on bez zapachu i nadmiernego poboru."
+  },
+  {
+    "id": "short-044",
+    "fictional": true,
+    "prompt": "OEM zaleca poprawkę stabilności. firmware update laptop.",
+    "expected_primary": "bios-uefi-firmware",
+    "supporting": [
+      "windows-bitlocker-tpm-security",
+      "windows-bcd-partition-repair",
+      "pc-hardware-diagnostics"
+    ],
+    "red_flags": [
+      "niepewny model/rewizja",
+      "niestabilne zasilanie"
+    ],
+    "first_step": "R0: Zweryfikować Service Tag/model/board, release notes i podpis.",
+    "evidence": [
+      "manufacturer/model/board revision",
+      "wersja BIOS i EC",
+      "tryb UEFI/Legacy",
+      "Secure Boot/TPM"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Flash pozostawić ręcznej, jawnie potwierdzonej procedurze R4."
+    ],
+    "validation": "Po flashu sprawdzić wersję, ustawienia, TPM, boot i temperatury."
+  },
+  {
+    "id": "short-045",
+    "fictional": true,
+    "prompt": "Pliki skasowane, dysk stabilny. dysk klika.",
+    "expected_primary": "storage-triage-cloning-recovery",
+    "supporting": [
+      "windows-backup-vss-restore",
+      "windows-case-evidence",
+      "pc-hardware-diagnostics"
+    ],
+    "red_flags": [
+      "klikający lub znikający dysk",
+      "rosnące read errors"
+    ],
+    "first_step": "R0: Natychmiast zatrzymać zapisy i utworzyć obraz read-only.",
+    "evidence": [
+      "model/serial z redakcją",
+      "SMART/NVMe health",
+      "read error trend",
+      "wartość danych"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Analizować kopię TestDisk/PhotoRec/DMDE; wyniki zapisywać na trzeci nośnik."
+    ],
+    "validation": "Otworzyć reprezentatywną próbkę i zachować log narzędzia."
+  },
+  {
+    "id": "short-046",
+    "fictional": true,
+    "prompt": "PC resetuje się bez BSOD. WHEA crash.",
+    "expected_primary": "memory-cpu-gpu-thermal",
+    "supporting": [
+      "pc-hardware-diagnostics",
+      "windows-bsod-debugging",
+      "windows-performance-hangs"
+    ],
+    "red_flags": [
+      "jakikolwiek błąd RAM",
+      "temperatura szybko rośnie do limitu"
+    ],
+    "first_step": "R0: Zebrać WHEA/Kernel-Power i temperatury, testować jeden podsystem.",
+    "evidence": [
+      "WHEA timeline",
+      "temperatury i clocks",
+      "ustawienia stock/XMP",
+      "moduły i sloty"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Wrócić do stock; wymienić znaną dobrą część przed zmianami systemu."
+    ],
+    "validation": "Brak restartu w powtarzalnym obciążeniu i zimnym starcie."
+  },
+  {
+    "id": "short-047",
+    "fictional": true,
+    "prompt": "Litery dysków są inne. Windows-versie controleren.",
+    "expected_primary": "windows-os-identification",
+    "supporting": [
+      "windows-10-support",
+      "windows-11-support",
+      "windows-legacy-xp-vista-7-8"
+    ],
+    "red_flags": [
+      "wyniki z różnych instalacji/offline volume",
+      "WinRE z nieustaloną literą"
+    ],
+    "first_step": "R0: Przeszukać woluminy read-only po Windows/System32/config/SOFTWARE.",
+    "evidence": [
+      "ProductName/EditionID",
+      "CurrentBuild/UBR",
+      "architecture",
+      "locale"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Załadować hive pod unikalną nazwą tylko do odczytu i zawsze odmontować."
+    ],
+    "validation": "Wskazany OS_VOLUME ma zgodny BCD, Windows dir i build."
+  },
+  {
+    "id": "short-048",
+    "fictional": true,
+    "prompt": "Logo pojawia się, potem reset. SrtTrail.txt.",
+    "expected_primary": "windows-boot-recovery",
+    "supporting": [
+      "windows-bcd-partition-repair",
+      "winpe-offline-repair",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "storage risk",
+      "BitLocker bez key readiness"
+    ],
+    "first_step": "R0: Wyłączyć auto-restart wyłącznie w WinRE menu, zebrać bugcheck/dump.",
+    "evidence": [
+      "etap startu",
+      "firmware detection",
+      "boot layout",
+      "SrtTrail/boot log"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawiać potwierdzony komponent, nie maskować restartu."
+    ],
+    "validation": "Start stabilny, dump skonfigurowany, regresja sleep/restart."
+  },
+  {
+    "id": "short-049",
+    "fictional": true,
+    "prompt": "WinRE pokazuje wiele NTFS. naprawa offline Windows.",
+    "expected_primary": "winpe-offline-repair",
+    "supporting": [
+      "windows-os-identification",
+      "windows-component-repair",
+      "windows-bcd-partition-repair"
+    ],
+    "red_flags": [
+      "nieustalone źródło/cel",
+      "BitLocker locked"
+    ],
+    "first_step": "R0: Listować woluminy i potwierdzić Windows dir, SOFTWARE hive i BCD.",
+    "evidence": [
+      "disk/volume unique IDs",
+      "OS directory",
+      "BCD device",
+      "BitLocker lock state"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zapisać mapę do sprawy; nie używać domyślnego C:."
+    ],
+    "validation": "Trzy niezależne sygnały wskazują ten sam OS volume."
+  },
+  {
+    "id": "short-050",
+    "fictional": true,
+    "prompt": "BIOS mówi no bootable device. no boot device.",
+    "expected_primary": "windows-bcd-partition-repair",
+    "supporting": [
+      "windows-boot-recovery",
+      "winpe-offline-repair",
+      "windows-bitlocker-tpm-security"
+    ],
+    "red_flags": [
+      "nieustalony dysk/OS/ESP",
+      "BitLocker bez klucza"
+    ],
+    "first_step": "R0: Potwierdzić BIOS mode, MBR i aktywną system partition.",
+    "evidence": [
+      "firmware mode",
+      "disk IDs",
+      "GPT/MBR",
+      "ESP/active partition"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawiać pojedynczy element; nie konwertować do GPT w tym samym kroku."
+    ],
+    "validation": "Boot działa i layout pozostaje zgodny z backupem."
+  },
+  {
+    "id": "short-051",
+    "fictional": true,
+    "prompt": "System nie bootuje, CBS wskazuje servicing. component store repair.",
+    "expected_primary": "windows-component-repair",
+    "supporting": [
+      "windows-update-servicing",
+      "winpe-offline-repair",
+      "storage-triage-cloning-recovery"
+    ],
+    "red_flags": [
+      "storage/RAM instability",
+      "source build/language/index mismatch"
+    ],
+    "first_step": "R0: Zebrać offline identity i logi przed zmianą.",
+    "evidence": [
+      "DISM health",
+      "CBS/DISM excerpts",
+      "build/edition/language",
+      "source metadata/index"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Repair wrapper z właściwym ImagePath i source; nie revert pending bez wyjątkowego gate."
+    ],
+    "validation": "Boot, DISM/SFC i update scan przechodzą."
+  },
+  {
+    "id": "short-052",
+    "fictional": true,
+    "prompt": "Ta sama KB wraca z błędem. 0x800f0922.",
+    "expected_primary": "windows-update-servicing",
+    "supporting": [
+      "windows-component-repair",
+      "windows-setup-upgrade-rollback",
+      "windows-remote-managed-client"
+    ],
+    "red_flags": [
+      "storage/RAM issue",
+      "managed update policy"
+    ],
+    "first_step": "R0: Zebrać exact KB/code, eventy, CBS i release health.",
+    "evidence": [
+      "build/edition",
+      "update history",
+      "WindowsUpdateClient events",
+      "policy sources"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Najpierw retry po potwierdzonym preflight; reset components dopiero później."
+    ],
+    "validation": "KB zainstalowana, reboot completed i scan clean."
+  },
+  {
+    "id": "short-053",
+    "fictional": true,
+    "prompt": "System działa, component repair nie wystarcza. upgrade failed.",
+    "expected_primary": "windows-setup-upgrade-rollback",
+    "supporting": [
+      "windows-update-servicing",
+      "windows-component-repair",
+      "windows-drivers-devices"
+    ],
+    "red_flags": [
+      "brak backupu",
+      "storage/RAM instability"
+    ],
+    "first_step": "R0: Sprawdzić edition/language/build, backup i BitLocker.",
+    "evidence": [
+      "SetupDiag result",
+      "Panther/Rollback logs",
+      "compat scan",
+      "build/edition/language"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Uruchomienie pozostawić jawnej interakcji z Setup; nie automatyzować wyborów."
+    ],
+    "validation": "Build, activation, apps, profile i update działają."
+  },
+  {
+    "id": "short-054",
+    "fictional": true,
+    "prompt": "Laptop poza siecią nie aktywuje. activation error.",
+    "expected_primary": "windows-activation-licensing",
+    "supporting": [
+      "windows-os-identification",
+      "windows-remote-managed-client",
+      "windows-setup-upgrade-rollback"
+    ],
+    "red_flags": [
+      "prośba o crack/KMS emulator",
+      "pełny product key w logu"
+    ],
+    "first_step": "R0: Zebrać channel i generic error; nie testować publicznych serwerów.",
+    "evidence": [
+      "edition/channel",
+      "partial product key only",
+      "activation status/error",
+      "OEM marker presence bez klucza"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Eskalować do administratora licencji."
+    ],
+    "validation": "Status licensed w autoryzowanej sieci."
+  },
+  {
+    "id": "short-055",
+    "fictional": true,
+    "prompt": "Ten sam bugcheck pod konkretną akcją. bugcheck.",
+    "expected_primary": "windows-bsod-debugging",
+    "supporting": [
+      "memory-cpu-gpu-thermal",
+      "windows-drivers-devices",
+      "windows-boot-recovery"
+    ],
+    "red_flags": [
+      "storage/RAM errors",
+      "brak wolnego miejsca/pagefile"
+    ],
+    "first_step": "R0: Analizować kilka dumpów z symbolami i korelować SetupAPI/driver changes.",
+    "evidence": [
+      "exact bugcheck parameters",
+      "dump type",
+      "stack/module timestamps",
+      "symbols"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Rollback/update tylko potwierdzonego drivera OEM."
+    ],
+    "validation": "Brak bugcheck w repro i brak nowych WHEA."
+  },
+  {
+    "id": "short-056",
+    "fictional": true,
+    "prompt": "Active time 100%, niski throughput. pc hangt / not responding.",
+    "expected_primary": "windows-performance-hangs",
+    "supporting": [
+      "windows-process-service-startup",
+      "memory-cpu-gpu-thermal",
+      "windows-drivers-devices"
+    ],
+    "red_flags": [
+      "storage health issue",
+      "thermal throttling"
+    ],
+    "first_step": "R0: Najpierw SMART/latency, potem process I/O trace.",
+    "evidence": [
+      "repro timeline",
+      "resource counters",
+      "ETW profile",
+      "Reliability/WER"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Naprawić przyczynę; nie wyłączać SysMain/Defender w ciemno."
+    ],
+    "validation": "Latency i queue spadają w tym samym workload."
+  },
+  {
+    "id": "short-057",
+    "fictional": true,
+    "prompt": "Losowy task uruchamia skrypt. program startuje z Windowsem.",
+    "expected_primary": "windows-process-service-startup",
+    "supporting": [
+      "windows-performance-hangs",
+      "windows-malware-remediation",
+      "windows-advanced-administration"
+    ],
+    "red_flags": [
+      "usługa bezpieczeństwa/backup/MDM",
+      "nieznany binary signature"
+    ],
+    "first_step": "R0: Wyeksportować XML, podpis/hash targetu i parent provenance.",
+    "evidence": [
+      "process path/signature",
+      "service config/dependencies",
+      "task XML",
+      "startup registry"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Przy malware przejść do incident playbook; nie kasować dowodu."
+    ],
+    "validation": "Task sklasyfikowany, dowody zachowane, brak nieautoryzowanego uruchomienia."
+  },
+  {
+    "id": "short-058",
+    "fictional": true,
+    "prompt": "Brak sterownika. Code 43.",
+    "expected_primary": "windows-drivers-devices",
+    "supporting": [
+      "windows-peripherals-repair",
+      "windows-bsod-debugging",
+      "windows-boot-recovery"
+    ],
+    "red_flags": [
+      "storage/network driver needed for recovery",
+      "managed OEM policy"
+    ],
+    "first_step": "R0: Zebrać IDs i dokładny model; szukać OEM/Windows Update Catalog.",
+    "evidence": [
+      "hardware IDs",
+      "problem code",
+      "driver provider/version/date",
+      "SetupAPI excerpt"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zainstalować podpisany driver właściwy dla arch/build."
+    ],
+    "validation": "Problem code 0 i funkcja urządzenia działa po reboot."
+  },
+  {
+    "id": "short-059",
+    "fictional": true,
+    "prompt": "IP działa, nazwy czasem nie. Wi-Fi disconnects.",
+    "expected_primary": "windows-network-repair",
+    "supporting": [
+      "windows-drivers-devices",
+      "windows-remote-managed-client",
+      "windows-malware-remediation"
+    ],
+    "red_flags": [
+      "managed VPN/firewall",
+      "incydent bezpieczeństwa"
+    ],
+    "first_step": "R0: Porównać Resolve-DnsName z serwerami i timeline.",
+    "evidence": [
+      "link/radio",
+      "IP/gateway/DHCP",
+      "DNS resolution",
+      "routes/proxy/VPN"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Korygować konfigurację tylko po identyfikacji właściciela DNS."
+    ],
+    "validation": "Wielokrotne rozwiązywanie obu stref działa bez leak."
+  },
+  {
+    "id": "short-060",
+    "fictional": true,
+    "prompt": "Urządzenie znika okresowo. USB disconnect / kamera nie działa.",
+    "expected_primary": "windows-peripherals-repair",
+    "supporting": [
+      "windows-drivers-devices",
+      "pc-hardware-diagnostics",
+      "windows-network-repair"
+    ],
+    "red_flags": [
+      "przegrzewający się port/kabel",
+      "uszkodzenie mechaniczne"
+    ],
+    "first_step": "R0: Korelować PnP events i topologię; test znanego kabla/portu.",
+    "evidence": [
+      "problem device IDs",
+      "port/cable/dock path",
+      "driver and firmware",
+      "service/event logs"
+    ],
+    "repair_ladder": [
+      "R0 evidence",
+      "R1 reversible test",
+      "Zmieniać jeden element; ustawienia zasilania jako R1 z rollback."
+    ],
+    "validation": "Brak disconnect w powtarzalnym teście oraz po resume."
+  }
+]

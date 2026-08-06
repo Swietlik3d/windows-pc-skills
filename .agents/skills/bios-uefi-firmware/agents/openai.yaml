@@ -1,0 +1,6 @@
+interface:
+  display_name: "BIOS, UEFI i firmware"
+  short_description: "Bezpiecznie: BIOS, UEFI i firmware"
+  default_prompt: "Use $bios-uefi-firmware to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

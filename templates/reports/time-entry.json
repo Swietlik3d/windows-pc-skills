@@ -1,0 +1,8 @@
+{
+  "timestamp_utc": "<ISO8601>",
+  "operator": "<ALIAS>",
+  "activity": "<ACTIVITY>",
+  "minutes": 0,
+  "billable": false,
+  "notes": "Brak narzuconej ceny."
+}

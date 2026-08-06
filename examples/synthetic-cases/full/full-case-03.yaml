@@ -1,0 +1,101 @@
+{
+  "case_id": "full-03",
+  "fictional": true,
+  "title": "Boot order po wymianie dysku",
+  "device": {
+    "alias": "lab-device-03",
+    "form_factor": "mini-PC",
+    "os": "Windows 11 25H2 ARM64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "critical",
+    "backup": "absent",
+    "encryption": "on-key-ready",
+    "managed": "entra-test-tenant"
+  },
+  "symptom": "UEFI nie pokazuje Windows Boot Manager.",
+  "expected_routing": {
+    "primary": "bios-uefi-firmware",
+    "supporting": [
+      "windows-bitlocker-tpm-security",
+      "windows-bcd-partition-repair",
+      "pc-hardware-diagnostics"
+    ]
+  },
+  "red_flags": [
+    "niepewny model/rewizja",
+    "niestabilne zasilanie",
+    "brak BitLocker key readiness",
+    "przerwany poprzedni flash"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "UEFI nie pokazuje Windows Boot Manager."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "manufacturer/model/board revision",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "wersja BIOS i EC",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "tryb UEFI/Legacy",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "Secure Boot/TPM",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "BitLocker protectors bez kluczy",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Brak wpisu NVRAM, niewłaściwy tryb lub ESP.",
+      "confidence": "medium",
+      "test": "Najpierw udokumentować layout i firmware mode."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Naprawę BCD przekazać do dedykowanego skilla; nie przełączać CSM w ciemno.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Windows Boot Manager wskazuje właściwy ESP i startuje trzy razy.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

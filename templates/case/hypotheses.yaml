@@ -1,0 +1,12 @@
+{
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "<HYPOTHESIS>",
+      "confidence": "low",
+      "evidence_for": [],
+      "evidence_against": [],
+      "next_discriminating_test": "<R0_TEST>"
+    }
+  ]
+}

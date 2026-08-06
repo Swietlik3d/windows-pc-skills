@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sprawa, dowody i raport zmian"
+  short_description: "Bezpiecznie: Sprawa, dowody i raport zmian"
+  default_prompt: "Use $windows-case-evidence to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

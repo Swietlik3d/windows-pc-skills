@@ -1,0 +1,101 @@
+{
+  "case_id": "full-01",
+  "fictional": true,
+  "title": "Szerokie zgłoszenie bez diagnozy",
+  "device": {
+    "alias": "lab-device-01",
+    "form_factor": "laptop",
+    "os": "Windows 11 24H2 x64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "high",
+    "backup": "verified",
+    "encryption": "on-key-ready",
+    "managed": "personal"
+  },
+  "symptom": "Użytkownik mówi tylko „komputer nie działa”.",
+  "expected_routing": {
+    "primary": "windows-master-router",
+    "supporting": [
+      "windows-service-intake",
+      "windows-case-evidence",
+      "windows-os-identification"
+    ]
+  },
+  "red_flags": [
+    "zagrożenie danych",
+    "zapach spalenizny lub spuchnięta bateria",
+    "podejrzenie incydentu",
+    "BitLocker bez gotowego recovery key"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Użytkownik mówi tylko „komputer nie działa”."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "stan uruchamiania",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "backup i wartość danych",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "szyfrowanie",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "zarządzanie organizacji",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "ostatnia zmiana",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Awaria może należeć do hardware, boot, storage albo zasilania.",
+      "confidence": "medium",
+      "test": "Zebrać pięć bramek bezpieczeństwa i sklasyfikować etap startu."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Przekazać do jednego skilla o najwyższym dopasowaniu; nie wykonywać naprawy w routerze.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Router zwraca jednego primary, maksymalnie trzy supporting i poziom pewności.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

@@ -1,0 +1,105 @@
+{
+  "case_id": "full-02",
+  "fictional": true,
+  "title": "Anonimizacja bundle",
+  "device": {
+    "alias": "lab-device-02",
+    "form_factor": "desktop",
+    "os": "Windows 10 22H2 x64",
+    "firmware": "BIOS/MBR"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "medium",
+    "backup": "present-unverified",
+    "encryption": "off",
+    "managed": "personal"
+  },
+  "symptom": "Log zawiera username, hostname i e-mail.",
+  "expected_routing": {
+    "primary": "windows-case-evidence",
+    "supporting": [
+      "windows-service-intake",
+      "windows-post-repair-validation",
+      "storage-triage-cloning-recovery"
+    ]
+  },
+  "red_flags": [
+    "podejrzenie przestępstwa",
+    "brak zgody na kopiowanie danych",
+    "artefakt zawiera recovery key lub token",
+    "źródłowy nośnik ulega degradacji"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Log zawiera username, hostname i e-mail."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "czas UTC",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "operator",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "cel czynności",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "hash SHA-256",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "źródło i kopia robocza",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "rollback",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "PII może wyciec do raportu.",
+      "confidence": "medium",
+      "test": "Pracować na kopii, zastosować deterministyczne tokeny redakcji."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Zachować mapę tylko poza repo i za zgodą.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Test redakcji nie znajduje wzorców PII ani sekretów.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

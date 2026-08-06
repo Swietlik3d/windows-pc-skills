@@ -1,0 +1,6 @@
+interface:
+  display_name: "Przyjęcie urządzenia i autoryzacja"
+  short_description: "Bezpiecznie: Przyjęcie urządzenia i autoryzacja"
+  default_prompt: "Use $windows-service-intake to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

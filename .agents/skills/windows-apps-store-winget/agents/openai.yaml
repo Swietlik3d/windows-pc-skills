@@ -1,0 +1,6 @@
+interface:
+  display_name: "Aplikacje, Store, MSI/MSIX i winget"
+  short_description: "Bezpiecznie: Aplikacje, Store, MSI/MSIX i winget"
+  default_prompt: "Use $windows-apps-store-winget to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

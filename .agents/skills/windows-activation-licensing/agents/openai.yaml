@@ -1,0 +1,6 @@
+interface:
+  display_name: "Aktywacja i licencjonowanie Windows"
+  short_description: "Bezpiecznie: Aktywacja i licencjonowanie Windows"
+  default_prompt: "Use $windows-activation-licensing to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

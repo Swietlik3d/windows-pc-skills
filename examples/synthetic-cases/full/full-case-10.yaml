@@ -1,0 +1,106 @@
+{
+  "case_id": "full-10",
+  "fictional": true,
+  "title": "Unknown device Code 28",
+  "device": {
+    "alias": "lab-device-10",
+    "form_factor": "laptop",
+    "os": "Windows 11 24H2 x64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "high",
+    "backup": "verified",
+    "encryption": "on-key-ready",
+    "managed": "personal"
+  },
+  "symptom": "Brak sterownika.",
+  "expected_routing": {
+    "primary": "windows-drivers-devices",
+    "supporting": [
+      "windows-peripherals-repair",
+      "windows-bsod-debugging",
+      "windows-boot-recovery"
+    ]
+  },
+  "red_flags": [
+    "storage/network driver needed for recovery",
+    "managed OEM policy",
+    "unsigned driver",
+    "BitLocker/boot-critical driver",
+    "unknown hardware ID"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Brak sterownika."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "hardware IDs",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "problem code",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "driver provider/version/date",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "SetupAPI excerpt",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "OEM model",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "recent changes",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Hardware ID wskazuje vendor/device.",
+      "confidence": "medium",
+      "test": "Zebrać IDs i dokładny model; szukać OEM/Windows Update Catalog."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Zainstalować podpisany driver właściwy dla arch/build.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Problem code 0 i funkcja urządzenia działa po reboot.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

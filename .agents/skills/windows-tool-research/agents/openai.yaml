@@ -1,0 +1,6 @@
+interface:
+  display_name: "Research narzędzi serwisowych"
+  short_description: "Bezpiecznie: Research narzędzi serwisowych"
+  default_prompt: "Use $windows-tool-research to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

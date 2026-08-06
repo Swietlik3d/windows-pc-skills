@@ -1,0 +1,106 @@
+{
+  "case_id": "full-09",
+  "fictional": true,
+  "title": "DPC audio stutter",
+  "device": {
+    "alias": "lab-device-09",
+    "form_factor": "mini-PC",
+    "os": "Windows 11 25H2 ARM64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "critical",
+    "backup": "absent",
+    "encryption": "on-key-ready",
+    "managed": "entra-test-tenant"
+  },
+  "symptom": "Trzaski podczas real-time audio.",
+  "expected_routing": {
+    "primary": "windows-performance-hangs",
+    "supporting": [
+      "windows-process-service-startup",
+      "memory-cpu-gpu-thermal",
+      "windows-drivers-devices"
+    ]
+  },
+  "red_flags": [
+    "storage health issue",
+    "thermal throttling",
+    "memory errors",
+    "incydent malware",
+    "trace zawiera wrażliwe dane"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Trzaski podczas real-time audio."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "repro timeline",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "resource counters",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "ETW profile",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "Reliability/WER",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "DPC/ISR",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "temperatures/clocks",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Driver ISR/DPC, power state lub USB.",
+      "confidence": "medium",
+      "test": "WPR trace i korelacja z urządzeniem; LatencyMon tylko pomocniczo."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Update/rollback potwierdzonego drivera, test planu zasilania odwracalnie.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Brak dropouts w kontrolowanym odtworzeniu i trace.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

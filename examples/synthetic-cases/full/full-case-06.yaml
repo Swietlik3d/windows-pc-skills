@@ -1,0 +1,106 @@
+{
+  "case_id": "full-06",
+  "fictional": true,
+  "title": "BCD wskazuje złą partycję",
+  "device": {
+    "alias": "lab-device-06",
+    "form_factor": "mini-PC",
+    "os": "Windows 11 25H2 ARM64",
+    "firmware": "UEFI/GPT"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "critical",
+    "backup": "absent",
+    "encryption": "on-key-ready",
+    "managed": "entra-test-tenant"
+  },
+  "symptom": "0xc000000e po zmianie dysku.",
+  "expected_routing": {
+    "primary": "windows-bcd-partition-repair",
+    "supporting": [
+      "windows-boot-recovery",
+      "winpe-offline-repair",
+      "windows-bitlocker-tpm-security"
+    ]
+  },
+  "red_flags": [
+    "nieustalony dysk/OS/ESP",
+    "BitLocker bez klucza",
+    "storage risk",
+    "hybrydowy/niestandardowy layout",
+    "dual boot bez zgody"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "0xc000000e po zmianie dysku."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "firmware mode",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "disk IDs",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "GPT/MBR",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "ESP/active partition",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "BCD export",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "OS loader path",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Identifikator urządzenia jest nieaktualny.",
+      "confidence": "medium",
+      "test": "Eksport BCD i porównanie osdevice z ustalonym OS volume."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Użyć wrappera R3 z target IDs i potwierdzeniem.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "bcdedit enum oraz boot log potwierdzają właściwy wpis.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

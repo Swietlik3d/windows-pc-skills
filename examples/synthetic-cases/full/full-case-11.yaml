@@ -1,0 +1,105 @@
+{
+  "case_id": "full-11",
+  "fictional": true,
+  "title": "Brak audio",
+  "device": {
+    "alias": "lab-device-11",
+    "form_factor": "desktop",
+    "os": "Windows 10 22H2 x64",
+    "firmware": "BIOS/MBR"
+  },
+  "intake": {
+    "authorization": "R0 then explicit R2 for confirmed repair",
+    "data_value": "medium",
+    "backup": "present-unverified",
+    "encryption": "off",
+    "managed": "personal"
+  },
+  "symptom": "Output device istnieje, brak dźwięku.",
+  "expected_routing": {
+    "primary": "windows-peripherals-repair",
+    "supporting": [
+      "windows-drivers-devices",
+      "pc-hardware-diagnostics",
+      "windows-network-repair"
+    ]
+  },
+  "red_flags": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "timeline": [
+    {
+      "t": "T-2d",
+      "fact": "Fikcyjna zmiana poprzedzająca objaw."
+    },
+    {
+      "t": "T0",
+      "fact": "Output device istnieje, brak dźwięku."
+    },
+    {
+      "t": "T+15m",
+      "fact": "Zebrano baseline R0 na fixture."
+    }
+  ],
+  "evidence": [
+    {
+      "item": "problem device IDs",
+      "result": "synthetic-observed"
+    },
+    {
+      "item": "port/cable/dock path",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "driver and firmware",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "service/event logs",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "privacy policy",
+      "result": "synthetic-not-observed"
+    },
+    {
+      "item": "known-good peripheral",
+      "result": "synthetic-not-observed"
+    }
+  ],
+  "hypotheses": [
+    {
+      "rank": 1,
+      "claim": "Endpoint selection, service, driver, privacy lub dock.",
+      "confidence": "medium",
+      "test": "Testować physical path, endpoint i events bez reinstall-all."
+    },
+    {
+      "rank": 2,
+      "claim": "alternatywa sprzętowa/środowiskowa",
+      "confidence": "low",
+      "test": "porównanie na znanym dobrym komponencie lub profilu"
+    }
+  ],
+  "repair_ladder": [
+    "R0 evidence and reproduction",
+    "R1 one-variable test",
+    "Rollback/update właściwego OEM audio stack.",
+    "R3/R4 not executed in fixture"
+  ],
+  "rollback": "Restore synthetic before-state; append correction record.",
+  "validation": {
+    "cause": "Playback/recording i sleep/wake działają.",
+    "symptom": "three synthetic passes",
+    "regression": [
+      "reboot",
+      "sleep/wake",
+      "security state"
+    ],
+    "result": "synthetic-pass"
+  },
+  "residual_risk": "Wymaga live/VM validation przed zastosowaniem do realnego urządzenia."
+}

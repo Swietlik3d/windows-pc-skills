@@ -1,0 +1,6 @@
+interface:
+  display_name: "Identyfikacja Windows"
+  short_description: "Bezpiecznie: Identyfikacja Windows"
+  default_prompt: "Use $windows-os-identification to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true
