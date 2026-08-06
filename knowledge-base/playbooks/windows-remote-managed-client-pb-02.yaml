@@ -1,0 +1,92 @@
+{
+  "id": "windows-remote-managed-client-pb-02",
+  "title": "GPO nie stosuje się",
+  "summary": "Firmowa konfiguracja brakująca.",
+  "symptoms": [
+    "Firmowa konfiguracja brakująca."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie wdrażać unattended persistence i nie zmieniać polityk organizacji bez administratora."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak świadomej zgody na sesję",
+    "Defender for Endpoint/LAPS/MDM",
+    "certificate/private key",
+    "conditional access",
+    "organizational data"
+  ],
+  "evidence_to_collect": [
+    "join state",
+    "MDM enrollment",
+    "gpresult",
+    "cert store metadata bez private keys",
+    "VPN/mapped drive",
+    "session consent"
+  ],
+  "hypotheses": [
+    "Connectivity, time, trust, scope lub client extension.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "gpresult/events/domain connectivity bez gpupdate force loops."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Eskalować z dowodami do admina; nie edytować local policy przeciw GPO.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-remote-managed-client-cmd-01",
+    "windows-remote-managed-client-cmd-02",
+    "windows-remote-managed-client-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "RSoP wskazuje oczekiwaną policy lub znany owner blocker.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak świadomej zgody na sesję",
+    "Defender for Endpoint/LAPS/MDM",
+    "certificate/private key",
+    "conditional access",
+    "organizational data"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-network-repair",
+    "windows-bitlocker-tpm-security",
+    "windows-accounts-profiles",
+    "windows-update-servicing"
+  ],
+  "sources": [
+    "ms-dsregcmd",
+    "ms-gpresult",
+    "ms-quick-assist"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

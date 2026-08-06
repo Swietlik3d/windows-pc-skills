@@ -1,0 +1,91 @@
+{
+  "id": "windows-automation-powershell-pb-01",
+  "title": "Nowy collector R0",
+  "summary": "Potrzebny powtarzalny export.",
+  "symptoms": [
+    "Potrzebny powtarzalny export."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie uruchamiać wygenerowanej automatyzacji naprawczej na hoście budowy."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak WhatIf/Apply gate",
+    "Invoke-Expression",
+    "sekrety w logu",
+    "nieustalony target",
+    "remoting bez autoryzacji"
+  ],
+  "evidence_to_collect": [
+    "PowerShell version",
+    "OS/arch/elevation",
+    "target set",
+    "idempotency state",
+    "rollback",
+    "mock coverage"
+  ],
+  "hypotheses": [
+    "Deterministyczny output ułatwi diagnozę.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zaprojektować typed parameters, redaction i JSON schema."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Testować tylko fixtures/mocks; live mode pozostawić operatorowi.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-automation-powershell-cmd-01",
+    "windows-automation-powershell-cmd-02",
+    "windows-automation-powershell-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Syntax, fixtures, redaction i exit codes przechodzą.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak WhatIf/Apply gate",
+    "Invoke-Expression",
+    "sekrety w logu",
+    "nieustalony target",
+    "remoting bez autoryzacji"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-advanced-administration",
+    "windows-case-evidence",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-powershell-shouldprocess",
+    "pester-docs",
+    "psscriptanalyzer"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

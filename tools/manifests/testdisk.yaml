@@ -1,0 +1,48 @@
+{
+  "id": "testdisk",
+  "name": "TestDisk",
+  "category": "data-recovery",
+  "publisher": "CGSecurity",
+  "official_home": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+  "official_download": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+  "official_repository": "",
+  "current_version": "7.2",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "GPL-2.0",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "allowed",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "PGP/checksum",
+  "checksum_method": "SHA-256",
+  "risk_class": "R0",
+  "use_cases": [
+    "data-recovery"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "testdisk"
+  ]
+}

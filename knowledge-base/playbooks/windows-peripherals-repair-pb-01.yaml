@@ -1,0 +1,90 @@
+{
+  "id": "windows-peripherals-repair-pb-01",
+  "title": "Kolejka drukarki stoi",
+  "summary": "Jobs pozostają w queue.",
+  "symptoms": [
+    "Jobs pozostają w queue."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zastępować skilla driver/hardware, gdy problem występuje także przed uruchomieniem Windows."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "evidence_to_collect": [
+    "problem device IDs",
+    "port/cable/dock path",
+    "driver and firmware",
+    "service/event logs",
+    "privacy policy",
+    "known-good peripheral"
+  ],
+  "hypotheses": [
+    "Spooler job/driver/port może być uszkodzony.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Wyeksportować queue, driver i PrintService events."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Usunąć tylko wskazany job lub kontrolowanie wyczyścić spool po backupie.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-peripherals-repair-cmd-01",
+    "windows-peripherals-repair-cmd-02",
+    "windows-peripherals-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Test page i realny dokument drukują po reboot.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-drivers-devices",
+    "pc-hardware-diagnostics",
+    "windows-network-repair",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-printer-troubleshoot",
+    "ms-pnputil",
+    "ms-bluetooth"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

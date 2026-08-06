@@ -1,0 +1,91 @@
+{
+  "id": "windows-accounts-profiles-pb-01",
+  "title": "Temporary profile",
+  "summary": "Windows loguje do profilu tymczasowego.",
+  "symptoms": [
+    "Windows loguje do profilu tymczasowego."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie omijać haseł, nie dumpować credentials i nie resetować kont organizacji poza oficjalnym procesem."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak autoryzacji właściciela",
+    "EFS",
+    "Entra/MDM",
+    "brak kopii profilu",
+    "podejrzenie account compromise"
+  ],
+  "evidence_to_collect": [
+    "account type/source",
+    "profile SID/path/state",
+    "User Profile Service events",
+    "EFS awareness",
+    "MSA/Entra recovery channel"
+  ],
+  "hypotheses": [
+    "ProfileList state/path, disk/ACL lub hive corruption.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zebrać events i profile mapping, sprawdzić storage."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Najpierw odwracalna korekta pojedynczego mappingu; migracja do nowego profilu jeśli hive uszkodzony.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-accounts-profiles-cmd-01",
+    "windows-accounts-profiles-cmd-02",
+    "windows-accounts-profiles-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Dwa logowania do właściwego profilu i aplikacje/dane dostępne.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak autoryzacji właściciela",
+    "EFS",
+    "Entra/MDM",
+    "brak kopii profilu",
+    "podejrzenie account compromise"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-ntfs-permissions-shares",
+    "windows-bitlocker-tpm-security",
+    "windows-office-cloud-repair",
+    "windows-remote-managed-client"
+  ],
+  "sources": [
+    "ms-account-recovery",
+    "ms-hello",
+    "ms-user-profile"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

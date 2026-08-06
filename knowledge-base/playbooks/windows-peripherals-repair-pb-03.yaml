@@ -1,0 +1,90 @@
+{
+  "id": "windows-peripherals-repair-pb-03",
+  "title": "USB/Bluetooth rozłącza",
+  "summary": "Urządzenie znika okresowo.",
+  "symptoms": [
+    "Urządzenie znika okresowo."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zastępować skilla driver/hardware, gdy problem występuje także przed uruchomieniem Windows."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "evidence_to_collect": [
+    "problem device IDs",
+    "port/cable/dock path",
+    "driver and firmware",
+    "service/event logs",
+    "privacy policy",
+    "known-good peripheral"
+  ],
+  "hypotheses": [
+    "Power management, kabel, hub, RF, driver lub hardware.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Korelować PnP events i topologię; test znanego kabla/portu."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Zmieniać jeden element; ustawienia zasilania jako R1 z rollback.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-peripherals-repair-cmd-01",
+    "windows-peripherals-repair-cmd-02",
+    "windows-peripherals-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Brak disconnect w powtarzalnym teście oraz po resume.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-drivers-devices",
+    "pc-hardware-diagnostics",
+    "windows-network-repair",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-printer-troubleshoot",
+    "ms-pnputil",
+    "ms-bluetooth"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

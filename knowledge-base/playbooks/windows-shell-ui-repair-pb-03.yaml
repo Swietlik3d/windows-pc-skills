@@ -1,0 +1,90 @@
+{
+  "id": "windows-shell-ui-repair-pb-03",
+  "title": "Złe file associations",
+  "summary": "Pliki otwierają złą aplikację.",
+  "symptoms": [
+    "Pliki otwierają złą aplikację."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie masowo rejestrować AppX ani resetować profilu bez porównania nowego konta."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "objaw tylko na jednym profilu z EFS/OneDrive",
+    "managed shell policy",
+    "crash po third-party extension",
+    "storage/component corruption"
+  ],
+  "evidence_to_collect": [
+    "scope user/system",
+    "Reliability/WER",
+    "shell extension list",
+    "AppX events",
+    "profile comparison",
+    "policy"
+  ],
+  "hypotheses": [
+    "Per-user choice, package removal lub policy.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zebrać extension/progid i approved apps."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Użyć UI Default Apps lub precyzyjnego, wspieranego association path.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-shell-ui-repair-cmd-01",
+    "windows-shell-ui-repair-cmd-02",
+    "windows-shell-ui-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Double-click i Open With działają dla próbki.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "objaw tylko na jednym profilu z EFS/OneDrive",
+    "managed shell policy",
+    "crash po third-party extension",
+    "storage/component corruption"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-accounts-profiles",
+    "windows-apps-store-winget",
+    "windows-component-repair",
+    "windows-performance-hangs"
+  ],
+  "sources": [
+    "ms-start-menu",
+    "ms-appx",
+    "sysinternals-autoruns"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

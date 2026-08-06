@@ -1,0 +1,89 @@
+{
+  "id": "windows-case-evidence-pb-03",
+  "title": "Raport zamknięcia",
+  "summary": "Naprawa zakończona i wykonano testy.",
+  "symptoms": [
+    "Naprawa zakończona i wykonano testy."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie wykonywać forensyki procesowej ani gwarantować formalnej wartości sądowej."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "podejrzenie przestępstwa",
+    "brak zgody na kopiowanie danych",
+    "artefakt zawiera recovery key lub token",
+    "źródłowy nośnik ulega degradacji"
+  ],
+  "evidence_to_collect": [
+    "czas UTC",
+    "operator",
+    "cel czynności",
+    "hash SHA-256",
+    "źródło i kopia robocza",
+    "rollback"
+  ],
+  "hypotheses": [
+    "Raport może mylić fakt z hipotezą.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Złożyć actions, evidence i validation według statusu."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wygenerować raport techniczny i krótkie owner summary.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-case-evidence-cmd-01",
+    "windows-case-evidence-cmd-02",
+    "windows-case-evidence-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Każde twierdzenie ma dowód lub jawne ograniczenie.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "podejrzenie przestępstwa",
+    "brak zgody na kopiowanie danych",
+    "artefakt zawiera recovery key lub token",
+    "źródłowy nośnik ulega degradacji"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-service-intake",
+    "windows-post-repair-validation",
+    "storage-triage-cloning-recovery"
+  ],
+  "sources": [
+    "ms-get-filehash",
+    "nist-chain-evidence",
+    "ms-privacy"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

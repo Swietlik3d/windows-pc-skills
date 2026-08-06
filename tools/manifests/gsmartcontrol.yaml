@@ -1,0 +1,48 @@
+{
+  "id": "gsmartcontrol",
+  "name": "GSmartControl",
+  "category": "storage-health",
+  "publisher": "GSmartControl",
+  "official_home": "https://gsmartcontrol.shaduri.dev/",
+  "official_download": "https://gsmartcontrol.shaduri.dev/",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "GPL-3.0",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "allowed",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "project packages",
+  "checksum_method": "SHA-256 where published",
+  "risk_class": "R0",
+  "use_cases": [
+    "storage-health"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "smartmontools"
+  ]
+}

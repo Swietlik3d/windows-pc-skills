@@ -1,0 +1,48 @@
+{
+  "id": "fsutil",
+  "name": "FsUtil",
+  "category": "storage",
+  "publisher": "Microsoft",
+  "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil",
+  "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil",
+  "official_repository": "",
+  "current_version": "os-component",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "Windows license",
+  "commercial_use": "allowed-with-valid-license",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "built-in",
+  "network_required": false,
+  "elevation_required": true,
+  "signature_method": "Windows component integrity",
+  "checksum_method": "not-applicable",
+  "risk_class": "R3",
+  "use_cases": [
+    "storage"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "ms-support-troubleshoot"
+  ]
+}

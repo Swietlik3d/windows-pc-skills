@@ -1,0 +1,90 @@
+{
+  "id": "windows-apps-store-winget-pb-01",
+  "title": "Store download fails",
+  "summary": "Download stoi lub błąd licencji.",
+  "symptoms": [
+    "Download stoi lub błąd licencji."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać Win32_Product do inwentaryzacji i nie masowo rejestrować wszystkich AppX bez diagnozy."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "aplikacja przechowuje krytyczne dane",
+    "managed deployment",
+    "package identity mismatch",
+    "brak installer source/license"
+  ],
+  "evidence_to_collect": [
+    "package identity/version",
+    "install technology",
+    "event/MSI log",
+    "dependencies",
+    "user/all-users scope",
+    "policy"
+  ],
+  "hypotheses": [
+    "Account, cache, service, network lub package registration.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zebrać Store/AppX events i account/network state."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Reset tylko Store cache/app, nie wszystkie pakiety.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-apps-store-winget-cmd-01",
+    "windows-apps-store-winget-cmd-02",
+    "windows-apps-store-winget-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Install/update działa dla testowej legalnej aplikacji.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "aplikacja przechowuje krytyczne dane",
+    "managed deployment",
+    "package identity mismatch",
+    "brak installer source/license"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-shell-ui-repair",
+    "windows-office-cloud-repair",
+    "windows-update-servicing",
+    "windows-remote-managed-client"
+  ],
+  "sources": [
+    "ms-winget",
+    "ms-appx",
+    "ms-msi-logging"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "sfc",
+  "name": "System File Checker",
+  "category": "servicing",
+  "publisher": "Microsoft",
+  "official_home": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e",
+  "official_download": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e",
+  "official_repository": "",
+  "current_version": "os-component",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "Windows license",
+  "commercial_use": "allowed-with-valid-license",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "built-in",
+  "network_required": false,
+  "elevation_required": true,
+  "signature_method": "Windows component integrity",
+  "checksum_method": "not-applicable",
+  "risk_class": "R2",
+  "use_cases": [
+    "servicing"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "ms-support-troubleshoot"
+  ]
+}

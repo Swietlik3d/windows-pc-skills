@@ -1,0 +1,90 @@
+{
+  "id": "windows-11-support-pb-02",
+  "title": "ARM64 compatibility",
+  "summary": "Aplikacja/driver nie instaluje.",
+  "symptoms": [
+    "Aplikacja/driver nie instaluje."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zakładać stałego numeru najnowszej wersji; zawsze czytać release matrix i release health."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "26H1 traktowane jako upgrade dla istniejącego PC",
+    "Secure Boot cert not updated",
+    "BitLocker key not ready",
+    "compatibility hold bypass"
+  ],
+  "evidence_to_collect": [
+    "version/build/edition",
+    "hardware/arch",
+    "release health",
+    "Secure Boot/TPM/VBS",
+    "Device Encryption",
+    "driver DCH"
+  ],
+  "hypotheses": [
+    "Emulacja apps nie obejmuje każdego kernel drivera.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Ustalić native arch pakietu i driver support OEM."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wybrać ARM64/native albo oficjalnie wspierany emulated app.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-11-support-cmd-01",
+    "windows-11-support-cmd-02",
+    "windows-11-support-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Funkcja działa bez unsigned/bypass driver.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "26H1 traktowane jako upgrade dla istniejącego PC",
+    "Secure Boot cert not updated",
+    "BitLocker key not ready",
+    "compatibility hold bypass"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-os-identification",
+    "windows-update-servicing",
+    "windows-bitlocker-tpm-security",
+    "windows-drivers-devices"
+  ],
+  "sources": [
+    "ms-win11-release",
+    "ms-release-health",
+    "ms-secure-boot-2026"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

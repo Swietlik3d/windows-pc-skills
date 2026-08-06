@@ -1,0 +1,4754 @@
+[
+  {
+    "id": "dism",
+    "name": "DISM",
+    "category": "servicing",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "servicing"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "sfc",
+    "name": "System File Checker",
+    "category": "servicing",
+    "publisher": "Microsoft",
+    "official_home": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e",
+    "official_download": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "servicing"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "chkdsk",
+    "name": "CHKDSK",
+    "category": "storage",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "storage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "bcdboot",
+    "name": "BCDBoot",
+    "category": "boot",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "boot"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "bootrec",
+    "name": "Bootrec",
+    "category": "boot",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bootrec-command-line-options",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bootrec-command-line-options",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "boot"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "bcdedit",
+    "name": "BCDEdit",
+    "category": "boot",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "boot"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "reagentc",
+    "name": "ReAgentC",
+    "category": "recovery",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/reagentc-command-line-options",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/reagentc-command-line-options",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "diskpart",
+    "name": "DiskPart",
+    "category": "storage",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/diskpart",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R4",
+    "use_cases": [
+      "storage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "mountvol",
+    "name": "MountVol",
+    "category": "storage",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mountvol",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/mountvol",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "storage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "fsutil",
+    "name": "FsUtil",
+    "category": "storage",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "storage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "robocopy",
+    "name": "Robocopy",
+    "category": "data-copy",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "data-copy"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "reg",
+    "name": "Reg.exe",
+    "category": "registry",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "registry"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "wevtutil",
+    "name": "Wevtutil",
+    "category": "events",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wevtutil",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "events"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "pnputil",
+    "name": "PnPUtil",
+    "category": "drivers",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "drivers"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "powercfg",
+    "name": "PowerCfg",
+    "category": "power",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "power"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "netsh",
+    "name": "Netsh",
+    "category": "network",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "network"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "setupdiag",
+    "name": "SetupDiag",
+    "category": "setup",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows/deployment/upgrade/setupdiag",
+    "official_download": "https://learn.microsoft.com/en-us/windows/deployment/upgrade/setupdiag",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "setup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "windbg",
+    "name": "WinDbg",
+    "category": "debugging",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "debugging"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "wpr",
+    "name": "Windows Performance Recorder",
+    "category": "performance",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-recorder",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-recorder",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "performance"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "wpa",
+    "name": "Windows Performance Analyzer",
+    "category": "performance",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-analyzer",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-analyzer",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "performance"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "perfmon",
+    "name": "Performance Monitor",
+    "category": "performance",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/perfmon",
+    "official_download": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/perfmon",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "performance"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "reliability-monitor",
+    "name": "Reliability Monitor",
+    "category": "reliability",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows/win32/wer/using-wer",
+    "official_download": "https://learn.microsoft.com/en-us/windows/win32/wer/using-wer",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "reliability"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "event-viewer",
+    "name": "Event Viewer",
+    "category": "events",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/shows/inside/event-viewer",
+    "official_download": "https://learn.microsoft.com/en-us/shows/inside/event-viewer",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R0",
+    "use_cases": [
+      "events"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "driver-verifier",
+    "name": "Driver Verifier",
+    "category": "drivers",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/driver-verifier",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/driver-verifier",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R3",
+    "use_cases": [
+      "drivers"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "windows-memory-diagnostic",
+    "name": "Windows Memory Diagnostic",
+    "category": "memory",
+    "publisher": "Microsoft",
+    "official_home": "https://support.microsoft.com/en-us/windows/diagnosing-memory-problems-on-your-computer-8231df72-d541-c2e4-010c-8bd503e6bb6f",
+    "official_download": "https://support.microsoft.com/en-us/windows/diagnosing-memory-problems-on-your-computer-8231df72-d541-c2e4-010c-8bd503e6bb6f",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R1",
+    "use_cases": [
+      "memory"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "defender-offline",
+    "name": "Microsoft Defender Offline",
+    "category": "malware",
+    "publisher": "Microsoft",
+    "official_home": "https://support.microsoft.com/en-us/windows/help-protect-my-pc-with-microsoft-defender-offline-9306d528-64bf-4668-5b80-ff533f183d6c",
+    "official_download": "https://support.microsoft.com/en-us/windows/help-protect-my-pc-with-microsoft-defender-offline-9306d528-64bf-4668-5b80-ff533f183d6c",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "malware"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "msert",
+    "name": "Microsoft Safety Scanner",
+    "category": "malware",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download",
+    "official_download": "https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "malware"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "quick-assist",
+    "name": "Quick Assist",
+    "category": "remote",
+    "publisher": "Microsoft",
+    "official_home": "https://support.microsoft.com/en-us/windows/solve-pc-problems-remotely-using-quick-assist-f20765d1-9d0a-4b85-8a3a-c9f8f3c0f0a9",
+    "official_download": "https://support.microsoft.com/en-us/windows/solve-pc-problems-remotely-using-quick-assist-f20765d1-9d0a-4b85-8a3a-c9f8f3c0f0a9",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R1",
+    "use_cases": [
+      "remote"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "windows-sandbox",
+    "name": "Windows Sandbox",
+    "category": "isolation",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/",
+    "official_download": "https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "isolation"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "windows-adk",
+    "name": "Windows ADK",
+    "category": "deployment",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "deployment"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "windows-pe",
+    "name": "Windows PE add-on",
+    "category": "deployment",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro",
+    "official_download": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "deployment"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "winget",
+    "name": "Windows Package Manager",
+    "category": "packages",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/windows/package-manager/winget/",
+    "official_download": "https://learn.microsoft.com/en-us/windows/package-manager/winget/",
+    "official_repository": "",
+    "current_version": "os-component",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Windows license",
+    "commercial_use": "allowed-with-valid-license",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "built-in",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Windows component integrity",
+    "checksum_method": "not-applicable",
+    "risk_class": "R2",
+    "use_cases": [
+      "packages"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-support-troubleshoot"
+    ]
+  },
+  {
+    "id": "sysinternals-suite",
+    "name": "Sysinternals Suite",
+    "category": "diagnostics",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
+    "official_repository": "",
+    "current_version": "2026.7",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "published SHA-256/Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "diagnostics"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "autoruns",
+    "name": "Autoruns",
+    "category": "startup",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "startup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "sysinternals-autoruns"
+    ]
+  },
+  {
+    "id": "process-explorer",
+    "name": "Process Explorer",
+    "category": "process",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "process"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "process-monitor",
+    "name": "Process Monitor",
+    "category": "process",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/procmon",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/procmon",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "process"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "procdump",
+    "name": "ProcDump",
+    "category": "debugging",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/procdump",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/procdump",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "debugging"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "rammap",
+    "name": "RAMMap",
+    "category": "memory",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/rammap",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/rammap",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "memory"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "vmmap",
+    "name": "VMMap",
+    "category": "memory",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/vmmap",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/vmmap",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "memory"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "sigcheck",
+    "name": "Sigcheck",
+    "category": "security",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "security"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "tcpview",
+    "name": "TCPView",
+    "category": "network",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/tcpview",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "network"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "pstools",
+    "name": "PsTools",
+    "category": "administration",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/pstools",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/pstools",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "administration"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "sysmon",
+    "name": "Sysmon",
+    "category": "security",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "security"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "disk2vhd",
+    "name": "Disk2vhd",
+    "category": "imaging",
+    "publisher": "Microsoft",
+    "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/disk2vhd",
+    "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/disk2vhd",
+    "official_repository": "",
+    "current_version": "rolling-suite",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Sysinternals EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "imaging"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-sysinternals"
+    ]
+  },
+  {
+    "id": "rufus",
+    "name": "Rufus",
+    "category": "boot-media",
+    "publisher": "Pete Batard",
+    "official_home": "https://rufus.ie/",
+    "official_download": "https://rufus.ie/",
+    "official_repository": "",
+    "current_version": "4.14",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-3.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode where published",
+    "checksum_method": "SHA-256 from official release",
+    "risk_class": "R0",
+    "use_cases": [
+      "boot-media"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "rufus"
+    ]
+  },
+  {
+    "id": "ventoy",
+    "name": "Ventoy",
+    "category": "multiboot",
+    "publisher": "Ventoy",
+    "official_home": "https://www.ventoy.net/en/download.html",
+    "official_download": "https://www.ventoy.net/en/download.html",
+    "official_repository": "",
+    "current_version": "1.1.x-current-page",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-3.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project signatures vary",
+    "checksum_method": "SHA-256 on official page",
+    "risk_class": "R0",
+    "use_cases": [
+      "multiboot"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ventoy"
+    ]
+  },
+  {
+    "id": "systemrescue",
+    "name": "SystemRescue",
+    "category": "rescue-media",
+    "publisher": "SystemRescue",
+    "official_home": "https://www.system-rescue.org/Download/",
+    "official_download": "https://www.system-rescue.org/Download/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL and component licenses",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "PGP",
+    "checksum_method": "SHA-256/PGP",
+    "risk_class": "R0",
+    "use_cases": [
+      "rescue-media"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "clonezilla",
+    "name": "Clonezilla Live",
+    "category": "imaging",
+    "publisher": "NCHC",
+    "official_home": "https://clonezilla.org/downloads.php",
+    "official_download": "https://clonezilla.org/downloads.php",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "checksums",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "imaging"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "rescuezilla",
+    "name": "Rescuezilla",
+    "category": "imaging",
+    "publisher": "Rescuezilla",
+    "official_home": "https://rescuezilla.com/download",
+    "official_download": "https://rescuezilla.com/download",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-3.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "checksums",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "imaging"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "gparted-live",
+    "name": "GParted Live",
+    "category": "partitioning",
+    "publisher": "GParted",
+    "official_home": "https://gparted.org/download.php",
+    "official_download": "https://gparted.org/download.php",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "checksums",
+    "checksum_method": "SHA-256",
+    "risk_class": "R3",
+    "use_cases": [
+      "partitioning"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "hirens-bootcd-pe",
+    "name": "Hiren's BootCD PE",
+    "category": "aggregated-rescue-media",
+    "publisher": "Hiren's BootCD",
+    "official_home": "https://www.hirensbootcd.org/download/",
+    "official_download": "https://www.hirensbootcd.org/download/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "mixed/verify each component",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "published hash",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "aggregated-rescue-media"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "medicat",
+    "name": "MediCat USB",
+    "category": "aggregated-rescue-media",
+    "publisher": "MediCat",
+    "official_home": "https://medicatusb.com/",
+    "official_download": "https://medicatusb.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "mixed/unclear",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "unknown",
+    "checksum_method": "project checksum if present",
+    "risk_class": "R0",
+    "use_cases": [
+      "aggregated-rescue-media"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "crystaldiskinfo",
+    "name": "CrystalDiskInfo",
+    "category": "storage-health",
+    "publisher": "Crystal Dew World",
+    "official_home": "https://crystalmark.info/en/software/crystaldiskinfo/",
+    "official_download": "https://crystalmark.info/en/software/crystaldiskinfo/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "MIT",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode/checksum varies",
+    "checksum_method": "official hash if present",
+    "risk_class": "R0",
+    "use_cases": [
+      "storage-health"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "smartmontools"
+    ]
+  },
+  {
+    "id": "smartmontools",
+    "name": "smartmontools",
+    "category": "storage-health",
+    "publisher": "smartmontools",
+    "official_home": "https://www.smartmontools.org/",
+    "official_download": "https://www.smartmontools.org/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project signature",
+    "checksum_method": "SHA-256/signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "storage-health"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "smartmontools"
+    ]
+  },
+  {
+    "id": "gsmartcontrol",
+    "name": "GSmartControl",
+    "category": "storage-health",
+    "publisher": "GSmartControl",
+    "official_home": "https://gsmartcontrol.shaduri.dev/",
+    "official_download": "https://gsmartcontrol.shaduri.dev/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-3.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project packages",
+    "checksum_method": "SHA-256 where published",
+    "risk_class": "R0",
+    "use_cases": [
+      "storage-health"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "smartmontools"
+    ]
+  },
+  {
+    "id": "hddscan",
+    "name": "HDDScan",
+    "category": "storage-test",
+    "publisher": "HDDScan",
+    "official_home": "https://hddscan.com/",
+    "official_download": "https://hddscan.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "unknown",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "unknown",
+    "checksum_method": "unknown",
+    "risk_class": "R0",
+    "use_cases": [
+      "storage-test"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "smartmontools"
+    ]
+  },
+  {
+    "id": "victoria",
+    "name": "Victoria HDD/SSD",
+    "category": "storage-write-risk",
+    "publisher": "Victoria",
+    "official_home": "https://hdd.by/victoria/",
+    "official_download": "https://hdd.by/victoria/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware/verify",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "unknown",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "unknown",
+    "checksum_method": "unknown",
+    "risk_class": "R3",
+    "use_cases": [
+      "storage-write-risk"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "smartmontools"
+    ]
+  },
+  {
+    "id": "testdisk",
+    "name": "TestDisk",
+    "category": "data-recovery",
+    "publisher": "CGSecurity",
+    "official_home": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+    "official_download": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+    "official_repository": "",
+    "current_version": "7.2",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "PGP/checksum",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "data-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "testdisk"
+    ]
+  },
+  {
+    "id": "photorec",
+    "name": "PhotoRec",
+    "category": "data-recovery",
+    "publisher": "CGSecurity",
+    "official_home": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+    "official_download": "https://www.cgsecurity.org/wiki/TestDisk_Download",
+    "official_repository": "",
+    "current_version": "7.2",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "PGP/checksum",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "data-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "testdisk"
+    ]
+  },
+  {
+    "id": "gddrescue",
+    "name": "GNU ddrescue",
+    "category": "imaging-recovery",
+    "publisher": "GNU",
+    "official_home": "https://www.gnu.org/software/ddrescue/",
+    "official_download": "https://www.gnu.org/software/ddrescue/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-3.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "GNU signatures",
+    "checksum_method": "GPG/checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "imaging-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "gddrescue"
+    ]
+  },
+  {
+    "id": "opensuperclone",
+    "name": "OpenSuperClone",
+    "category": "imaging-recovery",
+    "publisher": "OpenSuperClone",
+    "official_home": "https://github.com/ISpillMyDrink/OpenSuperClone",
+    "official_download": "https://github.com/ISpillMyDrink/OpenSuperClone",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "GitHub release provenance",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R0",
+    "use_cases": [
+      "imaging-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "opensuperclone"
+    ]
+  },
+  {
+    "id": "dmde",
+    "name": "DMDE",
+    "category": "data-recovery",
+    "publisher": "DMDE Software",
+    "official_home": "https://dmde.com/",
+    "official_download": "https://dmde.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial/free edition terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "vendor package",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R0",
+    "use_cases": [
+      "data-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "testdisk"
+    ]
+  },
+  {
+    "id": "r-studio",
+    "name": "R-Studio",
+    "category": "data-recovery",
+    "publisher": "R-Tools Technology",
+    "official_home": "https://www.r-studio.com/",
+    "official_download": "https://www.r-studio.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "vendor signature",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "data-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "testdisk"
+    ]
+  },
+  {
+    "id": "ufs-explorer",
+    "name": "UFS Explorer",
+    "category": "data-recovery",
+    "publisher": "SysDev Laboratories",
+    "official_home": "https://www.ufsexplorer.com/",
+    "official_download": "https://www.ufsexplorer.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "vendor signature",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "data-recovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "testdisk"
+    ]
+  },
+  {
+    "id": "hwinfo",
+    "name": "HWiNFO",
+    "category": "hardware-monitoring",
+    "publisher": "REALiX",
+    "official_home": "https://www.hwinfo.com/download/",
+    "official_download": "https://www.hwinfo.com/download/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R0",
+    "use_cases": [
+      "hardware-monitoring"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "cpu-z",
+    "name": "CPU-Z",
+    "category": "hardware-info",
+    "publisher": "CPUID",
+    "official_home": "https://www.cpuid.com/softwares/cpu-z.html",
+    "official_download": "https://www.cpuid.com/softwares/cpu-z.html",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "hardware-info"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "gpu-z",
+    "name": "GPU-Z",
+    "category": "hardware-info",
+    "publisher": "TechPowerUp",
+    "official_home": "https://www.techpowerup.com/gpuz/",
+    "official_download": "https://www.techpowerup.com/gpuz/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "hardware-info"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "memtest86plus",
+    "name": "MemTest86+",
+    "category": "memory-test",
+    "publisher": "MemTest86+",
+    "official_home": "https://memtest.org/",
+    "official_download": "https://memtest.org/",
+    "official_repository": "",
+    "current_version": "8.10",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project release",
+    "checksum_method": "SHA-256",
+    "risk_class": "R0",
+    "use_cases": [
+      "memory-test"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "memtest86plus"
+    ]
+  },
+  {
+    "id": "memtest86",
+    "name": "MemTest86",
+    "category": "memory-test",
+    "publisher": "PassMark",
+    "official_home": "https://www.memtest86.com/download.htm",
+    "official_download": "https://www.memtest86.com/download.htm",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/commercial proprietary",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "vendor signature",
+    "checksum_method": "vendor checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "memory-test"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "memtest86plus"
+    ]
+  },
+  {
+    "id": "occt",
+    "name": "OCCT",
+    "category": "stress-test",
+    "publisher": "OCBASE",
+    "official_home": "https://www.ocbase.com/download",
+    "official_download": "https://www.ocbase.com/download",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "personal/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R2",
+    "use_cases": [
+      "stress-test"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "prime95",
+    "name": "Prime95",
+    "category": "stress-test",
+    "publisher": "Mersenne Research",
+    "official_home": "https://www.mersenne.org/download/",
+    "official_download": "https://www.mersenne.org/download/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "vendor package",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R2",
+    "use_cases": [
+      "stress-test"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "furmark",
+    "name": "FurMark",
+    "category": "gpu-stress",
+    "publisher": "Geeks3D",
+    "official_home": "https://geeks3d.com/furmark/",
+    "official_download": "https://geeks3d.com/furmark/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Authenticode where present",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R2",
+    "use_cases": [
+      "gpu-stress"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-whea"
+    ]
+  },
+  {
+    "id": "latencymon",
+    "name": "LatencyMon",
+    "category": "dpc-analysis",
+    "publisher": "Resplendence",
+    "official_home": "https://www.resplendence.com/latencymon",
+    "official_download": "https://www.resplendence.com/latencymon",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free home/commercial license",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor package",
+    "risk_class": "R0",
+    "use_cases": [
+      "dpc-analysis"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-wpr"
+    ]
+  },
+  {
+    "id": "ddu",
+    "name": "Display Driver Uninstaller",
+    "category": "driver-cleanup",
+    "publisher": "Wagnardsoft",
+    "official_home": "https://www.wagnardsoft.com/display-driver-uninstaller-ddu-",
+    "official_download": "https://www.wagnardsoft.com/display-driver-uninstaller-ddu-",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "vendor package",
+    "checksum_method": "vendor checksum if present",
+    "risk_class": "R3",
+    "use_cases": [
+      "driver-cleanup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-driver-store"
+    ]
+  },
+  {
+    "id": "driver-store-explorer",
+    "name": "Driver Store Explorer",
+    "category": "driver-store",
+    "publisher": "Lostindark",
+    "official_home": "https://github.com/lostindark/DriverStoreExplorer",
+    "official_download": "https://github.com/lostindark/DriverStoreExplorer",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "GitHub release",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R0",
+    "use_cases": [
+      "driver-store"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "sdio",
+    "name": "Snappy Driver Installer Origin",
+    "category": "driver-pack",
+    "publisher": "SDIO",
+    "official_home": "https://www.snappy-driver-installer.org/",
+    "official_download": "https://www.snappy-driver-installer.org/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL and driver licenses",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "project packages",
+    "checksum_method": "hashes vary",
+    "risk_class": "R3",
+    "use_cases": [
+      "driver-pack"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "malwarebytes",
+    "name": "Malwarebytes",
+    "category": "second-opinion-malware",
+    "publisher": "Malwarebytes",
+    "official_home": "https://www.malwarebytes.com/",
+    "official_download": "https://www.malwarebytes.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial/free terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R2",
+    "use_cases": [
+      "second-opinion-malware"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-defender-offline"
+    ]
+  },
+  {
+    "id": "adwcleaner",
+    "name": "AdwCleaner",
+    "category": "pup-removal",
+    "publisher": "Malwarebytes",
+    "official_home": "https://www.malwarebytes.com/adwcleaner",
+    "official_download": "https://www.malwarebytes.com/adwcleaner",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R2",
+    "use_cases": [
+      "pup-removal"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-defender-offline"
+    ]
+  },
+  {
+    "id": "eset-sysinspector",
+    "name": "ESET SysInspector",
+    "category": "malware-triage",
+    "publisher": "ESET",
+    "official_home": "https://www.eset.com/int/support/sysinspector/",
+    "official_download": "https://www.eset.com/int/support/sysinspector/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "vendor terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "malware-triage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-defender-offline"
+    ]
+  },
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "category": "packet-analysis",
+    "publisher": "Wireshark Foundation",
+    "official_home": "https://www.wireshark.org/download.html",
+    "official_download": "https://www.wireshark.org/download.html",
+    "official_repository": "",
+    "current_version": "4.6.7",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "GPL-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "signed signature file",
+    "checksum_method": "SHA-256/PGP",
+    "risk_class": "R0",
+    "use_cases": [
+      "packet-analysis"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "wireshark"
+    ]
+  },
+  {
+    "id": "iperf3",
+    "name": "iperf3",
+    "category": "network-throughput",
+    "publisher": "ESnet",
+    "official_home": "https://software.es.net/iperf/",
+    "official_download": "https://software.es.net/iperf/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "BSD-3-Clause",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project packages",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R0",
+    "use_cases": [
+      "network-throughput"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "nmap",
+    "name": "Nmap",
+    "category": "authorized-network-discovery",
+    "publisher": "Nmap Project",
+    "official_home": "https://nmap.org/download.html",
+    "official_download": "https://nmap.org/download.html",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "NPSL/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "project signature",
+    "checksum_method": "SHA-256/signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "authorized-network-discovery"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "everything",
+    "name": "Everything",
+    "category": "file-search",
+    "publisher": "voidtools",
+    "official_home": "https://www.voidtools.com/downloads/",
+    "official_download": "https://www.voidtools.com/downloads/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "file-search"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "wiztree",
+    "name": "WizTree",
+    "category": "disk-usage",
+    "publisher": "Antibody Software",
+    "official_home": "https://diskanalyzer.com/download",
+    "official_download": "https://diskanalyzer.com/download",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "personal/commercial license",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "disk-usage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "treesize",
+    "name": "TreeSize",
+    "category": "disk-usage",
+    "publisher": "JAM Software",
+    "official_home": "https://www.jam-software.com/treesize_free",
+    "official_download": "https://www.jam-software.com/treesize_free",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/commercial editions",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "disk-usage"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "bcu",
+    "name": "Bulk Crap Uninstaller",
+    "category": "uninstall",
+    "publisher": "BCUninstaller",
+    "official_home": "https://www.bcuninstaller.com/",
+    "official_download": "https://www.bcuninstaller.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Apache-2.0",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "GitHub release",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R0",
+    "use_cases": [
+      "uninstall"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "revo-uninstaller",
+    "name": "Revo Uninstaller",
+    "category": "uninstall",
+    "publisher": "VS Revo Group",
+    "official_home": "https://www.revouninstaller.com/",
+    "official_download": "https://www.revouninstaller.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "uninstall"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "ninite",
+    "name": "Ninite",
+    "category": "package-installer",
+    "publisher": "Secure By Design",
+    "official_home": "https://ninite.com/",
+    "official_download": "https://ninite.com/",
+    "official_repository": "",
+    "current_version": "service",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial/free terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "TLS/vendor signature",
+    "checksum_method": "Authenticode",
+    "risk_class": "R0",
+    "use_cases": [
+      "package-installer"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "chocolatey",
+    "name": "Chocolatey",
+    "category": "package-manager",
+    "publisher": "Chocolatey Software",
+    "official_home": "https://chocolatey.org/",
+    "official_download": "https://chocolatey.org/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Apache/community and commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "conditional",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "package checksums",
+    "checksum_method": "per-package checksum",
+    "risk_class": "R0",
+    "use_cases": [
+      "package-manager"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "scoop",
+    "name": "Scoop",
+    "category": "package-manager",
+    "publisher": "ScoopInstaller",
+    "official_home": "https://scoop.sh/",
+    "official_download": "https://scoop.sh/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "Unlicense",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "manifest hashes",
+    "checksum_method": "SHA-256 per manifest",
+    "risk_class": "R0",
+    "use_cases": [
+      "package-manager"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "winutil",
+    "name": "Chris Titus Tech WinUtil",
+    "category": "tweak-suite",
+    "publisher": "Chris Titus Tech",
+    "official_home": "https://github.com/ChrisTitusTech/winutil",
+    "official_download": "https://github.com/ChrisTitusTech/winutil",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "MIT",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "source tags",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R2",
+    "use_cases": [
+      "tweak-suite"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "sophia-script",
+    "name": "Sophia Script",
+    "category": "tweak-suite",
+    "publisher": "Sophia Community",
+    "official_home": "https://github.com/farag2/Sophia-Script-for-Windows",
+    "official_download": "https://github.com/farag2/Sophia-Script-for-Windows",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "MIT",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "allowed",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "GitHub release",
+    "checksum_method": "SHA-256 locally",
+    "risk_class": "R2",
+    "use_cases": [
+      "tweak-suite"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "windows-repair-toolbox",
+    "name": "Windows Repair Toolbox",
+    "category": "tool-aggregator",
+    "publisher": "Windows Repair Toolbox",
+    "official_home": "https://windows-repair-toolbox.com/",
+    "official_download": "https://windows-repair-toolbox.com/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware/mixed downloads",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "vendor package",
+    "checksum_method": "per-tool verification",
+    "risk_class": "R0",
+    "use_cases": [
+      "tool-aggregator"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "tweaking-windows-repair",
+    "name": "Tweaking.com Windows Repair",
+    "category": "aggressive-repair-suite",
+    "publisher": "Tweaking.com",
+    "official_home": "https://www.tweaking.com/features/windows-repair-all-in-one/",
+    "official_download": "https://www.tweaking.com/features/windows-repair-all-in-one/",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/proprietary",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R3",
+    "use_cases": [
+      "aggressive-repair-suite"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "tron-script",
+    "name": "Tron",
+    "category": "aggressive-remediation",
+    "publisher": "bmrf",
+    "official_home": "https://github.com/bmrf/tron",
+    "official_download": "https://github.com/bmrf/tron",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "MIT plus bundled licenses",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": true,
+    "signature_method": "release checksums",
+    "checksum_method": "SHA-256",
+    "risk_class": "R3",
+    "use_cases": [
+      "aggressive-remediation"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  },
+  {
+    "id": "veeam-agent",
+    "name": "Veeam Agent for Microsoft Windows",
+    "category": "backup",
+    "publisher": "Veeam",
+    "official_home": "https://www.veeam.com/products/free/microsoft-windows.html",
+    "official_download": "https://www.veeam.com/products/free/microsoft-windows.html",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/commercial EULA",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "backup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-windows-backup"
+    ]
+  },
+  {
+    "id": "hasleo-backup",
+    "name": "Hasleo Backup Suite",
+    "category": "backup",
+    "publisher": "Hasleo",
+    "official_home": "https://www.easyuefi.com/backup-software/backup-suite-free.html",
+    "official_download": "https://www.easyuefi.com/backup-software/backup-suite-free.html",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "free/commercial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "backup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-windows-backup"
+    ]
+  },
+  {
+    "id": "macrium-reflect",
+    "name": "Macrium Reflect",
+    "category": "backup",
+    "publisher": "Macrium",
+    "official_home": "https://www.macrium.com/products/home",
+    "official_download": "https://www.macrium.com/products/home",
+    "official_repository": "",
+    "current_version": "rolling",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "commercial/trial terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "Authenticode",
+    "checksum_method": "vendor signature",
+    "risk_class": "R0",
+    "use_cases": [
+      "backup"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "ms-windows-backup"
+    ]
+  },
+  {
+    "id": "nirsoft",
+    "name": "NirSoft utilities",
+    "category": "diagnostic-utilities",
+    "publisher": "NirSoft",
+    "official_home": "https://www.nirsoft.net/",
+    "official_download": "https://www.nirsoft.net/",
+    "official_repository": "",
+    "current_version": "per-tool",
+    "checked_at": "2026-08-06",
+    "status": "active",
+    "replaced_by": "",
+    "license": "freeware terms",
+    "commercial_use": "verify-license-before-commercial-use",
+    "redistribution": "forbidden",
+    "supported_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "architectures": [
+      "x64",
+      "ARM64 where OS provides it"
+    ],
+    "environments": [
+      "online Windows"
+    ],
+    "portable": true,
+    "install_type": "portable-or-installer",
+    "network_required": false,
+    "elevation_required": false,
+    "signature_method": "many unsigned/false positives",
+    "checksum_method": "vendor hashes vary",
+    "risk_class": "R0",
+    "use_cases": [
+      "diagnostic-utilities"
+    ],
+    "avoid_when": [
+      "nieznany target",
+      "brak autoryzacji"
+    ],
+    "known_gotchas": [
+      "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+    ],
+    "alternatives": [],
+    "sources": [
+      "github-releases"
+    ]
+  }
+]

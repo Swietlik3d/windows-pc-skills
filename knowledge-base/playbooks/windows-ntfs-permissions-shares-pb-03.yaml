@@ -1,0 +1,92 @@
+{
+  "id": "windows-ntfs-permissions-shares-pb-03",
+  "title": "SMB działa lokalnie, nie z sieci",
+  "summary": "NTFS lokalnie OK.",
+  "symptoms": [
+    "NTFS lokalnie OK."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie wykonywać masowego takeown/icacls reset na dysku systemowym."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "EFS encrypted files",
+    "organizacyjny share",
+    "nieznany właściciel danych",
+    "root system drive target",
+    "brak ACL backup"
+  ],
+  "evidence_to_collect": [
+    "identity/SID",
+    "current ACL SDDL",
+    "inheritance",
+    "share permissions",
+    "effective access",
+    "EFS status"
+  ],
+  "hypotheses": [
+    "Share ACL, SMB auth, firewall lub network profile.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Sprawdzić Get-SmbShareAccess i test z autoryzowanego klienta."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawić najwęższą warstwę, nie Everyone Full Control.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-ntfs-permissions-shares-cmd-01",
+    "windows-ntfs-permissions-shares-cmd-02",
+    "windows-ntfs-permissions-shares-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Dostęp działa tylko dla zaplanowanych principal.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "EFS encrypted files",
+    "organizacyjny share",
+    "nieznany właściciel danych",
+    "root system drive target",
+    "brak ACL backup"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-accounts-profiles",
+    "windows-network-repair",
+    "windows-bitlocker-tpm-security",
+    "windows-case-evidence"
+  ],
+  "sources": [
+    "ms-icacls",
+    "ms-smbshare",
+    "ms-efs"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

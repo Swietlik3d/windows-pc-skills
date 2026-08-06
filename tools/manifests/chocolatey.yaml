@@ -1,0 +1,48 @@
+{
+  "id": "chocolatey",
+  "name": "Chocolatey",
+  "category": "package-manager",
+  "publisher": "Chocolatey Software",
+  "official_home": "https://chocolatey.org/",
+  "official_download": "https://chocolatey.org/",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "Apache/community and commercial terms",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "conditional",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "package checksums",
+  "checksum_method": "per-package checksum",
+  "risk_class": "R0",
+  "use_cases": [
+    "package-manager"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "github-releases"
+  ]
+}

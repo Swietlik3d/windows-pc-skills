@@ -1,0 +1,63 @@
+{
+  "commands": [
+    {
+      "id": "get-computerinfo",
+      "xp": false,
+      "vista": false,
+      "win7": false,
+      "win8": true,
+      "win10": true,
+      "win11": true,
+      "winre": "depends-on-PowerShell",
+      "arm64": true,
+      "fallback": "systeminfo + registry"
+    },
+    {
+      "id": "get-ciminstance",
+      "xp": false,
+      "vista": "with-WMF",
+      "win7": "with-WMF",
+      "win8": true,
+      "win10": true,
+      "win11": true,
+      "winre": false,
+      "arm64": true,
+      "fallback": "wmic/query WMI without Win32_Product"
+    },
+    {
+      "id": "pnputil",
+      "xp": false,
+      "vista": true,
+      "win7": true,
+      "win8": true,
+      "win10": true,
+      "win11": true,
+      "winre": true,
+      "arm64": true
+    },
+    {
+      "id": "dism-cleanup-image",
+      "xp": false,
+      "vista": "limited",
+      "win7": "limited",
+      "win8": true,
+      "win10": true,
+      "win11": true,
+      "winre": true,
+      "arm64": true
+    },
+    {
+      "id": "bcdedit",
+      "xp": false,
+      "vista": true,
+      "win7": true,
+      "win8": true,
+      "win10": true,
+      "win11": true,
+      "winre": true,
+      "arm64": true,
+      "fallback": "bootcfg for XP"
+    }
+  ],
+  "rule": "Verify exact syntax with local help and official docs for the target build."
+}

@@ -1,0 +1,48 @@
+{
+  "id": "procdump",
+  "name": "ProcDump",
+  "category": "debugging",
+  "publisher": "Microsoft",
+  "official_home": "https://learn.microsoft.com/en-us/sysinternals/downloads/procdump",
+  "official_download": "https://learn.microsoft.com/en-us/sysinternals/downloads/procdump",
+  "official_repository": "",
+  "current_version": "rolling-suite",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "Sysinternals EULA",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "Authenticode",
+  "checksum_method": "Authenticode",
+  "risk_class": "R0",
+  "use_cases": [
+    "debugging"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "ms-sysinternals"
+  ]
+}

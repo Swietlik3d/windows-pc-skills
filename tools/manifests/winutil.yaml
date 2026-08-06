@@ -1,0 +1,48 @@
+{
+  "id": "winutil",
+  "name": "Chris Titus Tech WinUtil",
+  "category": "tweak-suite",
+  "publisher": "Chris Titus Tech",
+  "official_home": "https://github.com/ChrisTitusTech/winutil",
+  "official_download": "https://github.com/ChrisTitusTech/winutil",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "MIT",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "allowed",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": true,
+  "signature_method": "source tags",
+  "checksum_method": "SHA-256 locally",
+  "risk_class": "R2",
+  "use_cases": [
+    "tweak-suite"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "github-releases"
+  ]
+}

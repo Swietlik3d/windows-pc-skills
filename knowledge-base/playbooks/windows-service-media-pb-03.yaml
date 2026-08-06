@@ -1,0 +1,93 @@
+{
+  "id": "windows-service-media-pb-03",
+  "title": "Aktualizacja zestawu",
+  "summary": "Narzędzia mogły się zestarzeć.",
+  "symptoms": [
+    "Narzędzia mogły się zestarzeć."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie pobierać ISO/binariów ani nie zapisywać USB bez jawnego polecenia i potwierdzenia celu."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "nieustalony target USB",
+    "brak backupu nośnika",
+    "narzędzie redistribution forbidden",
+    "niezweryfikowany checksum",
+    "Secure Boot incompatibility"
+  ],
+  "evidence_to_collect": [
+    "target unique ID/capacity",
+    "media manifest",
+    "official URLs",
+    "license/redistribution",
+    "checksums/signatures",
+    "UEFI/BIOS/arch"
+  ],
+  "hypotheses": [
+    "Stale/EOL tool może być ryzykiem.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Porównać katalog z official release pages i diff do review."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Pobierać dopiero po akceptacji licencji i weryfikacji.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-service-media-cmd-01",
+    "windows-service-media-cmd-02",
+    "windows-service-media-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Integrity scan clean, provenance complete, EOL items quarantined.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "nieustalony target USB",
+    "brak backupu nośnika",
+    "narzędzie redistribution forbidden",
+    "niezweryfikowany checksum",
+    "Secure Boot incompatibility"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-tool-research",
+    "windows-deployment-imaging",
+    "bios-uefi-firmware",
+    "windows-automation-powershell"
+  ],
+  "sources": [
+    "ms-adk",
+    "ms-winpe",
+    "rufus",
+    "ventoy"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

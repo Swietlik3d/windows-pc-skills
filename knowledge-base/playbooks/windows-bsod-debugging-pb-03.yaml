@@ -1,0 +1,90 @@
+{
+  "id": "windows-bsod-debugging-pb-03",
+  "title": "Driver Verifier",
+  "summary": "Podejrzenie third-party driver bez dowodu.",
+  "symptoms": [
+    "Podejrzenie third-party driver bez dowodu."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie uznawać nazwy modułu z pojedynczego minidumpa za dowód przyczyny."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "storage/RAM errors",
+    "brak wolnego miejsca/pagefile",
+    "Verifier bez dostępu do WinRE",
+    "WHEA hardware error"
+  ],
+  "evidence_to_collect": [
+    "exact bugcheck parameters",
+    "dump type",
+    "stack/module timestamps",
+    "symbols",
+    "WHEA/events",
+    "repro conditions"
+  ],
+  "hypotheses": [
+    "Verifier może stworzyć boot loop.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zapewnić backup, WinRE i komendę reset; wybrać tylko podejrzane non-Microsoft drivers."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Włączyć na ograniczony czas wyłącznie R3 z potwierdzeniem.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-bsod-debugging-cmd-01",
+    "windows-bsod-debugging-cmd-02",
+    "windows-bsod-debugging-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Pozyskać deterministyczny dump i wyłączyć Verifier.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "storage/RAM errors",
+    "brak wolnego miejsca/pagefile",
+    "Verifier bez dostępu do WinRE",
+    "WHEA hardware error"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "memory-cpu-gpu-thermal",
+    "windows-drivers-devices",
+    "windows-boot-recovery",
+    "windows-case-evidence"
+  ],
+  "sources": [
+    "ms-windbg",
+    "ms-bugcheck",
+    "ms-driver-verifier"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

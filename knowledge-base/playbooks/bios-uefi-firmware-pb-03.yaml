@@ -1,0 +1,89 @@
+{
+  "id": "bios-uefi-firmware-pb-03",
+  "title": "Boot order po wymianie dysku",
+  "summary": "UEFI nie pokazuje Windows Boot Manager.",
+  "symptoms": [
+    "UEFI nie pokazuje Windows Boot Manager."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie flashować bez dokładnego modelu, stabilnego zasilania, kopii ustawień i planu recovery."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "niepewny model/rewizja",
+    "niestabilne zasilanie",
+    "brak BitLocker key readiness",
+    "przerwany poprzedni flash"
+  ],
+  "evidence_to_collect": [
+    "manufacturer/model/board revision",
+    "wersja BIOS i EC",
+    "tryb UEFI/Legacy",
+    "Secure Boot/TPM",
+    "BitLocker protectors bez kluczy"
+  ],
+  "hypotheses": [
+    "Brak wpisu NVRAM, niewłaściwy tryb lub ESP.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Najpierw udokumentować layout i firmware mode."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawę BCD przekazać do dedykowanego skilla; nie przełączać CSM w ciemno.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "bios-uefi-firmware-cmd-01",
+    "bios-uefi-firmware-cmd-02",
+    "bios-uefi-firmware-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Windows Boot Manager wskazuje właściwy ESP i startuje trzy razy.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "niepewny model/rewizja",
+    "niestabilne zasilanie",
+    "brak BitLocker key readiness",
+    "przerwany poprzedni flash"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-bitlocker-tpm-security",
+    "windows-bcd-partition-repair",
+    "pc-hardware-diagnostics",
+    "windows-service-media"
+  ],
+  "sources": [
+    "ms-secure-boot-2026",
+    "ms-tpm",
+    "ms-bitlocker-overview"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

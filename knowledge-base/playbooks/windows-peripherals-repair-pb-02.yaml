@@ -1,0 +1,90 @@
+{
+  "id": "windows-peripherals-repair-pb-02",
+  "title": "Brak audio",
+  "summary": "Output device istnieje, brak dźwięku.",
+  "symptoms": [
+    "Output device istnieje, brak dźwięku."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zastępować skilla driver/hardware, gdy problem występuje także przed uruchomieniem Windows."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "evidence_to_collect": [
+    "problem device IDs",
+    "port/cable/dock path",
+    "driver and firmware",
+    "service/event logs",
+    "privacy policy",
+    "known-good peripheral"
+  ],
+  "hypotheses": [
+    "Endpoint selection, service, driver, privacy lub dock.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Testować physical path, endpoint i events bez reinstall-all."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Rollback/update właściwego OEM audio stack.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-peripherals-repair-cmd-01",
+    "windows-peripherals-repair-cmd-02",
+    "windows-peripherals-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Playback/recording i sleep/wake działają.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "przegrzewający się port/kabel",
+    "uszkodzenie mechaniczne",
+    "managed print policy",
+    "kamera/mikrofon z policy privacy"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-drivers-devices",
+    "pc-hardware-diagnostics",
+    "windows-network-repair",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-printer-troubleshoot",
+    "ms-pnputil",
+    "ms-bluetooth"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "windows-deployment-imaging-pb-02",
+  "title": "Capture WIM",
+  "summary": "Wzorzec ma być wdrażany.",
+  "symptoms": [
+    "Wzorzec ma być wdrażany."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie wykonywać capture/apply/clean na niezweryfikowanym dysku ani nie dołączać obrazów/licencji do repo."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "source/target ambiguity",
+    "BitLocker",
+    "unsupported generalization",
+    "OEM recovery dependencies",
+    "insufficient backup"
+  ],
+  "evidence_to_collect": [
+    "disk unique IDs",
+    "image metadata/index/hash",
+    "edition/language/arch",
+    "driver set",
+    "unattend secrets scan",
+    "restore test"
+  ],
+  "hypotheses": [
+    "Sysprep state/licensing/user data mogą wejść do obrazu.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Audit mode, secrets scan i supported app state."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Capture do zweryfikowanego celu po shutdown.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-deployment-imaging-cmd-01",
+    "windows-deployment-imaging-cmd-02",
+    "windows-deployment-imaging-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Apply w VM, specialize/OOBE i driver injection przechodzą.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "source/target ambiguity",
+    "BitLocker",
+    "unsupported generalization",
+    "OEM recovery dependencies",
+    "insufficient backup"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-service-media",
+    "winpe-offline-repair",
+    "windows-bcd-partition-repair",
+    "storage-triage-cloning-recovery"
+  ],
+  "sources": [
+    "ms-dism-image",
+    "ms-sysprep",
+    "ms-adk"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

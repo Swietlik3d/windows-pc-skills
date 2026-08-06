@@ -1,0 +1,91 @@
+{
+  "id": "windows-os-identification-pb-03",
+  "title": "ARM64/S mode/N edition",
+  "summary": "Aplikacja lub sterownik nie działa.",
+  "symptoms": [
+    "Aplikacja lub sterownik nie działa."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać wyłącznie do naprawy konkretnego, już zidentyfikowanego komponentu."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "wyniki z różnych instalacji/offline volume",
+    "WinRE z nieustaloną literą",
+    "build poza matrycą",
+    "tryb S lub organizacyjne policy"
+  ],
+  "evidence_to_collect": [
+    "ProductName/EditionID",
+    "CurrentBuild/UBR",
+    "architecture",
+    "locale",
+    "FirmwareType",
+    "partition style",
+    "WinRE status"
+  ],
+  "hypotheses": [
+    "Ograniczenie może wynikać z architektury albo edycji.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Ustalić native arch, emulation i capability edition."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Dobrać tylko kompatybilne narzędzia; nie obchodzić S mode.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-os-identification-cmd-01",
+    "windows-os-identification-cmd-02",
+    "windows-os-identification-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Rekomendacja ma jawny wpis kompatybilności.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "wyniki z różnych instalacji/offline volume",
+    "WinRE z nieustaloną literą",
+    "build poza matrycą",
+    "tryb S lub organizacyjne policy"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-10-support",
+    "windows-11-support",
+    "windows-legacy-xp-vista-7-8",
+    "winpe-offline-repair"
+  ],
+  "sources": [
+    "ms-win11-release",
+    "ms-win10-release",
+    "ms-lifecycle"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

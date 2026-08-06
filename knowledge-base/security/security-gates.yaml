@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-08-06",
+  "gates": [
+    {
+      "id": "bitlocker-recovery",
+      "condition": "A change may alter TPM measurements, boot files, firmware state or encrypted-volume access.",
+      "required": [
+        "confirm ownership and authorization",
+        "confirm recovery path exists without recording the key",
+        "capture encryption status R0"
+      ],
+      "forbidden": [
+        "request or store recovery key in the repo",
+        "disable or bypass encryption",
+        "change firmware/BCD before gate"
+      ],
+      "primary_skill": "windows-bitlocker-tpm-security"
+    },
+    {
+      "id": "managed-device",
+      "condition": "Domain, Entra, MDM, EDR or organization policy is detected or plausibly present.",
+      "required": [
+        "identify policy owner",
+        "limit work to approved scope",
+        "preserve management and audit evidence"
+      ],
+      "forbidden": [
+        "remove management",
+        "disable security controls",
+        "create unmanaged local access"
+      ],
+      "primary_skill": "windows-remote-managed-client"
+    },
+    {
+      "id": "suspected-compromise",
+      "condition": "Credential theft, persistence, active command-and-control or destructive malware is plausible.",
+      "required": [
+        "separate containment from eradication",
+        "preserve evidence and timeline",
+        "coordinate credentials from a clean device"
+      ],
+      "forbidden": [
+        "log into sensitive services from suspect host",
+        "run random cleaners",
+        "claim clean from one scanner"
+      ],
+      "primary_skill": "windows-malware-remediation"
+    }
+  ],
+  "sources": [
+    "ms-bitlocker-overview",
+    "ms-defender-offline",
+    "ms-privacy"
+  ]
+}

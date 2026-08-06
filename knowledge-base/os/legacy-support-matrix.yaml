@@ -1,0 +1,41 @@
+{
+  "snapshot_date": "2026-08-06",
+  "systems": [
+    {
+      "os": "Windows XP SP3",
+      "support_end": "2014-04-08",
+      "status": "eol",
+      "network_policy": "isolated/offline",
+      "source": "ms-xp-lifecycle"
+    },
+    {
+      "os": "Windows Vista SP2",
+      "support_end": "2017-04-11",
+      "status": "eol",
+      "network_policy": "isolated/offline",
+      "source": "ms-lifecycle"
+    },
+    {
+      "os": "Windows 7 SP1",
+      "support_end": "2020-01-14",
+      "esu_end_common": "2023-01-10",
+      "status": "eol",
+      "network_policy": "isolated/offline",
+      "source": "ms-win7-lifecycle"
+    },
+    {
+      "os": "Windows 8",
+      "support_end": "2016-01-12",
+      "status": "eol",
+      "network_policy": "isolated/offline",
+      "source": "ms-lifecycle"
+    },
+    {
+      "os": "Windows 8.1",
+      "support_end": "2023-01-10",
+      "status": "eol",
+      "network_policy": "isolated/offline",
+      "source": "ms-win81-lifecycle"
+    }
+  ]
+}

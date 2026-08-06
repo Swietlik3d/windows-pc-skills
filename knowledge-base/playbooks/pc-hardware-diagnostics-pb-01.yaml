@@ -1,0 +1,91 @@
+{
+  "id": "pc-hardware-diagnostics-pb-01",
+  "title": "Brak reakcji na power",
+  "summary": "Zero LED i wentylatorów.",
+  "symptoms": [
+    "Zero LED i wentylatorów."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie otwierać zasilacza sieciowego i nie prowadzić napraw komponentowych płyty."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "spuchnięta bateria",
+    "zapach spalenizny",
+    "ślady cieczy",
+    "iskrzenie",
+    "niepewny pinout zasilacza"
+  ],
+  "evidence_to_collect": [
+    "dokładny model",
+    "sekwencja LED/beep",
+    "napięcie znamionowe zasilacza",
+    "minimalna konfiguracja",
+    "znane dobre części"
+  ],
+  "hypotheses": [
+    "Zasilanie wejściowe, przycisk, PSU lub zwarcie płyty.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Odłączyć zasilanie, ocenić wizualnie, potem testować znanym dobrym zasilaczem o zgodnej specyfikacji."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wymieniać jedną część naraz; żadnego otwierania PSU.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "pc-hardware-diagnostics-cmd-01",
+    "pc-hardware-diagnostics-cmd-02",
+    "pc-hardware-diagnostics-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Urządzenie przechodzi powtarzalny power-on bez zapachu i nadmiernego poboru.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "spuchnięta bateria",
+    "zapach spalenizny",
+    "ślady cieczy",
+    "iskrzenie",
+    "niepewny pinout zasilacza"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "memory-cpu-gpu-thermal",
+    "bios-uefi-firmware",
+    "storage-triage-cloning-recovery",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-wmi-computersystem",
+    "ms-powercfg",
+    "ifixit-esd"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

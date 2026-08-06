@@ -1,0 +1,48 @@
+{
+  "id": "victoria",
+  "name": "Victoria HDD/SSD",
+  "category": "storage-write-risk",
+  "publisher": "Victoria",
+  "official_home": "https://hdd.by/victoria/",
+  "official_download": "https://hdd.by/victoria/",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "freeware/verify",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "unknown",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": true,
+  "signature_method": "unknown",
+  "checksum_method": "unknown",
+  "risk_class": "R3",
+  "use_cases": [
+    "storage-write-risk"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "smartmontools"
+  ]
+}

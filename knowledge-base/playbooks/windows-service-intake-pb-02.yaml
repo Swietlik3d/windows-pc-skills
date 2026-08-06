@@ -1,0 +1,89 @@
+{
+  "id": "windows-service-intake-pb-02",
+  "title": "Dane cenniejsze niż urządzenie",
+  "summary": "Brak backupu i niestabilny dysk.",
+  "symptoms": [
+    "Brak backupu i niestabilny dysk."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie diagnozować szczegółowo awarii ani nie wykonywać zmian systemowych."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak upoważnienia",
+    "dane krytyczne bez kopii",
+    "urządzenie firmowe bez kontaktu do administratora",
+    "oznaki cieczy lub baterii"
+  ],
+  "evidence_to_collect": [
+    "tożsamość urządzenia bez sekretów",
+    "zakres zgody R0–R4",
+    "wartość i lokalizacja danych",
+    "stan BitLocker",
+    "akcesoria i stan fizyczny"
+  ],
+  "hypotheses": [
+    "Dalsze uruchamianie może zwiększać utratę.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zatrzymać testy zapisu i uzgodnić imaging/pro recovery."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Nadać priorytet odzyskowi, nie naprawie Windows.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-service-intake-cmd-01",
+    "windows-service-intake-cmd-02",
+    "windows-service-intake-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Zakres wyraźnie rozdziela odzysk danych od naprawy.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak upoważnienia",
+    "dane krytyczne bez kopii",
+    "urządzenie firmowe bez kontaktu do administratora",
+    "oznaki cieczy lub baterii"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-case-evidence",
+    "windows-master-router",
+    "windows-bitlocker-tpm-security",
+    "windows-remote-managed-client"
+  ],
+  "sources": [
+    "ms-bitlocker-overview",
+    "ms-privacy",
+    "codex-skills"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

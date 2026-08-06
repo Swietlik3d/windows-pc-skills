@@ -1,0 +1,90 @@
+{
+  "id": "windows-network-repair-pb-01",
+  "title": "Link jest, brak internetu",
+  "summary": "Adres jest APIPA lub brak gateway.",
+  "symptoms": [
+    "Adres jest APIPA lub brak gateway."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie skanować cudzej sieci i nie resetować stosu przed snapshotem konfiguracji."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "managed VPN/firewall",
+    "incydent bezpieczeństwa",
+    "brak autoryzacji do capture/Nmap",
+    "statyczna konfiguracja bez backupu"
+  ],
+  "evidence_to_collect": [
+    "link/radio",
+    "IP/gateway/DHCP",
+    "DNS resolution",
+    "routes/proxy/VPN",
+    "firewall profile",
+    "packet timing"
+  ],
+  "hypotheses": [
+    "DHCP/link VLAN/adapter.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Test warstwowy: media, lease, gateway, DNS, HTTPS."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawić najniższą uszkodzoną warstwę; reset jako późny R2.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-network-repair-cmd-01",
+    "windows-network-repair-cmd-02",
+    "windows-network-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Lease poprawny, gateway/DNS/HTTPS działają.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "managed VPN/firewall",
+    "incydent bezpieczeństwa",
+    "brak autoryzacji do capture/Nmap",
+    "statyczna konfiguracja bez backupu"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-drivers-devices",
+    "windows-remote-managed-client",
+    "windows-malware-remediation",
+    "windows-peripherals-repair"
+  ],
+  "sources": [
+    "ms-nettcpip",
+    "ms-netsh",
+    "wireshark"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

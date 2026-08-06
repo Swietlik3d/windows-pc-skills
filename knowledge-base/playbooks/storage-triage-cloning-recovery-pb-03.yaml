@@ -1,0 +1,91 @@
+{
+  "id": "storage-triage-cloning-recovery-pb-03",
+  "title": "Odzysk logiczny po usunięciu",
+  "summary": "Pliki skasowane, dysk stabilny.",
+  "symptoms": [
+    "Pliki skasowane, dysk stabilny."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie uruchamiać napraw systemu plików przed obrazem, gdy istnieje podejrzenie fizycznego uszkodzenia."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "klikający lub znikający dysk",
+    "rosnące read errors",
+    "critical warning NVMe",
+    "źródło/cel nie są jednoznaczne"
+  ],
+  "evidence_to_collect": [
+    "model/serial z redakcją",
+    "SMART/NVMe health",
+    "read error trend",
+    "wartość danych",
+    "write blocker",
+    "mapfile imaging"
+  ],
+  "hypotheses": [
+    "TRIM mógł wyzerować bloki na SSD.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Natychmiast zatrzymać zapisy i utworzyć obraz read-only."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Analizować kopię TestDisk/PhotoRec/DMDE; wyniki zapisywać na trzeci nośnik.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "storage-triage-cloning-recovery-cmd-01",
+    "storage-triage-cloning-recovery-cmd-02",
+    "storage-triage-cloning-recovery-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Otworzyć reprezentatywną próbkę i zachować log narzędzia.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "klikający lub znikający dysk",
+    "rosnące read errors",
+    "critical warning NVMe",
+    "źródło/cel nie są jednoznaczne"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-backup-vss-restore",
+    "windows-case-evidence",
+    "pc-hardware-diagnostics",
+    "windows-deployment-imaging"
+  ],
+  "sources": [
+    "smartmontools",
+    "gddrescue",
+    "opensuperclone",
+    "testdisk"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

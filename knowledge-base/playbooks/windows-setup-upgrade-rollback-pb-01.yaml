@@ -1,0 +1,92 @@
+{
+  "id": "windows-setup-upgrade-rollback-pb-01",
+  "title": "Feature update rollback",
+  "summary": "Setup wraca do poprzedniego builda.",
+  "symptoms": [
+    "Setup wraca do poprzedniego builda."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać do zwykłej comiesięcznej KB bez logów Setup/Panther."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak backupu",
+    "storage/RAM instability",
+    "BitLocker not ready",
+    "unsupported hardware bypass",
+    "managed safeguard hold"
+  ],
+  "evidence_to_collect": [
+    "SetupDiag result",
+    "Panther/Rollback logs",
+    "compat scan",
+    "build/edition/language",
+    "drivers/apps",
+    "free space"
+  ],
+  "hypotheses": [
+    "Rule match wskazuje driver/app/partition.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Uruchomić parser na kopii logów i potwierdzić fazę."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Usunąć tylko potwierdzony blocker lub zaktualizować OEM driver.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-setup-upgrade-rollback-cmd-01",
+    "windows-setup-upgrade-rollback-cmd-02",
+    "windows-setup-upgrade-rollback-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Upgrade kończy OOBE/login i zachowuje dane/aplikacje.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak backupu",
+    "storage/RAM instability",
+    "BitLocker not ready",
+    "unsupported hardware bypass",
+    "managed safeguard hold"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-update-servicing",
+    "windows-component-repair",
+    "windows-drivers-devices",
+    "windows-backup-vss-restore"
+  ],
+  "sources": [
+    "ms-setupdiag",
+    "ms-setup-logfiles",
+    "ms-release-health"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

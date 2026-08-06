@@ -1,0 +1,170 @@
+[
+  {
+    "id": "cbs",
+    "name": "CBS",
+    "online_location": "%windir%\\Logs\\CBS\\CBS.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\Logs\\CBS\\CBS.log",
+    "collector_or_parser": "Parse-WindowsServicingLog.ps1",
+    "use": "SFC/servicing"
+  },
+  {
+    "id": "dism",
+    "name": "DISM",
+    "online_location": "%windir%\\Logs\\DISM\\dism.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\Logs\\DISM\\dism.log",
+    "collector_or_parser": "Parse-WindowsServicingLog.ps1",
+    "use": "component repair"
+  },
+  {
+    "id": "windows-update-etl",
+    "name": "Windows Update ETL",
+    "online_location": "%windir%\\Logs\\WindowsUpdate\\*.etl",
+    "offline_location": "<OS_VOLUME>:\\Windows\\Logs\\WindowsUpdate\\",
+    "collector_or_parser": "Get-WindowsUpdateLog",
+    "use": "update correlation"
+  },
+  {
+    "id": "panther",
+    "name": "Panther",
+    "online_location": "%windir%\\Panther\\*.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\Panther\\",
+    "collector_or_parser": "Parse-WindowsSetupLog.ps1",
+    "use": "setup phases"
+  },
+  {
+    "id": "rollback",
+    "name": "Rollback",
+    "online_location": "%SystemDrive%\\$WINDOWS.~BT\\Sources\\Rollback",
+    "offline_location": "<OS_VOLUME>:\\$WINDOWS.~BT\\Sources\\Rollback",
+    "collector_or_parser": "Parse-WindowsSetupLog.ps1",
+    "use": "upgrade rollback"
+  },
+  {
+    "id": "setupapi-device",
+    "name": "SetupAPI device",
+    "online_location": "%windir%\\INF\\setupapi.dev.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\INF\\setupapi.dev.log",
+    "collector_or_parser": "Parse-WindowsSetupLog.ps1",
+    "use": "driver install"
+  },
+  {
+    "id": "setupapi-app",
+    "name": "SetupAPI app",
+    "online_location": "%windir%\\INF\\setupapi.app.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\INF\\setupapi.app.log",
+    "collector_or_parser": "Parse-WindowsSetupLog.ps1",
+    "use": "application setup"
+  },
+  {
+    "id": "event-logs",
+    "name": "Event Logs",
+    "online_location": "%windir%\\System32\\winevt\\Logs",
+    "offline_location": "<OS_VOLUME>:\\Windows\\System32\\winevt\\Logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "timeline"
+  },
+  {
+    "id": "wer",
+    "name": "WER",
+    "online_location": "%ProgramData%\\Microsoft\\Windows\\WER",
+    "offline_location": "<OS_VOLUME>:\\ProgramData\\Microsoft\\Windows\\WER",
+    "collector_or_parser": "Get-WindowsRepairBundle.ps1",
+    "use": "crash/hang"
+  },
+  {
+    "id": "memory-dump",
+    "name": "Memory dump",
+    "online_location": "%SystemRoot%\\MEMORY.DMP; %SystemRoot%\\Minidump",
+    "offline_location": "<OS_VOLUME>:\\Windows\\",
+    "collector_or_parser": "Get-MinidumpMetadata.ps1 + WinDbg",
+    "use": "bugcheck"
+  },
+  {
+    "id": "whea",
+    "name": "WHEA",
+    "online_location": "System event log/WHEA-Logger",
+    "offline_location": "System.evtx",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "hardware errors"
+  },
+  {
+    "id": "srttrail",
+    "name": "SrtTrail",
+    "online_location": "%windir%\\System32\\LogFiles\\Srt\\SrtTrail.txt",
+    "offline_location": "<OS_VOLUME>:\\Windows\\System32\\LogFiles\\Srt",
+    "collector_or_parser": "text parser",
+    "use": "Automatic Repair"
+  },
+  {
+    "id": "boot-log",
+    "name": "Boot log",
+    "online_location": "%windir%\\ntbtlog.txt",
+    "offline_location": "<OS_VOLUME>:\\Windows\\ntbtlog.txt",
+    "collector_or_parser": "text parser",
+    "use": "driver boot"
+  },
+  {
+    "id": "defender",
+    "name": "Defender",
+    "online_location": "%ProgramData%\\Microsoft\\Windows Defender\\Support",
+    "offline_location": "<OS_VOLUME>:\\ProgramData\\Microsoft\\Windows Defender\\Support",
+    "collector_or_parser": "Get-WindowsRepairBundle.ps1",
+    "use": "security"
+  },
+  {
+    "id": "firewall",
+    "name": "Firewall",
+    "online_location": "%systemroot%\\system32\\LogFiles\\Firewall\\pfirewall.log",
+    "offline_location": "<OS_VOLUME>:\\Windows\\System32\\LogFiles\\Firewall",
+    "collector_or_parser": "text parser",
+    "use": "network"
+  },
+  {
+    "id": "wlan-report",
+    "name": "WLAN report",
+    "online_location": "%ProgramData%\\Microsoft\\Windows\\WlanReport",
+    "offline_location": "not-applicable",
+    "collector_or_parser": "Get-WindowsNetworkSnapshot.ps1",
+    "use": "Wi-Fi"
+  },
+  {
+    "id": "vss",
+    "name": "VSS",
+    "online_location": "Application/System event logs",
+    "offline_location": "event logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "backup"
+  },
+  {
+    "id": "bitlocker",
+    "name": "BitLocker",
+    "online_location": "Microsoft-Windows-BitLocker/BitLocker Management",
+    "offline_location": "event logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "encryption"
+  },
+  {
+    "id": "printservice",
+    "name": "PrintService",
+    "online_location": "Microsoft-Windows-PrintService/Operational",
+    "offline_location": "event logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "printing"
+  },
+  {
+    "id": "appx-store",
+    "name": "AppX/Store",
+    "online_location": "AppModel-Runtime/AppXDeploymentServer",
+    "offline_location": "event logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "packages"
+  },
+  {
+    "id": "user-profile",
+    "name": "User Profile",
+    "online_location": "User Profile Service events",
+    "offline_location": "event logs",
+    "collector_or_parser": "Export-WindowsRelevantEvents.ps1",
+    "use": "profiles"
+  }
+]

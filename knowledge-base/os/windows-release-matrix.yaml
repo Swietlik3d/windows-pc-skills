@@ -1,0 +1,67 @@
+{
+  "snapshot_date": "2026-08-06",
+  "freshness_days": 90,
+  "source": "ms-win11-release",
+  "windows_11": [
+    {
+      "version": "26H1",
+      "build_family": "28000",
+      "latest_build_snapshot": "28000.2525",
+      "availability": "2026-02-10",
+      "home_pro_eol": "2028-03-14",
+      "enterprise_education_eol": "2029-03-13",
+      "notes": "Preinstalled on select new 2026 hardware; not an in-place update from 24H2/25H2."
+    },
+    {
+      "version": "25H2",
+      "build_family": "26200",
+      "latest_build_snapshot": "26200.8875",
+      "availability": "2025-09-30",
+      "home_pro_eol": "2027-10-12",
+      "enterprise_education_eol": "2028-10-10"
+    },
+    {
+      "version": "24H2",
+      "build_family": "26100",
+      "latest_build_snapshot": "26100.8875",
+      "availability": "2024-10-01",
+      "home_pro_eol": "2026-10-13",
+      "enterprise_education_eol": "2027-10-12"
+    },
+    {
+      "version": "23H2",
+      "build_family": "22631",
+      "latest_build_snapshot": "22631.7376",
+      "availability": "2023-10-31",
+      "home_pro_eol": "ended",
+      "enterprise_education_eol": "2026-11-10"
+    }
+  ],
+  "windows_10": [
+    {
+      "version": "22H2",
+      "build_family": "19045",
+      "latest_build_snapshot": "19045.7548",
+      "availability": "2022-10-18",
+      "standard_support_eol": "2025-10-14",
+      "esu": "available for enrolled consumers/organizations; verify eligibility and year"
+    },
+    {
+      "version": "Enterprise LTSC 2021",
+      "build_family": "19044",
+      "mainstream_or_servicing_eol": "2027-01-12",
+      "iot_extended_eol": "2032-01-13"
+    },
+    {
+      "version": "Enterprise LTSC 2019",
+      "build_family": "17763",
+      "extended_eol": "2029-01-09"
+    },
+    {
+      "version": "Enterprise LTSB 2016",
+      "build_family": "14393",
+      "extended_eol": "2026-10-13",
+      "esu_note": "organization program may exist; verify live"
+    }
+  ]
+}

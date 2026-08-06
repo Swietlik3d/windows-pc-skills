@@ -1,0 +1,89 @@
+{
+  "id": "windows-process-service-startup-pb-02",
+  "title": "Wolny startup",
+  "summary": "Dużo programów po logowaniu.",
+  "symptoms": [
+    "Dużo programów po logowaniu."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać do usuwania persistence malware bez ścieżki incydentowej."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "usługa bezpieczeństwa/backup/MDM",
+    "nieznany binary signature",
+    "podejrzenie malware",
+    "brak exportu konfiguracji"
+  ],
+  "evidence_to_collect": [
+    "process path/signature",
+    "service config/dependencies",
+    "task XML",
+    "startup registry",
+    "boot/logon timeline"
+  ],
+  "hypotheses": [
+    "Jedna lub kilka pozycji blokuje shell.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Autoruns export i pomiar baseline; nie wyłączać Microsoft entries."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wyłączać po jednej pozycji z dokumentowanym rollback.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-process-service-startup-cmd-01",
+    "windows-process-service-startup-cmd-02",
+    "windows-process-service-startup-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Startup krótszy, a aplikacje wymagane pozostają dostępne.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "usługa bezpieczeństwa/backup/MDM",
+    "nieznany binary signature",
+    "podejrzenie malware",
+    "brak exportu konfiguracji"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-performance-hangs",
+    "windows-malware-remediation",
+    "windows-advanced-administration",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "ms-services",
+    "ms-scheduledtasks",
+    "sysinternals-autoruns"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

@@ -1,0 +1,92 @@
+{
+  "id": "windows-boot-recovery-pb-01",
+  "title": "Automatic Repair loop",
+  "summary": "WinRE uruchamia się przy każdym starcie.",
+  "symptoms": [
+    "WinRE uruchamia się przy każdym starcie."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie przebudowywać partycji/BCD; przekazać potwierdzoną awarię boot files do dedykowanego skilla."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "storage risk",
+    "BitLocker bez key readiness",
+    "błędy RAM",
+    "nieustalony OS volume",
+    "firmware nie widzi dysku"
+  ],
+  "evidence_to_collect": [
+    "etap startu",
+    "firmware detection",
+    "boot layout",
+    "SrtTrail/boot log",
+    "recent change",
+    "Safe Mode behavior"
+  ],
+  "hypotheses": [
+    "Pending update, driver, component corruption albo storage.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Najpierw layout/storage, potem zebrać SrtTrail i pending state."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Cofnąć pojedynczą zmianę; BCD tylko przy dowodzie.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-boot-recovery-cmd-01",
+    "windows-boot-recovery-cmd-02",
+    "windows-boot-recovery-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Trzy poprawne starty i zachowane logi before/after.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "storage risk",
+    "BitLocker bez key readiness",
+    "błędy RAM",
+    "nieustalony OS volume",
+    "firmware nie widzi dysku"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-bcd-partition-repair",
+    "winpe-offline-repair",
+    "storage-triage-cloning-recovery",
+    "windows-bsod-debugging"
+  ],
+  "sources": [
+    "ms-startup-repair",
+    "ms-bcdedit",
+    "ms-winre"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

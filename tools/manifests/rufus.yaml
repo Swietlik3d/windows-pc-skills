@@ -1,0 +1,48 @@
+{
+  "id": "rufus",
+  "name": "Rufus",
+  "category": "boot-media",
+  "publisher": "Pete Batard",
+  "official_home": "https://rufus.ie/",
+  "official_download": "https://rufus.ie/",
+  "official_repository": "",
+  "current_version": "4.14",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "GPL-3.0",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "allowed",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "Authenticode where published",
+  "checksum_method": "SHA-256 from official release",
+  "risk_class": "R0",
+  "use_cases": [
+    "boot-media"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "rufus"
+  ]
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "cf-latencymon-supporting-only",
+    "claim": "LatencyMon może wskazać kierunek DPC/ISR, ale nie jest samodzielnym dowodem winnego drivera.",
+    "classification": "community-confirmed",
+    "confidence": "medium",
+    "applies_to": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "risk_class": "R0",
+    "required_confirmation": [
+      "WPR/WPA trace",
+      "reproduction correlation"
+    ],
+    "sources": [
+      "ms-wpr"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "cf-ddu-exception",
+    "claim": "DDU bywa przydatny dla potwierdzonego problemu display-driver, lecz nie jest rutynowym pierwszym krokiem.",
+    "classification": "community-confirmed",
+    "confidence": "medium",
+    "applies_to": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "risk_class": "R3",
+    "required_confirmation": [
+      "Safe Mode recovery",
+      "matched OEM driver",
+      "restore/rollback"
+    ],
+    "sources": [
+      "ms-driver-store"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "cf-tweak-suites",
+    "claim": "Run-all tweak/repair suites niszczą możliwość przypisania przyczyny i mogą osłabić zabezpieczenia.",
+    "classification": "community-confirmed",
+    "confidence": "high",
+    "applies_to": [
+      "Windows client"
+    ],
+    "risk_class": "R3",
+    "required_confirmation": [
+      "review exact action",
+      "backup",
+      "rollback"
+    ],
+    "sources": [
+      "ms-support-troubleshoot"
+    ],
+    "last_verified": "2026-08-06"
+  }
+]

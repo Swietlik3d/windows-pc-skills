@@ -1,0 +1,92 @@
+{
+  "id": "windows-office-cloud-repair-pb-03",
+  "title": "Teams sign-in loop",
+  "summary": "WAM login wraca.",
+  "symptoms": [
+    "WAM login wraca."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie usuwać profilu, OST/PST ani unlinkować OneDrive bez inwentaryzacji danych i rollbacku."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "lokalne-only PST",
+    "unsynced OneDrive files",
+    "managed tenant",
+    "retention/legal hold",
+    "account compromise"
+  ],
+  "evidence_to_collect": [
+    "account/tenant scope bez sekretów",
+    "Office channel/build",
+    "data file paths/sizes",
+    "sync state",
+    "add-ins",
+    "identity/WAM events"
+  ],
+  "hypotheses": [
+    "Token broker, time, WebView2, policy lub tenant.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Sprawdzić time, account broker events i Office health."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawić wspieranym client resetem tylko po wylogowaniu/backup.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-office-cloud-repair-cmd-01",
+    "windows-office-cloud-repair-cmd-02",
+    "windows-office-cloud-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Sign-in, meeting audio/video i reboot działają.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "lokalne-only PST",
+    "unsynced OneDrive files",
+    "managed tenant",
+    "retention/legal hold",
+    "account compromise"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-accounts-profiles",
+    "windows-apps-store-winget",
+    "windows-network-repair",
+    "windows-backup-vss-restore"
+  ],
+  "sources": [
+    "ms-office-repair",
+    "ms-onedrive",
+    "ms-teams-troubleshoot"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

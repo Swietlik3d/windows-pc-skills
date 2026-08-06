@@ -1,0 +1,92 @@
+{
+  "id": "winpe-offline-repair-pb-03",
+  "title": "Offline component repair",
+  "summary": "CBS wskazuje corruption, storage/RAM stabilne.",
+  "symptoms": [
+    "CBS wskazuje corruption, storage/RAM stabilne."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zakładać C: i nie prowadzić zmian BCD/partycji bez dedykowanego playbooka."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "nieustalone źródło/cel",
+    "BitLocker locked",
+    "storage risk",
+    "hive już załadowany",
+    "źródło DISM nie pasuje"
+  ],
+  "evidence_to_collect": [
+    "disk/volume unique IDs",
+    "OS directory",
+    "BCD device",
+    "BitLocker lock state",
+    "build/language/index",
+    "wolne miejsce"
+  ],
+  "hypotheses": [
+    "Źródło musi pasować build/edition/language.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Najpierw DISM Check/Scan na wskazanym image i zweryfikować source index."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Apply dopiero R2 po snapshot/backup i planie rollback.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "winpe-offline-repair-cmd-01",
+    "winpe-offline-repair-cmd-02",
+    "winpe-offline-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "DISM/SFC exit, logs i ponowny boot są zweryfikowane.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "nieustalone źródło/cel",
+    "BitLocker locked",
+    "storage risk",
+    "hive już załadowany",
+    "źródło DISM nie pasuje"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-os-identification",
+    "windows-component-repair",
+    "windows-bcd-partition-repair",
+    "windows-case-evidence"
+  ],
+  "sources": [
+    "ms-winpe",
+    "ms-dism-image",
+    "ms-reg"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

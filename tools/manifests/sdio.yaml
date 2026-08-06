@@ -1,0 +1,48 @@
+{
+  "id": "sdio",
+  "name": "Snappy Driver Installer Origin",
+  "category": "driver-pack",
+  "publisher": "SDIO",
+  "official_home": "https://www.snappy-driver-installer.org/",
+  "official_download": "https://www.snappy-driver-installer.org/",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "GPL and driver licenses",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": true,
+  "signature_method": "project packages",
+  "checksum_method": "hashes vary",
+  "risk_class": "R3",
+  "use_cases": [
+    "driver-pack"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "github-releases"
+  ]
+}

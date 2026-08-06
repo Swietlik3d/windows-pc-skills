@@ -1,0 +1,92 @@
+{
+  "id": "windows-bitlocker-tpm-security-pb-01",
+  "title": "Recovery po firmware change",
+  "summary": "Każdy boot żąda key.",
+  "symptoms": [
+    "Każdy boot żąda key."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie pozyskiwać, zapisywać ani obchodzić recovery keys; nie wyłączać ochrony bez jawnego celu i rollbacku."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak recovery key readiness",
+    "firmware/BCD/partition change",
+    "managed policy",
+    "podejrzenie kradzieży",
+    "EFS/certificate loss"
+  ],
+  "evidence_to_collect": [
+    "protection/lock status bez key",
+    "protector types bez IDs w raporcie publicznym",
+    "TPM readiness",
+    "Secure Boot cert state",
+    "VBS/HVCI",
+    "management policy"
+  ],
+  "hypotheses": [
+    "PCR zmienił się albo firmware nie zapisuje ustawień.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Nie wpisywać key do logu; zebrać firmware/TPM/events po autoryzowanym unlock."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawić firmware/policy i wykonać oficjalny reseal tylko z adminem.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-bitlocker-tpm-security-cmd-01",
+    "windows-bitlocker-tpm-security-cmd-02",
+    "windows-bitlocker-tpm-security-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Dwa cold boots bez recovery i protector active.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak recovery key readiness",
+    "firmware/BCD/partition change",
+    "managed policy",
+    "podejrzenie kradzieży",
+    "EFS/certificate loss"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "bios-uefi-firmware",
+    "windows-bcd-partition-repair",
+    "windows-remote-managed-client",
+    "windows-accounts-profiles"
+  ],
+  "sources": [
+    "ms-bitlocker-overview",
+    "ms-tpm",
+    "ms-secure-boot-2026"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

@@ -1,0 +1,1617 @@
+[
+  {
+    "id": "codex-skills",
+    "title": "Build skills",
+    "url": "https://learn.chatgpt.com/docs/build-skills",
+    "publisher": "OpenAI",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "SKILL.md wymaga name i description; repo używa .agents/skills, a user scope $HOME/.agents/skills.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "agentskills-spec",
+    "title": "Agent Skills specification",
+    "url": "https://agentskills.io/specification",
+    "publisher": "Agent Skills",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Otwarty standard katalogu skill i front matter.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "github-releases",
+    "title": "Linking to releases",
+    "url": "https://docs.github.com/en/repositories/releasing-projects-on-github/linking-to-releases",
+    "publisher": "GitHub",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Oficjalny wzorzec releases/latest i asset provenance.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-support-troubleshoot",
+    "title": "Windows troubleshooting documentation",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/welcome-windows-client",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows troubleshooting documentation",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-privacy",
+    "title": "Microsoft privacy principles",
+    "url": "https://www.microsoft.com/privacy/privacystatement",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Microsoft privacy principles",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-win11-release",
+    "title": "Windows 11 release information",
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "26H1, 25H2, 24H2 i 23H2 servicing/build/lifecycle; 26H1 tylko dla nowych urządzeń.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-win10-release",
+    "title": "Windows 10 release information",
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/release-information",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows 10 22H2 zakończył standardowe wsparcie i otrzymuje aktualizacje ESU dla zapisanych urządzeń.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-release-health",
+    "title": "Windows release health",
+    "url": "https://learn.microsoft.com/en-us/windows/release-health/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Bieżące known issues, safeguard holds i miesięczne informacje o wydaniach.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-lifecycle",
+    "title": "Lifecycle FAQ - Windows",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/faq/windows",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Lifecycle FAQ - Windows",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-windows-esu",
+    "title": "Windows 10 Extended Security Updates",
+    "url": "https://learn.microsoft.com/en-us/windows/whats-new/extended-security-updates",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows 10 Extended Security Updates",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-xp-lifecycle",
+    "title": "Windows XP lifecycle",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-xp",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows XP SP3 support ended 2014-04-08.",
+    "confidence": "high",
+    "status": "eol",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-win7-lifecycle",
+    "title": "Windows 7 lifecycle",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-7",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows 7 support ended; ESU ended for common editions.",
+    "confidence": "high",
+    "status": "eol",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-win81-lifecycle",
+    "title": "Windows 8.1 lifecycle",
+    "url": "https://learn.microsoft.com/en-us/lifecycle/products/windows-81",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows 8.1 support ended 2023-01-10.",
+    "confidence": "high",
+    "status": "eol",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-adk",
+    "title": "Download and install Windows ADK",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/get-started/adk-install",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "ADK 10.1.28000.1 supports Windows 11 26H1 ARM64 and requires current security servicing.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-winpe",
+    "title": "Windows PE overview",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-intro",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows PE overview",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-secure-boot-2026",
+    "title": "Update Secure Boot certificates for Windows devices",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/windows-security/update-secure-boot-certificates",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Certyfikaty Secure Boot 2011 wygasają od czerwca 2026; wdrażać certyfikaty 2023 po pilotażu.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-tpm",
+    "title": "Trusted Platform Module overview",
+    "url": "https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/trusted-platform-module-overview",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Trusted Platform Module overview",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bitlocker-overview",
+    "title": "BitLocker overview",
+    "url": "https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "BitLocker overview",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-wmi-computersystem",
+    "title": "Win32_ComputerSystem class",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-computersystem",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Win32_ComputerSystem class",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-powercfg",
+    "title": "Powercfg command-line options",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Powercfg command-line options",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-whea",
+    "title": "WHEA hardware error events",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/whea/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "WHEA hardware error events",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-get-filehash",
+    "title": "Get-FileHash",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Get-FileHash",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "nist-chain-evidence",
+    "title": "Digital evidence guidelines",
+    "url": "https://csrc.nist.gov/publications/detail/sp/800-86/final",
+    "publisher": "NIST",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Digital evidence guidelines",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ifixit-esd",
+    "title": "Electrostatic discharge safety",
+    "url": "https://www.ifixit.com/Wiki/ESD",
+    "publisher": "iFixit",
+    "source_type": "secondary",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Electrostatic discharge safety",
+    "confidence": "medium",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-startup-repair",
+    "title": "Startup Repair",
+    "url": "https://support.microsoft.com/en-us/windows/startup-repair-85deb0b9-fa3d-44d8-a2d1-2a6aee1f1e94",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Startup Repair",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-winre",
+    "title": "Windows Recovery Environment",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Recovery Environment",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bcdedit",
+    "title": "BCDEdit command-line options",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/bcdedit--set",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "BCDEdit command-line options",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bcdboot",
+    "title": "BCDBoot command-line options",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bcdboot-command-line-options-techref-di",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "BCDBoot command-line options",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bootrec",
+    "title": "Bootrec reference",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/bootrec-command-line-options",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Bootrec reference",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-dism-image",
+    "title": "DISM image management",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/what-is-dism",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "DISM image management",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-reg",
+    "title": "Reg command",
+    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/reg",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Reg command",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-dism-repair",
+    "title": "Repair a Windows image",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/repair-a-windows-image",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Repair a Windows image",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-sfc",
+    "title": "System File Checker",
+    "url": "https://support.microsoft.com/en-us/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "System File Checker",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-cbs-log",
+    "title": "Analyze SFC and CBS log",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/analyze-sfc-program-log-file-entries",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Analyze SFC and CBS log",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-wu-troubleshoot",
+    "title": "Windows Update troubleshooting guidance",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Update troubleshooting guidance",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-windowsupdate-log",
+    "title": "Get-WindowsUpdateLog",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/windowsupdate/get-windowsupdatelog",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Get-WindowsUpdateLog",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-setupdiag",
+    "title": "SetupDiag",
+    "url": "https://learn.microsoft.com/en-us/windows/deployment/upgrade/setupdiag",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "SetupDiag",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-setup-logfiles",
+    "title": "Windows Setup log files",
+    "url": "https://learn.microsoft.com/en-us/windows/deployment/upgrade/log-files",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Setup log files",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-activation",
+    "title": "Activate Windows",
+    "url": "https://support.microsoft.com/en-us/windows/activate-windows-c39005d4-95ee-b91e-b399-2820fda32227",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Activate Windows",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-activation-troubleshooter",
+    "title": "Activation troubleshooter",
+    "url": "https://support.microsoft.com/en-us/windows/using-the-activation-troubleshooter-d717cdff-cf19-9770-7198-40119c2a696c",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Activation troubleshooter",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-volume-activation",
+    "title": "Volume activation overview",
+    "url": "https://learn.microsoft.com/en-us/windows/deployment/volume-activation/volume-activation-windows",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Volume activation overview",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-windbg",
+    "title": "Install WinDbg",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Install WinDbg",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bugcheck",
+    "title": "Bug check code reference",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-code-reference2",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Bug check code reference",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-driver-verifier",
+    "title": "Driver Verifier",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/driver-verifier",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Driver Verifier",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-wpr",
+    "title": "Windows Performance Recorder",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-recorder",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Performance Recorder",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-wpa",
+    "title": "Windows Performance Analyzer",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-analyzer",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Performance Analyzer",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-perfmon",
+    "title": "Performance Monitor",
+    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/perfmon",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Performance Monitor",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-reliability",
+    "title": "Reliability analysis component",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/wer/using-wer",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Reliability analysis component",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-services",
+    "title": "Service control manager",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/services/service-control-manager",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Service control manager",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-scheduledtasks",
+    "title": "ScheduledTasks module",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/scheduledtasks/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "ScheduledTasks module",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "sysinternals-autoruns",
+    "title": "Autoruns",
+    "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Autoruns",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-pnputil",
+    "title": "PnPUtil",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "PnPUtil",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-setupapi",
+    "title": "SetupAPI device installation log",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/setupapi-device-installation-log-entries",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "SetupAPI device installation log",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-driver-store",
+    "title": "Driver Store",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/driver-store",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Driver Store",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-nettcpip",
+    "title": "NetTCPIP module",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/nettcpip/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "NetTCPIP module",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-netsh",
+    "title": "Netsh",
+    "url": "https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Netsh",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-printer-troubleshoot",
+    "title": "Troubleshoot printer problems",
+    "url": "https://support.microsoft.com/en-us/windows/fix-printer-connection-and-printing-problems-in-windows-fb830bff-7702-6349-33cd-9443fe987f73",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Troubleshoot printer problems",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-bluetooth",
+    "title": "Fix Bluetooth problems",
+    "url": "https://support.microsoft.com/en-us/windows/fix-bluetooth-problems-in-windows-723e092f-03fa-858b-5c80-131ec3fba75c",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Fix Bluetooth problems",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-account-recovery",
+    "title": "Microsoft account recovery",
+    "url": "https://support.microsoft.com/en-us/account-billing/help-with-the-microsoft-account-recovery-form-b19c02d1-a782-dee6-93c3-dc8113b20c42",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Microsoft account recovery",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-hello",
+    "title": "Windows Hello troubleshooting",
+    "url": "https://support.microsoft.com/en-us/windows/troubleshoot-problems-with-windows-hello-bf68539e-e95e-48b6-a6cb-455649db3887",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Hello troubleshooting",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-user-profile",
+    "title": "User profile service",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/user-profiles-and-logon/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "User profile service",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-icacls",
+    "title": "icacls",
+    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/icacls",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "icacls",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-smbshare",
+    "title": "SmbShare module",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/smbshare/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "SmbShare module",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-efs",
+    "title": "Encrypting File System",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-encryption",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Encrypting File System",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-defender-offline",
+    "title": "Microsoft Defender Offline",
+    "url": "https://support.microsoft.com/en-us/windows/help-protect-my-pc-with-microsoft-defender-offline-9306d528-64bf-4668-5b80-ff533f183d6c",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Microsoft Defender Offline",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-msert",
+    "title": "Microsoft Safety Scanner",
+    "url": "https://learn.microsoft.com/en-us/defender-endpoint/safety-scanner-download",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Microsoft Safety Scanner",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-winget",
+    "title": "Windows Package Manager",
+    "url": "https://learn.microsoft.com/en-us/windows/package-manager/winget/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Package Manager",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-appx",
+    "title": "Appx module",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/appx/",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Appx module",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-msi-logging",
+    "title": "Enable Windows Installer logging",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/enable-windows-installer-logging",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Enable Windows Installer logging",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-start-menu",
+    "title": "Troubleshoot Start menu errors",
+    "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/shell-experience/troubleshoot-start-menu-errors",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Troubleshoot Start menu errors",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-office-repair",
+    "title": "Repair an Office application",
+    "url": "https://support.microsoft.com/en-us/office/repair-an-office-application-7821d4b6-7c1d-4205-aa0e-a6b40c5bb88b",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Repair an Office application",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-onedrive",
+    "title": "OneDrive troubleshooting",
+    "url": "https://support.microsoft.com/en-us/onedrive",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "OneDrive troubleshooting",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-teams-troubleshoot",
+    "title": "Teams troubleshooting",
+    "url": "https://learn.microsoft.com/en-us/microsoftteams/troubleshoot/teams-welcome",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Teams troubleshooting",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-vss",
+    "title": "Volume Shadow Copy Service",
+    "url": "https://learn.microsoft.com/en-us/windows-server/storage/file-server/volume-shadow-copy-service",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Volume Shadow Copy Service",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-file-history",
+    "title": "File History",
+    "url": "https://support.microsoft.com/en-us/windows/backup-and-restore-with-file-history-7bf065bf-f1ea-0a78-c1cf-7dcf51cc8bfc",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "File History",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-windows-backup",
+    "title": "Windows Backup",
+    "url": "https://support.microsoft.com/en-us/windows/back-up-your-windows-pc-87a81f8a-78fa-456e-b521-ac0560e32338",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Windows Backup",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-dsregcmd",
+    "title": "dsregcmd troubleshooting",
+    "url": "https://learn.microsoft.com/en-us/entra/identity/devices/troubleshoot-device-dsregcmd",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "dsregcmd troubleshooting",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-gpresult",
+    "title": "gpresult",
+    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/gpresult",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "gpresult",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-quick-assist",
+    "title": "Quick Assist",
+    "url": "https://support.microsoft.com/en-us/windows/solve-pc-problems-remotely-using-quick-assist-f20765d1-9d0a-4b85-8a3a-c9f8f3c0f0a9",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Quick Assist",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-get-winevent",
+    "title": "Get-WinEvent",
+    "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Get-WinEvent",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-registry",
+    "title": "about Registry Provider",
+    "url": "https://learn.microsoft.com/en-us/powershell/provider/registry-provider",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "about Registry Provider",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-optionalfeatures",
+    "title": "DISM optional features",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/enable-or-disable-windows-features-using-dism",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "DISM optional features",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-powershell-shouldprocess",
+    "title": "Everything about ShouldProcess",
+    "url": "https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-shouldprocess",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Everything about ShouldProcess",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "pester-docs",
+    "title": "Pester documentation",
+    "url": "https://pester.dev/docs/quick-start",
+    "publisher": "Pester",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Pester documentation",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "psscriptanalyzer",
+    "title": "PSScriptAnalyzer",
+    "url": "https://learn.microsoft.com/en-us/powershell/utility-modules/psscriptanalyzer/overview",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "PSScriptAnalyzer",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-sysprep",
+    "title": "Sysprep overview",
+    "url": "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Sysprep overview",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ms-sysinternals",
+    "title": "Sysinternals Suite",
+    "url": "https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite",
+    "publisher": "Microsoft",
+    "source_type": "official",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Suite 2026.7, updated 2026-07-09, with x64/ARM64 downloads.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "smartmontools",
+    "title": "smartmontools",
+    "url": "https://www.smartmontools.org/",
+    "publisher": "smartmontools",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "smartmontools",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "gddrescue",
+    "title": "GNU ddrescue",
+    "url": "https://www.gnu.org/software/ddrescue/",
+    "publisher": "GNU",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "GNU ddrescue",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "opensuperclone",
+    "title": "OpenSuperClone",
+    "url": "https://github.com/ISpillMyDrink/OpenSuperClone",
+    "publisher": "OpenSuperClone",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "OpenSuperClone",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "testdisk",
+    "title": "TestDisk and PhotoRec",
+    "url": "https://www.cgsecurity.org/",
+    "publisher": "CGSecurity",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "TestDisk/PhotoRec stable 7.2 at verification.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "memtest86plus",
+    "title": "MemTest86+",
+    "url": "https://github.com/memtest86plus/memtest86plus",
+    "publisher": "MemTest86+",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "v8.10 released 2026-05-16; GPL-2.0.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "wireshark",
+    "title": "Wireshark download",
+    "url": "https://www.wireshark.org/download.html",
+    "publisher": "Wireshark Foundation",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Stable 4.6.7; signed signatures file and Windows x64/ARM64 packages.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "rufus",
+    "title": "Rufus",
+    "url": "https://github.com/pbatard/rufus",
+    "publisher": "Pete Batard",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Stable 4.14 at verification; GPL-3.0.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  },
+  {
+    "id": "ventoy",
+    "title": "Ventoy download",
+    "url": "https://www.ventoy.net/en/download.html",
+    "publisher": "Ventoy",
+    "source_type": "project",
+    "retrieved_at": "2026-08-06",
+    "last_verified": "2026-08-06",
+    "applies_to": [
+      "Windows client",
+      "repo knowledge"
+    ],
+    "claim_summary": "Official download page publishes pinned assets and SHA-256.",
+    "confidence": "high",
+    "status": "current",
+    "license_notes": "Link i synteza; prawa należą do wydawcy."
+  }
+]

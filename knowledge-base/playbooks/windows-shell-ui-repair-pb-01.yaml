@@ -1,0 +1,90 @@
+{
+  "id": "windows-shell-ui-repair-pb-01",
+  "title": "Explorer crash loop",
+  "summary": "explorer.exe restartuje.",
+  "symptoms": [
+    "explorer.exe restartuje."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie masowo rejestrować AppX ani resetować profilu bez porównania nowego konta."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "objaw tylko na jednym profilu z EFS/OneDrive",
+    "managed shell policy",
+    "crash po third-party extension",
+    "storage/component corruption"
+  ],
+  "evidence_to_collect": [
+    "scope user/system",
+    "Reliability/WER",
+    "shell extension list",
+    "AppX events",
+    "profile comparison",
+    "policy"
+  ],
+  "hypotheses": [
+    "Shell extension, namespace handler lub corruption.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Safe Mode/new profile i WER module correlation."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wyłączyć pojedynczą third-party extension z rollback.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-shell-ui-repair-cmd-01",
+    "windows-shell-ui-repair-cmd-02",
+    "windows-shell-ui-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Explorer stabilny w repro i po reboot.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "objaw tylko na jednym profilu z EFS/OneDrive",
+    "managed shell policy",
+    "crash po third-party extension",
+    "storage/component corruption"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-accounts-profiles",
+    "windows-apps-store-winget",
+    "windows-component-repair",
+    "windows-performance-hangs"
+  ],
+  "sources": [
+    "ms-start-menu",
+    "ms-appx",
+    "sysinternals-autoruns"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

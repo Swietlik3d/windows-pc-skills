@@ -1,0 +1,92 @@
+{
+  "id": "windows-performance-hangs-pb-02",
+  "title": "100% disk",
+  "summary": "Active time 100%, niski throughput.",
+  "symptoms": [
+    "Active time 100%, niski throughput."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie optymalizować przez wyłączanie ochrony/usług bez pomiaru i hipotezy."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "storage health issue",
+    "thermal throttling",
+    "memory errors",
+    "incydent malware",
+    "trace zawiera wrażliwe dane"
+  ],
+  "evidence_to_collect": [
+    "repro timeline",
+    "resource counters",
+    "ETW profile",
+    "Reliability/WER",
+    "DPC/ISR",
+    "temperatures/clocks"
+  ],
+  "hypotheses": [
+    "Latency storage, paging, AV scan lub failing media.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Najpierw SMART/latency, potem process I/O trace."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Naprawić przyczynę; nie wyłączać SysMain/Defender w ciemno.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-performance-hangs-cmd-01",
+    "windows-performance-hangs-cmd-02",
+    "windows-performance-hangs-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Latency i queue spadają w tym samym workload.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "storage health issue",
+    "thermal throttling",
+    "memory errors",
+    "incydent malware",
+    "trace zawiera wrażliwe dane"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-process-service-startup",
+    "memory-cpu-gpu-thermal",
+    "windows-drivers-devices",
+    "windows-bsod-debugging"
+  ],
+  "sources": [
+    "ms-wpr",
+    "ms-wpa",
+    "ms-perfmon"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

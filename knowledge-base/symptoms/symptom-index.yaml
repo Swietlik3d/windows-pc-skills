@@ -1,0 +1,1289 @@
+[
+  {
+    "id": "symptom-windows-master-router-01",
+    "phrases": [
+      "Szerokie zgłoszenie bez diagnozy",
+      "Użytkownik mówi tylko „komputer nie działa”.",
+      "PC broken / Windows problem"
+    ],
+    "primary_skill": "windows-master-router",
+    "playbook": "knowledge-base/playbooks/windows-master-router-pb-01.yaml",
+    "first_gate": "zagrożenie danych"
+  },
+  {
+    "id": "symptom-windows-master-router-02",
+    "phrases": [
+      "Wiele równoczesnych objawów",
+      "Wolny start, błędy aktualizacji i znikający dysk.",
+      "ordinateur start niet"
+    ],
+    "primary_skill": "windows-master-router",
+    "playbook": "knowledge-base/playbooks/windows-master-router-pb-02.yaml",
+    "first_gate": "zagrożenie danych"
+  },
+  {
+    "id": "symptom-windows-master-router-03",
+    "phrases": [
+      "Zgłoszenie firmowe i szyfrowane",
+      "Laptop Entra/MDM żąda BitLocker recovery.",
+      "route this Windows issue"
+    ],
+    "primary_skill": "windows-master-router",
+    "playbook": "knowledge-base/playbooks/windows-master-router-pb-03.yaml",
+    "first_gate": "zagrożenie danych"
+  },
+  {
+    "id": "symptom-windows-service-intake-01",
+    "phrases": [
+      "Standardowe przyjęcie",
+      "Urządzenie prywatne, Windows uruchamia się.",
+      "service intake"
+    ],
+    "primary_skill": "windows-service-intake",
+    "playbook": "knowledge-base/playbooks/windows-service-intake-pb-01.yaml",
+    "first_gate": "brak upoważnienia"
+  },
+  {
+    "id": "symptom-windows-service-intake-02",
+    "phrases": [
+      "Dane cenniejsze niż urządzenie",
+      "Brak backupu i niestabilny dysk.",
+      "toestemming reparatie"
+    ],
+    "primary_skill": "windows-service-intake",
+    "playbook": "knowledge-base/playbooks/windows-service-intake-pb-02.yaml",
+    "first_gate": "brak upoważnienia"
+  },
+  {
+    "id": "symptom-windows-service-intake-03",
+    "phrases": [
+      "Laptop zarządzany",
+      "Entra/MDM, klient nie zna polityk.",
+      "formularz zgody klienta"
+    ],
+    "primary_skill": "windows-service-intake",
+    "playbook": "knowledge-base/playbooks/windows-service-intake-pb-03.yaml",
+    "first_gate": "brak upoważnienia"
+  },
+  {
+    "id": "symptom-windows-case-evidence-01",
+    "phrases": [
+      "Zapis pojedynczej czynności",
+      "Technik zebrał log R0.",
+      "case evidence"
+    ],
+    "primary_skill": "windows-case-evidence",
+    "playbook": "knowledge-base/playbooks/windows-case-evidence-pb-01.yaml",
+    "first_gate": "podejrzenie przestępstwa"
+  },
+  {
+    "id": "symptom-windows-case-evidence-02",
+    "phrases": [
+      "Anonimizacja bundle",
+      "Log zawiera username, hostname i e-mail.",
+      "chain of custody"
+    ],
+    "primary_skill": "windows-case-evidence",
+    "playbook": "knowledge-base/playbooks/windows-case-evidence-pb-02.yaml",
+    "first_gate": "podejrzenie przestępstwa"
+  },
+  {
+    "id": "symptom-windows-case-evidence-03",
+    "phrases": [
+      "Raport zamknięcia",
+      "Naprawa zakończona i wykonano testy.",
+      "serwisrapport"
+    ],
+    "primary_skill": "windows-case-evidence",
+    "playbook": "knowledge-base/playbooks/windows-case-evidence-pb-03.yaml",
+    "first_gate": "podejrzenie przestępstwa"
+  },
+  {
+    "id": "symptom-pc-hardware-diagnostics-01",
+    "phrases": [
+      "Brak reakcji na power",
+      "Zero LED i wentylatorów.",
+      "no power / no POST"
+    ],
+    "primary_skill": "pc-hardware-diagnostics",
+    "playbook": "knowledge-base/playbooks/pc-hardware-diagnostics-pb-01.yaml",
+    "first_gate": "spuchnięta bateria"
+  },
+  {
+    "id": "symptom-pc-hardware-diagnostics-02",
+    "phrases": [
+      "Zasilanie jest, brak POST",
+      "Wentylatory ruszają, brak obrazu i kod.",
+      "pieptoon moederbord"
+    ],
+    "primary_skill": "pc-hardware-diagnostics",
+    "playbook": "knowledge-base/playbooks/pc-hardware-diagnostics-pb-02.yaml",
+    "first_gate": "spuchnięta bateria"
+  },
+  {
+    "id": "symptom-pc-hardware-diagnostics-03",
+    "phrases": [
+      "Laptop nie ładuje",
+      "Działa z baterii, nie przyjmuje zasilania USB-C.",
+      "laptop nie ładuje"
+    ],
+    "primary_skill": "pc-hardware-diagnostics",
+    "playbook": "knowledge-base/playbooks/pc-hardware-diagnostics-pb-03.yaml",
+    "first_gate": "spuchnięta bateria"
+  },
+  {
+    "id": "symptom-bios-uefi-firmware-01",
+    "phrases": [
+      "Zmiana Secure Boot po aktualizacji",
+      "Secure Boot jest wyłączony lub status nieznany.",
+      "UEFI Secure Boot problem"
+    ],
+    "primary_skill": "bios-uefi-firmware",
+    "playbook": "knowledge-base/playbooks/bios-uefi-firmware-pb-01.yaml",
+    "first_gate": "niepewny model/rewizja"
+  },
+  {
+    "id": "symptom-bios-uefi-firmware-02",
+    "phrases": [
+      "Plan aktualizacji BIOS",
+      "OEM zaleca poprawkę stabilności.",
+      "TPM niet beschikbaar"
+    ],
+    "primary_skill": "bios-uefi-firmware",
+    "playbook": "knowledge-base/playbooks/bios-uefi-firmware-pb-02.yaml",
+    "first_gate": "niepewny model/rewizja"
+  },
+  {
+    "id": "symptom-bios-uefi-firmware-03",
+    "phrases": [
+      "Boot order po wymianie dysku",
+      "UEFI nie pokazuje Windows Boot Manager.",
+      "firmware update laptop"
+    ],
+    "primary_skill": "bios-uefi-firmware",
+    "playbook": "knowledge-base/playbooks/bios-uefi-firmware-pb-03.yaml",
+    "first_gate": "niepewny model/rewizja"
+  },
+  {
+    "id": "symptom-storage-triage-cloning-recovery-01",
+    "phrases": [
+      "Klikający HDD",
+      "Dysk wydaje dźwięki i zwalnia.",
+      "SSD znika"
+    ],
+    "primary_skill": "storage-triage-cloning-recovery",
+    "playbook": "knowledge-base/playbooks/storage-triage-cloning-recovery-pb-01.yaml",
+    "first_gate": "klikający lub znikający dysk"
+  },
+  {
+    "id": "symptom-storage-triage-cloning-recovery-02",
+    "phrases": [
+      "SSD/NVMe znika",
+      "Dysk okresowo znika z UEFI.",
+      "SMART bad"
+    ],
+    "primary_skill": "storage-triage-cloning-recovery",
+    "playbook": "knowledge-base/playbooks/storage-triage-cloning-recovery-pb-02.yaml",
+    "first_gate": "klikający lub znikający dysk"
+  },
+  {
+    "id": "symptom-storage-triage-cloning-recovery-03",
+    "phrases": [
+      "Odzysk logiczny po usunięciu",
+      "Pliki skasowane, dysk stabilny.",
+      "recover files / gegevens herstellen"
+    ],
+    "primary_skill": "storage-triage-cloning-recovery",
+    "playbook": "knowledge-base/playbooks/storage-triage-cloning-recovery-pb-03.yaml",
+    "first_gate": "klikający lub znikający dysk"
+  },
+  {
+    "id": "symptom-memory-cpu-gpu-thermal-01",
+    "phrases": [
+      "Losowe restarty pod obciążeniem",
+      "PC resetuje się bez BSOD.",
+      "WHEA crash"
+    ],
+    "primary_skill": "memory-cpu-gpu-thermal",
+    "playbook": "knowledge-base/playbooks/memory-cpu-gpu-thermal-pb-01.yaml",
+    "first_gate": "jakikolwiek błąd RAM"
+  },
+  {
+    "id": "symptom-memory-cpu-gpu-thermal-02",
+    "phrases": [
+      "Błędy MemTest",
+      "Co najmniej jeden błąd pamięci.",
+      "GPU artifacts"
+    ],
+    "primary_skill": "memory-cpu-gpu-thermal",
+    "playbook": "knowledge-base/playbooks/memory-cpu-gpu-thermal-pb-02.yaml",
+    "first_gate": "jakikolwiek błąd RAM"
+  },
+  {
+    "id": "symptom-memory-cpu-gpu-thermal-03",
+    "phrases": [
+      "Artefakty GPU",
+      "Kolorowe bloki w BIOS i Windows.",
+      "oververhitting / thermal shutdown"
+    ],
+    "primary_skill": "memory-cpu-gpu-thermal",
+    "playbook": "knowledge-base/playbooks/memory-cpu-gpu-thermal-pb-03.yaml",
+    "first_gate": "jakikolwiek błąd RAM"
+  },
+  {
+    "id": "symptom-windows-os-identification-01",
+    "phrases": [
+      "System online",
+      "Windows działa, wersja nieznana.",
+      "identify Windows build"
+    ],
+    "primary_skill": "windows-os-identification",
+    "playbook": "knowledge-base/playbooks/windows-os-identification-pb-01.yaml",
+    "first_gate": "wyniki z różnych instalacji/offline volume"
+  },
+  {
+    "id": "symptom-windows-os-identification-02",
+    "phrases": [
+      "System offline w WinRE",
+      "Litery dysków są inne.",
+      "Windows-versie controleren"
+    ],
+    "primary_skill": "windows-os-identification",
+    "playbook": "knowledge-base/playbooks/windows-os-identification-pb-02.yaml",
+    "first_gate": "wyniki z różnych instalacji/offline volume"
+  },
+  {
+    "id": "symptom-windows-os-identification-03",
+    "phrases": [
+      "ARM64/S mode/N edition",
+      "Aplikacja lub sterownik nie działa.",
+      "edition architecture boot mode"
+    ],
+    "primary_skill": "windows-os-identification",
+    "playbook": "knowledge-base/playbooks/windows-os-identification-pb-03.yaml",
+    "first_gate": "wyniki z różnych instalacji/offline volume"
+  },
+  {
+    "id": "symptom-windows-boot-recovery-01",
+    "phrases": [
+      "Automatic Repair loop",
+      "WinRE uruchamia się przy każdym starcie.",
+      "Windows nie startuje"
+    ],
+    "primary_skill": "windows-boot-recovery",
+    "playbook": "knowledge-base/playbooks/windows-boot-recovery-pb-01.yaml",
+    "first_gate": "storage risk"
+  },
+  {
+    "id": "symptom-windows-boot-recovery-02",
+    "phrases": [
+      "Czarny ekran po logowaniu",
+      "Kursor jest, system odpowiada.",
+      "zwart scherm na aanmelden"
+    ],
+    "primary_skill": "windows-boot-recovery",
+    "playbook": "knowledge-base/playbooks/windows-boot-recovery-pb-02.yaml",
+    "first_gate": "storage risk"
+  },
+  {
+    "id": "symptom-windows-boot-recovery-03",
+    "phrases": [
+      "Restart przed logowaniem",
+      "Logo pojawia się, potem reset.",
+      "SrtTrail.txt"
+    ],
+    "primary_skill": "windows-boot-recovery",
+    "playbook": "knowledge-base/playbooks/windows-boot-recovery-pb-03.yaml",
+    "first_gate": "storage risk"
+  },
+  {
+    "id": "symptom-winpe-offline-repair-01",
+    "phrases": [
+      "Ustalenie litery offline OS",
+      "WinRE pokazuje wiele NTFS.",
+      "WinPE repair"
+    ],
+    "primary_skill": "winpe-offline-repair",
+    "playbook": "knowledge-base/playbooks/winpe-offline-repair-pb-01.yaml",
+    "first_gate": "nieustalone źródło/cel"
+  },
+  {
+    "id": "symptom-winpe-offline-repair-02",
+    "phrases": [
+      "Eksport logów offline",
+      "Windows nie startuje, potrzebne CBS/Panther.",
+      "WinRE opdrachtprompt"
+    ],
+    "primary_skill": "winpe-offline-repair",
+    "playbook": "knowledge-base/playbooks/winpe-offline-repair-pb-02.yaml",
+    "first_gate": "nieustalone źródło/cel"
+  },
+  {
+    "id": "symptom-winpe-offline-repair-03",
+    "phrases": [
+      "Offline component repair",
+      "CBS wskazuje corruption, storage/RAM stabilne.",
+      "load offline registry hive"
+    ],
+    "primary_skill": "winpe-offline-repair",
+    "playbook": "knowledge-base/playbooks/winpe-offline-repair-pb-03.yaml",
+    "first_gate": "nieustalone źródło/cel"
+  },
+  {
+    "id": "symptom-windows-bcd-partition-repair-01",
+    "phrases": [
+      "Brak Windows Boot Manager UEFI",
+      "Firmware widzi dysk, ale nie wpis.",
+      "no boot device"
+    ],
+    "primary_skill": "windows-bcd-partition-repair",
+    "playbook": "knowledge-base/playbooks/windows-bcd-partition-repair-pb-01.yaml",
+    "first_gate": "nieustalony dysk/OS/ESP"
+  },
+  {
+    "id": "symptom-windows-bcd-partition-repair-02",
+    "phrases": [
+      "Legacy MBR po klonowaniu",
+      "BIOS mówi no bootable device.",
+      "Windows Boot Manager ontbreekt"
+    ],
+    "primary_skill": "windows-bcd-partition-repair",
+    "playbook": "knowledge-base/playbooks/windows-bcd-partition-repair-pb-02.yaml",
+    "first_gate": "nieustalony dysk/OS/ESP"
+  },
+  {
+    "id": "symptom-windows-bcd-partition-repair-03",
+    "phrases": [
+      "BCD wskazuje złą partycję",
+      "0xc000000e po zmianie dysku.",
+      "napraw ESP UEFI"
+    ],
+    "primary_skill": "windows-bcd-partition-repair",
+    "playbook": "knowledge-base/playbooks/windows-bcd-partition-repair-pb-03.yaml",
+    "first_gate": "nieustalony dysk/OS/ESP"
+  },
+  {
+    "id": "symptom-windows-component-repair-01",
+    "phrases": [
+      "SFC reports corruption",
+      "SFC /verifyonly wykrywa naruszenia.",
+      "DISM 0x800f081f"
+    ],
+    "primary_skill": "windows-component-repair",
+    "playbook": "knowledge-base/playbooks/windows-component-repair-pb-01.yaml",
+    "first_gate": "storage/RAM instability"
+  },
+  {
+    "id": "symptom-windows-component-repair-02",
+    "phrases": [
+      "DISM 0x800f081f",
+      "Source files could not be found.",
+      "component store repair"
+    ],
+    "primary_skill": "windows-component-repair",
+    "playbook": "knowledge-base/playbooks/windows-component-repair-pb-02.yaml",
+    "first_gate": "storage/RAM instability"
+  },
+  {
+    "id": "symptom-windows-component-repair-03",
+    "phrases": [
+      "Offline corruption",
+      "System nie bootuje, CBS wskazuje servicing.",
+      "bronbestanden niet gevonden"
+    ],
+    "primary_skill": "windows-component-repair",
+    "playbook": "knowledge-base/playbooks/windows-component-repair-pb-03.yaml",
+    "first_gate": "storage/RAM instability"
+  },
+  {
+    "id": "symptom-windows-update-servicing-01",
+    "phrases": [
+      "Quality update fails",
+      "Ta sama KB wraca z błędem.",
+      "aktualizacja stoi 0%"
+    ],
+    "primary_skill": "windows-update-servicing",
+    "playbook": "knowledge-base/playbooks/windows-update-servicing-pb-01.yaml",
+    "first_gate": "storage/RAM issue"
+  },
+  {
+    "id": "symptom-windows-update-servicing-02",
+    "phrases": [
+      "Feature update rollback",
+      "Upgrade wraca do starej wersji.",
+      "update mislukt"
+    ],
+    "primary_skill": "windows-update-servicing",
+    "playbook": "knowledge-base/playbooks/windows-update-servicing-pb-02.yaml",
+    "first_gate": "storage/RAM issue"
+  },
+  {
+    "id": "symptom-windows-update-servicing-03",
+    "phrases": [
+      "Update sterowany przez organizację",
+      "Some settings are managed.",
+      "0x800f0922"
+    ],
+    "primary_skill": "windows-update-servicing",
+    "playbook": "knowledge-base/playbooks/windows-update-servicing-pb-03.yaml",
+    "first_gate": "storage/RAM issue"
+  },
+  {
+    "id": "symptom-windows-setup-upgrade-rollback-01",
+    "phrases": [
+      "Feature update rollback",
+      "Setup wraca do poprzedniego builda.",
+      "SetupDiag"
+    ],
+    "primary_skill": "windows-setup-upgrade-rollback",
+    "playbook": "knowledge-base/playbooks/windows-setup-upgrade-rollback-pb-01.yaml",
+    "first_gate": "brak backupu"
+  },
+  {
+    "id": "symptom-windows-setup-upgrade-rollback-02",
+    "phrases": [
+      "In-place repair install",
+      "System działa, component repair nie wystarcza.",
+      "Windows installatie teruggedraaid"
+    ],
+    "primary_skill": "windows-setup-upgrade-rollback",
+    "playbook": "knowledge-base/playbooks/windows-setup-upgrade-rollback-pb-02.yaml",
+    "first_gate": "brak backupu"
+  },
+  {
+    "id": "symptom-windows-setup-upgrade-rollback-03",
+    "phrases": [
+      "Compatibility hold",
+      "Windows Update nie oferuje wersji.",
+      "in-place repair install"
+    ],
+    "primary_skill": "windows-setup-upgrade-rollback",
+    "playbook": "knowledge-base/playbooks/windows-setup-upgrade-rollback-pb-03.yaml",
+    "first_gate": "brak backupu"
+  },
+  {
+    "id": "symptom-windows-activation-licensing-01",
+    "phrases": [
+      "Edition mismatch po reinstalacji",
+      "Licencja Home, zainstalowano Pro.",
+      "activation error"
+    ],
+    "primary_skill": "windows-activation-licensing",
+    "playbook": "knowledge-base/playbooks/windows-activation-licensing-pb-01.yaml",
+    "first_gate": "prośba o crack/KMS emulator"
+  },
+  {
+    "id": "symptom-windows-activation-licensing-02",
+    "phrases": [
+      "Digital license po wymianie płyty",
+      "Activation lost after hardware change.",
+      "edition mismatch"
+    ],
+    "primary_skill": "windows-activation-licensing",
+    "playbook": "knowledge-base/playbooks/windows-activation-licensing-pb-02.yaml",
+    "first_gate": "prośba o crack/KMS emulator"
+  },
+  {
+    "id": "symptom-windows-activation-licensing-03",
+    "phrases": [
+      "Firmowy KMS/MAK",
+      "Laptop poza siecią nie aktywuje.",
+      "Windows-activering mislukt"
+    ],
+    "primary_skill": "windows-activation-licensing",
+    "playbook": "knowledge-base/playbooks/windows-activation-licensing-pb-03.yaml",
+    "first_gate": "prośba o crack/KMS emulator"
+  },
+  {
+    "id": "symptom-windows-bsod-debugging-01",
+    "phrases": [
+      "Powtarzalny driver BSOD",
+      "Ten sam bugcheck pod konkretną akcją.",
+      "BSOD"
+    ],
+    "primary_skill": "windows-bsod-debugging",
+    "playbook": "knowledge-base/playbooks/windows-bsod-debugging-pb-01.yaml",
+    "first_gate": "storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-bsod-debugging-02",
+    "phrases": [
+      "Losowe bugchecki",
+      "Kody i moduły zmieniają się.",
+      "bugcheck"
+    ],
+    "primary_skill": "windows-bsod-debugging",
+    "playbook": "knowledge-base/playbooks/windows-bsod-debugging-pb-02.yaml",
+    "first_gate": "storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-bsod-debugging-03",
+    "phrases": [
+      "Driver Verifier",
+      "Podejrzenie third-party driver bez dowodu.",
+      "blauw scherm WinDbg"
+    ],
+    "primary_skill": "windows-bsod-debugging",
+    "playbook": "knowledge-base/playbooks/windows-bsod-debugging-pb-03.yaml",
+    "first_gate": "storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-performance-hangs-01",
+    "phrases": [
+      "Wolne logowanie",
+      "Desktop gotowy po kilku minutach.",
+      "100% disk"
+    ],
+    "primary_skill": "windows-performance-hangs",
+    "playbook": "knowledge-base/playbooks/windows-performance-hangs-pb-01.yaml",
+    "first_gate": "storage health issue"
+  },
+  {
+    "id": "symptom-windows-performance-hangs-02",
+    "phrases": [
+      "100% disk",
+      "Active time 100%, niski throughput.",
+      "microstutter"
+    ],
+    "primary_skill": "windows-performance-hangs",
+    "playbook": "knowledge-base/playbooks/windows-performance-hangs-pb-02.yaml",
+    "first_gate": "storage health issue"
+  },
+  {
+    "id": "symptom-windows-performance-hangs-03",
+    "phrases": [
+      "DPC audio stutter",
+      "Trzaski podczas real-time audio.",
+      "pc hangt / not responding"
+    ],
+    "primary_skill": "windows-performance-hangs",
+    "playbook": "knowledge-base/playbooks/windows-performance-hangs-pb-03.yaml",
+    "first_gate": "storage health issue"
+  },
+  {
+    "id": "symptom-windows-process-service-startup-01",
+    "phrases": [
+      "Usługa nie startuje",
+      "Service timeout/dependency error.",
+      "service won't start"
+    ],
+    "primary_skill": "windows-process-service-startup",
+    "playbook": "knowledge-base/playbooks/windows-process-service-startup-pb-01.yaml",
+    "first_gate": "usługa bezpieczeństwa/backup/MDM"
+  },
+  {
+    "id": "symptom-windows-process-service-startup-02",
+    "phrases": [
+      "Wolny startup",
+      "Dużo programów po logowaniu.",
+      "clean boot"
+    ],
+    "primary_skill": "windows-process-service-startup",
+    "playbook": "knowledge-base/playbooks/windows-process-service-startup-pb-02.yaml",
+    "first_gate": "usługa bezpieczeństwa/backup/MDM"
+  },
+  {
+    "id": "symptom-windows-process-service-startup-03",
+    "phrases": [
+      "Podejrzane zadanie",
+      "Losowy task uruchamia skrypt.",
+      "opstartprogramma uitschakelen"
+    ],
+    "primary_skill": "windows-process-service-startup",
+    "playbook": "knowledge-base/playbooks/windows-process-service-startup-pb-03.yaml",
+    "first_gate": "usługa bezpieczeństwa/backup/MDM"
+  },
+  {
+    "id": "symptom-windows-drivers-devices-01",
+    "phrases": [
+      "Unknown device Code 28",
+      "Brak sterownika.",
+      "Code 43"
+    ],
+    "primary_skill": "windows-drivers-devices",
+    "playbook": "knowledge-base/playbooks/windows-drivers-devices-pb-01.yaml",
+    "first_gate": "storage/network driver needed for recovery"
+  },
+  {
+    "id": "symptom-windows-drivers-devices-02",
+    "phrases": [
+      "GPU Code 43",
+      "Adapter zatrzymany.",
+      "driver problem"
+    ],
+    "primary_skill": "windows-drivers-devices",
+    "playbook": "knowledge-base/playbooks/windows-drivers-devices-pb-02.yaml",
+    "first_gate": "storage/network driver needed for recovery"
+  },
+  {
+    "id": "symptom-windows-drivers-devices-03",
+    "phrases": [
+      "Driver powoduje boot loop",
+      "Po aktualizacji system nie startuje.",
+      "apparaatcode 10"
+    ],
+    "primary_skill": "windows-drivers-devices",
+    "playbook": "knowledge-base/playbooks/windows-drivers-devices-pb-03.yaml",
+    "first_gate": "storage/network driver needed for recovery"
+  },
+  {
+    "id": "symptom-windows-network-repair-01",
+    "phrases": [
+      "Link jest, brak internetu",
+      "Adres jest APIPA lub brak gateway.",
+      "DNS problem"
+    ],
+    "primary_skill": "windows-network-repair",
+    "playbook": "knowledge-base/playbooks/windows-network-repair-pb-01.yaml",
+    "first_gate": "managed VPN/firewall"
+  },
+  {
+    "id": "symptom-windows-network-repair-02",
+    "phrases": [
+      "DNS intermittent",
+      "IP działa, nazwy czasem nie.",
+      "Wi-Fi disconnects"
+    ],
+    "primary_skill": "windows-network-repair",
+    "playbook": "knowledge-base/playbooks/windows-network-repair-pb-02.yaml",
+    "first_gate": "managed VPN/firewall"
+  },
+  {
+    "id": "symptom-windows-network-repair-03",
+    "phrases": [
+      "VPN psuje sieć",
+      "Po rozłączeniu brak dostępu.",
+      "geen internet / VPN werkt niet"
+    ],
+    "primary_skill": "windows-network-repair",
+    "playbook": "knowledge-base/playbooks/windows-network-repair-pb-03.yaml",
+    "first_gate": "managed VPN/firewall"
+  },
+  {
+    "id": "symptom-windows-peripherals-repair-01",
+    "phrases": [
+      "Kolejka drukarki stoi",
+      "Jobs pozostają w queue.",
+      "no sound"
+    ],
+    "primary_skill": "windows-peripherals-repair",
+    "playbook": "knowledge-base/playbooks/windows-peripherals-repair-pb-01.yaml",
+    "first_gate": "przegrzewający się port/kabel"
+  },
+  {
+    "id": "symptom-windows-peripherals-repair-02",
+    "phrases": [
+      "Brak audio",
+      "Output device istnieje, brak dźwięku.",
+      "Bluetooth werkt niet"
+    ],
+    "primary_skill": "windows-peripherals-repair",
+    "playbook": "knowledge-base/playbooks/windows-peripherals-repair-pb-02.yaml",
+    "first_gate": "przegrzewający się port/kabel"
+  },
+  {
+    "id": "symptom-windows-peripherals-repair-03",
+    "phrases": [
+      "USB/Bluetooth rozłącza",
+      "Urządzenie znika okresowo.",
+      "USB disconnect / kamera nie działa"
+    ],
+    "primary_skill": "windows-peripherals-repair",
+    "playbook": "knowledge-base/playbooks/windows-peripherals-repair-pb-03.yaml",
+    "first_gate": "przegrzewający się port/kabel"
+  },
+  {
+    "id": "symptom-windows-accounts-profiles-01",
+    "phrases": [
+      "Temporary profile",
+      "Windows loguje do profilu tymczasowego.",
+      "nie mogę się zalogować"
+    ],
+    "primary_skill": "windows-accounts-profiles",
+    "playbook": "knowledge-base/playbooks/windows-accounts-profiles-pb-01.yaml",
+    "first_gate": "brak autoryzacji właściciela"
+  },
+  {
+    "id": "symptom-windows-accounts-profiles-02",
+    "phrases": [
+      "Hello PIN unavailable",
+      "PIN nie działa po TPM/firmware change.",
+      "Windows Hello PIN problem"
+    ],
+    "primary_skill": "windows-accounts-profiles",
+    "playbook": "knowledge-base/playbooks/windows-accounts-profiles-pb-02.yaml",
+    "first_gate": "brak autoryzacji właściciela"
+  },
+  {
+    "id": "symptom-windows-accounts-profiles-03",
+    "phrases": [
+      "Migracja uszkodzonego profilu",
+      "Explorer/apps padają tylko dla jednego usera.",
+      "tijdelijk profiel"
+    ],
+    "primary_skill": "windows-accounts-profiles",
+    "playbook": "knowledge-base/playbooks/windows-accounts-profiles-pb-03.yaml",
+    "first_gate": "brak autoryzacji właściciela"
+  },
+  {
+    "id": "symptom-windows-ntfs-permissions-shares-01",
+    "phrases": [
+      "Access denied do jednego folderu",
+      "Właściciel ma upoważnienie.",
+      "NTFS permissions"
+    ],
+    "primary_skill": "windows-ntfs-permissions-shares",
+    "playbook": "knowledge-base/playbooks/windows-ntfs-permissions-shares-pb-01.yaml",
+    "first_gate": "EFS encrypted files"
+  },
+  {
+    "id": "symptom-windows-ntfs-permissions-shares-02",
+    "phrases": [
+      "Po migracji dysku stare SID",
+      "Foldery pokazują unknown account.",
+      "SMB share permission"
+    ],
+    "primary_skill": "windows-ntfs-permissions-shares",
+    "playbook": "knowledge-base/playbooks/windows-ntfs-permissions-shares-pb-02.yaml",
+    "first_gate": "EFS encrypted files"
+  },
+  {
+    "id": "symptom-windows-ntfs-permissions-shares-03",
+    "phrases": [
+      "SMB działa lokalnie, nie z sieci",
+      "NTFS lokalnie OK.",
+      "toegang geweigerd"
+    ],
+    "primary_skill": "windows-ntfs-permissions-shares",
+    "playbook": "knowledge-base/playbooks/windows-ntfs-permissions-shares-pb-03.yaml",
+    "first_gate": "EFS encrypted files"
+  },
+  {
+    "id": "symptom-windows-bitlocker-tpm-security-01",
+    "phrases": [
+      "Recovery po firmware change",
+      "Każdy boot żąda key.",
+      "TPM error"
+    ],
+    "primary_skill": "windows-bitlocker-tpm-security",
+    "playbook": "knowledge-base/playbooks/windows-bitlocker-tpm-security-pb-01.yaml",
+    "first_gate": "brak recovery key readiness"
+  },
+  {
+    "id": "symptom-windows-bitlocker-tpm-security-02",
+    "phrases": [
+      "Plan zmiany BIOS/BCD",
+      "Naprawa R3/R4 może wywołać recovery.",
+      "Device Encryption"
+    ],
+    "primary_skill": "windows-bitlocker-tpm-security",
+    "playbook": "knowledge-base/playbooks/windows-bitlocker-tpm-security-pb-02.yaml",
+    "first_gate": "brak recovery key readiness"
+  },
+  {
+    "id": "symptom-windows-bitlocker-tpm-security-03",
+    "phrases": [
+      "Secure Boot cert 2026",
+      "Urządzenie może mieć certyfikaty 2011.",
+      "herstelcode BitLocker / Secure Boot"
+    ],
+    "primary_skill": "windows-bitlocker-tpm-security",
+    "playbook": "knowledge-base/playbooks/windows-bitlocker-tpm-security-pb-03.yaml",
+    "first_gate": "brak recovery key readiness"
+  },
+  {
+    "id": "symptom-windows-malware-remediation-01",
+    "phrases": [
+      "PUP/browser hijack",
+      "Homepage/extensions wracają.",
+      "browser hijack"
+    ],
+    "primary_skill": "windows-malware-remediation",
+    "playbook": "knowledge-base/playbooks/windows-malware-remediation-pb-01.yaml",
+    "first_gate": "ransomware in progress"
+  },
+  {
+    "id": "symptom-windows-malware-remediation-02",
+    "phrases": [
+      "Defender disabled",
+      "Protection off bez zgody.",
+      "Defender disabled"
+    ],
+    "primary_skill": "windows-malware-remediation",
+    "playbook": "knowledge-base/playbooks/windows-malware-remediation-pb-02.yaml",
+    "first_gate": "ransomware in progress"
+  },
+  {
+    "id": "symptom-windows-malware-remediation-03",
+    "phrases": [
+      "Poważny kompromis",
+      "Stealer/ransomware/backdoor evidence.",
+      "malware verwijderen"
+    ],
+    "primary_skill": "windows-malware-remediation",
+    "playbook": "knowledge-base/playbooks/windows-malware-remediation-pb-03.yaml",
+    "first_gate": "ransomware in progress"
+  },
+  {
+    "id": "symptom-windows-apps-store-winget-01",
+    "phrases": [
+      "Store download fails",
+      "Download stoi lub błąd licencji.",
+      "winget error"
+    ],
+    "primary_skill": "windows-apps-store-winget",
+    "playbook": "knowledge-base/playbooks/windows-apps-store-winget-pb-01.yaml",
+    "first_gate": "aplikacja przechowuje krytyczne dane"
+  },
+  {
+    "id": "symptom-windows-apps-store-winget-02",
+    "phrases": [
+      "MSI rollback",
+      "Installer kończy 1603.",
+      "MSI install failed"
+    ],
+    "primary_skill": "windows-apps-store-winget",
+    "playbook": "knowledge-base/playbooks/windows-apps-store-winget-pb-02.yaml",
+    "first_gate": "aplikacja przechowuje krytyczne dane"
+  },
+  {
+    "id": "symptom-windows-apps-store-winget-03",
+    "phrases": [
+      "winget source failure",
+      "winget source/update error.",
+      "app wordt niet gestart"
+    ],
+    "primary_skill": "windows-apps-store-winget",
+    "playbook": "knowledge-base/playbooks/windows-apps-store-winget-pb-03.yaml",
+    "first_gate": "aplikacja przechowuje krytyczne dane"
+  },
+  {
+    "id": "symptom-windows-shell-ui-repair-01",
+    "phrases": [
+      "Explorer crash loop",
+      "explorer.exe restartuje.",
+      "Explorer crashes"
+    ],
+    "primary_skill": "windows-shell-ui-repair",
+    "playbook": "knowledge-base/playbooks/windows-shell-ui-repair-pb-01.yaml",
+    "first_gate": "objaw tylko na jednym profilu z EFS/OneDrive"
+  },
+  {
+    "id": "symptom-windows-shell-ui-repair-02",
+    "phrases": [
+      "Start/Search nie odpowiada",
+      "Kliknięcie bez reakcji.",
+      "taskbar frozen"
+    ],
+    "primary_skill": "windows-shell-ui-repair",
+    "playbook": "knowledge-base/playbooks/windows-shell-ui-repair-pb-02.yaml",
+    "first_gate": "objaw tylko na jednym profilu z EFS/OneDrive"
+  },
+  {
+    "id": "symptom-windows-shell-ui-repair-03",
+    "phrases": [
+      "Złe file associations",
+      "Pliki otwierają złą aplikację.",
+      "Zoeken werkt niet"
+    ],
+    "primary_skill": "windows-shell-ui-repair",
+    "playbook": "knowledge-base/playbooks/windows-shell-ui-repair-pb-03.yaml",
+    "first_gate": "objaw tylko na jednym profilu z EFS/OneDrive"
+  },
+  {
+    "id": "symptom-windows-office-cloud-repair-01",
+    "phrases": [
+      "Outlook crash/start fail",
+      "Outlook nie otwiera profilu.",
+      "OneDrive sync problem"
+    ],
+    "primary_skill": "windows-office-cloud-repair",
+    "playbook": "knowledge-base/playbooks/windows-office-cloud-repair-pb-01.yaml",
+    "first_gate": "lokalne-only PST"
+  },
+  {
+    "id": "symptom-windows-office-cloud-repair-02",
+    "phrases": [
+      "OneDrive sync stuck",
+      "Pliki mają czerwone X.",
+      "Teams sign-in"
+    ],
+    "primary_skill": "windows-office-cloud-repair",
+    "playbook": "knowledge-base/playbooks/windows-office-cloud-repair-pb-02.yaml",
+    "first_gate": "lokalne-only PST"
+  },
+  {
+    "id": "symptom-windows-office-cloud-repair-03",
+    "phrases": [
+      "Teams sign-in loop",
+      "WAM login wraca.",
+      "Office activering / synchronisatie"
+    ],
+    "primary_skill": "windows-office-cloud-repair",
+    "playbook": "knowledge-base/playbooks/windows-office-cloud-repair-pb-03.yaml",
+    "first_gate": "lokalne-only PST"
+  },
+  {
+    "id": "symptom-windows-backup-vss-restore-01",
+    "phrases": [
+      "VSS writer failed",
+      "Backup zgłasza writer error.",
+      "backup failed"
+    ],
+    "primary_skill": "windows-backup-vss-restore",
+    "playbook": "knowledge-base/playbooks/windows-backup-vss-restore-pb-01.yaml",
+    "first_gate": "jedyna kopia danych"
+  },
+  {
+    "id": "symptom-windows-backup-vss-restore-02",
+    "phrases": [
+      "Walidacja obrazu",
+      "Backup mówi successful.",
+      "File History"
+    ],
+    "primary_skill": "windows-backup-vss-restore",
+    "playbook": "knowledge-base/playbooks/windows-backup-vss-restore-pb-02.yaml",
+    "first_gate": "jedyna kopia danych"
+  },
+  {
+    "id": "symptom-windows-backup-vss-restore-03",
+    "phrases": [
+      "File History brak wersji",
+      "Użytkownik nie widzi pliku.",
+      "systeemherstel werkt niet"
+    ],
+    "primary_skill": "windows-backup-vss-restore",
+    "playbook": "knowledge-base/playbooks/windows-backup-vss-restore-pb-03.yaml",
+    "first_gate": "jedyna kopia danych"
+  },
+  {
+    "id": "symptom-windows-remote-managed-client-01",
+    "phrases": [
+      "Quick Assist session",
+      "Użytkownik prosi o widoczną pomoc.",
+      "Entra joined"
+    ],
+    "primary_skill": "windows-remote-managed-client",
+    "playbook": "knowledge-base/playbooks/windows-remote-managed-client-pb-01.yaml",
+    "first_gate": "brak świadomej zgody na sesję"
+  },
+  {
+    "id": "symptom-windows-remote-managed-client-02",
+    "phrases": [
+      "GPO nie stosuje się",
+      "Firmowa konfiguracja brakująca.",
+      "GPO problem"
+    ],
+    "primary_skill": "windows-remote-managed-client",
+    "playbook": "knowledge-base/playbooks/windows-remote-managed-client-pb-02.yaml",
+    "first_gate": "brak świadomej zgody na sesję"
+  },
+  {
+    "id": "symptom-windows-remote-managed-client-03",
+    "phrases": [
+      "Entra/MDM compliance",
+      "Device noncompliant.",
+      "Quick Assist / Hulp op afstand"
+    ],
+    "primary_skill": "windows-remote-managed-client",
+    "playbook": "knowledge-base/playbooks/windows-remote-managed-client-pb-03.yaml",
+    "first_gate": "brak świadomej zgody na sesję"
+  },
+  {
+    "id": "symptom-windows-advanced-administration-01",
+    "phrases": [
+      "Korelacja Event Viewer",
+      "Wiele błędów bez jasnej przyczyny.",
+      "registry/service administration"
+    ],
+    "primary_skill": "windows-advanced-administration",
+    "playbook": "knowledge-base/playbooks/windows-advanced-administration-pb-01.yaml",
+    "first_gate": "managed policy"
+  },
+  {
+    "id": "symptom-windows-advanced-administration-02",
+    "phrases": [
+      "Precyzyjna zmiana registry",
+      "Vendor KB wymaga jednego value.",
+      "Hyper-V WSL issue"
+    ],
+    "primary_skill": "windows-advanced-administration",
+    "playbook": "knowledge-base/playbooks/windows-advanced-administration-pb-02.yaml",
+    "first_gate": "managed policy"
+  },
+  {
+    "id": "symptom-windows-advanced-administration-03",
+    "phrases": [
+      "WSL/Hyper-V conflict",
+      "Feature nie startuje.",
+      "Windows-beheer geavanceerd"
+    ],
+    "primary_skill": "windows-advanced-administration",
+    "playbook": "knowledge-base/playbooks/windows-advanced-administration-pb-03.yaml",
+    "first_gate": "managed policy"
+  },
+  {
+    "id": "symptom-windows-automation-powershell-01",
+    "phrases": [
+      "Nowy collector R0",
+      "Potrzebny powtarzalny export.",
+      "safe automation"
+    ],
+    "primary_skill": "windows-automation-powershell",
+    "playbook": "knowledge-base/playbooks/windows-automation-powershell-pb-01.yaml",
+    "first_gate": "brak WhatIf/Apply gate"
+  },
+  {
+    "id": "symptom-windows-automation-powershell-02",
+    "phrases": [
+      "Repair wrapper R2",
+      "Potrzebna kontrolowana zmiana.",
+      "Pester mock"
+    ],
+    "primary_skill": "windows-automation-powershell",
+    "playbook": "knowledge-base/playbooks/windows-automation-powershell-pb-02.yaml",
+    "first_gate": "brak WhatIf/Apply gate"
+  },
+  {
+    "id": "symptom-windows-automation-powershell-03",
+    "phrases": [
+      "Legacy compatibility",
+      "Skrypt ma działać PS5.1/WinRE.",
+      "PowerShell automatisering"
+    ],
+    "primary_skill": "windows-automation-powershell",
+    "playbook": "knowledge-base/playbooks/windows-automation-powershell-pb-03.yaml",
+    "first_gate": "brak WhatIf/Apply gate"
+  },
+  {
+    "id": "symptom-windows-deployment-imaging-01",
+    "phrases": [
+      "Migracja HDD→SSD",
+      "Wymiana na nowy dysk.",
+      "deploy Windows image"
+    ],
+    "primary_skill": "windows-deployment-imaging",
+    "playbook": "knowledge-base/playbooks/windows-deployment-imaging-pb-01.yaml",
+    "first_gate": "source/target ambiguity"
+  },
+  {
+    "id": "symptom-windows-deployment-imaging-02",
+    "phrases": [
+      "Capture WIM",
+      "Wzorzec ma być wdrażany.",
+      "Sysprep error"
+    ],
+    "primary_skill": "windows-deployment-imaging",
+    "playbook": "knowledge-base/playbooks/windows-deployment-imaging-pb-02.yaml",
+    "first_gate": "source/target ambiguity"
+  },
+  {
+    "id": "symptom-windows-deployment-imaging-03",
+    "phrases": [
+      "Offline driver injection",
+      "WinPE/Windows nie widzi storage/network.",
+      "HDD naar SSD migratie"
+    ],
+    "primary_skill": "windows-deployment-imaging",
+    "playbook": "knowledge-base/playbooks/windows-deployment-imaging-pb-03.yaml",
+    "first_gate": "source/target ambiguity"
+  },
+  {
+    "id": "symptom-windows-service-media-01",
+    "phrases": [
+      "Plan oficjalnego WinPE",
+      "ADK i add-on mogą być zainstalowane.",
+      "WinPE toolkit"
+    ],
+    "primary_skill": "windows-service-media",
+    "playbook": "knowledge-base/playbooks/windows-service-media-pb-01.yaml",
+    "first_gate": "nieustalony target USB"
+  },
+  {
+    "id": "symptom-windows-service-media-02",
+    "phrases": [
+      "Multiboot Ventoy/Rufus",
+      "Technik chce kilka legalnych obrazów.",
+      "service USB"
+    ],
+    "primary_skill": "windows-service-media",
+    "playbook": "knowledge-base/playbooks/windows-service-media-pb-02.yaml",
+    "first_gate": "nieustalony target USB"
+  },
+  {
+    "id": "symptom-windows-service-media-03",
+    "phrases": [
+      "Aktualizacja zestawu",
+      "Narzędzia mogły się zestarzeć.",
+      "herstel-USB maken"
+    ],
+    "primary_skill": "windows-service-media",
+    "playbook": "knowledge-base/playbooks/windows-service-media-pb-03.yaml",
+    "first_gate": "nieustalony target USB"
+  },
+  {
+    "id": "symptom-windows-legacy-xp-vista-7-8-01",
+    "phrases": [
+      "NTLDR missing XP",
+      "BIOS widzi dysk, komunikat przed logo.",
+      "Windows 7 repair"
+    ],
+    "primary_skill": "windows-legacy-xp-vista-7-8",
+    "playbook": "knowledge-base/playbooks/windows-legacy-xp-vista-7-8-pb-01.yaml",
+    "first_gate": "Internet exposure"
+  },
+  {
+    "id": "symptom-windows-legacy-xp-vista-7-8-02",
+    "phrases": [
+      "Windows 7 nie bootuje",
+      "Startup Repair loop.",
+      "NTLDR missing"
+    ],
+    "primary_skill": "windows-legacy-xp-vista-7-8",
+    "playbook": "knowledge-base/playbooks/windows-legacy-xp-vista-7-8-pb-02.yaml",
+    "first_gate": "Internet exposure"
+  },
+  {
+    "id": "symptom-windows-legacy-xp-vista-7-8-03",
+    "phrases": [
+      "Migracja z 8.1",
+      "Aplikacja wymaga starego systemu.",
+      "oude Windows 8.1 laptop"
+    ],
+    "primary_skill": "windows-legacy-xp-vista-7-8",
+    "playbook": "knowledge-base/playbooks/windows-legacy-xp-vista-7-8-pb-03.yaml",
+    "first_gate": "Internet exposure"
+  },
+  {
+    "id": "symptom-windows-10-support-01",
+    "phrases": [
+      "22H2 po EOL",
+      "Home/Pro działa po 2025-10-14.",
+      "ESU Windows 10"
+    ],
+    "primary_skill": "windows-10-support",
+    "playbook": "knowledge-base/playbooks/windows-10-support-pb-01.yaml",
+    "first_gate": "brak ESU na Internet-connected device"
+  },
+  {
+    "id": "symptom-windows-10-support-02",
+    "phrases": [
+      "LTSC lifecycle",
+      "Enterprise LTSC pozostaje w firmie.",
+      "22H2 update"
+    ],
+    "primary_skill": "windows-10-support",
+    "playbook": "knowledge-base/playbooks/windows-10-support-pb-02.yaml",
+    "first_gate": "brak ESU na Internet-connected device"
+  },
+  {
+    "id": "symptom-windows-10-support-03",
+    "phrases": [
+      "PC nie spełnia Windows 11",
+      "TPM/CPU blocker.",
+      "Windows 10 ondersteuning"
+    ],
+    "primary_skill": "windows-10-support",
+    "playbook": "knowledge-base/playbooks/windows-10-support-pb-03.yaml",
+    "first_gate": "brak ESU na Internet-connected device"
+  },
+  {
+    "id": "symptom-windows-11-support-01",
+    "phrases": [
+      "Dobór aktywnej gałęzi",
+      "PC ma 24H2/25H2/26H1.",
+      "Windows 11 problem"
+    ],
+    "primary_skill": "windows-11-support",
+    "playbook": "knowledge-base/playbooks/windows-11-support-pb-01.yaml",
+    "first_gate": "26H1 traktowane jako upgrade dla istniejącego PC"
+  },
+  {
+    "id": "symptom-windows-11-support-02",
+    "phrases": [
+      "ARM64 compatibility",
+      "Aplikacja/driver nie instaluje.",
+      "ARM64 app"
+    ],
+    "primary_skill": "windows-11-support",
+    "playbook": "knowledge-base/playbooks/windows-11-support-pb-02.yaml",
+    "first_gate": "26H1 traktowane jako upgrade dla istniejącego PC"
+  },
+  {
+    "id": "symptom-windows-11-support-03",
+    "phrases": [
+      "Device Encryption recovery risk",
+      "Update firmware/security przed zmianą.",
+      "Windows 11 updateprobleem"
+    ],
+    "primary_skill": "windows-11-support",
+    "playbook": "knowledge-base/playbooks/windows-11-support-pb-03.yaml",
+    "first_gate": "26H1 traktowane jako upgrade dla istniejącego PC"
+  },
+  {
+    "id": "symptom-windows-post-repair-validation-01",
+    "phrases": [
+      "Walidacja naprawy software",
+      "Objaw już nie występuje.",
+      "post repair validation"
+    ],
+    "primary_skill": "windows-post-repair-validation",
+    "playbook": "knowledge-base/playbooks/windows-post-repair-validation-pb-01.yaml",
+    "first_gate": "niewyjaśnione storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-post-repair-validation-02",
+    "phrases": [
+      "Burn-in po hardware",
+      "Wymieniono RAM/SSD/cooling.",
+      "burn-in"
+    ],
+    "primary_skill": "windows-post-repair-validation",
+    "playbook": "knowledge-base/playbooks/windows-post-repair-validation-pb-02.yaml",
+    "first_gate": "niewyjaśnione storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-post-repair-validation-03",
+    "phrases": [
+      "Zamknięcie z ryzykiem resztkowym",
+      "Nie wszystkie hipotezy można wykluczyć.",
+      "controle na reparatie"
+    ],
+    "primary_skill": "windows-post-repair-validation",
+    "playbook": "knowledge-base/playbooks/windows-post-repair-validation-pb-03.yaml",
+    "first_gate": "niewyjaśnione storage/RAM errors"
+  },
+  {
+    "id": "symptom-windows-tool-research-01",
+    "phrases": [
+      "Aktualizacja aktywnego projektu",
+      "Katalog ma starszą wersję.",
+      "is this tool safe"
+    ],
+    "primary_skill": "windows-tool-research",
+    "playbook": "knowledge-base/playbooks/windows-tool-research-pb-01.yaml",
+    "first_gate": "download aggregator only"
+  },
+  {
+    "id": "symptom-windows-tool-research-02",
+    "phrases": [
+      "Porzucone narzędzie",
+      "Brak release przez długi czas.",
+      "update tool catalog"
+    ],
+    "primary_skill": "windows-tool-research",
+    "playbook": "knowledge-base/playbooks/windows-tool-research-pb-02.yaml",
+    "first_gate": "download aggregator only"
+  },
+  {
+    "id": "symptom-windows-tool-research-03",
+    "phrases": [
+      "Community repair suite",
+      "Użytkownik pyta o WinUtil/Tron.",
+      "hulpprogramma versie/licentie"
+    ],
+    "primary_skill": "windows-tool-research",
+    "playbook": "knowledge-base/playbooks/windows-tool-research-pb-03.yaml",
+    "first_gate": "download aggregator only"
+  }
+]

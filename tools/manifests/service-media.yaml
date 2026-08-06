@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-08-06",
+  "policy": {
+    "download_during_build": false,
+    "execute_downloaded_asset": false,
+    "require_exact_target_for_usb_write": true,
+    "require_license_acceptance": true
+  },
+  "layouts": {
+    "official_winpe": {
+      "requires": [
+        "Windows ADK",
+        "Windows PE add-on",
+        "current ADK security patch"
+      ],
+      "architectures": [
+        "x64",
+        "ARM64"
+      ],
+      "build_only_if_installed": true
+    },
+    "multiboot": {
+      "options": [
+        "Rufus",
+        "Ventoy"
+      ],
+      "images": [
+        "official Windows media acquired by owner",
+        "SystemRescue/Clonezilla as separately licensed"
+      ],
+      "secure_boot": "test each exact release on target hardware"
+    }
+  },
+  "directories": [
+    "boot",
+    "iso/official",
+    "linux-rescue",
+    "tools/x64",
+    "tools/arm64",
+    "drivers/storage/x64",
+    "drivers/storage/arm64",
+    "drivers/network/x64",
+    "drivers/network/arm64",
+    "scripts",
+    "docs",
+    "cases-encrypted",
+    "manifests"
+  ],
+  "items": [
+    {
+      "tool_id": "windows-pe",
+      "redistribution": "forbidden",
+      "download": "manual-official",
+      "integrity": "Microsoft Authenticode/package source"
+    },
+    {
+      "tool_id": "rufus",
+      "redistribution": "allowed",
+      "download": "explicit-only",
+      "integrity": "official release SHA-256/Authenticode"
+    },
+    {
+      "tool_id": "ventoy",
+      "redistribution": "allowed",
+      "download": "explicit-only",
+      "integrity": "official SHA-256"
+    },
+    {
+      "tool_id": "hirens-bootcd-pe",
+      "redistribution": "forbidden",
+      "download": "manual-only",
+      "integrity": "official hash; component license review"
+    },
+    {
+      "tool_id": "medicat",
+      "redistribution": "forbidden",
+      "download": "manual-only",
+      "integrity": "unverified per component"
+    }
+  ]
+}

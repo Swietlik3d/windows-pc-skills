@@ -1,0 +1,119 @@
+[
+  {
+    "code": "0x800f081f",
+    "domain": "component-store",
+    "meaning": "source files not found or source mismatch",
+    "primary_skill": "windows-component-repair",
+    "evidence": [
+      "DISM.log",
+      "CBS.log",
+      "source index/build/language"
+    ],
+    "do_not": "blind RestoreHealth retry"
+  },
+  {
+    "code": "0x800f0922",
+    "domain": "update",
+    "meaning": "servicing/connection/system partition context required",
+    "primary_skill": "windows-update-servicing",
+    "evidence": [
+      "CBS.log",
+      "WindowsUpdateClient",
+      "ESP/free space",
+      "VPN"
+    ],
+    "do_not": "resize partitions without proof"
+  },
+  {
+    "code": "0xc000000e",
+    "domain": "boot",
+    "meaning": "required device unavailable or BCD device mismatch",
+    "primary_skill": "windows-bcd-partition-repair",
+    "evidence": [
+      "boot layout",
+      "BCD export",
+      "firmware mode"
+    ],
+    "do_not": "blind bootrec"
+  },
+  {
+    "code": "Code 10",
+    "domain": "pnp",
+    "meaning": "device cannot start",
+    "primary_skill": "windows-drivers-devices",
+    "evidence": [
+      "hardware IDs",
+      "SetupAPI",
+      "driver version"
+    ],
+    "do_not": "random driver pack"
+  },
+  {
+    "code": "Code 28",
+    "domain": "pnp",
+    "meaning": "drivers not installed",
+    "primary_skill": "windows-drivers-devices",
+    "evidence": [
+      "hardware IDs",
+      "OEM model"
+    ],
+    "do_not": "guess device"
+  },
+  {
+    "code": "Code 31",
+    "domain": "pnp",
+    "meaning": "Windows cannot load required drivers",
+    "primary_skill": "windows-drivers-devices",
+    "evidence": [
+      "SetupAPI",
+      "driver store"
+    ],
+    "do_not": "bulk delete Driver Store"
+  },
+  {
+    "code": "Code 43",
+    "domain": "pnp/gpu",
+    "meaning": "device reported a problem",
+    "primary_skill": "windows-drivers-devices",
+    "evidence": [
+      "pre-OS behavior",
+      "WHEA",
+      "driver history"
+    ],
+    "do_not": "assume driver only"
+  },
+  {
+    "code": "0xC1900101",
+    "domain": "setup",
+    "meaning": "driver-related rollback family; phase/operation required",
+    "primary_skill": "windows-setup-upgrade-rollback",
+    "evidence": [
+      "SetupDiag",
+      "Panther",
+      "Rollback"
+    ],
+    "do_not": "remove all drivers"
+  },
+  {
+    "code": "1603",
+    "domain": "MSI",
+    "meaning": "fatal install error; contextual MSI log required",
+    "primary_skill": "windows-apps-store-winget",
+    "evidence": [
+      "verbose MSI log around Return value 3"
+    ],
+    "do_not": "registry cleaner"
+  },
+  {
+    "code": "WHEA_UNCORRECTABLE_ERROR",
+    "domain": "hardware",
+    "meaning": "hardware-reported uncorrectable error",
+    "primary_skill": "memory-cpu-gpu-thermal",
+    "evidence": [
+      "WHEA record",
+      "stock settings",
+      "hardware tests"
+    ],
+    "do_not": "blame ntoskrnl"
+  }
+]

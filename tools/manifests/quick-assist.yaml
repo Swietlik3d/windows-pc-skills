@@ -1,0 +1,48 @@
+{
+  "id": "quick-assist",
+  "name": "Quick Assist",
+  "category": "remote",
+  "publisher": "Microsoft",
+  "official_home": "https://support.microsoft.com/en-us/windows/solve-pc-problems-remotely-using-quick-assist-f20765d1-9d0a-4b85-8a3a-c9f8f3c0f0a9",
+  "official_download": "https://support.microsoft.com/en-us/windows/solve-pc-problems-remotely-using-quick-assist-f20765d1-9d0a-4b85-8a3a-c9f8f3c0f0a9",
+  "official_repository": "",
+  "current_version": "os-component",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "Windows license",
+  "commercial_use": "allowed-with-valid-license",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "built-in",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "Windows component integrity",
+  "checksum_method": "not-applicable",
+  "risk_class": "R1",
+  "use_cases": [
+    "remote"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "ms-support-troubleshoot"
+  ]
+}

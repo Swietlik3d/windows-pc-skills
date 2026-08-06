@@ -1,0 +1,89 @@
+{
+  "id": "windows-activation-licensing-pb-02",
+  "title": "Digital license po wymianie płyty",
+  "summary": "Activation lost after hardware change.",
+  "symptoms": [
+    "Activation lost after hardware change."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie obsługiwać aktywatorów, emulatorów KMS, cracków ani obchodzenia warunków licencji."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "prośba o crack/KMS emulator",
+    "pełny product key w logu",
+    "urządzenie firmowe z volume activation",
+    "niejasny dowód licencji"
+  ],
+  "evidence_to_collect": [
+    "edition/channel",
+    "partial product key only",
+    "activation status/error",
+    "OEM marker presence bez klucza",
+    "MSA link",
+    "organization scope"
+  ],
+  "hypotheses": [
+    "Hardware hash uległ zmianie.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Użyć oficjalnego Activation Troubleshooter z właścicielem MSA."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Jeśli OEM non-transferable — eskalować do Microsoft/OEM.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-activation-licensing-cmd-01",
+    "windows-activation-licensing-cmd-02",
+    "windows-activation-licensing-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Activation UI pokazuje legalną aktywację.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "prośba o crack/KMS emulator",
+    "pełny product key w logu",
+    "urządzenie firmowe z volume activation",
+    "niejasny dowód licencji"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-os-identification",
+    "windows-remote-managed-client",
+    "windows-setup-upgrade-rollback"
+  ],
+  "sources": [
+    "ms-activation",
+    "ms-activation-troubleshooter",
+    "ms-volume-activation"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

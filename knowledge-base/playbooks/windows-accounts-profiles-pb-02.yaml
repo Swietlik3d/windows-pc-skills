@@ -1,0 +1,91 @@
+{
+  "id": "windows-accounts-profiles-pb-02",
+  "title": "Hello PIN unavailable",
+  "summary": "PIN nie działa po TPM/firmware change.",
+  "symptoms": [
+    "PIN nie działa po TPM/firmware change."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie omijać haseł, nie dumpować credentials i nie resetować kont organizacji poza oficjalnym procesem."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak autoryzacji właściciela",
+    "EFS",
+    "Entra/MDM",
+    "brak kopii profilu",
+    "podejrzenie account compromise"
+  ],
+  "evidence_to_collect": [
+    "account type/source",
+    "profile SID/path/state",
+    "User Profile Service events",
+    "EFS awareness",
+    "MSA/Entra recovery channel"
+  ],
+  "hypotheses": [
+    "Hello container, TPM attestation lub policy.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Potwierdzić password/official recovery i stan TPM/Entra."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Użyć oficjalnego „I forgot my PIN”; nie usuwać NGC w ciemno.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-accounts-profiles-cmd-01",
+    "windows-accounts-profiles-cmd-02",
+    "windows-accounts-profiles-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "PIN re-enrolled, password fallback i access policies działają.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak autoryzacji właściciela",
+    "EFS",
+    "Entra/MDM",
+    "brak kopii profilu",
+    "podejrzenie account compromise"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-ntfs-permissions-shares",
+    "windows-bitlocker-tpm-security",
+    "windows-office-cloud-repair",
+    "windows-remote-managed-client"
+  ],
+  "sources": [
+    "ms-account-recovery",
+    "ms-hello",
+    "ms-user-profile"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

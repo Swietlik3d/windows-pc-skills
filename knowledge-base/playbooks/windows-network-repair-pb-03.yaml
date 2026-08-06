@@ -1,0 +1,90 @@
+{
+  "id": "windows-network-repair-pb-03",
+  "title": "VPN psuje sieć",
+  "summary": "Po rozłączeniu brak dostępu.",
+  "symptoms": [
+    "Po rozłączeniu brak dostępu."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie skanować cudzej sieci i nie resetować stosu przed snapshotem konfiguracji."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "managed VPN/firewall",
+    "incydent bezpieczeństwa",
+    "brak autoryzacji do capture/Nmap",
+    "statyczna konfiguracja bez backupu"
+  ],
+  "evidence_to_collect": [
+    "link/radio",
+    "IP/gateway/DHCP",
+    "DNS resolution",
+    "routes/proxy/VPN",
+    "firewall profile",
+    "packet timing"
+  ],
+  "hypotheses": [
+    "Routes, proxy, NRPT lub filter driver pozostał.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Snapshot przed/po VPN i diff tras/proxy/adapters."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Repair klienta VPN/OEM; nie usuwać filtrów w ciemno.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-network-repair-cmd-01",
+    "windows-network-repair-cmd-02",
+    "windows-network-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Sieć działa przed, w trakcie i po VPN.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "managed VPN/firewall",
+    "incydent bezpieczeństwa",
+    "brak autoryzacji do capture/Nmap",
+    "statyczna konfiguracja bez backupu"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-drivers-devices",
+    "windows-remote-managed-client",
+    "windows-malware-remediation",
+    "windows-peripherals-repair"
+  ],
+  "sources": [
+    "ms-nettcpip",
+    "ms-netsh",
+    "wireshark"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

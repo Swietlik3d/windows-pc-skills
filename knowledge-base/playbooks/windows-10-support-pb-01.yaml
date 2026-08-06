@@ -1,0 +1,89 @@
+{
+  "id": "windows-10-support-pb-01",
+  "title": "22H2 po EOL",
+  "summary": "Home/Pro działa po 2025-10-14.",
+  "symptoms": [
+    "Home/Pro działa po 2025-10-14."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zakładać, że wszystkie LTSC/LTSB mają ten sam lifecycle albo że ESU obejmuje feature support."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "brak ESU na Internet-connected device",
+    "unsupported app/security stack",
+    "hardware not Win11 eligible",
+    "managed licensing"
+  ],
+  "evidence_to_collect": [
+    "edition/channel/build",
+    "ESU enrollment/status",
+    "LTSC exact product",
+    "hardware eligibility",
+    "backup/migration blockers"
+  ],
+  "hypotheses": [
+    "Bez ESU brak regularnych security updates.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Ustalić edition i legalny ESU/enrollment lub plan migracji."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Nie obiecywać wsparcia; ograniczyć exposure do migracji.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-10-support-cmd-01",
+    "windows-10-support-cmd-02",
+    "windows-10-support-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Urządzenie ma ESU z aktualnymi KB albo przeszło na supported OS.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "brak ESU na Internet-connected device",
+    "unsupported app/security stack",
+    "hardware not Win11 eligible",
+    "managed licensing"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-os-identification",
+    "windows-11-support",
+    "windows-update-servicing",
+    "windows-deployment-imaging"
+  ],
+  "sources": [
+    "ms-win10-release",
+    "ms-windows-esu",
+    "ms-lifecycle"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

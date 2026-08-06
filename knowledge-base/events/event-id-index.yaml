@@ -1,0 +1,112 @@
+[
+  {
+    "provider": "Microsoft-Windows-WHEA-Logger",
+    "ids": [
+      1,
+      17,
+      18,
+      19,
+      20,
+      46,
+      47
+    ],
+    "use": "hardware record; decode context",
+    "skill": "memory-cpu-gpu-thermal"
+  },
+  {
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "ids": [
+      41
+    ],
+    "use": "unexpected shutdown marker, not root cause",
+    "skill": "pc-hardware-diagnostics"
+  },
+  {
+    "provider": "Disk",
+    "ids": [
+      7,
+      51,
+      153,
+      157
+    ],
+    "use": "I/O/reset timeline",
+    "skill": "storage-triage-cloning-recovery"
+  },
+  {
+    "provider": "Ntfs",
+    "ids": [
+      55,
+      98,
+      140
+    ],
+    "use": "filesystem/storage context",
+    "skill": "storage-triage-cloning-recovery"
+  },
+  {
+    "provider": "Microsoft-Windows-WindowsUpdateClient",
+    "ids": [
+      19,
+      20,
+      25,
+      31,
+      34
+    ],
+    "use": "update success/failure",
+    "skill": "windows-update-servicing"
+  },
+  {
+    "provider": "Service Control Manager",
+    "ids": [
+      7000,
+      7001,
+      7009,
+      7011,
+      7031,
+      7034
+    ],
+    "use": "service start/crash timeline",
+    "skill": "windows-process-service-startup"
+  },
+  {
+    "provider": "Microsoft-Windows-User Profiles Service",
+    "ids": [
+      1500,
+      1508,
+      1511,
+      1515,
+      1530
+    ],
+    "use": "profile load/temp profile",
+    "skill": "windows-accounts-profiles"
+  },
+  {
+    "provider": "Microsoft-Windows-BitLocker-API",
+    "ids": [
+      24588,
+      24620,
+      24635
+    ],
+    "use": "BitLocker context; verify build-specific meaning",
+    "skill": "windows-bitlocker-tpm-security"
+  },
+  {
+    "provider": "Microsoft-Windows-Kernel-Boot",
+    "ids": [
+      27,
+      29,
+      32
+    ],
+    "use": "boot mode/status context",
+    "skill": "windows-boot-recovery"
+  },
+  {
+    "provider": "Microsoft-Windows-PrintService",
+    "ids": [
+      307,
+      372,
+      808
+    ],
+    "use": "print success/failure",
+    "skill": "windows-peripherals-repair"
+  }
+]

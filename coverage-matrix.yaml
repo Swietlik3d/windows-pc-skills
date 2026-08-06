@@ -1,0 +1,418 @@
+[
+  {
+    "id": "no-power-post-random-shutdown",
+    "class": "brak zasilania, brak POST, restarty, thermal shutdown",
+    "coverage": "complete",
+    "skill": "pc-hardware-diagnostics",
+    "playbook": "knowledge-base/playbooks/pc-hardware-diagnostics-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "display-artifacts-black-screen",
+    "class": "brak obrazu, artefakty, monitor/dock/GPU",
+    "coverage": "complete",
+    "skill": "memory-cpu-gpu-thermal",
+    "playbook": "knowledge-base/playbooks/memory-cpu-gpu-thermal-pb-03.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "boot-device-automatic-repair",
+    "class": "no boot device, Automatic Repair loop, BCD/ESP/MBR",
+    "coverage": "complete",
+    "skill": "windows-boot-recovery",
+    "playbook": "knowledge-base/playbooks/windows-boot-recovery-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "bitlocker-recovery-loop",
+    "class": "BitLocker recovery loop",
+    "coverage": "complete",
+    "skill": "windows-bitlocker-tpm-security",
+    "playbook": "knowledge-base/playbooks/windows-bitlocker-tpm-security-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "bsod-whea",
+    "class": "BSOD, WHEA, zmienne bugcheck",
+    "coverage": "complete",
+    "skill": "windows-bsod-debugging",
+    "playbook": "knowledge-base/playbooks/windows-bsod-debugging-pb-02.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "freeze-hang-stutter",
+    "class": "freeze, hang, stutter, Not responding",
+    "coverage": "complete",
+    "skill": "windows-performance-hangs",
+    "playbook": "knowledge-base/playbooks/windows-performance-hangs-pb-03.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "slow-login-high-resource",
+    "class": "wolny start/logowanie, 100% disk, high CPU/GPU",
+    "coverage": "complete",
+    "skill": "windows-performance-hangs",
+    "playbook": "knowledge-base/playbooks/windows-performance-hangs-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "storage-failure-recovery",
+    "class": "uszkodzony dysk, read errors, recovery",
+    "coverage": "complete",
+    "skill": "storage-triage-cloning-recovery",
+    "playbook": "knowledge-base/playbooks/storage-triage-cloning-recovery-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "hdd-ssd-migration",
+    "class": "migracja HDD do SSD",
+    "coverage": "complete",
+    "skill": "windows-deployment-imaging",
+    "playbook": "knowledge-base/playbooks/windows-deployment-imaging-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "windows-update",
+    "class": "Windows Update i błędy quality update",
+    "coverage": "complete",
+    "skill": "windows-update-servicing",
+    "playbook": "knowledge-base/playbooks/windows-update-servicing-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "feature-update-rollback",
+    "class": "failed feature update, rollback",
+    "coverage": "complete",
+    "skill": "windows-setup-upgrade-rollback",
+    "playbook": "knowledge-base/playbooks/windows-setup-upgrade-rollback-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "dism-sfc-cbs",
+    "class": "DISM/SFC/CBS, payload/source mismatch",
+    "coverage": "complete",
+    "skill": "windows-component-repair",
+    "playbook": "knowledge-base/playbooks/windows-component-repair-pb-02.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "drivers-device-codes",
+    "class": "unknown device, Code 10/28/31/43",
+    "coverage": "complete",
+    "skill": "windows-drivers-devices",
+    "playbook": "knowledge-base/playbooks/windows-drivers-devices-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "usb-audio-wifi-gpu",
+    "class": "USB disconnect, audio, Wi-Fi, GPU driver",
+    "coverage": "complete",
+    "skill": "windows-peripherals-repair",
+    "playbook": "knowledge-base/playbooks/windows-peripherals-repair-pb-03.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "network-dhcp-dns",
+    "class": "Internet, DNS, DHCP, proxy, VPN, firewall, SMB",
+    "coverage": "complete",
+    "skill": "windows-network-repair",
+    "playbook": "knowledge-base/playbooks/windows-network-repair-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "profiles-login-hello",
+    "class": "temporary profile, login loop, Hello/PIN",
+    "coverage": "complete",
+    "skill": "windows-accounts-profiles",
+    "playbook": "knowledge-base/playbooks/windows-accounts-profiles-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "permissions-shares-efs",
+    "class": "NTFS/share permissions, EFS awareness",
+    "coverage": "complete",
+    "skill": "windows-ntfs-permissions-shares",
+    "playbook": "knowledge-base/playbooks/windows-ntfs-permissions-shares-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "malware-pup-persistence",
+    "class": "malware, PUP, hijack, persistence, Defender disabled",
+    "coverage": "complete",
+    "skill": "windows-malware-remediation",
+    "playbook": "knowledge-base/playbooks/windows-malware-remediation-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "store-msi-apps",
+    "class": "Store/MSIX/AppX/MSI/winget",
+    "coverage": "complete",
+    "skill": "windows-apps-store-winget",
+    "playbook": "knowledge-base/playbooks/windows-apps-store-winget-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "shell-start-search",
+    "class": "Start/Search/Explorer/taskbar/Settings",
+    "coverage": "complete",
+    "skill": "windows-shell-ui-repair",
+    "playbook": "knowledge-base/playbooks/windows-shell-ui-repair-pb-02.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "office-cloud",
+    "class": "Office/Outlook/OneDrive/Teams",
+    "coverage": "complete",
+    "skill": "windows-office-cloud-repair",
+    "playbook": "knowledge-base/playbooks/windows-office-cloud-repair-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "printing-bluetooth-camera",
+    "class": "drukarka, spooler, Bluetooth, kamera",
+    "coverage": "complete",
+    "skill": "windows-peripherals-repair",
+    "playbook": "knowledge-base/playbooks/windows-peripherals-repair-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "backup-vss-restore",
+    "class": "backup, VSS, File History, bare-metal",
+    "coverage": "complete",
+    "skill": "windows-backup-vss-restore",
+    "playbook": "knowledge-base/playbooks/windows-backup-vss-restore-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "activation-edition",
+    "class": "aktywacja i edition mismatch",
+    "coverage": "complete",
+    "skill": "windows-activation-licensing",
+    "playbook": "knowledge-base/playbooks/windows-activation-licensing-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "managed-client",
+    "class": "domain/Entra/MDM, GPO, cert, RDP/Quick Assist",
+    "coverage": "complete",
+    "skill": "windows-remote-managed-client",
+    "playbook": "knowledge-base/playbooks/windows-remote-managed-client-pb-02.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "legacy",
+    "class": "XP/Vista/7/8.1, BIOS/MBR, NTLDR/boot.ini",
+    "coverage": "complete",
+    "skill": "windows-legacy-xp-vista-7-8",
+    "playbook": "knowledge-base/playbooks/windows-legacy-xp-vista-7-8-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "windows-10-esu",
+    "class": "Windows 10 po standardowym wsparciu, ESU/LTSC",
+    "coverage": "complete",
+    "skill": "windows-10-support",
+    "playbook": "knowledge-base/playbooks/windows-10-support-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "windows-11-current",
+    "class": "bieżące Windows 11, ARM64, security stack",
+    "coverage": "complete",
+    "skill": "windows-11-support",
+    "playbook": "knowledge-base/playbooks/windows-11-support-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "service-media",
+    "class": "WinPE/multiboot nośnik serwisowy",
+    "coverage": "complete",
+    "skill": "windows-service-media",
+    "playbook": "knowledge-base/playbooks/windows-service-media-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "tool-research",
+    "class": "wersja/licencja/EOL narzędzia",
+    "coverage": "complete",
+    "skill": "windows-tool-research",
+    "playbook": "knowledge-base/playbooks/windows-tool-research-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "case-evidence",
+    "class": "intake, evidence, raport",
+    "coverage": "complete",
+    "skill": "windows-case-evidence",
+    "playbook": "knowledge-base/playbooks/windows-case-evidence-pb-03.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  },
+  {
+    "id": "post-repair",
+    "class": "burn-in i walidacja",
+    "coverage": "complete",
+    "skill": "windows-post-repair-validation",
+    "playbook": "knowledge-base/playbooks/windows-post-repair-validation-pb-01.yaml",
+    "languages": [
+      "pl",
+      "en",
+      "nl-keywords"
+    ],
+    "last_verified": "2026-08-06"
+  }
+]

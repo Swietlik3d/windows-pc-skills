@@ -1,0 +1,92 @@
+{
+  "id": "windows-post-repair-validation-pb-01",
+  "title": "Walidacja naprawy software",
+  "summary": "Objaw już nie występuje.",
+  "symptoms": [
+    "Objaw już nie występuje."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie zastępować właściwej diagnozy; aktywować po wykonaniu naprawy lub przy zamknięciu sprawy."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "niewyjaśnione storage/RAM errors",
+    "temperatury przy limicie",
+    "backup niezweryfikowany",
+    "ochrona wyłączona",
+    "test ryzykowny dla danych"
+  ],
+  "evidence_to_collect": [
+    "baseline before",
+    "success criteria",
+    "cause reproduction",
+    "symptom test",
+    "regression set",
+    "residual risk"
+  ],
+  "hypotheses": [
+    "Jedna udana próba może być przypadkiem.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Powtórzyć exact repro, potem reboot/sleep/user workflow."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Jeśli odchylenie wraca, cofnąć zmianę i wrócić do hipotez.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-post-repair-validation-cmd-01",
+    "windows-post-repair-validation-cmd-02",
+    "windows-post-repair-validation-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Co najmniej trzy próby lub uzasadniony okres bez regresji.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "niewyjaśnione storage/RAM errors",
+    "temperatury przy limicie",
+    "backup niezweryfikowany",
+    "ochrona wyłączona",
+    "test ryzykowny dla danych"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-case-evidence",
+    "windows-service-intake",
+    "pc-hardware-diagnostics",
+    "windows-backup-vss-restore"
+  ],
+  "sources": [
+    "ms-reliability",
+    "ms-powercfg",
+    "ms-release-health"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

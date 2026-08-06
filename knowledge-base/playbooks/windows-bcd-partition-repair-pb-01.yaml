@@ -1,0 +1,92 @@
+{
+  "id": "windows-bcd-partition-repair-pb-01",
+  "title": "Brak Windows Boot Manager UEFI",
+  "summary": "Firmware widzi dysk, ale nie wpis.",
+  "symptoms": [
+    "Firmware widzi dysk, ale nie wpis."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać do ogólnej pętli boot bez dowodu, że problemem jest konfiguracja rozruchu."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "nieustalony dysk/OS/ESP",
+    "BitLocker bez klucza",
+    "storage risk",
+    "hybrydowy/niestandardowy layout",
+    "dual boot bez zgody"
+  ],
+  "evidence_to_collect": [
+    "firmware mode",
+    "disk IDs",
+    "GPT/MBR",
+    "ESP/active partition",
+    "BCD export",
+    "OS loader path"
+  ],
+  "hypotheses": [
+    "Wpis NVRAM lub pliki ESP są brakujące.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Potwierdzić GPT, FAT32 ESP i właściwy Windows volume."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Wyeksportować BCD; użyć BCDBoot tylko z jawnymi /s i /f UEFI.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-bcd-partition-repair-cmd-01",
+    "windows-bcd-partition-repair-cmd-02",
+    "windows-bcd-partition-repair-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "NVRAM/ESP wskazuje właściwy loader, trzy zimne starty.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "nieustalony dysk/OS/ESP",
+    "BitLocker bez klucza",
+    "storage risk",
+    "hybrydowy/niestandardowy layout",
+    "dual boot bez zgody"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-boot-recovery",
+    "winpe-offline-repair",
+    "windows-bitlocker-tpm-security",
+    "bios-uefi-firmware"
+  ],
+  "sources": [
+    "ms-bcdboot",
+    "ms-bcdedit",
+    "ms-bootrec"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

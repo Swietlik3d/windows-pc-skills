@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_date": "2026-08-06",
+  "rule": "The most data-destructive or physically hazardous plausible cause controls the first step.",
+  "gates": [
+    {
+      "id": "power-or-battery-hazard",
+      "triggers": [
+        "swollen battery",
+        "smoke",
+        "burning smell",
+        "sparking",
+        "liquid ingress"
+      ],
+      "risk_class": "R4",
+      "stop": "Disconnect external power only when physically safe; do not energize, charge, open a PSU or continue testing.",
+      "allowed_r0": [
+        "photograph exterior",
+        "record model and symptoms from owner",
+        "escalate to qualified hardware handling"
+      ],
+      "primary_skill": "pc-hardware-diagnostics"
+    },
+    {
+      "id": "degrading-storage",
+      "triggers": [
+        "clicking",
+        "disappearing device",
+        "I/O reset",
+        "SMART critical",
+        "read errors increasing"
+      ],
+      "risk_class": "R4",
+      "stop": "Stop boot loops, CHKDSK and write-heavy tests; agree imaging or professional recovery first.",
+      "allowed_r0": [
+        "record exact identity",
+        "capture non-invasive SMART once if stable",
+        "document data value and backup"
+      ],
+      "primary_skill": "storage-triage-cloning-recovery"
+    },
+    {
+      "id": "thermal-or-electrical-instability",
+      "triggers": [
+        "rapid overtemperature",
+        "VRM alarm",
+        "fan stopped",
+        "unexpected power loss under load"
+      ],
+      "risk_class": "R3",
+      "stop": "End stress/load tests and return settings to known stock only with an authorized rollback.",
+      "allowed_r0": [
+        "read sensors at idle",
+        "inspect airflow without live disassembly",
+        "correlate WHEA and shutdown time"
+      ],
+      "primary_skill": "memory-cpu-gpu-thermal"
+    }
+  ],
+  "sources": [
+    "ms-support-troubleshoot",
+    "smartmontools",
+    "ms-whea"
+  ]
+}

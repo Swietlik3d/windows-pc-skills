@@ -1,0 +1,92 @@
+{
+  "id": "windows-boot-recovery-pb-02",
+  "title": "Czarny ekran po logowaniu",
+  "summary": "Kursor jest, system odpowiada.",
+  "symptoms": [
+    "Kursor jest, system odpowiada."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie przebudowywać partycji/BCD; przekazać potwierdzoną awarię boot files do dedykowanego skilla."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "storage risk",
+    "BitLocker bez key readiness",
+    "błędy RAM",
+    "nieustalony OS volume",
+    "firmware nie widzi dysku"
+  ],
+  "evidence_to_collect": [
+    "etap startu",
+    "firmware detection",
+    "boot layout",
+    "SrtTrail/boot log",
+    "recent change",
+    "Safe Mode behavior"
+  ],
+  "hypotheses": [
+    "Explorer, display driver, profile lub shell extension.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Sprawdzić Ctrl+Shift+Esc, Safe Mode i zdalny event timeline."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Przekazać do shell/driver/profile zależnie od dowodu.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-boot-recovery-cmd-01",
+    "windows-boot-recovery-cmd-02",
+    "windows-boot-recovery-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Login i Explorer działają na nowym i istniejącym profilu.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "storage risk",
+    "BitLocker bez key readiness",
+    "błędy RAM",
+    "nieustalony OS volume",
+    "firmware nie widzi dysku"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-bcd-partition-repair",
+    "winpe-offline-repair",
+    "storage-triage-cloning-recovery",
+    "windows-bsod-debugging"
+  ],
+  "sources": [
+    "ms-startup-repair",
+    "ms-bcdedit",
+    "ms-winre"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

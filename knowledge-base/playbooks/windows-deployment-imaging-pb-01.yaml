@@ -1,0 +1,92 @@
+{
+  "id": "windows-deployment-imaging-pb-01",
+  "title": "Migracja HDD→SSD",
+  "summary": "Wymiana na nowy dysk.",
+  "symptoms": [
+    "Wymiana na nowy dysk."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie wykonywać capture/apply/clean na niezweryfikowanym dysku ani nie dołączać obrazów/licencji do repo."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "source/target ambiguity",
+    "BitLocker",
+    "unsupported generalization",
+    "OEM recovery dependencies",
+    "insufficient backup"
+  ],
+  "evidence_to_collect": [
+    "disk unique IDs",
+    "image metadata/index/hash",
+    "edition/language/arch",
+    "driver set",
+    "unattend secrets scan",
+    "restore test"
+  ],
+  "hypotheses": [
+    "Layout/sector size/boot mode może nie pasować.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Sprawdzić health źródła, backup, used space i target IDs."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Klonować/imaging poza Windows; nie nadpisywać źródła.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-deployment-imaging-cmd-01",
+    "windows-deployment-imaging-cmd-02",
+    "windows-deployment-imaging-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Boot, partitions, alignment, BitLocker i recovery działają.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "source/target ambiguity",
+    "BitLocker",
+    "unsupported generalization",
+    "OEM recovery dependencies",
+    "insufficient backup"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-service-media",
+    "winpe-offline-repair",
+    "windows-bcd-partition-repair",
+    "storage-triage-cloning-recovery"
+  ],
+  "sources": [
+    "ms-dism-image",
+    "ms-sysprep",
+    "ms-adk"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}

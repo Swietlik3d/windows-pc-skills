@@ -1,0 +1,48 @@
+{
+  "id": "hirens-bootcd-pe",
+  "name": "Hiren's BootCD PE",
+  "category": "aggregated-rescue-media",
+  "publisher": "Hiren's BootCD",
+  "official_home": "https://www.hirensbootcd.org/download/",
+  "official_download": "https://www.hirensbootcd.org/download/",
+  "official_repository": "",
+  "current_version": "rolling",
+  "checked_at": "2026-08-06",
+  "status": "active",
+  "replaced_by": "",
+  "license": "mixed/verify each component",
+  "commercial_use": "verify-license-before-commercial-use",
+  "redistribution": "forbidden",
+  "supported_os": [
+    "Windows 10",
+    "Windows 11"
+  ],
+  "architectures": [
+    "x64",
+    "ARM64 where OS provides it"
+  ],
+  "environments": [
+    "online Windows"
+  ],
+  "portable": true,
+  "install_type": "portable-or-installer",
+  "network_required": false,
+  "elevation_required": false,
+  "signature_method": "published hash",
+  "checksum_method": "SHA-256",
+  "risk_class": "R0",
+  "use_cases": [
+    "aggregated-rescue-media"
+  ],
+  "avoid_when": [
+    "nieznany target",
+    "brak autoryzacji"
+  ],
+  "known_gotchas": [
+    "Wynik narzędzia jest dowodem cząstkowym, nie automatyczną diagnozą."
+  ],
+  "alternatives": [],
+  "sources": [
+    "github-releases"
+  ]
+}

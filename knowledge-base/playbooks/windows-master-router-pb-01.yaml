@@ -1,0 +1,89 @@
+{
+  "id": "windows-master-router-pb-01",
+  "title": "Szerokie zgłoszenie bez diagnozy",
+  "summary": "Użytkownik mówi tylko „komputer nie działa”.",
+  "symptoms": [
+    "Użytkownik mówi tylko „komputer nie działa”."
+  ],
+  "applies_to": [
+    "Windows XP-11 according to compatibility matrix",
+    "online/offline as documented"
+  ],
+  "excludes": [
+    "Nie używać jako substytutu specjalistycznego playbooka po jednoznacznym rozpoznaniu domeny."
+  ],
+  "risk_class": "R0-R3 gated",
+  "authorization_required": true,
+  "prerequisites": [
+    "intake",
+    "authorization",
+    "backup status",
+    "target identification"
+  ],
+  "data_safety": [
+    "zagrożenie danych",
+    "zapach spalenizny lub spuchnięta bateria",
+    "podejrzenie incydentu",
+    "BitLocker bez gotowego recovery key"
+  ],
+  "evidence_to_collect": [
+    "stan uruchamiania",
+    "backup i wartość danych",
+    "szyfrowanie",
+    "zarządzanie organizacji",
+    "ostatnia zmiana"
+  ],
+  "hypotheses": [
+    "Awaria może należeć do hardware, boot, storage albo zasilania.",
+    "alternatywa sprzętowa lub środowiskowa",
+    "wynik niejednoznaczny"
+  ],
+  "diagnostics": [
+    "Zebrać pięć bramek bezpieczeństwa i sklasyfikować etap startu."
+  ],
+  "repair_ladder": [
+    "R0 evidence",
+    "R1 reversible test",
+    "Przekazać do jednego skilla o najwyższym dopasowaniu; nie wykonywać naprawy w routerze.",
+    "R4 manual-only"
+  ],
+  "commands": [
+    "windows-master-router-cmd-01",
+    "windows-master-router-cmd-02",
+    "windows-master-router-cmd-03"
+  ],
+  "rollback": [
+    "stan before",
+    "rekord korekty w timeline",
+    "eskalacja, jeśli rollback nie działa"
+  ],
+  "validation": [
+    "Router zwraca jednego primary, maksymalnie trzy supporting i poziom pewności.",
+    "test regresji",
+    "porównanie before/after"
+  ],
+  "stop_conditions": [
+    "zagrożenie danych",
+    "zapach spalenizny lub spuchnięta bateria",
+    "podejrzenie incydentu",
+    "BitLocker bez gotowego recovery key"
+  ],
+  "escalation": [
+    "hardware/data lab",
+    "organizational administrator",
+    "incident response as applicable"
+  ],
+  "related_skills": [
+    "windows-service-intake",
+    "windows-case-evidence",
+    "windows-os-identification",
+    "windows-post-repair-validation"
+  ],
+  "sources": [
+    "codex-skills",
+    "ms-support-troubleshoot",
+    "ms-bitlocker-overview"
+  ],
+  "last_verified": "2026-08-06",
+  "status": "complete"
+}
