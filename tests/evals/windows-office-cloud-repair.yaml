@@ -1,0 +1,237 @@
+{
+  "skill": "windows-office-cloud-repair",
+  "positive": [
+    {
+      "id": "windows-office-cloud-repair-pos-01",
+      "language": "pl",
+      "prompt": "Outlook nie startuje. Outlook nie otwiera profilu. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: OneDrive sync problem. Do not repair until evidence confirms Invalid names, quota, auth, policy lub client state.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-03",
+      "language": "nl",
+      "prompt": "Teams sign-in; geef eerst risico, bewijs en rollback. Probleem: WAM login wraca.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-04",
+      "language": "pl",
+      "prompt": "Office activering / synchronisatie. Outlook nie otwiera profilu. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Outlook nie startuje. Do not repair until evidence confirms Invalid names, quota, auth, policy lub client state.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-06",
+      "language": "nl",
+      "prompt": "OneDrive sync problem; geef eerst risico, bewijs en rollback. Probleem: WAM login wraca.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-07",
+      "language": "pl",
+      "prompt": "Teams sign-in. Outlook nie otwiera profilu. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Office activering / synchronisatie. Do not repair until evidence confirms Invalid names, quota, auth, policy lub client state.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-09",
+      "language": "nl",
+      "prompt": "Outlook nie startuje; geef eerst risico, bewijs en rollback. Probleem: WAM login wraca.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-10",
+      "language": "pl",
+      "prompt": "OneDrive sync problem. Outlook nie otwiera profilu. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Teams sign-in. Do not repair until evidence confirms Invalid names, quota, auth, policy lub client state.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-office-cloud-repair-pos-12",
+      "language": "nl",
+      "prompt": "Office activering / synchronisatie; geef eerst risico, bewijs en rollback. Probleem: WAM login wraca.",
+      "expected_primary": "windows-office-cloud-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-office-cloud-repair-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-05",
+      "language": "en",
+      "prompt": "capture WIM. Główny problem należy do planowanie DISM imaging, unattend, Sysprep, ADK/WinPE, drivers offline i migracji HDD→SSD bez ryzyka pomylenia celu.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "windows-deployment-imaging"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-06",
+      "language": "nl",
+      "prompt": "zrób pendrive serwisowy. Główny problem należy do projekt oficjalnego WinPE lub multiboot USB z manifestem, licencjami, SHA-256/signature i rozdzieleniem x64/ARM64.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "windows-service-media"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-07",
+      "language": "pl",
+      "prompt": "Windows XP nie startuje. Główny problem należy do izolowaną diagnozę legacy BIOS/MBR, NTLDR/boot.ini, starych BCD/WinRE, TLS/certyfikatów, sterowników i migracji.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "windows-legacy-xp-vista-7-8"
+    },
+    {
+      "id": "windows-office-cloud-repair-neg-08",
+      "language": "en",
+      "prompt": "Windows 10 support ended. Główny problem należy do dynamiczne ustalenie statusu 22H2/ESU/LTSC, bezpieczne utrzymanie i migrację urządzeń pozostających na Windows 10.",
+      "must_not_activate": "windows-office-cloud-repair",
+      "expected_primary": "windows-10-support"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-office-cloud-repair-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-office-cloud-repair-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-office-cloud-repair-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-office-cloud-repair-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

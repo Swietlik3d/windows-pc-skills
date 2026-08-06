@@ -1,0 +1,6 @@
+interface:
+  display_name: "Zaawansowana administracja klienta Windows"
+  short_description: "Bezpiecznie: Zaawansowana administracja klienta Windows"
+  default_prompt: "Use $windows-advanced-administration to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

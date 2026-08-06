@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "url",
+      "publisher",
+      "source_type",
+      "retrieved_at",
+      "last_verified",
+      "claim_summary",
+      "confidence",
+      "status",
+      "license_notes"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "title": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "pattern": "^https://"
+      },
+      "publisher": {
+        "type": "string"
+      },
+      "source_type": {
+        "enum": [
+          "official",
+          "vendor",
+          "project",
+          "community",
+          "secondary"
+        ]
+      },
+      "retrieved_at": {
+        "type": "string"
+      },
+      "last_verified": {
+        "type": "string"
+      },
+      "applies_to": {
+        "type": "array"
+      },
+      "claim_summary": {
+        "type": "string"
+      },
+      "confidence": {
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ]
+      },
+      "status": {
+        "enum": [
+          "current",
+          "stale",
+          "eol",
+          "replaced",
+          "unverified"
+        ]
+      },
+      "license_notes": {
+        "type": "string"
+      }
+    }
+  }
+}

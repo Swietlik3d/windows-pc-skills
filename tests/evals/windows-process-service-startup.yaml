@@ -1,0 +1,237 @@
+{
+  "skill": "windows-process-service-startup",
+  "positive": [
+    {
+      "id": "windows-process-service-startup-pos-01",
+      "language": "pl",
+      "prompt": "program startuje z Windowsem. Service timeout/dependency error. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: service won't start. Do not repair until evidence confirms Jedna lub kilka pozycji blokuje shell.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-03",
+      "language": "nl",
+      "prompt": "clean boot; geef eerst risico, bewijs en rollback. Probleem: Losowy task uruchamia skrypt.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-04",
+      "language": "pl",
+      "prompt": "opstartprogramma uitschakelen. Service timeout/dependency error. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: program startuje z Windowsem. Do not repair until evidence confirms Jedna lub kilka pozycji blokuje shell.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-06",
+      "language": "nl",
+      "prompt": "service won't start; geef eerst risico, bewijs en rollback. Probleem: Losowy task uruchamia skrypt.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-07",
+      "language": "pl",
+      "prompt": "clean boot. Service timeout/dependency error. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: opstartprogramma uitschakelen. Do not repair until evidence confirms Jedna lub kilka pozycji blokuje shell.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-09",
+      "language": "nl",
+      "prompt": "program startuje z Windowsem; geef eerst risico, bewijs en rollback. Probleem: Losowy task uruchamia skrypt.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-10",
+      "language": "pl",
+      "prompt": "service won't start. Service timeout/dependency error. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: clean boot. Do not repair until evidence confirms Jedna lub kilka pozycji blokuje shell.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-process-service-startup-pos-12",
+      "language": "nl",
+      "prompt": "opstartprogramma uitschakelen; geef eerst risico, bewijs en rollback. Probleem: Losowy task uruchamia skrypt.",
+      "expected_primary": "windows-process-service-startup",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-process-service-startup-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-process-service-startup-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-process-service-startup-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-process-service-startup-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-process-service-startup-neg-05",
+      "language": "en",
+      "prompt": "Access denied. Główny problem należy do precyzyjną diagnozę ownership, dziedziczenia, effective access, share ACL, offline ACL i świadomość EFS.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "windows-ntfs-permissions-shares"
+    },
+    {
+      "id": "windows-process-service-startup-neg-06",
+      "language": "nl",
+      "prompt": "BitLocker recovery loop. Główny problem należy do diagnozę Device Encryption/BitLocker, recovery readiness, TPM, Secure Boot, VBS/HVCI, certyfikatów i policy bez obchodzenia ochrony.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "windows-bitlocker-tpm-security"
+    },
+    {
+      "id": "windows-process-service-startup-neg-07",
+      "language": "pl",
+      "prompt": "podejrzewam wirusa. Główny problem należy do izolację, zachowanie dowodów, Defender Offline/MSERT/Sysinternals, PUP/browser hijack, persistence i kryteria reinstalacji.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "windows-malware-remediation"
+    },
+    {
+      "id": "windows-process-service-startup-neg-08",
+      "language": "en",
+      "prompt": "Microsoft Store nie działa. Główny problem należy do diagnozę instalacji/odinstalowania MSI, ClickOnce, MSIX/AppX, Store, dependencies i winget bez registry cleanerów.",
+      "must_not_activate": "windows-process-service-startup",
+      "expected_primary": "windows-apps-store-winget"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-process-service-startup-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-process-service-startup-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-process-service-startup-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-process-service-startup-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

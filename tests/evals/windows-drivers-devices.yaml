@@ -1,0 +1,237 @@
+{
+  "skill": "windows-drivers-devices",
+  "positive": [
+    {
+      "id": "windows-drivers-devices-pos-01",
+      "language": "pl",
+      "prompt": "unknown device. Brak sterownika. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Code 43. Do not repair until evidence confirms Driver, firmware, hardware lub passthrough.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-03",
+      "language": "nl",
+      "prompt": "driver problem; geef eerst risico, bewijs en rollback. Probleem: Po aktualizacji system nie startuje.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-04",
+      "language": "pl",
+      "prompt": "apparaatcode 10. Brak sterownika. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: unknown device. Do not repair until evidence confirms Driver, firmware, hardware lub passthrough.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-06",
+      "language": "nl",
+      "prompt": "Code 43; geef eerst risico, bewijs en rollback. Probleem: Po aktualizacji system nie startuje.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-07",
+      "language": "pl",
+      "prompt": "driver problem. Brak sterownika. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: apparaatcode 10. Do not repair until evidence confirms Driver, firmware, hardware lub passthrough.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-09",
+      "language": "nl",
+      "prompt": "unknown device; geef eerst risico, bewijs en rollback. Probleem: Po aktualizacji system nie startuje.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-10",
+      "language": "pl",
+      "prompt": "Code 43. Brak sterownika. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: driver problem. Do not repair until evidence confirms Driver, firmware, hardware lub passthrough.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-drivers-devices-pos-12",
+      "language": "nl",
+      "prompt": "apparaatcode 10; geef eerst risico, bewijs en rollback. Probleem: Po aktualizacji system nie startuje.",
+      "expected_primary": "windows-drivers-devices",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-drivers-devices-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-drivers-devices-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-drivers-devices-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-drivers-devices-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-drivers-devices-neg-05",
+      "language": "en",
+      "prompt": "BitLocker recovery loop. Główny problem należy do diagnozę Device Encryption/BitLocker, recovery readiness, TPM, Secure Boot, VBS/HVCI, certyfikatów i policy bez obchodzenia ochrony.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "windows-bitlocker-tpm-security"
+    },
+    {
+      "id": "windows-drivers-devices-neg-06",
+      "language": "nl",
+      "prompt": "podejrzewam wirusa. Główny problem należy do izolację, zachowanie dowodów, Defender Offline/MSERT/Sysinternals, PUP/browser hijack, persistence i kryteria reinstalacji.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "windows-malware-remediation"
+    },
+    {
+      "id": "windows-drivers-devices-neg-07",
+      "language": "pl",
+      "prompt": "Microsoft Store nie działa. Główny problem należy do diagnozę instalacji/odinstalowania MSI, ClickOnce, MSIX/AppX, Store, dependencies i winget bez registry cleanerów.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "windows-apps-store-winget"
+    },
+    {
+      "id": "windows-drivers-devices-neg-08",
+      "language": "en",
+      "prompt": "Start menu nie działa. Główny problem należy do diagnozę Explorer, Start, Search, Settings, taskbar, shell extensions, ikon i file associations.",
+      "must_not_activate": "windows-drivers-devices",
+      "expected_primary": "windows-shell-ui-repair"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-drivers-devices-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-drivers-devices-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-drivers-devices-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-drivers-devices-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

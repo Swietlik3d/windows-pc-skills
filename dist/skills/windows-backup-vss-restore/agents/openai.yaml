@@ -1,0 +1,6 @@
+interface:
+  display_name: "Backup, VSS i przywracanie"
+  short_description: "Bezpiecznie: Backup, VSS i przywracanie"
+  default_prompt: "Use $windows-backup-vss-restore to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

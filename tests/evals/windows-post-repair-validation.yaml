@@ -1,0 +1,237 @@
+{
+  "skill": "windows-post-repair-validation",
+  "positive": [
+    {
+      "id": "windows-post-repair-validation-pos-01",
+      "language": "pl",
+      "prompt": "sprawdź naprawę. Objaw już nie występuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: post repair validation. Do not repair until evidence confirms Intermittent fault może ujawnić się pod temperaturą/cyklem.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-03",
+      "language": "nl",
+      "prompt": "burn-in; geef eerst risico, bewijs en rollback. Probleem: Nie wszystkie hipotezy można wykluczyć.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-04",
+      "language": "pl",
+      "prompt": "controle na reparatie. Objaw już nie występuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: sprawdź naprawę. Do not repair until evidence confirms Intermittent fault może ujawnić się pod temperaturą/cyklem.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-06",
+      "language": "nl",
+      "prompt": "post repair validation; geef eerst risico, bewijs en rollback. Probleem: Nie wszystkie hipotezy można wykluczyć.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-07",
+      "language": "pl",
+      "prompt": "burn-in. Objaw już nie występuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: controle na reparatie. Do not repair until evidence confirms Intermittent fault może ujawnić się pod temperaturą/cyklem.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-09",
+      "language": "nl",
+      "prompt": "sprawdź naprawę; geef eerst risico, bewijs en rollback. Probleem: Nie wszystkie hipotezy można wykluczyć.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-10",
+      "language": "pl",
+      "prompt": "post repair validation. Objaw już nie występuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: burn-in. Do not repair until evidence confirms Intermittent fault może ujawnić się pod temperaturą/cyklem.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-post-repair-validation-pos-12",
+      "language": "nl",
+      "prompt": "controle na reparatie; geef eerst risico, bewijs en rollback. Probleem: Nie wszystkie hipotezy można wykluczyć.",
+      "expected_primary": "windows-post-repair-validation",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-post-repair-validation-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-05",
+      "language": "en",
+      "prompt": "komputer nie włącza się. Główny problem należy do różnicowanie braku zasilania, POST, kodów LED/beep, baterii, ładowania, PSU, płyty i peryferiów bez pracy pod napięciem.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "pc-hardware-diagnostics"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-06",
+      "language": "nl",
+      "prompt": "aktualizacja BIOS. Główny problem należy do bezpieczna identyfikacja ustawień firmware, boot mode, CSM, Secure Boot, TPM oraz aktualizacji i rollbacku po dokładnym modelu.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "bios-uefi-firmware"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-07",
+      "language": "pl",
+      "prompt": "dysk klika. Główny problem należy do ochrona danych na HDD/SSD/NVMe/USB, SMART, imaging, ddrescue/OpenSuperClone, recovery logiczne i bezwzględna kontrola kierunku zapisu.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "storage-triage-cloning-recovery"
+    },
+    {
+      "id": "windows-post-repair-validation-neg-08",
+      "language": "en",
+      "prompt": "błędy pamięci. Główny problem należy do różnicowanie błędów RAM/IMC, WHEA, GPU/VRAM, throttlingu, chłodzenia oraz wpływu OC/UV/XMP/EXPO.",
+      "must_not_activate": "windows-post-repair-validation",
+      "expected_primary": "memory-cpu-gpu-thermal"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-post-repair-validation-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-post-repair-validation-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-post-repair-validation-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-post-repair-validation-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

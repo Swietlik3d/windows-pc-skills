@@ -1,0 +1,237 @@
+{
+  "skill": "windows-legacy-xp-vista-7-8",
+  "positive": [
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-01",
+      "language": "pl",
+      "prompt": "Windows XP nie startuje. BIOS widzi dysk, komunikat przed logo. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Windows 7 repair. Do not repair until evidence confirms BCD/update/driver/storage.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-03",
+      "language": "nl",
+      "prompt": "NTLDR missing; geef eerst risico, bewijs en rollback. Probleem: Aplikacja wymaga starego systemu.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-04",
+      "language": "pl",
+      "prompt": "oude Windows 8.1 laptop. BIOS widzi dysk, komunikat przed logo. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Windows XP nie startuje. Do not repair until evidence confirms BCD/update/driver/storage.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-06",
+      "language": "nl",
+      "prompt": "Windows 7 repair; geef eerst risico, bewijs en rollback. Probleem: Aplikacja wymaga starego systemu.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-07",
+      "language": "pl",
+      "prompt": "NTLDR missing. BIOS widzi dysk, komunikat przed logo. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: oude Windows 8.1 laptop. Do not repair until evidence confirms BCD/update/driver/storage.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-09",
+      "language": "nl",
+      "prompt": "Windows XP nie startuje; geef eerst risico, bewijs en rollback. Probleem: Aplikacja wymaga starego systemu.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-10",
+      "language": "pl",
+      "prompt": "Windows 7 repair. BIOS widzi dysk, komunikat przed logo. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: NTLDR missing. Do not repair until evidence confirms BCD/update/driver/storage.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-pos-12",
+      "language": "nl",
+      "prompt": "oude Windows 8.1 laptop; geef eerst risico, bewijs en rollback. Probleem: Aplikacja wymaga starego systemu.",
+      "expected_primary": "windows-legacy-xp-vista-7-8",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-05",
+      "language": "en",
+      "prompt": "komputer nie działa i nie wiem od czego zacząć. Główny problem należy do rozpoznanie objawu, ryzyka i wybór dokładnie jednego skilla głównego oraz najwyżej trzech pomocniczych.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "windows-master-router"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-06",
+      "language": "nl",
+      "prompt": "przyjęcie laptopa do serwisu. Główny problem należy do udokumentowanie właściciela, autoryzacji, wartości danych, szyfrowania, zarządzania, symptomów i zakresu zgody przed serwisem.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "windows-service-intake"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-07",
+      "language": "pl",
+      "prompt": "zapisz czynności serwisowe. Główny problem należy do prowadzenie timeline, lekkiego chain of custody, hashy, anonimizacji, artefaktów before/after i raportu serwisowego.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "windows-case-evidence"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-neg-08",
+      "language": "en",
+      "prompt": "komputer nie włącza się. Główny problem należy do różnicowanie braku zasilania, POST, kodów LED/beep, baterii, ładowania, PSU, płyty i peryferiów bez pracy pod napięciem.",
+      "must_not_activate": "windows-legacy-xp-vista-7-8",
+      "expected_primary": "pc-hardware-diagnostics"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-legacy-xp-vista-7-8-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-legacy-xp-vista-7-8-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

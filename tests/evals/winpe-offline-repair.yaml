@@ -1,0 +1,237 @@
+{
+  "skill": "winpe-offline-repair",
+  "positive": [
+    {
+      "id": "winpe-offline-repair-pos-01",
+      "language": "pl",
+      "prompt": "naprawa offline Windows. WinRE pokazuje wiele NTFS. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: WinPE repair. Do not repair until evidence confirms Logi mogą wskazać przyczynę bez zmiany systemu.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-03",
+      "language": "nl",
+      "prompt": "WinRE opdrachtprompt; geef eerst risico, bewijs en rollback. Probleem: CBS wskazuje corruption, storage/RAM stabilne.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-04",
+      "language": "pl",
+      "prompt": "load offline registry hive. WinRE pokazuje wiele NTFS. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: naprawa offline Windows. Do not repair until evidence confirms Logi mogą wskazać przyczynę bez zmiany systemu.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-06",
+      "language": "nl",
+      "prompt": "WinPE repair; geef eerst risico, bewijs en rollback. Probleem: CBS wskazuje corruption, storage/RAM stabilne.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-07",
+      "language": "pl",
+      "prompt": "WinRE opdrachtprompt. WinRE pokazuje wiele NTFS. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: load offline registry hive. Do not repair until evidence confirms Logi mogą wskazać przyczynę bez zmiany systemu.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-09",
+      "language": "nl",
+      "prompt": "naprawa offline Windows; geef eerst risico, bewijs en rollback. Probleem: CBS wskazuje corruption, storage/RAM stabilne.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-10",
+      "language": "pl",
+      "prompt": "WinPE repair. WinRE pokazuje wiele NTFS. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: WinRE opdrachtprompt. Do not repair until evidence confirms Logi mogą wskazać przyczynę bez zmiany systemu.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "winpe-offline-repair-pos-12",
+      "language": "nl",
+      "prompt": "load offline registry hive; geef eerst risico, bewijs en rollback. Probleem: CBS wskazuje corruption, storage/RAM stabilne.",
+      "expected_primary": "winpe-offline-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "winpe-offline-repair-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "winpe-offline-repair-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "winpe-offline-repair-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "winpe-offline-repair-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "winpe-offline-repair-neg-05",
+      "language": "en",
+      "prompt": "Windows nie jest aktywowany. Główny problem należy do legalną diagnostykę digital license, OEM OA3, edition mismatch i kanałów retail/OEM/volume bez ujawniania kluczy.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "windows-activation-licensing"
+    },
+    {
+      "id": "winpe-offline-repair-neg-06",
+      "language": "nl",
+      "prompt": "blue screen. Główny problem należy do konfigurację dumpów, analizę bugcheck/stacks/modules/WHEA i ostrożne użycie Driver Verifier z planem odzyskania.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "windows-bsod-debugging"
+    },
+    {
+      "id": "winpe-offline-repair-neg-07",
+      "language": "pl",
+      "prompt": "Windows wolno działa. Główny problem należy do korelację opóźnień, hangów, stutter, CPU/RAM/dysk/GPU, DPC/ISR przy użyciu WPR/WPA, PerfMon i Reliability.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "windows-performance-hangs"
+    },
+    {
+      "id": "winpe-offline-repair-neg-08",
+      "language": "en",
+      "prompt": "program startuje z Windowsem. Główny problem należy do diagnozę procesów, usług, Scheduled Tasks, Autoruns/ProcMon i odwracalny clean boot bez utraty konfiguracji.",
+      "must_not_activate": "winpe-offline-repair",
+      "expected_primary": "windows-process-service-startup"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "winpe-offline-repair-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "winpe-offline-repair-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "winpe-offline-repair-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "winpe-offline-repair-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

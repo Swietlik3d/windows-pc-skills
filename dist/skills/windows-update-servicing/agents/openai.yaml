@@ -1,0 +1,6 @@
+interface:
+  display_name: "Windows Update i servicing"
+  short_description: "Bezpiecznie: Windows Update i servicing"
+  default_prompt: "Use $windows-update-servicing to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

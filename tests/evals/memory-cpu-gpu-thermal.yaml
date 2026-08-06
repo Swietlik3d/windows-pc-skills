@@ -1,0 +1,237 @@
+{
+  "skill": "memory-cpu-gpu-thermal",
+  "positive": [
+    {
+      "id": "memory-cpu-gpu-thermal-pos-01",
+      "language": "pl",
+      "prompt": "błędy pamięci. PC resetuje się bez BSOD. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: WHEA crash. Do not repair until evidence confirms Moduł, slot, IMC lub niestabilny profil.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-03",
+      "language": "nl",
+      "prompt": "GPU artifacts; geef eerst risico, bewijs en rollback. Probleem: Kolorowe bloki w BIOS i Windows.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-04",
+      "language": "pl",
+      "prompt": "oververhitting / thermal shutdown. PC resetuje się bez BSOD. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: błędy pamięci. Do not repair until evidence confirms Moduł, slot, IMC lub niestabilny profil.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-06",
+      "language": "nl",
+      "prompt": "WHEA crash; geef eerst risico, bewijs en rollback. Probleem: Kolorowe bloki w BIOS i Windows.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-07",
+      "language": "pl",
+      "prompt": "GPU artifacts. PC resetuje się bez BSOD. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: oververhitting / thermal shutdown. Do not repair until evidence confirms Moduł, slot, IMC lub niestabilny profil.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-09",
+      "language": "nl",
+      "prompt": "błędy pamięci; geef eerst risico, bewijs en rollback. Probleem: Kolorowe bloki w BIOS i Windows.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-10",
+      "language": "pl",
+      "prompt": "WHEA crash. PC resetuje się bez BSOD. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: GPU artifacts. Do not repair until evidence confirms Moduł, slot, IMC lub niestabilny profil.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-pos-12",
+      "language": "nl",
+      "prompt": "oververhitting / thermal shutdown; geef eerst risico, bewijs en rollback. Probleem: Kolorowe bloki w BIOS i Windows.",
+      "expected_primary": "memory-cpu-gpu-thermal",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "memory-cpu-gpu-thermal-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "none"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "none"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "none"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "none"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-05",
+      "language": "en",
+      "prompt": "SFC found corrupt files. Główny problem należy do diagnozę CBS/component store oraz dopasowanie źródła WIM/ESD przed SFC/DISM online i offline.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "windows-component-repair"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-06",
+      "language": "nl",
+      "prompt": "Windows Update error. Główny problem należy do diagnozę update history, policy, pending reboot, cache, servicing stack i kontrolowany reset komponentów.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "windows-update-servicing"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-07",
+      "language": "pl",
+      "prompt": "upgrade failed. Główny problem należy do analizę in-place setup, feature update, compatibility blocks, SetupDiag, Panther/Rollback i kontrolowany rollback.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "windows-setup-upgrade-rollback"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-neg-08",
+      "language": "en",
+      "prompt": "Windows nie jest aktywowany. Główny problem należy do legalną diagnostykę digital license, OEM OA3, edition mismatch i kanałów retail/OEM/volume bez ujawniania kluczy.",
+      "must_not_activate": "memory-cpu-gpu-thermal",
+      "expected_primary": "windows-activation-licensing"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "memory-cpu-gpu-thermal-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "memory-cpu-gpu-thermal-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

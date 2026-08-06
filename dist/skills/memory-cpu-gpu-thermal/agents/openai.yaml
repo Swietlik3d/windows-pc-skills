@@ -1,0 +1,6 @@
+interface:
+  display_name: "RAM, CPU, GPU i termika"
+  short_description: "Bezpiecznie: RAM, CPU, GPU i termika"
+  default_prompt: "Use $memory-cpu-gpu-thermal to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

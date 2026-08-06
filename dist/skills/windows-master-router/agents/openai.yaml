@@ -1,0 +1,6 @@
+interface:
+  display_name: "Router główny serwisu Windows"
+  short_description: "Bezpiecznie: Router główny serwisu Windows"
+  default_prompt: "Use $windows-master-router to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

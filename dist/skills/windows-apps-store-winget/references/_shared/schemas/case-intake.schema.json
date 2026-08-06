@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "case_id",
+    "created_utc",
+    "owner_alias",
+    "authorization_level",
+    "data_value",
+    "backup_status",
+    "encryption_status",
+    "managed_status"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "created_utc": {
+      "type": "string"
+    },
+    "owner_alias": {
+      "type": "string"
+    },
+    "authorization_level": {
+      "enum": [
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ]
+    },
+    "data_value": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical",
+        "unknown"
+      ]
+    },
+    "backup_status": {
+      "enum": [
+        "verified",
+        "present-unverified",
+        "absent",
+        "unknown"
+      ]
+    },
+    "encryption_status": {
+      "enum": [
+        "off",
+        "on-key-ready",
+        "on-key-not-ready",
+        "unknown"
+      ]
+    },
+    "managed_status": {
+      "enum": [
+        "personal",
+        "domain",
+        "entra",
+        "mdm",
+        "unknown"
+      ]
+    }
+  }
+}

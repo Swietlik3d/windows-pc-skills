@@ -1,0 +1,6 @@
+interface:
+  display_name: "NTFS ACL i udziały SMB"
+  short_description: "Bezpiecznie: NTFS ACL i udziały SMB"
+  default_prompt: "Use $windows-ntfs-permissions-shares to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

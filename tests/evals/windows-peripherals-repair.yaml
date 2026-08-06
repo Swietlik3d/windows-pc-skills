@@ -1,0 +1,237 @@
+{
+  "skill": "windows-peripherals-repair",
+  "positive": [
+    {
+      "id": "windows-peripherals-repair-pos-01",
+      "language": "pl",
+      "prompt": "drukarka nie drukuje. Jobs pozostają w queue. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: no sound. Do not repair until evidence confirms Endpoint selection, service, driver, privacy lub dock.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-03",
+      "language": "nl",
+      "prompt": "Bluetooth werkt niet; geef eerst risico, bewijs en rollback. Probleem: Urządzenie znika okresowo.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-04",
+      "language": "pl",
+      "prompt": "USB disconnect / kamera nie działa. Jobs pozostają w queue. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: drukarka nie drukuje. Do not repair until evidence confirms Endpoint selection, service, driver, privacy lub dock.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-06",
+      "language": "nl",
+      "prompt": "no sound; geef eerst risico, bewijs en rollback. Probleem: Urządzenie znika okresowo.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-07",
+      "language": "pl",
+      "prompt": "Bluetooth werkt niet. Jobs pozostają w queue. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: USB disconnect / kamera nie działa. Do not repair until evidence confirms Endpoint selection, service, driver, privacy lub dock.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-09",
+      "language": "nl",
+      "prompt": "drukarka nie drukuje; geef eerst risico, bewijs en rollback. Probleem: Urządzenie znika okresowo.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-10",
+      "language": "pl",
+      "prompt": "no sound. Jobs pozostają w queue. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Bluetooth werkt niet. Do not repair until evidence confirms Endpoint selection, service, driver, privacy lub dock.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-peripherals-repair-pos-12",
+      "language": "nl",
+      "prompt": "USB disconnect / kamera nie działa; geef eerst risico, bewijs en rollback. Probleem: Urządzenie znika okresowo.",
+      "expected_primary": "windows-peripherals-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-peripherals-repair-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-05",
+      "language": "en",
+      "prompt": "Microsoft Store nie działa. Główny problem należy do diagnozę instalacji/odinstalowania MSI, ClickOnce, MSIX/AppX, Store, dependencies i winget bez registry cleanerów.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "windows-apps-store-winget"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-06",
+      "language": "nl",
+      "prompt": "Start menu nie działa. Główny problem należy do diagnozę Explorer, Start, Search, Settings, taskbar, shell extensions, ikon i file associations.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "windows-shell-ui-repair"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-07",
+      "language": "pl",
+      "prompt": "Outlook nie startuje. Główny problem należy do ochronę danych oraz diagnozę Click-to-Run, profili Outlook, PST/OST, OneDrive/Teams sign-in i synchronizacji.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "windows-office-cloud-repair"
+    },
+    {
+      "id": "windows-peripherals-repair-neg-08",
+      "language": "en",
+      "prompt": "VSS error. Główny problem należy do diagnozę VSS, restore points, File History, Windows Backup, obrazów bare-metal i walidację kopii.",
+      "must_not_activate": "windows-peripherals-repair",
+      "expected_primary": "windows-backup-vss-restore"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-peripherals-repair-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-peripherals-repair-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-peripherals-repair-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-peripherals-repair-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

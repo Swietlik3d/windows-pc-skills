@@ -1,0 +1,237 @@
+{
+  "skill": "windows-tool-research",
+  "positive": [
+    {
+      "id": "windows-tool-research-pos-01",
+      "language": "pl",
+      "prompt": "sprawdź narzędzie serwisowe. Katalog ma starszą wersję. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: is this tool safe. Do not repair until evidence confirms Projekt może być stabilny albo EOL.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-03",
+      "language": "nl",
+      "prompt": "update tool catalog; geef eerst risico, bewijs en rollback. Probleem: Użytkownik pyta o WinUtil/Tron.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-04",
+      "language": "pl",
+      "prompt": "hulpprogramma versie/licentie. Katalog ma starszą wersję. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: sprawdź narzędzie serwisowe. Do not repair until evidence confirms Projekt może być stabilny albo EOL.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-06",
+      "language": "nl",
+      "prompt": "is this tool safe; geef eerst risico, bewijs en rollback. Probleem: Użytkownik pyta o WinUtil/Tron.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-07",
+      "language": "pl",
+      "prompt": "update tool catalog. Katalog ma starszą wersję. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: hulpprogramma versie/licentie. Do not repair until evidence confirms Projekt może być stabilny albo EOL.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-09",
+      "language": "nl",
+      "prompt": "sprawdź narzędzie serwisowe; geef eerst risico, bewijs en rollback. Probleem: Użytkownik pyta o WinUtil/Tron.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-10",
+      "language": "pl",
+      "prompt": "is this tool safe. Katalog ma starszą wersję. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: update tool catalog. Do not repair until evidence confirms Projekt może być stabilny albo EOL.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-tool-research-pos-12",
+      "language": "nl",
+      "prompt": "hulpprogramma versie/licentie; geef eerst risico, bewijs en rollback. Probleem: Użytkownik pyta o WinUtil/Tron.",
+      "expected_primary": "windows-tool-research",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-tool-research-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-tool-research-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-tool-research-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-tool-research-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-tool-research-neg-05",
+      "language": "en",
+      "prompt": "aktualizacja BIOS. Główny problem należy do bezpieczna identyfikacja ustawień firmware, boot mode, CSM, Secure Boot, TPM oraz aktualizacji i rollbacku po dokładnym modelu.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "bios-uefi-firmware"
+    },
+    {
+      "id": "windows-tool-research-neg-06",
+      "language": "nl",
+      "prompt": "dysk klika. Główny problem należy do ochrona danych na HDD/SSD/NVMe/USB, SMART, imaging, ddrescue/OpenSuperClone, recovery logiczne i bezwzględna kontrola kierunku zapisu.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "storage-triage-cloning-recovery"
+    },
+    {
+      "id": "windows-tool-research-neg-07",
+      "language": "pl",
+      "prompt": "błędy pamięci. Główny problem należy do różnicowanie błędów RAM/IMC, WHEA, GPU/VRAM, throttlingu, chłodzenia oraz wpływu OC/UV/XMP/EXPO.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "memory-cpu-gpu-thermal"
+    },
+    {
+      "id": "windows-tool-research-neg-08",
+      "language": "en",
+      "prompt": "jaki mam Windows. Główny problem należy do ustalenie edition, build, kanału, architektury, języka, boot mode, partycji, WinRE i statusu wsparcia przed doborem poleceń.",
+      "must_not_activate": "windows-tool-research",
+      "expected_primary": "windows-os-identification"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-tool-research-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-tool-research-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-tool-research-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-tool-research-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

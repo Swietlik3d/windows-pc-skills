@@ -1,0 +1,151 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/windows-master/tool-catalog.schema.json",
+  "type": "array",
+  "minItems": 60,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "category",
+      "publisher",
+      "official_home",
+      "official_download",
+      "official_repository",
+      "current_version",
+      "checked_at",
+      "status",
+      "replaced_by",
+      "license",
+      "commercial_use",
+      "redistribution",
+      "supported_os",
+      "architectures",
+      "environments",
+      "portable",
+      "install_type",
+      "network_required",
+      "elevation_required",
+      "signature_method",
+      "checksum_method",
+      "risk_class",
+      "use_cases",
+      "avoid_when",
+      "known_gotchas",
+      "alternatives",
+      "sources"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "name": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "publisher": {
+        "type": "string"
+      },
+      "official_home": {
+        "type": "string",
+        "pattern": "^https://"
+      },
+      "official_download": {
+        "type": "string",
+        "pattern": "^https://"
+      },
+      "official_repository": {
+        "type": "string"
+      },
+      "current_version": {
+        "type": "string"
+      },
+      "checked_at": {
+        "type": "string",
+        "format": "date"
+      },
+      "status": {
+        "enum": [
+          "active",
+          "stale",
+          "eol",
+          "replaced",
+          "unknown"
+        ]
+      },
+      "replaced_by": {
+        "type": "string"
+      },
+      "license": {
+        "type": "string"
+      },
+      "commercial_use": {
+        "type": "string"
+      },
+      "redistribution": {
+        "enum": [
+          "forbidden",
+          "unknown",
+          "allowed",
+          "conditional"
+        ]
+      },
+      "supported_os": {
+        "type": "array"
+      },
+      "architectures": {
+        "type": "array"
+      },
+      "environments": {
+        "type": "array"
+      },
+      "portable": {
+        "type": "boolean"
+      },
+      "install_type": {
+        "type": "string"
+      },
+      "network_required": {
+        "type": "boolean"
+      },
+      "elevation_required": {
+        "type": "boolean"
+      },
+      "signature_method": {
+        "type": "string"
+      },
+      "checksum_method": {
+        "type": "string"
+      },
+      "risk_class": {
+        "enum": [
+          "R0",
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ]
+      },
+      "use_cases": {
+        "type": "array"
+      },
+      "avoid_when": {
+        "type": "array"
+      },
+      "known_gotchas": {
+        "type": "array"
+      },
+      "alternatives": {
+        "type": "array"
+      },
+      "sources": {
+        "type": "array"
+      }
+    }
+  }
+}

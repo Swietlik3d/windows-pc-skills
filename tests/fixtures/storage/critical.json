@@ -1,0 +1,11 @@
+{
+  "disks": [
+    {
+      "model": "SYNTH-HDD",
+      "health": "critical",
+      "read_errors_total": 19,
+      "symptom": "clicking"
+    }
+  ],
+  "synthetic": true
+}

@@ -1,0 +1,237 @@
+{
+  "skill": "windows-shell-ui-repair",
+  "positive": [
+    {
+      "id": "windows-shell-ui-repair-pos-01",
+      "language": "pl",
+      "prompt": "Start menu nie działa. explorer.exe restartuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Explorer crashes. Do not repair until evidence confirms Search service/package/user state/policy.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-03",
+      "language": "nl",
+      "prompt": "taskbar frozen; geef eerst risico, bewijs en rollback. Probleem: Pliki otwierają złą aplikację.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-04",
+      "language": "pl",
+      "prompt": "Zoeken werkt niet. explorer.exe restartuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Start menu nie działa. Do not repair until evidence confirms Search service/package/user state/policy.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-06",
+      "language": "nl",
+      "prompt": "Explorer crashes; geef eerst risico, bewijs en rollback. Probleem: Pliki otwierają złą aplikację.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-07",
+      "language": "pl",
+      "prompt": "taskbar frozen. explorer.exe restartuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Zoeken werkt niet. Do not repair until evidence confirms Search service/package/user state/policy.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-09",
+      "language": "nl",
+      "prompt": "Start menu nie działa; geef eerst risico, bewijs en rollback. Probleem: Pliki otwierają złą aplikację.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-10",
+      "language": "pl",
+      "prompt": "Explorer crashes. explorer.exe restartuje. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: taskbar frozen. Do not repair until evidence confirms Search service/package/user state/policy.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-shell-ui-repair-pos-12",
+      "language": "nl",
+      "prompt": "Zoeken werkt niet; geef eerst risico, bewijs en rollback. Probleem: Pliki otwierają złą aplikację.",
+      "expected_primary": "windows-shell-ui-repair",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-shell-ui-repair-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-05",
+      "language": "en",
+      "prompt": "napisz skrypt PowerShell do Windows. Główny problem należy do projektowanie bezpiecznych, idempotentnych skryptów PowerShell 5.1/7, CIM, remoting, logging, ShouldProcess i testów.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "windows-automation-powershell"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-06",
+      "language": "nl",
+      "prompt": "capture WIM. Główny problem należy do planowanie DISM imaging, unattend, Sysprep, ADK/WinPE, drivers offline i migracji HDD→SSD bez ryzyka pomylenia celu.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "windows-deployment-imaging"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-07",
+      "language": "pl",
+      "prompt": "zrób pendrive serwisowy. Główny problem należy do projekt oficjalnego WinPE lub multiboot USB z manifestem, licencjami, SHA-256/signature i rozdzieleniem x64/ARM64.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "windows-service-media"
+    },
+    {
+      "id": "windows-shell-ui-repair-neg-08",
+      "language": "en",
+      "prompt": "Windows XP nie startuje. Główny problem należy do izolowaną diagnozę legacy BIOS/MBR, NTLDR/boot.ini, starych BCD/WinRE, TLS/certyfikatów, sterowników i migracji.",
+      "must_not_activate": "windows-shell-ui-repair",
+      "expected_primary": "windows-legacy-xp-vista-7-8"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-shell-ui-repair-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-shell-ui-repair-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-shell-ui-repair-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-shell-ui-repair-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

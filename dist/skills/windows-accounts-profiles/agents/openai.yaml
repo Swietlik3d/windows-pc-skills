@@ -1,0 +1,6 @@
+interface:
+  display_name: "Konta, logowanie i profile"
+  short_description: "Bezpiecznie: Konta, logowanie i profile"
+  default_prompt: "Use $windows-accounts-profiles to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

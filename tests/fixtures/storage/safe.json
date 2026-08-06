@@ -1,0 +1,11 @@
+{
+  "disks": [
+    {
+      "model": "SYNTH-SSD",
+      "health": "healthy",
+      "read_errors_total": 0,
+      "temperature": 38
+    }
+  ],
+  "synthetic": true
+}

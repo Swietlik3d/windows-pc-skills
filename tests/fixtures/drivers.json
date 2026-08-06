@@ -1,0 +1,12 @@
+{
+  "drivers": [
+    {
+      "device": "Synthetic GPU",
+      "provider": "Example OEM",
+      "version": "1.2.3",
+      "signed": true
+    }
+  ],
+  "problem_devices": [],
+  "synthetic": true
+}

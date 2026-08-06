@@ -1,0 +1,6 @@
+interface:
+  display_name: "Walidacja po naprawie"
+  short_description: "Bezpiecznie: Walidacja po naprawie"
+  default_prompt: "Use $windows-post-repair-validation to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

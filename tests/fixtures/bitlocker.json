@@ -1,0 +1,14 @@
+{
+  "volumes": [
+    {
+      "mount": "C:",
+      "protection": "On",
+      "lock": "Unlocked",
+      "protector_types": [
+        "Tpm"
+      ]
+    }
+  ],
+  "contains_recovery_keys": false,
+  "synthetic": true
+}

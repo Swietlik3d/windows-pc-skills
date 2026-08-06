@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sterowniki i urządzenia"
+  short_description: "Bezpiecznie: Sterowniki i urządzenia"
+  default_prompt: "Use $windows-drivers-devices to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

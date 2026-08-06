@@ -1,0 +1,10 @@
+{
+  "pending_reboot": false,
+  "events": [
+    {
+      "id": 20,
+      "code": "0x800f0922",
+      "synthetic": true
+    }
+  ]
+}

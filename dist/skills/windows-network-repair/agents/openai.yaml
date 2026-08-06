@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sieć Windows"
+  short_description: "Bezpiecznie: Sieć Windows"
+  default_prompt: "Use $windows-network-repair to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

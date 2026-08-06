@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "skill",
+    "positive",
+    "negative",
+    "ambiguous"
+  ],
+  "properties": {
+    "skill": {
+      "type": "string"
+    },
+    "positive": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object"
+      }
+    },
+    "negative": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object"
+      }
+    },
+    "ambiguous": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

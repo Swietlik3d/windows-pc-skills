@@ -1,0 +1,8 @@
+{
+  "join_summary": [
+    "AzureAdJoined : NO",
+    "DomainJoined : NO"
+  ],
+  "mdm": false,
+  "synthetic": true
+}

@@ -1,0 +1,237 @@
+{
+  "skill": "windows-10-support",
+  "positive": [
+    {
+      "id": "windows-10-support-pos-01",
+      "language": "pl",
+      "prompt": "Windows 10 support ended. Home/Pro działa po 2025-10-14. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: ESU Windows 10. Do not repair until evidence confirms Daty różnią się między Enterprise i IoT.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-03",
+      "language": "nl",
+      "prompt": "22H2 update; geef eerst risico, bewijs en rollback. Probleem: TPM/CPU blocker.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-04",
+      "language": "pl",
+      "prompt": "Windows 10 ondersteuning. Home/Pro działa po 2025-10-14. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Windows 10 support ended. Do not repair until evidence confirms Daty różnią się między Enterprise i IoT.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-06",
+      "language": "nl",
+      "prompt": "ESU Windows 10; geef eerst risico, bewijs en rollback. Probleem: TPM/CPU blocker.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-07",
+      "language": "pl",
+      "prompt": "22H2 update. Home/Pro działa po 2025-10-14. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Windows 10 ondersteuning. Do not repair until evidence confirms Daty różnią się między Enterprise i IoT.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-09",
+      "language": "nl",
+      "prompt": "Windows 10 support ended; geef eerst risico, bewijs en rollback. Probleem: TPM/CPU blocker.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-10",
+      "language": "pl",
+      "prompt": "ESU Windows 10. Home/Pro działa po 2025-10-14. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: 22H2 update. Do not repair until evidence confirms Daty różnią się między Enterprise i IoT.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-10-support-pos-12",
+      "language": "nl",
+      "prompt": "Windows 10 ondersteuning; geef eerst risico, bewijs en rollback. Probleem: TPM/CPU blocker.",
+      "expected_primary": "windows-10-support",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-10-support-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-10-support-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-10-support-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-10-support-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-10-support-neg-05",
+      "language": "en",
+      "prompt": "przyjęcie laptopa do serwisu. Główny problem należy do udokumentowanie właściciela, autoryzacji, wartości danych, szyfrowania, zarządzania, symptomów i zakresu zgody przed serwisem.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "windows-service-intake"
+    },
+    {
+      "id": "windows-10-support-neg-06",
+      "language": "nl",
+      "prompt": "zapisz czynności serwisowe. Główny problem należy do prowadzenie timeline, lekkiego chain of custody, hashy, anonimizacji, artefaktów before/after i raportu serwisowego.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "windows-case-evidence"
+    },
+    {
+      "id": "windows-10-support-neg-07",
+      "language": "pl",
+      "prompt": "komputer nie włącza się. Główny problem należy do różnicowanie braku zasilania, POST, kodów LED/beep, baterii, ładowania, PSU, płyty i peryferiów bez pracy pod napięciem.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "pc-hardware-diagnostics"
+    },
+    {
+      "id": "windows-10-support-neg-08",
+      "language": "en",
+      "prompt": "aktualizacja BIOS. Główny problem należy do bezpieczna identyfikacja ustawień firmware, boot mode, CSM, Secure Boot, TPM oraz aktualizacji i rollbacku po dokładnym modelu.",
+      "must_not_activate": "windows-10-support",
+      "expected_primary": "bios-uefi-firmware"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-10-support-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-10-support-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-10-support-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-10-support-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

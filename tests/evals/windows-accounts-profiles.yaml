@@ -1,0 +1,237 @@
+{
+  "skill": "windows-accounts-profiles",
+  "positive": [
+    {
+      "id": "windows-accounts-profiles-pos-01",
+      "language": "pl",
+      "prompt": "temporary profile. Windows loguje do profilu tymczasowego. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: nie mogę się zalogować. Do not repair until evidence confirms Hello container, TPM attestation lub policy.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-03",
+      "language": "nl",
+      "prompt": "Windows Hello PIN problem; geef eerst risico, bewijs en rollback. Probleem: Explorer/apps padają tylko dla jednego usera.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-04",
+      "language": "pl",
+      "prompt": "tijdelijk profiel. Windows loguje do profilu tymczasowego. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: temporary profile. Do not repair until evidence confirms Hello container, TPM attestation lub policy.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-06",
+      "language": "nl",
+      "prompt": "nie mogę się zalogować; geef eerst risico, bewijs en rollback. Probleem: Explorer/apps padają tylko dla jednego usera.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-07",
+      "language": "pl",
+      "prompt": "Windows Hello PIN problem. Windows loguje do profilu tymczasowego. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: tijdelijk profiel. Do not repair until evidence confirms Hello container, TPM attestation lub policy.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-09",
+      "language": "nl",
+      "prompt": "temporary profile; geef eerst risico, bewijs en rollback. Probleem: Explorer/apps padają tylko dla jednego usera.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-10",
+      "language": "pl",
+      "prompt": "nie mogę się zalogować. Windows loguje do profilu tymczasowego. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Windows Hello PIN problem. Do not repair until evidence confirms Hello container, TPM attestation lub policy.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-accounts-profiles-pos-12",
+      "language": "nl",
+      "prompt": "tijdelijk profiel; geef eerst risico, bewijs en rollback. Probleem: Explorer/apps padają tylko dla jednego usera.",
+      "expected_primary": "windows-accounts-profiles",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-accounts-profiles-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-05",
+      "language": "en",
+      "prompt": "Start menu nie działa. Główny problem należy do diagnozę Explorer, Start, Search, Settings, taskbar, shell extensions, ikon i file associations.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "windows-shell-ui-repair"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-06",
+      "language": "nl",
+      "prompt": "Outlook nie startuje. Główny problem należy do ochronę danych oraz diagnozę Click-to-Run, profili Outlook, PST/OST, OneDrive/Teams sign-in i synchronizacji.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "windows-office-cloud-repair"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-07",
+      "language": "pl",
+      "prompt": "VSS error. Główny problem należy do diagnozę VSS, restore points, File History, Windows Backup, obrazów bare-metal i walidację kopii.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "windows-backup-vss-restore"
+    },
+    {
+      "id": "windows-accounts-profiles-neg-08",
+      "language": "en",
+      "prompt": "laptop firmowy. Główny problem należy do transparentną Quick Assist/RDP pomoc oraz wykrycie domain/Entra/MDM, GPO, certyfikatów, mapped drives i firmowych VPN bez łamania zarządzania.",
+      "must_not_activate": "windows-accounts-profiles",
+      "expected_primary": "windows-remote-managed-client"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-accounts-profiles-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-accounts-profiles-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-accounts-profiles-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-accounts-profiles-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "adapters": [
+    {
+      "name": "Ethernet",
+      "status": "Up"
+    }
+  ],
+  "ip": [
+    {
+      "address": "192.0.2.44"
+    }
+  ],
+  "routes": [],
+  "synthetic": true
+}

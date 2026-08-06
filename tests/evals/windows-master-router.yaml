@@ -1,0 +1,237 @@
+{
+  "skill": "windows-master-router",
+  "positive": [
+    {
+      "id": "windows-master-router-pos-01",
+      "language": "pl",
+      "prompt": "komputer nie działa i nie wiem od czego zacząć. Użytkownik mówi tylko „komputer nie działa”. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: PC broken / Windows problem. Do not repair until evidence confirms Objawy programowe mogą być skutkiem niestabilnego storage.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-03",
+      "language": "nl",
+      "prompt": "ordinateur start niet; geef eerst risico, bewijs en rollback. Probleem: Laptop Entra/MDM żąda BitLocker recovery.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-04",
+      "language": "pl",
+      "prompt": "route this Windows issue. Użytkownik mówi tylko „komputer nie działa”. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: komputer nie działa i nie wiem od czego zacząć. Do not repair until evidence confirms Objawy programowe mogą być skutkiem niestabilnego storage.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-06",
+      "language": "nl",
+      "prompt": "PC broken / Windows problem; geef eerst risico, bewijs en rollback. Probleem: Laptop Entra/MDM żąda BitLocker recovery.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-07",
+      "language": "pl",
+      "prompt": "ordinateur start niet. Użytkownik mówi tylko „komputer nie działa”. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: route this Windows issue. Do not repair until evidence confirms Objawy programowe mogą być skutkiem niestabilnego storage.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-09",
+      "language": "nl",
+      "prompt": "komputer nie działa i nie wiem od czego zacząć; geef eerst risico, bewijs en rollback. Probleem: Laptop Entra/MDM żąda BitLocker recovery.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-10",
+      "language": "pl",
+      "prompt": "PC broken / Windows problem. Użytkownik mówi tylko „komputer nie działa”. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: ordinateur start niet. Do not repair until evidence confirms Objawy programowe mogą być skutkiem niestabilnego storage.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-master-router-pos-12",
+      "language": "nl",
+      "prompt": "route this Windows issue; geef eerst risico, bewijs en rollback. Probleem: Laptop Entra/MDM żąda BitLocker recovery.",
+      "expected_primary": "windows-master-router",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-master-router-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-master-router-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-master-router-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-master-router-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-master-router-neg-05",
+      "language": "en",
+      "prompt": "dysk klika. Główny problem należy do ochrona danych na HDD/SSD/NVMe/USB, SMART, imaging, ddrescue/OpenSuperClone, recovery logiczne i bezwzględna kontrola kierunku zapisu.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "storage-triage-cloning-recovery"
+    },
+    {
+      "id": "windows-master-router-neg-06",
+      "language": "nl",
+      "prompt": "błędy pamięci. Główny problem należy do różnicowanie błędów RAM/IMC, WHEA, GPU/VRAM, throttlingu, chłodzenia oraz wpływu OC/UV/XMP/EXPO.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "memory-cpu-gpu-thermal"
+    },
+    {
+      "id": "windows-master-router-neg-07",
+      "language": "pl",
+      "prompt": "jaki mam Windows. Główny problem należy do ustalenie edition, build, kanału, architektury, języka, boot mode, partycji, WinRE i statusu wsparcia przed doborem poleceń.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "windows-os-identification"
+    },
+    {
+      "id": "windows-master-router-neg-08",
+      "language": "en",
+      "prompt": "Automatic Repair loop. Główny problem należy do diagnozę etapów boot, Automatic Repair loop, Safe Mode, czarnego ekranu, restartów i SrtTrail bez ślepej przebudowy BCD.",
+      "must_not_activate": "windows-master-router",
+      "expected_primary": "windows-boot-recovery"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-master-router-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-master-router-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-master-router-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-master-router-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Odzyskiwanie startu Windows"
+  short_description: "Bezpiecznie: Odzyskiwanie startu Windows"
+  default_prompt: "Use $windows-boot-recovery to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,237 @@
+{
+  "skill": "pc-hardware-diagnostics",
+  "positive": [
+    {
+      "id": "pc-hardware-diagnostics-pos-01",
+      "language": "pl",
+      "prompt": "komputer nie włącza się. Zero LED i wentylatorów. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: no power / no POST. Do not repair until evidence confirms RAM, GPU, CPU/IMC, firmware albo płyta.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-03",
+      "language": "nl",
+      "prompt": "pieptoon moederbord; geef eerst risico, bewijs en rollback. Probleem: Działa z baterii, nie przyjmuje zasilania USB-C.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-04",
+      "language": "pl",
+      "prompt": "laptop nie ładuje. Zero LED i wentylatorów. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: komputer nie włącza się. Do not repair until evidence confirms RAM, GPU, CPU/IMC, firmware albo płyta.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-06",
+      "language": "nl",
+      "prompt": "no power / no POST; geef eerst risico, bewijs en rollback. Probleem: Działa z baterii, nie przyjmuje zasilania USB-C.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-07",
+      "language": "pl",
+      "prompt": "pieptoon moederbord. Zero LED i wentylatorów. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: laptop nie ładuje. Do not repair until evidence confirms RAM, GPU, CPU/IMC, firmware albo płyta.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-09",
+      "language": "nl",
+      "prompt": "komputer nie włącza się; geef eerst risico, bewijs en rollback. Probleem: Działa z baterii, nie przyjmuje zasilania USB-C.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-10",
+      "language": "pl",
+      "prompt": "no power / no POST. Zero LED i wentylatorów. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: pieptoon moederbord. Do not repair until evidence confirms RAM, GPU, CPU/IMC, firmware albo płyta.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "pc-hardware-diagnostics-pos-12",
+      "language": "nl",
+      "prompt": "laptop nie ładuje; geef eerst risico, bewijs en rollback. Probleem: Działa z baterii, nie przyjmuje zasilania USB-C.",
+      "expected_primary": "pc-hardware-diagnostics",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "pc-hardware-diagnostics-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "none"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "none"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "none"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "none"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-05",
+      "language": "en",
+      "prompt": "Automatic Repair loop. Główny problem należy do diagnozę etapów boot, Automatic Repair loop, Safe Mode, czarnego ekranu, restartów i SrtTrail bez ślepej przebudowy BCD.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "windows-boot-recovery"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-06",
+      "language": "nl",
+      "prompt": "naprawa offline Windows. Główny problem należy do identyfikację woluminów, montowanie hive, offline log collection, DISM/SFC i kopiowanie danych w WinRE/WinPE.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "winpe-offline-repair"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-07",
+      "language": "pl",
+      "prompt": "missing BCD. Główny problem należy do kontrolowaną diagnozę i naprawę BCD/BCDBoot/ESP/MBR/GPT/NVRAM po pełnej identyfikacji celu.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "windows-bcd-partition-repair"
+    },
+    {
+      "id": "pc-hardware-diagnostics-neg-08",
+      "language": "en",
+      "prompt": "SFC found corrupt files. Główny problem należy do diagnozę CBS/component store oraz dopasowanie źródła WIM/ESD przed SFC/DISM online i offline.",
+      "must_not_activate": "pc-hardware-diagnostics",
+      "expected_primary": "windows-component-repair"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "pc-hardware-diagnostics-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "pc-hardware-diagnostics-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "pc-hardware-diagnostics-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "pc-hardware-diagnostics-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

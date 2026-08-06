@@ -1,0 +1,6 @@
+interface:
+  display_name: "Klient zdalny, domenowy, Entra i MDM"
+  short_description: "Bezpiecznie: Klient zdalny, domenowy, Entra i MDM"
+  default_prompt: "Use $windows-remote-managed-client to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

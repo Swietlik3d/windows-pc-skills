@@ -1,0 +1,6 @@
+interface:
+  display_name: "BitLocker, TPM i zabezpieczenia platformy"
+  short_description: "Bezpiecznie: BitLocker, TPM i zabezpieczenia platformy"
+  default_prompt: "Use $windows-bitlocker-tpm-security to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

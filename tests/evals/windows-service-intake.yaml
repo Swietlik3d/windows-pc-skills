@@ -1,0 +1,237 @@
+{
+  "skill": "windows-service-intake",
+  "positive": [
+    {
+      "id": "windows-service-intake-pos-01",
+      "language": "pl",
+      "prompt": "przyjęcie laptopa do serwisu. Urządzenie prywatne, Windows uruchamia się. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: service intake. Do not repair until evidence confirms Dalsze uruchamianie może zwiększać utratę.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-03",
+      "language": "nl",
+      "prompt": "toestemming reparatie; geef eerst risico, bewijs en rollback. Probleem: Entra/MDM, klient nie zna polityk.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-04",
+      "language": "pl",
+      "prompt": "formularz zgody klienta. Urządzenie prywatne, Windows uruchamia się. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: przyjęcie laptopa do serwisu. Do not repair until evidence confirms Dalsze uruchamianie może zwiększać utratę.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-06",
+      "language": "nl",
+      "prompt": "service intake; geef eerst risico, bewijs en rollback. Probleem: Entra/MDM, klient nie zna polityk.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-07",
+      "language": "pl",
+      "prompt": "toestemming reparatie. Urządzenie prywatne, Windows uruchamia się. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: formularz zgody klienta. Do not repair until evidence confirms Dalsze uruchamianie może zwiększać utratę.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-09",
+      "language": "nl",
+      "prompt": "przyjęcie laptopa do serwisu; geef eerst risico, bewijs en rollback. Probleem: Entra/MDM, klient nie zna polityk.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-10",
+      "language": "pl",
+      "prompt": "service intake. Urządzenie prywatne, Windows uruchamia się. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: toestemming reparatie. Do not repair until evidence confirms Dalsze uruchamianie może zwiększać utratę.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-service-intake-pos-12",
+      "language": "nl",
+      "prompt": "formularz zgody klienta; geef eerst risico, bewijs en rollback. Probleem: Entra/MDM, klient nie zna polityk.",
+      "expected_primary": "windows-service-intake",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-service-intake-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-service-intake-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-service-intake-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-service-intake-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-service-intake-neg-05",
+      "language": "en",
+      "prompt": "błędy pamięci. Główny problem należy do różnicowanie błędów RAM/IMC, WHEA, GPU/VRAM, throttlingu, chłodzenia oraz wpływu OC/UV/XMP/EXPO.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "memory-cpu-gpu-thermal"
+    },
+    {
+      "id": "windows-service-intake-neg-06",
+      "language": "nl",
+      "prompt": "jaki mam Windows. Główny problem należy do ustalenie edition, build, kanału, architektury, języka, boot mode, partycji, WinRE i statusu wsparcia przed doborem poleceń.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "windows-os-identification"
+    },
+    {
+      "id": "windows-service-intake-neg-07",
+      "language": "pl",
+      "prompt": "Automatic Repair loop. Główny problem należy do diagnozę etapów boot, Automatic Repair loop, Safe Mode, czarnego ekranu, restartów i SrtTrail bez ślepej przebudowy BCD.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "windows-boot-recovery"
+    },
+    {
+      "id": "windows-service-intake-neg-08",
+      "language": "en",
+      "prompt": "naprawa offline Windows. Główny problem należy do identyfikację woluminów, montowanie hive, offline log collection, DISM/SFC i kopiowanie danych w WinRE/WinPE.",
+      "must_not_activate": "windows-service-intake",
+      "expected_primary": "winpe-offline-repair"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-service-intake-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-service-intake-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-service-intake-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-service-intake-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

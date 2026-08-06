@@ -1,0 +1,97 @@
+{
+  "skill": "winpe-offline-repair",
+  "path": "dist\\skills\\winpe-offline-repair",
+  "self_contained": true,
+  "files": [
+    {
+      "path": "agents\\openai.yaml",
+      "sha256": "ac5f917f1c6860879506b260450b27c1310268b2a55e6e1cef3b9c6a20480837",
+      "bytes": 283
+    },
+    {
+      "path": "assets\\validation-checklist.md",
+      "sha256": "16cca60ff8a2beb76c6e77c17f1a1d942c1d28804f2c1a916bf4693385b38e06",
+      "bytes": 528
+    },
+    {
+      "path": "references\\_shared\\fixtures\\router-fixture.yaml",
+      "sha256": "057b0020eb87af576ca2adaedec6984b279d27b6c178f80598cfd5b9cc753812",
+      "bytes": 313
+    },
+    {
+      "path": "references\\_shared\\references\\response-contract.md",
+      "sha256": "a33ddd4e8327e416e99652d55780f6126fedec719307799280ddc74e808bfd5f",
+      "bytes": 282
+    },
+    {
+      "path": "references\\_shared\\references\\risk-model.md",
+      "sha256": "ab577c7ec8bbfc71ad545dacc90935c09035e582c4837a1fcd34e63f15a0ca02",
+      "bytes": 307
+    },
+    {
+      "path": "references\\_shared\\references\\stop-conditions.md",
+      "sha256": "4769fa482b442f8f4a60789b8f5682a5d4eb07a493d5bb95af4680e2601266a9",
+      "bytes": 285
+    },
+    {
+      "path": "references\\_shared\\schemas\\case-intake.schema.json",
+      "sha256": "ef3e7d4438ad393e275694d5c65ed7d4b8bda20b68eab6a335e5b221b6c2ade6",
+      "bytes": 1134
+    },
+    {
+      "path": "references\\_shared\\schemas\\playbook.schema.json",
+      "sha256": "6f35dc19fcba82a5c9aa6f2878f2a8b0d0aae3c89bfc7fb9b1ed2d90b316b3e0",
+      "bytes": 3085
+    },
+    {
+      "path": "references\\_shared\\schemas\\source-register.schema.json",
+      "sha256": "07739c81a80685398347ca580120566e48a5344f46a340e186a5973d4c2fe9a9",
+      "bytes": 1342
+    },
+    {
+      "path": "references\\_shared\\schemas\\tool-catalog.schema.json",
+      "sha256": "65f97d14a32d3f6cb38b373cb533d3a78e4a211fcb91ed0c2bf33f1cad4d30f9",
+      "bytes": 2982
+    },
+    {
+      "path": "references\\_shared\\schemas\\trigger-eval.schema.json",
+      "sha256": "41a5fce276637044aebf2c49d4026f4f4a22216318d79812a1f82eec6d258ced",
+      "bytes": 592
+    },
+    {
+      "path": "references\\_shared\\scripts\\Test-SkillInput.ps1",
+      "sha256": "04f3d8cc84f60844a98c0ce8395edc802807167ca27fdef6abee414df7e62be0",
+      "bytes": 694
+    },
+    {
+      "path": "references\\_shared\\templates\\action-record.json",
+      "sha256": "b8c970f08a569d80b7ba8188d4d2e473927f38f935dc2dd3915a55df822f5e22",
+      "bytes": 259
+    },
+    {
+      "path": "references\\command-cards.md",
+      "sha256": "e316bece4567edfba6004b7a2522070bd136d9a3fe8b0d6776ad42d6f0856474",
+      "bytes": 3782
+    },
+    {
+      "path": "references\\compatibility.md",
+      "sha256": "a3e4d4331fd26f2ba4fdd9388f43704c4651d729f937488de631abfc7f1cc68d",
+      "bytes": 983
+    },
+    {
+      "path": "references\\playbooks.md",
+      "sha256": "d4f7abc1a88d034ce2be7d13d243a8639f5638b5b1b3c6b880a8def8da36e124",
+      "bytes": 6697
+    },
+    {
+      "path": "references\\sources.md",
+      "sha256": "947dbb46cbb79a94dcff4ea3e6dbf3a2d8ecd8a2f10666135b3ca520dd48d107",
+      "bytes": 702
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "254c14038a89e6888a2dcde30b38079e426cbfdbfd00427ab2dd5a21605d84fe",
+      "bytes": 8960
+    }
+  ]
+}

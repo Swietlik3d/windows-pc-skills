@@ -1,0 +1,11 @@
+{
+  "startup": [
+    {
+      "name": "Synthetic Updater",
+      "command": "C:\\Program Files\\Example\\updater.exe"
+    }
+  ],
+  "services": [],
+  "tasks": [],
+  "synthetic": true
+}

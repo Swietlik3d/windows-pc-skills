@@ -1,0 +1,237 @@
+{
+  "skill": "windows-bsod-debugging",
+  "positive": [
+    {
+      "id": "windows-bsod-debugging-pos-01",
+      "language": "pl",
+      "prompt": "blue screen. Ten sam bugcheck pod konkretną akcją. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: BSOD. Do not repair until evidence confirms RAM/storage/power bardziej prawdopodobne niż wiele driverów.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-03",
+      "language": "nl",
+      "prompt": "bugcheck; geef eerst risico, bewijs en rollback. Probleem: Podejrzenie third-party driver bez dowodu.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-04",
+      "language": "pl",
+      "prompt": "blauw scherm WinDbg. Ten sam bugcheck pod konkretną akcją. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: blue screen. Do not repair until evidence confirms RAM/storage/power bardziej prawdopodobne niż wiele driverów.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-06",
+      "language": "nl",
+      "prompt": "BSOD; geef eerst risico, bewijs en rollback. Probleem: Podejrzenie third-party driver bez dowodu.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-07",
+      "language": "pl",
+      "prompt": "bugcheck. Ten sam bugcheck pod konkretną akcją. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: blauw scherm WinDbg. Do not repair until evidence confirms RAM/storage/power bardziej prawdopodobne niż wiele driverów.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-09",
+      "language": "nl",
+      "prompt": "blue screen; geef eerst risico, bewijs en rollback. Probleem: Podejrzenie third-party driver bez dowodu.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-10",
+      "language": "pl",
+      "prompt": "BSOD. Ten sam bugcheck pod konkretną akcją. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: bugcheck. Do not repair until evidence confirms RAM/storage/power bardziej prawdopodobne niż wiele driverów.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bsod-debugging-pos-12",
+      "language": "nl",
+      "prompt": "blauw scherm WinDbg; geef eerst risico, bewijs en rollback. Probleem: Podejrzenie third-party driver bez dowodu.",
+      "expected_primary": "windows-bsod-debugging",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-bsod-debugging-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-05",
+      "language": "en",
+      "prompt": "drukarka nie drukuje. Główny problem należy do diagnozę drukarek, spoolera, skanerów, audio, monitorów, USB, Bluetooth, kamer, docków i HID.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "windows-peripherals-repair"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-06",
+      "language": "nl",
+      "prompt": "temporary profile. Główny problem należy do oficjalne odzyskanie logowania lokalnego/MSA/Entra/Hello oraz naprawę temporary/corrupt profile bez obchodzenia haseł.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "windows-accounts-profiles"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-07",
+      "language": "pl",
+      "prompt": "Access denied. Główny problem należy do precyzyjną diagnozę ownership, dziedziczenia, effective access, share ACL, offline ACL i świadomość EFS.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "windows-ntfs-permissions-shares"
+    },
+    {
+      "id": "windows-bsod-debugging-neg-08",
+      "language": "en",
+      "prompt": "BitLocker recovery loop. Główny problem należy do diagnozę Device Encryption/BitLocker, recovery readiness, TPM, Secure Boot, VBS/HVCI, certyfikatów i policy bez obchodzenia ochrony.",
+      "must_not_activate": "windows-bsod-debugging",
+      "expected_primary": "windows-bitlocker-tpm-security"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-bsod-debugging-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bsod-debugging-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bsod-debugging-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bsod-debugging-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

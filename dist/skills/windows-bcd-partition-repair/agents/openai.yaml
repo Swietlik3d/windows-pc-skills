@@ -1,0 +1,6 @@
+interface:
+  display_name: "BCD, ESP i partycje startowe"
+  short_description: "Bezpiecznie: BCD, ESP i partycje startowe"
+  default_prompt: "Use $windows-bcd-partition-repair to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

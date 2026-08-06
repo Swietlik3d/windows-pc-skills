@@ -1,0 +1,6 @@
+interface:
+  display_name: "Windows XP, Vista, 7 i 8.x"
+  short_description: "Bezpiecznie: Windows XP, Vista, 7 i 8.x"
+  default_prompt: "Use $windows-legacy-xp-vista-7-8 to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

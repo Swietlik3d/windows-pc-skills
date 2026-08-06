@@ -1,0 +1,237 @@
+{
+  "skill": "windows-bitlocker-tpm-security",
+  "positive": [
+    {
+      "id": "windows-bitlocker-tpm-security-pos-01",
+      "language": "pl",
+      "prompt": "BitLocker recovery loop. Każdy boot żąda key. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-02",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: TPM error. Do not repair until evidence confirms BitLocker będzie chronił zmianę boot chain.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-03",
+      "language": "nl",
+      "prompt": "Device Encryption; geef eerst risico, bewijs en rollback. Probleem: Urządzenie może mieć certyfikaty 2011.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-04",
+      "language": "pl",
+      "prompt": "herstelcode BitLocker / Secure Boot. Każdy boot żąda key. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-05",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: BitLocker recovery loop. Do not repair until evidence confirms BitLocker będzie chronił zmianę boot chain.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-06",
+      "language": "nl",
+      "prompt": "TPM error; geef eerst risico, bewijs en rollback. Probleem: Urządzenie może mieć certyfikaty 2011.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-07",
+      "language": "pl",
+      "prompt": "Device Encryption. Każdy boot żąda key. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-08",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: herstelcode BitLocker / Secure Boot. Do not repair until evidence confirms BitLocker będzie chronił zmianę boot chain.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-09",
+      "language": "nl",
+      "prompt": "BitLocker recovery loop; geef eerst risico, bewijs en rollback. Probleem: Urządzenie może mieć certyfikaty 2011.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-10",
+      "language": "pl",
+      "prompt": "TPM error. Każdy boot żąda key. Najpierw tylko diagnostyka read-only i ochrona danych.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-11",
+      "language": "en",
+      "prompt": "Please use a safe Windows workflow for: Device Encryption. Do not repair until evidence confirms BitLocker będzie chronił zmianę boot chain.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-pos-12",
+      "language": "nl",
+      "prompt": "herstelcode BitLocker / Secure Boot; geef eerst risico, bewijs en rollback. Probleem: Urządzenie może mieć certyfikaty 2011.",
+      "expected_primary": "windows-bitlocker-tpm-security",
+      "max_supporting": 3,
+      "required_safety": "R0 first and stop conditions",
+      "forbidden": [
+        "destructive action without gate",
+        "invented diagnosis"
+      ]
+    }
+  ],
+  "negative": [
+    {
+      "id": "windows-bitlocker-tpm-security-neg-01",
+      "language": "pl",
+      "prompt": "Napisz mi CV po polsku.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-02",
+      "language": "en",
+      "prompt": "How do I rotate a PDF?",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-03",
+      "language": "nl",
+      "prompt": "Znajdź restaurację w Amsterdamie.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-04",
+      "language": "pl",
+      "prompt": "Maak een kalenderafspraak voor morgen.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "none"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-05",
+      "language": "en",
+      "prompt": "VSS error. Główny problem należy do diagnozę VSS, restore points, File History, Windows Backup, obrazów bare-metal i walidację kopii.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "windows-backup-vss-restore"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-06",
+      "language": "nl",
+      "prompt": "laptop firmowy. Główny problem należy do transparentną Quick Assist/RDP pomoc oraz wykrycie domain/Entra/MDM, GPO, certyfikatów, mapped drives i firmowych VPN bez łamania zarządzania.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "windows-remote-managed-client"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-07",
+      "language": "pl",
+      "prompt": "Event Viewer analysis. Główny problem należy do bezpieczną pracę z Event Viewer, registry, services, tasks, local policy, firewall, certyfikaty, storage, SMB, Hyper-V, WSL, Sandbox i power.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "windows-advanced-administration"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-neg-08",
+      "language": "en",
+      "prompt": "napisz skrypt PowerShell do Windows. Główny problem należy do projektowanie bezpiecznych, idempotentnych skryptów PowerShell 5.1/7, CIM, remoting, logging, ShouldProcess i testów.",
+      "must_not_activate": "windows-bitlocker-tpm-security",
+      "expected_primary": "windows-automation-powershell"
+    }
+  ],
+  "ambiguous": [
+    {
+      "id": "windows-bitlocker-tpm-security-amb-01",
+      "language": "pl",
+      "prompt": "Komputer nie działa po aktualizacji, nie wiem czy startuje.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-amb-02",
+      "language": "en",
+      "prompt": "PC is slow and sometimes restarts; backup and encryption are unknown.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-amb-03",
+      "language": "nl",
+      "prompt": "Windows werkt niet goed, bedrijfsapparaat, BitLocker-status onbekend.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    },
+    {
+      "id": "windows-bitlocker-tpm-security-amb-04",
+      "language": "pl",
+      "prompt": "Mam kilka objawów naraz i ważne dane bez kopii.",
+      "expected_primary": "windows-master-router",
+      "required_question_or_collection": "boot state, backup, encryption, management, red flags"
+    }
+  ]
+}

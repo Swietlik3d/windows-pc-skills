@@ -1,0 +1,6 @@
+interface:
+  display_name: "Wsparcie Windows 10"
+  short_description: "Bezpiecznie: Wsparcie Windows 10"
+  default_prompt: "Use $windows-10-support to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

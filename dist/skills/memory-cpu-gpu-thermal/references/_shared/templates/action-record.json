@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "<ISO8601>",
+  "operator": "<ALIAS>",
+  "purpose": "<PURPOSE>",
+  "risk_class": "R0",
+  "command_or_tool": "<NAME_AND_VERSION>",
+  "target": "<VERIFIED_TARGET>",
+  "result": "observed",
+  "rollback": "not-applicable",
+  "artifacts": []
+}

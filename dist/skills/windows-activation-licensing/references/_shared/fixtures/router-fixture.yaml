@@ -1,0 +1,9 @@
+{
+  "text": "Laptop wpada w Automatic Repair po aktualizacji, dysk nie klika, BitLocker włączony.",
+  "expected_primary": "windows-boot-recovery",
+  "expected_supporting": [
+    "windows-update-servicing",
+    "windows-bitlocker-tpm-security"
+  ],
+  "required_first_step": "R0 boot layout and storage safety"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Wydajność, zawieszenia i ETW"
+  short_description: "Bezpiecznie: Wydajność, zawieszenia i ETW"
+  default_prompt: "Use $windows-performance-hangs to diagnose this Windows issue safely and show one phase at a time."
+policy:
+  allow_implicit_invocation: true

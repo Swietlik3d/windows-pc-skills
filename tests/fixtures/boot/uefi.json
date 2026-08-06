@@ -1,0 +1,23 @@
+{
+  "firmware": "UEFI",
+  "disks": [
+    {
+      "number": 0,
+      "style": "GPT",
+      "unique_id": "SYNTH-DISK-0"
+    }
+  ],
+  "partitions": [
+    {
+      "role": "ESP",
+      "fs": "FAT32",
+      "size_mb": 260
+    },
+    {
+      "role": "Windows",
+      "letter": "D",
+      "has_windows": true
+    }
+  ],
+  "synthetic": true
+}
