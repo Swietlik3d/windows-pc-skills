@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS Validates a JSON input envelope against the minimum safety gates shared by packaged skills.
 .EXAMPLE .\Test-SkillInput.ps1 -Path .\input.json
 #>
