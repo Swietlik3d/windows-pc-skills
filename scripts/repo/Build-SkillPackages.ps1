@@ -21,7 +21,7 @@ function Write-DeterministicTextTree {
  foreach($file in Get-ChildItem -LiteralPath $RootPath -File -Recurse){
   if($file.Extension -notin @('.md','.json','.yaml','.yml','.ps1','.psm1','.cmd')){continue}
   $text=[IO.File]::ReadAllText($file.FullName).Replace("`r`n","`n").Replace("`r","`n")
-  if($file.Extension -in @('.ps1','.psm1','.cmd')){$text=$text.Replace("`n","`r`n")}
+  if($file.Extension -eq '.cmd'){$text=$text.Replace("`n","`r`n")}
   [IO.File]::WriteAllText($file.FullName,$text,[Text.UTF8Encoding]::new($false))
  }
 }
