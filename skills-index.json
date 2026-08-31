@@ -2,8 +2,8 @@
   "schema_version": 1,
   "pack_id": "windows-pc-skills",
   "source_repository": "https://github.com/Swietlik3d/windows-pc-skills",
-  "source_commit": "0a342c6a79aaa43d200b4e0a25efb333d9dfd729",
-  "generated_at": "2026-08-31T16:17:54.000Z",
+  "source_commit": "5ac654298b8e0f87073001e47408400acc66e609",
+  "generated_at": "2026-08-31T16:48:03.000Z",
   "skills": [
     {
       "name": "bios-uefi-firmware",
