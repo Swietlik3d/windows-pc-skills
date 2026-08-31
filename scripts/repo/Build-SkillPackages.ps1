@@ -16,6 +16,15 @@ function Write-JsonUtf8Lf {
  $json=$InputObject|ConvertTo-Json -Depth 20
  [IO.File]::WriteAllText($Path,$json.Replace("`r`n","`n")+"`n",[Text.UTF8Encoding]::new($false))
 }
+function Write-DeterministicTextTree {
+ param([Parameter(Mandatory)][string]$RootPath)
+ foreach($file in Get-ChildItem -LiteralPath $RootPath -File -Recurse){
+  if($file.Extension -notin @('.md','.json','.yaml','.yml','.ps1','.psm1','.cmd')){continue}
+  $text=[IO.File]::ReadAllText($file.FullName).Replace("`r`n","`n").Replace("`r","`n")
+  if($file.Extension -in @('.ps1','.psm1','.cmd')){$text=$text.Replace("`n","`r`n")}
+  [IO.File]::WriteAllText($file.FullName,$text,[Text.UTF8Encoding]::new($false))
+ }
+}
 if($WhatIfPreference){
  [pscustomobject]@{Destination=$dest;Packages=$skills.Count;SharedCopied=$false;Planned=$true}
  return
@@ -35,6 +44,7 @@ foreach($skill in $skills){
  $sharedTarget=Join-Path $target 'references\_shared'
  Copy-Item -LiteralPath $shared -Destination $sharedTarget -Recurse
  if(Test-Path -LiteralPath (Join-Path $sharedTarget 'SKILL.md')){throw '_shared unexpectedly contains SKILL.md'}
+ Write-DeterministicTextTree -RootPath $target
  $files=@()
  foreach($file in Get-ChildItem -LiteralPath $target -File -Recurse|Sort-Object FullName){$files+=[ordered]@{path=(Get-WmRelativePath -BasePath $target -Path $file.FullName);sha256=(Get-FileHash $file.FullName -Algorithm SHA256).Hash.ToLowerInvariant();bytes=$file.Length}}
  $entry=[ordered]@{skill=$skill.Name;path=(Get-WmRelativePath -BasePath $repo -Path $target);self_contained=$true;files=$files}
