@@ -83,6 +83,15 @@ function git(...args) {
   return execFileSync("git", ["-C", repo, ...args], { encoding: "utf8", windowsHide: true }).trim();
 }
 
+function gitOk(...args) {
+  try {
+    execFileSync("git", ["-C", repo, ...args], { stdio: "ignore", windowsHide: true });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function stable(index) {
   const { source_commit, generated_at, ...rest } = index;
   return rest;
@@ -124,8 +133,7 @@ for (const filePath of files) {
 }
 skills.sort((a, b) => a.name.localeCompare(b.name));
 const sourceCommit = git("rev-parse", "HEAD");
-const epoch = process.env.SOURCE_DATE_EPOCH;
-const generatedAt = epoch ? new Date(Number(epoch) * 1000).toISOString() : new Date(git("show", "-s", "--format=%cI", "HEAD")).toISOString();
+const generatedAt = new Date(git("show", "-s", "--format=%cI", "HEAD")).toISOString();
 const index = { schema_version: 1, pack_id: packId, source_repository: source, source_commit: sourceCommit, generated_at: generatedAt, skills };
 const outputPath = path.join(repo, "skills-index.json");
 if (process.argv.includes("--check")) {
@@ -137,6 +145,20 @@ if (process.argv.includes("--check")) {
   }
   if (JSON.stringify(stable(existing)) !== JSON.stringify(stable(index))) {
     throw new Error("skills-index.json is stale; run node scripts/generate-skill-index.mjs");
+  }
+  if (!/^[0-9a-f]{40}$/.test(existing.source_commit) || !gitOk("cat-file", "-e", `${existing.source_commit}^{commit}`)) {
+    throw new Error("skills-index.json source_commit is not a full commit in this repository");
+  }
+  if (!gitOk("merge-base", "--is-ancestor", existing.source_commit, "HEAD")) {
+    throw new Error("skills-index.json source_commit is not an ancestor of HEAD");
+  }
+  const provenancePaths = ["pack.yaml", "scripts/generate-skill-index.mjs", ...skills.map((skill) => skill.path)];
+  if (!gitOk("diff", "--quiet", existing.source_commit, "--", ...provenancePaths)) {
+    throw new Error("skills-index.json source_commit does not contain the current manifest, generator, and skill metadata; commit them, regenerate the index, and commit the index separately");
+  }
+  const provenanceTime = new Date(git("show", "-s", "--format=%cI", existing.source_commit)).toISOString();
+  if (existing.generated_at !== provenanceTime) {
+    throw new Error("skills-index.json generated_at does not match source_commit");
   }
   console.log(JSON.stringify({ ok: true, pack: packId, skills: skills.length }));
 } else {
