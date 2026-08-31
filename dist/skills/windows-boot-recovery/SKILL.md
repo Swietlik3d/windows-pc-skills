@@ -1,6 +1,17 @@
 ---
 name: windows-boot-recovery
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę etapów boot, Automatic Repair loop, Safe Mode, czarnego ekranu, restartów i SrtTrail bez ślepej przebudowy BCD. Aktywuj przy zgłoszeniach: Automatic Repair loop; Windows nie startuje; zwart scherm na aanmelden; SrtTrail.txt. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "high"
 ---
 
 # Odzyskiwanie startu Windows

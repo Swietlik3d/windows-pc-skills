@@ -1,6 +1,17 @@
 ---
 name: windows-bitlocker-tpm-security
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Device Encryption/BitLocker, recovery readiness, TPM, Secure Boot, VBS/HVCI, certyfikatów i policy bez obchodzenia ochrony. Aktywuj przy zgłoszeniach: BitLocker recovery loop; TPM error; Device Encryption; herstelcode BitLocker / Secure Boot. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "required"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "critical"
 ---
 
 # BitLocker, TPM i zabezpieczenia platformy

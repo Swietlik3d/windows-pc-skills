@@ -1,6 +1,17 @@
 ---
 name: windows-tool-research
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: utrzymanie katalogu narzędzi, official sources, wersji, licencji, statusu active/stale/EOL, checksum/signature i community findings. Aktywuj przy zgłoszeniach: sprawdź narzędzie serwisowe; is this tool safe; update tool catalog; hulpprogramma versie/licentie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "fast_reader"
+  swietlik.orchestrator.minimum-agent: "fast_reader"
+  swietlik.orchestrator.reasoning: "low"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "optional"
+  swietlik.orchestrator.review: "optional"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Research narzędzi serwisowych

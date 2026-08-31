@@ -1,6 +1,17 @@
 ---
 name: windows-10-support
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: dynamiczne ustalenie statusu 22H2/ESU/LTSC, bezpieczne utrzymanie i migrację urządzeń pozostających na Windows 10. Aktywuj przy zgłoszeniach: Windows 10 support ended; ESU Windows 10; 22H2 update; Windows 10 ondersteuning. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Wsparcie Windows 10

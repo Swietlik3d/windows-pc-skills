@@ -1,6 +1,17 @@
 ---
 name: windows-remote-managed-client
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: transparentną Quick Assist/RDP pomoc oraz wykrycie domain/Entra/MDM, GPO, certyfikatów, mapped drives i firmowych VPN bez łamania zarządzania. Aktywuj przy zgłoszeniach: laptop firmowy; Entra joined; GPO problem; Quick Assist / Hulp op afstand. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Klient zdalny, domenowy, Entra i MDM

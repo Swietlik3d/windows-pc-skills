@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Dodano stringowe metadane wykonawcze `swietlik.orchestrator.*` do 39 skilli źródłowych bez
+  zmiany procedur naprawczych ani granic R0–R4.
+- Dodano rootowy `pack.yaml`, deterministyczny `skills-index.json`, samowystarczalny generator
+  indeksu oraz CI wykrywające dryf i błędy kontraktu.
+- Rozszerzono generator i statyczny validator repozytorium o trwałą obsługę metadanych
+  orkiestratora.
+
 ## 1.0.0 — 2026-08-06
 
 - Utworzono 39 skilli z playbookami, kartami poleceń, evals i metadanymi UI.

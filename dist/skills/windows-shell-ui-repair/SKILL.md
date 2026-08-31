@@ -1,6 +1,17 @@
 ---
 name: windows-shell-ui-repair
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Explorer, Start, Search, Settings, taskbar, shell extensions, ikon i file associations. Aktywuj przy zgłoszeniach: Start menu nie działa; Explorer crashes; taskbar frozen; Zoeken werkt niet. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Explorer, Start, Search i interfejs

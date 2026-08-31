@@ -38,6 +38,13 @@ TOOL_FIELDS = {
  "elevation_required","signature_method","checksum_method","risk_class","use_cases","avoid_when",
  "known_gotchas","alternatives","sources"
 }
+ORCHESTRATOR_METADATA_KEYS = {
+ "swietlik.orchestrator.schema","swietlik.orchestrator.pack",
+ "swietlik.orchestrator.recommended-agent","swietlik.orchestrator.minimum-agent",
+ "swietlik.orchestrator.reasoning","swietlik.orchestrator.verbosity",
+ "swietlik.orchestrator.delegation","swietlik.orchestrator.review",
+ "swietlik.orchestrator.parallel","swietlik.orchestrator.risk"
+}
 
 class Check:
  def __init__(self):
@@ -51,10 +58,15 @@ def frontmatter(text):
  if not text.startswith("---\n"): return {}, ""
  end=text.find("\n---\n",4)
  if end<0:return {}, ""
- data={}
+ data={}; parent=None
  for line in text[4:end].splitlines():
-  if ":" in line:
-   key,value=line.split(":",1); data[key.strip()]=value.strip().strip('"')
+  if ":" not in line:continue
+  key,value=line.split(":",1)
+  if line.startswith("  ") and parent=="metadata":
+   data[parent][key.strip()]=value.strip().strip('"')
+  else:
+   parent=key.strip(); parsed=value.strip().strip('"')
+   data[parent]={} if parent=="metadata" and not parsed else parsed
  return data,text[end+5:]
 
 def load_json(path, c):
@@ -82,8 +94,11 @@ def structure(root,c):
   folder=base/name; path=folder/"SKILL.md"
   if not path.exists():c.error(f"Missing {path}");continue
   text=path.read_text(encoding="utf-8");fm,body=frontmatter(text)
-  if set(fm)!={"name","description"}:c.error(f"{name}: frontmatter keys {sorted(fm)}")
+  if set(fm)!={"name","description","metadata"}:c.error(f"{name}: frontmatter keys {sorted(fm)}")
   if fm.get("name")!=name:c.error(f"{name}: name mismatch")
+  metadata=fm.get("metadata",{})
+  if not isinstance(metadata,dict) or set(metadata)!=ORCHESTRATOR_METADATA_KEYS:c.error(f"{name}: invalid orchestrator metadata keys")
+  elif metadata.get("swietlik.orchestrator.schema")!="1" or metadata.get("swietlik.orchestrator.pack")!="windows-pc-skills":c.error(f"{name}: invalid orchestrator metadata identity")
   desc=fm.get("description","")
   if not 120<=len(desc)<=900:c.error(f"{name}: description length {len(desc)}")
   if not re.search(r"[ąćęłńóśźż]",desc.lower()) or "Use for" not in desc:c.error(f"{name}: description must contain Polish and English trigger language")
@@ -109,7 +124,7 @@ def schemas(root,c):
  start=time.time();before=len(c.errors)
  for path in list(root.rglob("*.yaml"))+list(root.rglob("*.json")):
   if any(part in {".git","dist"} for part in path.parts):continue
-  if path.name=="openai.yaml":continue
+  if path.name in {"openai.yaml","pack.yaml"}:continue
   load_json(path,c)
  playbooks=list((root/"knowledge-base"/"playbooks").glob("*.yaml"))
  sources=load_json(root/"knowledge-base"/"sources"/"source-register.yaml",c) or []

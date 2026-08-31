@@ -1,6 +1,17 @@
 ---
 name: windows-setup-upgrade-rollback
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: analizę in-place setup, feature update, compatibility blocks, SetupDiag, Panther/Rollback i kontrolowany rollback. Aktywuj przy zgłoszeniach: upgrade failed; SetupDiag; Windows installatie teruggedraaid; in-place repair install. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "high"
 ---
 
 # Setup, upgrade i rollback

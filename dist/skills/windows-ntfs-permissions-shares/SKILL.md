@@ -1,6 +1,17 @@
 ---
 name: windows-ntfs-permissions-shares
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: precyzyjną diagnozę ownership, dziedziczenia, effective access, share ACL, offline ACL i świadomość EFS. Aktywuj przy zgłoszeniach: Access denied; NTFS permissions; SMB share permission; toegang geweigerd. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "high"
 ---
 
 # NTFS ACL i udziały SMB

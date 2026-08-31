@@ -1,6 +1,7 @@
 # Instrukcje dla skilli
 
-- Front matter zawiera tylko `name` i `description`; folder i `name` muszą być identyczne.
+- Front matter zawiera `name`, `description` i stringowy blok `metadata` zgodny z kontraktem
+  `swietlik.orchestrator.*`; folder i `name` muszą być identyczne.
 - Description front-loaduje cel i polskie/angielskie/holenderskie frazy; body pozostaje poniżej
   500 linii, a szczegóły trafiają do bezpośrednich `references/`.
 - Każdy skill ma trzy kompletne playbooki, trzy command cards, rollback, walidację, źródła,

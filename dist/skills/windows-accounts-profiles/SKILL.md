@@ -1,6 +1,17 @@
 ---
 name: windows-accounts-profiles
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: oficjalne odzyskanie logowania lokalnego/MSA/Entra/Hello oraz naprawę temporary/corrupt profile bez obchodzenia haseł. Aktywuj przy zgłoszeniach: temporary profile; nie mogę się zalogować; Windows Hello PIN problem; tijdelijk profiel. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "high"
 ---
 
 # Konta, logowanie i profile

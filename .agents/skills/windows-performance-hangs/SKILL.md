@@ -1,6 +1,17 @@
 ---
 name: windows-performance-hangs
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: korelację opóźnień, hangów, stutter, CPU/RAM/dysk/GPU, DPC/ISR przy użyciu WPR/WPA, PerfMon i Reliability. Aktywuj przy zgłoszeniach: Windows wolno działa; 100% disk; microstutter; pc hangt / not responding. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Wydajność, zawieszenia i ETW

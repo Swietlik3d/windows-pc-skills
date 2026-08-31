@@ -1,6 +1,17 @@
 ---
 name: windows-drivers-devices
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Device Manager, PnPUtil, Driver Store, SetupAPI, DCH, Code 10/28/31/43 i kontrolowany rollback/offline driver. Aktywuj przy zgłoszeniach: unknown device; Code 43; driver problem; apparaatcode 10. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "high"
 ---
 
 # Sterowniki i urządzenia

@@ -15,17 +15,21 @@ celowo ignorowany przez Git).
 - Collectory i parsery mają ścieżkę fixture; repairs są Scan-first z `-Apply`.
 - 117 playbooków, 117 command cards, 95 źródeł, 99 narzędzi i 936 eval prompts.
 - 32/32 wiersze coverage mają status kompletny; nie ma wpisów `planned`.
+- Rootowy indeks orkiestratora obejmuje 39 kanonicznych skilli; 39 wygenerowanych paczek `dist`
+  pozostaje celowo poza katalogiem źródłowym indeksu.
 
-## Rzeczywiste wyniki walidacji — 2026-08-06
+## Rzeczywiste wyniki walidacji — 2026-08-31
 
 | Kontrola | Wynik | Dowód |
 |---|---:|---|
 | Oficjalny `skill-creator/quick_validate.py` | PASS | 39/39 skilli źródłowych oraz 39/39 paczek |
+| `node scripts/generate-skill-index.mjs --check` | PASS | 39 skilli źródłowych, bez mirrorów `dist` |
+| `swietlik-orchestrator pack validate` | PASS | 39 skilli, 0 błędów, 0 ostrzeżeń |
 | Statyczny validator repo | PASS | 7/7 grup, 0 błędów, 0 ostrzeżeń |
 | Linki wewnętrzne | PASS | 703 odwołania |
 | Safety/schema/evals/coverage | PASS | 0 niedozwolonych binariów; 936 promptów; 60+15 spraw |
-| Pester, PowerShell 7.6.4 | PASS | 24/24, 0 skipped |
-| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 24/24, 0 skipped |
+| Pester, PowerShell 7.6.5 (Pester 3.4.0) | PASS | 24/24, 0 skipped |
+| Pester, Windows PowerShell 5.1.26100.8972 | PASS (snapshot 2026-08-06) | 24/24, 0 skipped |
 | Parser AST PowerShell 5.1 | PASS | 38 plików, 0 błędów |
 | Python `compileall` | PASS | wszystkie skrypty Python, 0 błędów |
 | Build `dist/skills` | PASS | 39/39 poprawnych i samowystarczalnych paczek |

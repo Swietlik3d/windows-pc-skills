@@ -1,6 +1,17 @@
 ---
 name: windows-apps-store-winget
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę instalacji/odinstalowania MSI, ClickOnce, MSIX/AppX, Store, dependencies i winget bez registry cleanerów. Aktywuj przy zgłoszeniach: Microsoft Store nie działa; winget error; MSI install failed; app wordt niet gestart. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Aplikacje, Store, MSI/MSIX i winget

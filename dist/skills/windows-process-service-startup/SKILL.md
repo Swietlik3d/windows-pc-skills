@@ -1,6 +1,17 @@
 ---
 name: windows-process-service-startup
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę procesów, usług, Scheduled Tasks, Autoruns/ProcMon i odwracalny clean boot bez utraty konfiguracji. Aktywuj przy zgłoszeniach: program startuje z Windowsem; service won't start; clean boot; opstartprogramma uitschakelen. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Procesy, usługi i autostart
