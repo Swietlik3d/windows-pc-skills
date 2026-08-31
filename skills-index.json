@@ -2,8 +2,8 @@
   "schema_version": 1,
   "pack_id": "windows-pc-skills",
   "source_repository": "https://github.com/Swietlik3d/windows-pc-skills",
-  "source_commit": "fd65756e5ead945b23b9273265d55a8cf8b44e6c",
-  "generated_at": "2026-08-06T20:38:19.000Z",
+  "source_commit": "0a342c6a79aaa43d200b4e0a25efb333d9dfd729",
+  "generated_at": "2026-08-31T16:17:54.000Z",
   "skills": [
     {
       "name": "bios-uefi-firmware",
@@ -284,13 +284,13 @@
       "execution_metadata": {
         "swietlik.orchestrator.schema": "1",
         "swietlik.orchestrator.pack": "windows-pc-skills",
-        "swietlik.orchestrator.recommended-agent": "fast_reader",
+        "swietlik.orchestrator.recommended-agent": "fast_worker",
         "swietlik.orchestrator.minimum-agent": "fast_reader",
-        "swietlik.orchestrator.reasoning": "low",
+        "swietlik.orchestrator.reasoning": "medium",
         "swietlik.orchestrator.verbosity": "low",
         "swietlik.orchestrator.delegation": "optional",
         "swietlik.orchestrator.review": "optional",
-        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.parallel": "forbidden",
         "swietlik.orchestrator.risk": "medium"
       }
     },
