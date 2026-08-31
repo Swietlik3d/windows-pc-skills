@@ -1238,7 +1238,6 @@ ORCHESTRATOR_CRITICAL = {
     "winpe-offline-repair",
 }
 ORCHESTRATOR_FAST_READERS = {
-    "windows-case-evidence",
     "windows-os-identification",
     "windows-tool-research",
 }
@@ -1262,6 +1261,10 @@ def orchestrator_metadata(name: str) -> dict[str, str]:
         profile, reasoning, delegation, review, parallel, risk = (
             "expert_worker", "high", "required", "required", "forbidden", "critical"
         )
+    elif name == "windows-case-evidence":
+        profile, reasoning, delegation, review, parallel, risk = (
+            "fast_worker", "medium", "optional", "optional", "forbidden", "medium"
+        )
     elif name == "windows-master-router":
         profile, reasoning, delegation, review, parallel, risk = (
             "fast_reader", "medium", "forbidden", "optional", "forbidden", "low"
@@ -1282,7 +1285,7 @@ def orchestrator_metadata(name: str) -> dict[str, str]:
         profile, reasoning, delegation, review, parallel, risk = (
             "expert_worker", "high", "preferred", "required", "forbidden", "high"
         )
-    minimum = "fast_reader" if profile == "reviewer" else profile
+    minimum = "fast_reader" if profile == "reviewer" or name == "windows-case-evidence" else profile
     return {
         "swietlik.orchestrator.schema": "1",
         "swietlik.orchestrator.pack": "windows-pc-skills",

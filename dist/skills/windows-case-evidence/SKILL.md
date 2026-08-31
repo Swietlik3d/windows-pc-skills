@@ -4,13 +4,13 @@ description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: p
 metadata:
   swietlik.orchestrator.schema: "1"
   swietlik.orchestrator.pack: "windows-pc-skills"
-  swietlik.orchestrator.recommended-agent: "fast_reader"
+  swietlik.orchestrator.recommended-agent: "fast_worker"
   swietlik.orchestrator.minimum-agent: "fast_reader"
-  swietlik.orchestrator.reasoning: "low"
+  swietlik.orchestrator.reasoning: "medium"
   swietlik.orchestrator.verbosity: "low"
   swietlik.orchestrator.delegation: "optional"
   swietlik.orchestrator.review: "optional"
-  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.parallel: "forbidden"
   swietlik.orchestrator.risk: "medium"
 ---
 

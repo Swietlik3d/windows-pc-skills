@@ -90,8 +90,23 @@ function stable(index) {
 
 const manifestText = await fs.readFile(path.join(repo, "pack.yaml"), "utf8");
 const manifestLines = manifestText.replace(/\r\n/g, "\n").split("\n");
+const manifestKeys = manifestLines.flatMap((line) => {
+  const match = line.match(/^([a-z_]+):/);
+  return match ? [match[1]] : [];
+});
+const expectedManifestKeys = ["schema_version", "id", "description", "source", "index_schema_version"];
+if (JSON.stringify([...manifestKeys].sort()) !== JSON.stringify([...expectedManifestKeys].sort())) {
+  throw new Error(`pack.yaml must contain exactly: ${expectedManifestKeys.join(", ")}`);
+}
+const manifestSchema = topLevelValue(manifestLines, "schema_version");
 const packId = topLevelValue(manifestLines, "id");
+const packDescription = topLevelValue(manifestLines, "description");
 const source = topLevelValue(manifestLines, "source");
+const indexSchema = topLevelValue(manifestLines, "index_schema_version");
+if (manifestSchema !== "1" || indexSchema !== "1") throw new Error("pack.yaml schema versions must equal 1");
+if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(packId)) throw new Error("pack.yaml id is invalid");
+if (packDescription.length < 24 || packDescription.length > 1024) throw new Error("pack.yaml description length is invalid");
+if (!/^https:\/\/github\.com\/Swietlik3d\/[A-Za-z0-9._-]+$/.test(source)) throw new Error("pack.yaml source is not trusted");
 const files = (await discover(repo)).sort((a, b) => a.localeCompare(b));
 const names = new Map();
 const skills = [];
@@ -115,6 +130,11 @@ const index = { schema_version: 1, pack_id: packId, source_repository: source, s
 const outputPath = path.join(repo, "skills-index.json");
 if (process.argv.includes("--check")) {
   const existing = JSON.parse(await fs.readFile(outputPath, "utf8"));
+  const indexKeys = Object.keys(existing).sort();
+  const expectedIndexKeys = ["schema_version", "pack_id", "source_repository", "source_commit", "generated_at", "skills"].sort();
+  if (JSON.stringify(indexKeys) !== JSON.stringify(expectedIndexKeys) || existing.schema_version !== 1) {
+    throw new Error("skills-index.json envelope is invalid");
+  }
   if (JSON.stringify(stable(existing)) !== JSON.stringify(stable(index))) {
     throw new Error("skills-index.json is stale; run node scripts/generate-skill-index.mjs");
   }

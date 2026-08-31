@@ -51,6 +51,8 @@ if($Category -in @('All','Smoke')){
  $sw=[Diagnostics.Stopwatch]::StartNew()
  $packageRoot=Join-Path $repo 'dist\skills'
  & (Join-Path $repo 'scripts\repo\Build-SkillPackages.ps1') -Destination $packageRoot|Out-Null
+ & git -C $repo diff --exit-code -- dist/skills | Out-Null
+ if($LASTEXITCODE -ne 0){Add-Result 'dist-mirror-drift' 'FAIL' 'committed dist/skills differs from canonical package build' 0;$failed=$true}else{Add-Result 'dist-mirror-drift' 'PASS' 'committed dist/skills matches canonical package build' 0}
  $temp=Join-Path $repo 'dist\test-install'
  if(Test-Path -LiteralPath $temp){Remove-Item -LiteralPath $temp -Recurse -Force}
  & (Join-Path $repo 'scripts\repo\Install-WindowsMasterSkills.ps1') -Destination $temp -Source (Join-Path $repo '.agents\skills') -Mode Copy|Out-Null

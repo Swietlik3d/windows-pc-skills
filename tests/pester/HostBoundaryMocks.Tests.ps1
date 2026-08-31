@@ -4,6 +4,12 @@ Import-Module $ModulePath -Force
 $ModuleName=(Get-Module|Where-Object Path -eq $ModulePath|Select-Object -First 1).Name
 
 Describe 'Mocked read-only host boundaries' {
+ BeforeAll {
+  $script:Repo=(Resolve-Path (Join-Path $PSScriptRoot '..\..')).Path
+  $script:ModulePath=Join-Path $script:Repo 'scripts\lib\WindowsMaster.HostAdapter.psm1'
+  Import-Module $script:ModulePath -Force
+  $script:ModuleName=(Get-Module|Where-Object Path -eq $script:ModulePath|Select-Object -First 1).Name
+ }
  It 'mocks registry reads' {
   Mock -CommandName Get-ItemProperty -ModuleName $ModuleName -MockWith {[pscustomobject]@{State='synthetic'}}
   $result=Get-WmRegistrySnapshot -LiteralPath 'HKLM:\SYNTHETIC'

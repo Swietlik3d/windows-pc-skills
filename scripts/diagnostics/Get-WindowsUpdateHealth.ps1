@@ -25,7 +25,7 @@ try{
          'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired'
         )|Where-Object {Test-Path -LiteralPath $_}
         $events=@()
-        try{$events=Get-WinEvent -FilterHashtable @{LogName='System';ProviderName='Microsoft-Windows-WindowsUpdateClient';StartTime=(Get-Date).AddDays(-30)} -MaxEvents 200|Select-Object TimeCreated,Id,LevelDisplayName,Message}catch{}
+        try{$events=Get-WinEvent -FilterHashtable @{LogName='System';ProviderName='Microsoft-Windows-WindowsUpdateClient';StartTime=(Get-Date).AddDays(-30)} -MaxEvents 200|Select-Object TimeCreated,Id,LevelDisplayName,Message}catch{Write-Verbose "Windows Update event query failed: $($_.Exception.Message)"}
         $data=[ordered]@{collected_utc=[DateTime]::UtcNow.ToString('o');pending_reboot=($pending.Count -gt 0);pending_markers=$pending;events=$events}
         $source='live-read-only'
     }
