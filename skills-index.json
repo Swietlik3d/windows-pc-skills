@@ -1,0 +1,672 @@
+{
+  "schema_version": 1,
+  "pack_id": "windows-pc-skills",
+  "source_repository": "https://github.com/Swietlik3d/windows-pc-skills",
+  "source_commit": "5ac654298b8e0f87073001e47408400acc66e609",
+  "generated_at": "2026-08-31T16:48:03.000Z",
+  "skills": [
+    {
+      "name": "bios-uefi-firmware",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: bezpieczna identyfikacja ustawień firmware, boot mode, CSM, Secure Boot, TPM oraz aktualizacji i rollbacku po dokładnym modelu. Aktywuj przy zgłoszeniach: aktualizacja BIOS; UEFI Secure Boot problem; TPM niet beschikbaar; firmware update laptop. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/bios-uefi-firmware/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "memory-cpu-gpu-thermal",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: różnicowanie błędów RAM/IMC, WHEA, GPU/VRAM, throttlingu, chłodzenia oraz wpływu OC/UV/XMP/EXPO. Aktywuj przy zgłoszeniach: błędy pamięci; WHEA crash; GPU artifacts; oververhitting / thermal shutdown. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/memory-cpu-gpu-thermal/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "pc-hardware-diagnostics",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: różnicowanie braku zasilania, POST, kodów LED/beep, baterii, ładowania, PSU, płyty i peryferiów bez pracy pod napięciem. Aktywuj przy zgłoszeniach: komputer nie włącza się; no power / no POST; pieptoon moederbord; laptop nie ładuje. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/pc-hardware-diagnostics/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "storage-triage-cloning-recovery",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: ochrona danych na HDD/SSD/NVMe/USB, SMART, imaging, ddrescue/OpenSuperClone, recovery logiczne i bezwzględna kontrola kierunku zapisu. Aktywuj przy zgłoszeniach: dysk klika; SSD znika; SMART bad; recover files / gegevens herstellen. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/storage-triage-cloning-recovery/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "windows-10-support",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: dynamiczne ustalenie statusu 22H2/ESU/LTSC, bezpieczne utrzymanie i migrację urządzeń pozostających na Windows 10. Aktywuj przy zgłoszeniach: Windows 10 support ended; ESU Windows 10; 22H2 update; Windows 10 ondersteuning. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-10-support/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-11-support",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: obsługę aktywnych gałęzi Windows 11, ARM64, UEFI/GPT, Device Encryption, VBS/HVCI, Hello, DCH i safeguard holds. Aktywuj przy zgłoszeniach: Windows 11 24H2/25H2/26H1; Windows 11 problem; ARM64 app; Windows 11 updateprobleem. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-11-support/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-accounts-profiles",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: oficjalne odzyskanie logowania lokalnego/MSA/Entra/Hello oraz naprawę temporary/corrupt profile bez obchodzenia haseł. Aktywuj przy zgłoszeniach: temporary profile; nie mogę się zalogować; Windows Hello PIN problem; tijdelijk profiel. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-accounts-profiles/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-activation-licensing",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: legalną diagnostykę digital license, OEM OA3, edition mismatch i kanałów retail/OEM/volume bez ujawniania kluczy. Aktywuj przy zgłoszeniach: Windows nie jest aktywowany; activation error; edition mismatch; Windows-activering mislukt. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-activation-licensing/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-advanced-administration",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: bezpieczną pracę z Event Viewer, registry, services, tasks, local policy, firewall, certyfikaty, storage, SMB, Hyper-V, WSL, Sandbox i power. Aktywuj przy zgłoszeniach: Event Viewer analysis; registry/service administration; Hyper-V WSL issue; Windows-beheer geavanceerd. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-advanced-administration/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-apps-store-winget",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę instalacji/odinstalowania MSI, ClickOnce, MSIX/AppX, Store, dependencies i winget bez registry cleanerów. Aktywuj przy zgłoszeniach: Microsoft Store nie działa; winget error; MSI install failed; app wordt niet gestart. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-apps-store-winget/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-automation-powershell",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: projektowanie bezpiecznych, idempotentnych skryptów PowerShell 5.1/7, CIM, remoting, logging, ShouldProcess i testów. Aktywuj przy zgłoszeniach: napisz skrypt PowerShell do Windows; safe automation; Pester mock; PowerShell automatisering. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-automation-powershell/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-backup-vss-restore",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę VSS, restore points, File History, Windows Backup, obrazów bare-metal i walidację kopii. Aktywuj przy zgłoszeniach: VSS error; backup failed; File History; systeemherstel werkt niet. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-backup-vss-restore/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-bcd-partition-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: kontrolowaną diagnozę i naprawę BCD/BCDBoot/ESP/MBR/GPT/NVRAM po pełnej identyfikacji celu. Aktywuj przy zgłoszeniach: missing BCD; no boot device; Windows Boot Manager ontbreekt; napraw ESP UEFI. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-bcd-partition-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "windows-bitlocker-tpm-security",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Device Encryption/BitLocker, recovery readiness, TPM, Secure Boot, VBS/HVCI, certyfikatów i policy bez obchodzenia ochrony. Aktywuj przy zgłoszeniach: BitLocker recovery loop; TPM error; Device Encryption; herstelcode BitLocker / Secure Boot. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-bitlocker-tpm-security/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "windows-boot-recovery",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę etapów boot, Automatic Repair loop, Safe Mode, czarnego ekranu, restartów i SrtTrail bez ślepej przebudowy BCD. Aktywuj przy zgłoszeniach: Automatic Repair loop; Windows nie startuje; zwart scherm na aanmelden; SrtTrail.txt. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-boot-recovery/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-bsod-debugging",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: konfigurację dumpów, analizę bugcheck/stacks/modules/WHEA i ostrożne użycie Driver Verifier z planem odzyskania. Aktywuj przy zgłoszeniach: blue screen; BSOD; bugcheck; blauw scherm WinDbg. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-bsod-debugging/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-case-evidence",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: prowadzenie timeline, lekkiego chain of custody, hashy, anonimizacji, artefaktów before/after i raportu serwisowego. Aktywuj przy zgłoszeniach: zapisz czynności serwisowe; case evidence; chain of custody; serwisrapport. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-case-evidence/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "fast_worker",
+        "swietlik.orchestrator.minimum-agent": "fast_reader",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "optional",
+        "swietlik.orchestrator.review": "optional",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-component-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę CBS/component store oraz dopasowanie źródła WIM/ESD przed SFC/DISM online i offline. Aktywuj przy zgłoszeniach: SFC found corrupt files; DISM 0x800f081f; component store repair; bronbestanden niet gevonden. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-component-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-deployment-imaging",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: planowanie DISM imaging, unattend, Sysprep, ADK/WinPE, drivers offline i migracji HDD→SSD bez ryzyka pomylenia celu. Aktywuj przy zgłoszeniach: capture WIM; deploy Windows image; Sysprep error; HDD naar SSD migratie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-deployment-imaging/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "windows-drivers-devices",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Device Manager, PnPUtil, Driver Store, SetupAPI, DCH, Code 10/28/31/43 i kontrolowany rollback/offline driver. Aktywuj przy zgłoszeniach: unknown device; Code 43; driver problem; apparaatcode 10. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-drivers-devices/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-legacy-xp-vista-7-8",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: izolowaną diagnozę legacy BIOS/MBR, NTLDR/boot.ini, starych BCD/WinRE, TLS/certyfikatów, sterowników i migracji. Aktywuj przy zgłoszeniach: Windows XP nie startuje; Windows 7 repair; NTLDR missing; oude Windows 8.1 laptop. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-legacy-xp-vista-7-8/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-malware-remediation",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: izolację, zachowanie dowodów, Defender Offline/MSERT/Sysinternals, PUP/browser hijack, persistence i kryteria reinstalacji. Aktywuj przy zgłoszeniach: podejrzewam wirusa; browser hijack; Defender disabled; malware verwijderen. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-malware-remediation/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    },
+    {
+      "name": "windows-master-router",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: rozpoznanie objawu, ryzyka i wybór dokładnie jednego skilla głównego oraz najwyżej trzech pomocniczych. Aktywuj przy zgłoszeniach: komputer nie działa i nie wiem od czego zacząć; PC broken / Windows problem; ordinateur start niet; route this Windows issue. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-master-router/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "fast_reader",
+        "swietlik.orchestrator.minimum-agent": "fast_reader",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "forbidden",
+        "swietlik.orchestrator.review": "optional",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "low"
+      }
+    },
+    {
+      "name": "windows-network-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: warstwową diagnozę Ethernet/Wi-Fi/DHCP/DNS/proxy/VPN/routing/firewall/SMB i kontrolowane resety stosu. Aktywuj przy zgłoszeniach: brak internetu; DNS problem; Wi-Fi disconnects; geen internet / VPN werkt niet. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-network-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-ntfs-permissions-shares",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: precyzyjną diagnozę ownership, dziedziczenia, effective access, share ACL, offline ACL i świadomość EFS. Aktywuj przy zgłoszeniach: Access denied; NTFS permissions; SMB share permission; toegang geweigerd. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-ntfs-permissions-shares/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-office-cloud-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: ochronę danych oraz diagnozę Click-to-Run, profili Outlook, PST/OST, OneDrive/Teams sign-in i synchronizacji. Aktywuj przy zgłoszeniach: Outlook nie startuje; OneDrive sync problem; Teams sign-in; Office activering / synchronisatie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-office-cloud-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-os-identification",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: ustalenie edition, build, kanału, architektury, języka, boot mode, partycji, WinRE i statusu wsparcia przed doborem poleceń. Aktywuj przy zgłoszeniach: jaki mam Windows; identify Windows build; Windows-versie controleren; edition architecture boot mode. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-os-identification/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "fast_reader",
+        "swietlik.orchestrator.minimum-agent": "fast_reader",
+        "swietlik.orchestrator.reasoning": "low",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "optional",
+        "swietlik.orchestrator.review": "optional",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-performance-hangs",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: korelację opóźnień, hangów, stutter, CPU/RAM/dysk/GPU, DPC/ISR przy użyciu WPR/WPA, PerfMon i Reliability. Aktywuj przy zgłoszeniach: Windows wolno działa; 100% disk; microstutter; pc hangt / not responding. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-performance-hangs/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-peripherals-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę drukarek, spoolera, skanerów, audio, monitorów, USB, Bluetooth, kamer, docków i HID. Aktywuj przy zgłoszeniach: drukarka nie drukuje; no sound; Bluetooth werkt niet; USB disconnect / kamera nie działa. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-peripherals-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-post-repair-validation",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: mierzalne testy przyczyny, objawu i regresji: boot, SMART, temperatury, sleep/wake, update, sieć, peryferia, backup i ryzyko resztkowe. Aktywuj przy zgłoszeniach: sprawdź naprawę; post repair validation; burn-in; controle na reparatie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-post-repair-validation/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "reviewer",
+        "swietlik.orchestrator.minimum-agent": "fast_reader",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "none",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-process-service-startup",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę procesów, usług, Scheduled Tasks, Autoruns/ProcMon i odwracalny clean boot bez utraty konfiguracji. Aktywuj przy zgłoszeniach: program startuje z Windowsem; service won't start; clean boot; opstartprogramma uitschakelen. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-process-service-startup/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-remote-managed-client",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: transparentną Quick Assist/RDP pomoc oraz wykrycie domain/Entra/MDM, GPO, certyfikatów, mapped drives i firmowych VPN bez łamania zarządzania. Aktywuj przy zgłoszeniach: laptop firmowy; Entra joined; GPO problem; Quick Assist / Hulp op afstand. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-remote-managed-client/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-service-intake",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: udokumentowanie właściciela, autoryzacji, wartości danych, szyfrowania, zarządzania, symptomów i zakresu zgody przed serwisem. Aktywuj przy zgłoszeniach: przyjęcie laptopa do serwisu; service intake; toestemming reparatie; formularz zgody klienta. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-service-intake/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-service-media",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: projekt oficjalnego WinPE lub multiboot USB z manifestem, licencjami, SHA-256/signature i rozdzieleniem x64/ARM64. Aktywuj przy zgłoszeniach: zrób pendrive serwisowy; WinPE toolkit; service USB; herstel-USB maken. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-service-media/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-setup-upgrade-rollback",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: analizę in-place setup, feature update, compatibility blocks, SetupDiag, Panther/Rollback i kontrolowany rollback. Aktywuj przy zgłoszeniach: upgrade failed; SetupDiag; Windows installatie teruggedraaid; in-place repair install. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-setup-upgrade-rollback/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "windows-shell-ui-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę Explorer, Start, Search, Settings, taskbar, shell extensions, ikon i file associations. Aktywuj przy zgłoszeniach: Start menu nie działa; Explorer crashes; taskbar frozen; Zoeken werkt niet. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-shell-ui-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "standard_worker",
+        "swietlik.orchestrator.minimum-agent": "standard_worker",
+        "swietlik.orchestrator.reasoning": "medium",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "auto",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-tool-research",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: utrzymanie katalogu narzędzi, official sources, wersji, licencji, statusu active/stale/EOL, checksum/signature i community findings. Aktywuj przy zgłoszeniach: sprawdź narzędzie serwisowe; is this tool safe; update tool catalog; hulpprogramma versie/licentie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-tool-research/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "fast_reader",
+        "swietlik.orchestrator.minimum-agent": "fast_reader",
+        "swietlik.orchestrator.reasoning": "low",
+        "swietlik.orchestrator.verbosity": "low",
+        "swietlik.orchestrator.delegation": "optional",
+        "swietlik.orchestrator.review": "optional",
+        "swietlik.orchestrator.parallel": "allowed",
+        "swietlik.orchestrator.risk": "medium"
+      }
+    },
+    {
+      "name": "windows-update-servicing",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: diagnozę update history, policy, pending reboot, cache, servicing stack i kontrolowany reset komponentów. Aktywuj przy zgłoszeniach: Windows Update error; aktualizacja stoi 0%; update mislukt; 0x800f0922. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/windows-update-servicing/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "preferred",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "high"
+      }
+    },
+    {
+      "name": "winpe-offline-repair",
+      "description": "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: identyfikację woluminów, montowanie hive, offline log collection, DISM/SFC i kopiowanie danych w WinRE/WinPE. Aktywuj przy zgłoszeniach: naprawa offline Windows; WinPE repair; WinRE opdrachtprompt; load offline registry hive. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów.",
+      "path": ".agents/skills/winpe-offline-repair/SKILL.md",
+      "execution_metadata": {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": "expert_worker",
+        "swietlik.orchestrator.minimum-agent": "expert_worker",
+        "swietlik.orchestrator.reasoning": "high",
+        "swietlik.orchestrator.verbosity": "medium",
+        "swietlik.orchestrator.delegation": "required",
+        "swietlik.orchestrator.review": "required",
+        "swietlik.orchestrator.parallel": "forbidden",
+        "swietlik.orchestrator.risk": "critical"
+      }
+    }
+  ]
+}

@@ -1,6 +1,17 @@
 ---
 name: windows-deployment-imaging
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: planowanie DISM imaging, unattend, Sysprep, ADK/WinPE, drivers offline i migracji HDD→SSD bez ryzyka pomylenia celu. Aktywuj przy zgłoszeniach: capture WIM; deploy Windows image; Sysprep error; HDD naar SSD migratie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "required"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "critical"
 ---
 
 # Wdrożenia, WIM/ESD/FFU i migracja

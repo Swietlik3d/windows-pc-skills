@@ -5,7 +5,6 @@
 [CmdletBinding(SupportsShouldProcess,ConfirmImpact='High')]
 param([ValidateSet('Repo','User')][string]$Scope='User',[string]$Destination,[switch]$RestoreBackup)
 Set-StrictMode -Version Latest;$ErrorActionPreference='Stop'
-$repo=Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if(-not $Destination){
  if($Scope -eq 'User'){$Destination=Join-Path ([Environment]::GetFolderPath('UserProfile')) '.agents\skills'}
  else{throw "Repo scope requires the exact installed -Destination '<TARGET_REPO>\.agents\skills'."}

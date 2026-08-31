@@ -1,6 +1,17 @@
 ---
 name: windows-11-support
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: obsługę aktywnych gałęzi Windows 11, ARM64, UEFI/GPT, Device Encryption, VBS/HVCI, Hello, DCH i safeguard holds. Aktywuj przy zgłoszeniach: Windows 11 24H2/25H2/26H1; Windows 11 problem; ARM64 app; Windows 11 updateprobleem. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "standard_worker"
+  swietlik.orchestrator.minimum-agent: "standard_worker"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "auto"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Bieżące Windows 11

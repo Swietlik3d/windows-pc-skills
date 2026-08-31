@@ -1,6 +1,17 @@
 ---
 name: windows-master-router
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: rozpoznanie objawu, ryzyka i wybór dokładnie jednego skilla głównego oraz najwyżej trzech pomocniczych. Aktywuj przy zgłoszeniach: komputer nie działa i nie wiem od czego zacząć; PC broken / Windows problem; ordinateur start niet; route this Windows issue. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "fast_reader"
+  swietlik.orchestrator.minimum-agent: "fast_reader"
+  swietlik.orchestrator.reasoning: "medium"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "forbidden"
+  swietlik.orchestrator.review: "optional"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "low"
 ---
 
 # Router główny serwisu Windows

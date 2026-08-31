@@ -1228,11 +1228,90 @@ def skill_description(spec: dict) -> str:
     )
 
 
+ORCHESTRATOR_CRITICAL = {
+    "bios-uefi-firmware",
+    "storage-triage-cloning-recovery",
+    "windows-bcd-partition-repair",
+    "windows-bitlocker-tpm-security",
+    "windows-deployment-imaging",
+    "windows-malware-remediation",
+    "winpe-offline-repair",
+}
+ORCHESTRATOR_FAST_READERS = {
+    "windows-os-identification",
+    "windows-tool-research",
+}
+ORCHESTRATOR_STANDARD = {
+    "windows-10-support",
+    "windows-11-support",
+    "windows-apps-store-winget",
+    "windows-automation-powershell",
+    "windows-network-repair",
+    "windows-performance-hangs",
+    "windows-peripherals-repair",
+    "windows-process-service-startup",
+    "windows-remote-managed-client",
+    "windows-service-intake",
+    "windows-shell-ui-repair",
+}
+
+
+def orchestrator_metadata(name: str) -> dict[str, str]:
+    if name in ORCHESTRATOR_CRITICAL:
+        profile, reasoning, delegation, review, parallel, risk = (
+            "expert_worker", "high", "required", "required", "forbidden", "critical"
+        )
+    elif name == "windows-case-evidence":
+        profile, reasoning, delegation, review, parallel, risk = (
+            "fast_worker", "medium", "optional", "optional", "forbidden", "medium"
+        )
+    elif name == "windows-master-router":
+        profile, reasoning, delegation, review, parallel, risk = (
+            "fast_reader", "medium", "forbidden", "optional", "forbidden", "low"
+        )
+    elif name == "windows-post-repair-validation":
+        profile, reasoning, delegation, review, parallel, risk = (
+            "reviewer", "high", "preferred", "none", "allowed", "medium"
+        )
+    elif name in ORCHESTRATOR_FAST_READERS:
+        profile, reasoning, delegation, review, parallel, risk = (
+            "fast_reader", "low", "optional", "optional", "allowed", "medium"
+        )
+    elif name in ORCHESTRATOR_STANDARD:
+        profile, reasoning, delegation, review, parallel, risk = (
+            "standard_worker", "medium", "preferred", "auto", "allowed", "medium"
+        )
+    else:
+        profile, reasoning, delegation, review, parallel, risk = (
+            "expert_worker", "high", "preferred", "required", "forbidden", "high"
+        )
+    minimum = "fast_reader" if profile == "reviewer" or name == "windows-case-evidence" else profile
+    return {
+        "swietlik.orchestrator.schema": "1",
+        "swietlik.orchestrator.pack": "windows-pc-skills",
+        "swietlik.orchestrator.recommended-agent": profile,
+        "swietlik.orchestrator.minimum-agent": minimum,
+        "swietlik.orchestrator.reasoning": reasoning,
+        "swietlik.orchestrator.verbosity": "medium" if profile == "expert_worker" else "low",
+        "swietlik.orchestrator.delegation": delegation,
+        "swietlik.orchestrator.review": review,
+        "swietlik.orchestrator.parallel": parallel,
+        "swietlik.orchestrator.risk": risk,
+    }
+
+
+def orchestrator_frontmatter(name: str) -> str:
+    rows = ["metadata:"]
+    rows.extend(f'  {key}: "{value}"' for key, value in orchestrator_metadata(name).items())
+    return "\n".join(rows)
+
+
 def generate_skill(spec: dict) -> None:
     name = spec["name"]
     folder = SKILL_ROOT / name
     folder.mkdir(parents=True, exist_ok=True)
     description = skill_description(spec).replace('"', "'")
+    execution_metadata = orchestrator_frontmatter(name)
     related_links = "\n".join(
         f"- [`{item}`](../{item}/SKILL.md) — użyj tylko, gdy dowód wskazuje tę domenę."
         for item in spec["related"]
@@ -1258,6 +1337,7 @@ def generate_skill(spec: dict) -> None:
 ---
 name: {name}
 description: "{description}"
+{execution_metadata}
 ---
 
 # {spec['title']}
@@ -1763,7 +1843,8 @@ Zobacz [REPO_STATUS.md](REPO_STATUS.md), [coverage-matrix.yaml](coverage-matrix.
             """\
 # Instrukcje dla skilli
 
-- Front matter zawiera tylko `name` i `description`; folder i `name` muszą być identyczne.
+- Front matter zawiera `name`, `description` i stringowy blok `metadata` zgodny z kontraktem
+  `swietlik.orchestrator.*`; folder i `name` muszą być identyczne.
 - Description front-loaduje cel i polskie/angielskie/holenderskie frazy; body pozostaje poniżej
   500 linii, a szczegóły trafiają do bezpośrednich `references/`.
 - Każdy skill ma trzy kompletne playbooki, trzy command cards, rollback, walidację, źródła,
@@ -1854,6 +1935,15 @@ kanałem właściciela; repo nie definiuje publicznego endpointu.
         clean(
             f"""\
 # Changelog
+
+## Unreleased
+
+- Dodano stringowe metadane wykonawcze `swietlik.orchestrator.*` do 39 skilli źródłowych bez
+  zmiany procedur naprawczych ani granic R0–R4.
+- Dodano rootowy `pack.yaml`, deterministyczny `skills-index.json`, samowystarczalny generator
+  indeksu oraz CI wykrywające dryf i błędy kontraktu.
+- Rozszerzono generator i statyczny validator repozytorium o trwałą obsługę metadanych
+  orkiestratora.
 
 ## 1.0.0 — {TODAY}
 
@@ -4675,6 +4765,13 @@ TOOL_FIELDS = {
  "elevation_required","signature_method","checksum_method","risk_class","use_cases","avoid_when",
  "known_gotchas","alternatives","sources"
 }
+ORCHESTRATOR_METADATA_KEYS = {
+ "swietlik.orchestrator.schema","swietlik.orchestrator.pack",
+ "swietlik.orchestrator.recommended-agent","swietlik.orchestrator.minimum-agent",
+ "swietlik.orchestrator.reasoning","swietlik.orchestrator.verbosity",
+ "swietlik.orchestrator.delegation","swietlik.orchestrator.review",
+ "swietlik.orchestrator.parallel","swietlik.orchestrator.risk"
+}
 
 class Check:
  def __init__(self):
@@ -4688,10 +4785,15 @@ def frontmatter(text):
  if not text.startswith("---\n"): return {}, ""
  end=text.find("\n---\n",4)
  if end<0:return {}, ""
- data={}
+ data={}; parent=None
  for line in text[4:end].splitlines():
-  if ":" in line:
-   key,value=line.split(":",1); data[key.strip()]=value.strip().strip('"')
+  if ":" not in line:continue
+  key,value=line.split(":",1)
+  if line.startswith("  ") and parent=="metadata":
+   data[parent][key.strip()]=value.strip().strip('"')
+  else:
+   parent=key.strip(); parsed=value.strip().strip('"')
+   data[parent]={} if parent=="metadata" and not parsed else parsed
  return data,text[end+5:]
 
 def load_json(path, c):
@@ -4719,8 +4821,11 @@ def structure(root,c):
   folder=base/name; path=folder/"SKILL.md"
   if not path.exists():c.error(f"Missing {path}");continue
   text=path.read_text(encoding="utf-8");fm,body=frontmatter(text)
-  if set(fm)!={"name","description"}:c.error(f"{name}: frontmatter keys {sorted(fm)}")
+  if set(fm)!={"name","description","metadata"}:c.error(f"{name}: frontmatter keys {sorted(fm)}")
   if fm.get("name")!=name:c.error(f"{name}: name mismatch")
+  metadata=fm.get("metadata",{})
+  if not isinstance(metadata,dict) or set(metadata)!=ORCHESTRATOR_METADATA_KEYS:c.error(f"{name}: invalid orchestrator metadata keys")
+  elif metadata.get("swietlik.orchestrator.schema")!="1" or metadata.get("swietlik.orchestrator.pack")!="windows-pc-skills":c.error(f"{name}: invalid orchestrator metadata identity")
   desc=fm.get("description","")
   if not 120<=len(desc)<=900:c.error(f"{name}: description length {len(desc)}")
   if not re.search(r"[ąćęłńóśźż]",desc.lower()) or "Use for" not in desc:c.error(f"{name}: description must contain Polish and English trigger language")
@@ -4746,7 +4851,7 @@ def schemas(root,c):
  start=time.time();before=len(c.errors)
  for path in list(root.rglob("*.yaml"))+list(root.rglob("*.json")):
   if any(part in {".git","dist"} for part in path.parts):continue
-  if path.name=="openai.yaml":continue
+  if path.name in {"openai.yaml","pack.yaml"}:continue
   load_json(path,c)
  playbooks=list((root/"knowledge-base"/"playbooks").glob("*.yaml"))
  sources=load_json(root/"knowledge-base"/"sources"/"source-register.yaml",c) or []
@@ -5278,17 +5383,21 @@ celowo ignorowany przez Git).
 - Collectory i parsery mają ścieżkę fixture; repairs są Scan-first z `-Apply`.
 - 117 playbooków, 117 command cards, 95 źródeł, 99 narzędzi i 936 eval prompts.
 - 32/32 wiersze coverage mają status kompletny; nie ma wpisów `planned`.
+- Rootowy indeks orkiestratora obejmuje 39 kanonicznych skilli; 39 wygenerowanych paczek `dist`
+  pozostaje celowo poza katalogiem źródłowym indeksu.
 
 ## Rzeczywiste wyniki walidacji — {TODAY}
 
 | Kontrola | Wynik | Dowód |
 |---|---:|---|
 | Oficjalny `skill-creator/quick_validate.py` | PASS | 39/39 skilli źródłowych oraz 39/39 paczek |
+| `node scripts/generate-skill-index.mjs --check` | PASS | 39 skilli źródłowych, bez mirrorów `dist` |
+| `swietlik-orchestrator pack validate` | PASS | 39 skilli, 0 błędów, 0 ostrzeżeń |
 | Statyczny validator repo | PASS | 7/7 grup, 0 błędów, 0 ostrzeżeń |
 | Linki wewnętrzne | PASS | 703 odwołania |
 | Safety/schema/evals/coverage | PASS | 0 niedozwolonych binariów; 936 promptów; 60+15 spraw |
-| Pester, PowerShell 7.6.4 | PASS | 24/24, 0 skipped |
-| Pester, Windows PowerShell 5.1.26100.8972 | PASS | 24/24, 0 skipped |
+| Pester, PowerShell 7.6.5 (Pester 3.4.0) | PASS | 24/24, 0 skipped |
+| Pester, Windows PowerShell 5.1.26100.8972 | PASS (snapshot 2026-08-06) | 24/24, 0 skipped |
 | Parser AST PowerShell 5.1 | PASS | 38 plików, 0 błędów |
 | Python `compileall` | PASS | wszystkie skrypty Python, 0 błędów |
 | Build `dist/skills` | PASS | 39/39 poprawnych i samowystarczalnych paczek |

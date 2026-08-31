@@ -1,6 +1,17 @@
 ---
 name: bios-uefi-firmware
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: bezpieczna identyfikacja ustawień firmware, boot mode, CSM, Secure Boot, TPM oraz aktualizacji i rollbacku po dokładnym modelu. Aktywuj przy zgłoszeniach: aktualizacja BIOS; UEFI Secure Boot problem; TPM niet beschikbaar; firmware update laptop. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "required"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "critical"
 ---
 
 # BIOS, UEFI i firmware

@@ -1,0 +1,7 @@
+schema_version: 1
+id: windows-pc-skills
+description: Evidence-first Windows and PC service diagnostics and controlled repair for hardware,
+  storage, boot, firmware, BitLocker, drivers, networking, servicing, malware, deployment, and
+  offline recovery.
+source: https://github.com/Swietlik3d/windows-pc-skills
+index_schema_version: 1

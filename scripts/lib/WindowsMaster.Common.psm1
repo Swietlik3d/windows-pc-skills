@@ -157,7 +157,7 @@ function Assert-WmApplyGate {
 }
 
 function New-WmRepairPlan {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param(
         [Parameter(Mandatory)][string]$Operation,
         [Parameter(Mandatory)][string]$RiskClass,
@@ -167,9 +167,6 @@ function New-WmRepairPlan {
         [Parameter(Mandatory)][string]$LogRoot,
         [switch]$Synthetic
     )
-    if (-not (Test-Path -LiteralPath $LogRoot)) {
-        New-Item -ItemType Directory -Path $LogRoot -Force | Out-Null
-    }
     $record = [ordered]@{
         schema_version = '1.0.0'
         created_utc = [DateTime]::UtcNow.ToString('o')
@@ -184,8 +181,13 @@ function New-WmRepairPlan {
         idempotency = 'Preflight is idempotent; apply step documents exceptions.'
         status = 'planned-not-applied'
     }
-    Write-WmJson -InputObject $record -Path (Join-Path $LogRoot "$Operation-plan.json")
-    Write-WmJson -InputObject $record.context -Path (Join-Path $LogRoot 'context.json')
+    if ($PSCmdlet.ShouldProcess($LogRoot, "Write $Operation repair plan evidence")) {
+        if (-not (Test-Path -LiteralPath $LogRoot)) {
+            New-Item -ItemType Directory -Path $LogRoot -Force | Out-Null
+        }
+        Write-WmJson -InputObject $record -Path (Join-Path $LogRoot "$Operation-plan.json")
+        Write-WmJson -InputObject $record.context -Path (Join-Path $LogRoot 'context.json')
+    }
     return [pscustomobject]$record
 }
 

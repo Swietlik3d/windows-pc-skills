@@ -11,7 +11,7 @@ Import-Module (Join-Path $repo 'scripts\lib\WindowsMaster.Common.psm1') -Force
 if($FixturePath){$data=Get-Content -LiteralPath (Resolve-Path -LiteralPath $FixturePath) -Raw|ConvertFrom-Json;$source='fixture'}
 else{
  if($PSVersionTable.PSVersion.Major -ge 6 -and -not $IsWindows){throw 'Live collection requires Windows.'}
- $fw='unknown';try{$fw=(Get-ComputerInfo -Property BiosFirmwareType).BiosFirmwareType}catch{}
+ $fw='unknown';try{$fw=(Get-ComputerInfo -Property BiosFirmwareType).BiosFirmwareType}catch{Write-Verbose "Firmware query failed: $($_.Exception.Message)"}
  $data=[ordered]@{firmware=$fw;disks=@(Get-Disk|Select-Object Number,UniqueId,FriendlyName,PartitionStyle,Size,IsBoot,IsSystem);partitions=@(Get-Partition|Select-Object DiskNumber,PartitionNumber,DriveLetter,Type,GptType,IsActive,IsBoot,IsSystem,Size);volumes=@(Get-Volume|Select-Object DriveLetter,FileSystemLabel,FileSystem,HealthStatus,Size,SizeRemaining)}
  $source='live-read-only'
 }

@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, json
+import argparse, json, sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 def main()->int:
     p=argparse.ArgumentParser(); p.add_argument("--use-case",required=True); p.add_argument("--os",default="Windows 11"); p.add_argument("--arch",default="x64"); a=p.parse_args()
     tools=json.loads((ROOT/"tools/catalog.yaml").read_text(encoding="utf-8"))

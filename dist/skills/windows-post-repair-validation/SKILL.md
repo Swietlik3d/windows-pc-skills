@@ -1,6 +1,17 @@
 ---
 name: windows-post-repair-validation
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: mierzalne testy przyczyny, objawu i regresji: boot, SMART, temperatury, sleep/wake, update, sieć, peryferia, backup i ryzyko resztkowe. Aktywuj przy zgłoszeniach: sprawdź naprawę; post repair validation; burn-in; controle na reparatie. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "reviewer"
+  swietlik.orchestrator.minimum-agent: "fast_reader"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "low"
+  swietlik.orchestrator.delegation: "preferred"
+  swietlik.orchestrator.review: "none"
+  swietlik.orchestrator.parallel: "allowed"
+  swietlik.orchestrator.risk: "medium"
 ---
 
 # Walidacja po naprawie

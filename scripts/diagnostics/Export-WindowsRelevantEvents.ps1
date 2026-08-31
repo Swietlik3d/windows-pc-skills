@@ -24,7 +24,7 @@ try{
         $providers=@('Microsoft-Windows-WHEA-Logger','Disk','Ntfs','Microsoft-Windows-WindowsUpdateClient','Service Control Manager','Microsoft-Windows-User Profiles Service')
         $data=@()
         foreach($provider in $providers){
-            try{$data+=Get-WinEvent -FilterHashtable @{LogName='System';ProviderName=$provider;StartTime=$since} -MaxEvents 200 -ErrorAction Stop|Select-Object TimeCreated,ProviderName,Id,LevelDisplayName,Message}catch{}
+            try{$data+=Get-WinEvent -FilterHashtable @{LogName='System';ProviderName=$provider;StartTime=$since} -MaxEvents 200 -ErrorAction Stop|Select-Object TimeCreated,ProviderName,Id,LevelDisplayName,Message}catch{Write-Verbose "Event query failed for ${provider}: $($_.Exception.Message)"}
         }
         $source='live-read-only'
     }

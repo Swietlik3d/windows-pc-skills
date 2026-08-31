@@ -1,6 +1,17 @@
 ---
 name: windows-bcd-partition-repair
 description: "Prowadzi bezpieczną diagnostykę i kontrolowane działania dla: kontrolowaną diagnozę i naprawę BCD/BCDBoot/ESP/MBR/GPT/NVRAM po pełnej identyfikacji celu. Aktywuj przy zgłoszeniach: missing BCD; no boot device; Windows Boot Manager ontbreekt; napraw ESP UEFI. Use for Windows service diagnostics in this domain; do not use outside this scope. Zawsze zaczynaj od ochrony danych i dowodów."
+metadata:
+  swietlik.orchestrator.schema: "1"
+  swietlik.orchestrator.pack: "windows-pc-skills"
+  swietlik.orchestrator.recommended-agent: "expert_worker"
+  swietlik.orchestrator.minimum-agent: "expert_worker"
+  swietlik.orchestrator.reasoning: "high"
+  swietlik.orchestrator.verbosity: "medium"
+  swietlik.orchestrator.delegation: "required"
+  swietlik.orchestrator.review: "required"
+  swietlik.orchestrator.parallel: "forbidden"
+  swietlik.orchestrator.risk: "critical"
 ---
 
 # BCD, ESP i partycje startowe

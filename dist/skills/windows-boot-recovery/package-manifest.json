@@ -60,8 +60,8 @@
     },
     {
       "path": "references\\_shared\\scripts\\Test-SkillInput.ps1",
-      "sha256": "04f3d8cc84f60844a98c0ce8395edc802807167ca27fdef6abee414df7e62be0",
-      "bytes": 694
+      "sha256": "d1080363173923590187891520bfaedcf5018febf0f0cf67d10514880ebac291",
+      "bytes": 691
     },
     {
       "path": "references\\_shared\\templates\\action-record.json",
@@ -90,8 +90,8 @@
     },
     {
       "path": "SKILL.md",
-      "sha256": "67404bb9284e28cf403b95698933e955af491cb4afcdb682a91ac7b5dee3b94d",
-      "bytes": 9085
+      "sha256": "d38f028214060f8ee30ea2d3e7a77722aea5a3e61412d5cfd5a5cbc43321253c",
+      "bytes": 9555
     }
   ]
 }
